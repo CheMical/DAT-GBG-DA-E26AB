@@ -165,7 +165,7 @@
 <tr>
   <td></td>
   <td><a href="39/02_tir_2026-09-22/">Tirsdag 22-09-2026</a></td>
-  <td>Design: User stories, Controller, Ansvar og afhængigheder, GRASP</td>
+  <td>Design: User stories, Controller, Ansvar og afhængigheder, Coupling og Cohesion</td>
   <td></td>
   <td></td>
 </tr>
