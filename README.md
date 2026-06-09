@@ -83,7 +83,7 @@
   <td>MICA</td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Klasser og objekter</strong></td></tr>
+<tr><td colspan="5"><strong>Projekt (Klasser og objekter)</strong></td></tr>
 <tr>
   <td>37</td>
   <td><a href="37/01_man_2026-09-07/">Mandag 07-09-2026</a></td>
@@ -154,7 +154,7 @@
   <td>MICA</td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Adventure-spil (Objekt-referencer, git, SOLID, arv og polymorfi)</strong></td></tr>
+<tr><td colspan="5"><strong>Projekt Adventure-spil (Objekt-referencer, git, SOLID, arv og polymorfi)</strong></td></tr>
 <tr>
   <td>39</td>
   <td><a href="39/01_man_2026-09-21/">Mandag 21-09-2026</a></td>
@@ -296,7 +296,7 @@
   <td>MICA</td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Filmsamlingsprojekt (CRUD,  test, FURPS, filer og sortering)</strong></td></tr>
+<tr><td colspan="5"><strong>Projekt Filmsamling (CRUD,  test, FURPS, filer og sortering)</strong></td></tr>
 <tr>
   <td>43</td>
   <td><a href="43/01_man_2026-10-19/">Mandag 19-10-2026</a></td>
