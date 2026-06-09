@@ -17,7 +17,7 @@
   <td>35</td>
   <td><a href="35/01_man_2026-08-24/">Mandag 24-08-2026</a></td>
   <td>Introdag 1, studiegrupper</td>
-  <td>MANY</td>
+  <td>IANB/MANY/MICA</td>
   <td></td>
 </tr>
 <tr>
@@ -30,7 +30,7 @@
 <tr>
   <td></td>
   <td><a href="35/03_ons_2026-08-26/">Onsdag 26-08-2026</a></td>
-  <td>Variable og datatyper</td>
+  <td>Studieliv kommer forbi. Variable og datatyper</td>
   <td></td>
   <td></td>
 </tr>
