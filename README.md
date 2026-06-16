@@ -263,37 +263,9 @@
 <tr><td colspan="5"><strong>Efterårsferie</strong></td></tr>
 <tr>
   <td>42</td>
-  <td><a href="42/01_man_2026-10-12/README.md">Mandag 12-10-2026</a></td>
-  <td>Undervisningsfri</td>
-  <td>MANY</td>
   <td></td>
-</tr>
-<tr>
-  <td></td>
-  <td><a href="42/02_tir_2026-10-13/README.md">Tirsdag 13-10-2026</a></td>
   <td>Undervisningsfri</td>
   <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td></td>
-  <td><a href="42/03_ons_2026-10-14/README.md">Onsdag 14-10-2026</a></td>
-  <td>Undervisningsfri</td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td></td>
-  <td><a href="42/04_tor_2026-10-15/README.md">Torsdag 15-10-2026</a></td>
-  <td>Undervisningsfri</td>
-  <td>IANB</td>
-  <td></td>
-</tr>
-<tr>
-  <td></td>
-  <td><a href="42/05_fre_2026-10-16/README.md">Fredag 16-10-2026</a></td>
-  <td>Undervisningsfri</td>
-  <td>MICA</td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Projekt Filmsamling (CRUD,  test, FURPS, filer og sortering)</strong></td></tr>
