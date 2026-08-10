@@ -270,7 +270,8 @@
   <td></td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Projekt Filmsamling (CRUD,  test, FURPS, filer og sortering)</strong></td></tr>
+<tr><td colspan="5"><strong>Projekt: Filmsamling</strong>TBD</td></tr>
+<tr><td colspan="5"><strong>CRUD,  test, FURPS, filer og sortering</strong></td></tr>
 <tr>
   <td>43</td>
   <td><a href="43/01_man_2026-10-19/README.md">Mandag 19-10-2026</a></td>
