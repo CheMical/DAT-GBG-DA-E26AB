@@ -130,21 +130,21 @@
 <tr>
   <td></td>
   <td><a href="38/02_tir_2026-09-15/README.md">Tirsdag 15-09-2026</a></td>
-  <td>ITF</td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td></td>
-  <td><a href="38/03_ons_2026-09-16/README.md">Onsdag 16-09-2026</a></td>
   <td>Objekter i objekter, klassediagrammer</td>
   <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="38/04_tor_2026-09-17/README.md">Torsdag 17-09-2026</a></td>
+  <td><a href="38/03_ons_2026-09-16/README.md">Onsdag 16-09-2026</a></td>
   <td>ArrayList</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="38/04_tor_2026-09-17/README.md">Torsdag 17-09-2026</a></td>
+  <td>ITF</td>
   <td></td>
   <td></td>
 </tr>
