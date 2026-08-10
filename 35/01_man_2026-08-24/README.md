@@ -1,4 +1,4 @@
-# Intro
+# Introdag 1
 
 ## Beskrivelse
 ### Semestret – praktisk info   
