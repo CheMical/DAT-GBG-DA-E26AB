@@ -52,7 +52,7 @@ Ingen
 ### Semesterets projekter
 I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel. Bemærk at tre af disse er obligatoriske og skal afleveres for at man kan indstilles til eksamen.
 
-| Projekt | Bemærkninger                                                                                                                           | Obligatorinsk|
+| Projekt | Bemærkninger                                                                                                                           | Obligatorisk|
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------|-----|
 | TBD        | |
 | Adventure           |                                                                                                             |X |
