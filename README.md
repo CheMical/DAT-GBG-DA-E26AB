@@ -12,7 +12,6 @@
 </thead>
 <tbody>
 
-<tr><td colspan="5"><strong>Projekt:</strong>TBD</td></tr>
 <tr><td colspan="5"><strong>Introduktion til programmering</strong></td></tr>
 <tr>
   <td>35</td>
@@ -84,7 +83,8 @@
   <td>MICA</td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Projekt (Klasser og objekter)</strong></td></tr>
+<tr><td colspan="5"><strong>Projekt:</strong>TBD</td></tr>
+<tr><td colspan="5"><strong>Klasser og objekter</strong></td></tr>
 <tr>
   <td>37</td>
   <td><a href="37/01_man_2026-09-07/README.md">Mandag 07-09-2026</a></td>
@@ -155,7 +155,8 @@
   <td></td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Projekt Adventure-spil (Objekt-referencer, git, SOLID, arv og polymorfi)</strong></td></tr>
+<tr><td colspan="5"><strong>Projekt: </strong>Adventure-spil</td></tr>
+<tr><td colspan="5"><strong>Objekt-referencer, git, SOLID, arv og polymorfi)</strong></td></tr>
 <tr>
   <td>39</td>
   <td><a href="39/01_man_2026-09-21/README.md">Mandag 21-09-2026</a></td>
