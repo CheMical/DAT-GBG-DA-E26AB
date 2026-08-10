@@ -156,7 +156,7 @@
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Projekt: </strong>Adventure-spil</td></tr>
-<tr><td colspan="5"><strong>Objekt-referencer, git, SOLID, arv og polymorfi)</strong></td></tr>
+<tr><td colspan="5"><strong>Objekt-referencer, git, SOLID, arv og polymorfi</strong></td></tr>
 <tr>
   <td>39</td>
   <td><a href="39/01_man_2026-09-21/README.md">Mandag 21-09-2026</a></td>
