@@ -1,25 +1,25 @@
 # Intro
 
 ## Beskrivelse
-Semestret – praktisk info   
+### Semestret – praktisk info   
 - [Datamatikeruddannelsen](https://studieordninger.kea.dk/2025/36/225)
 - Semesterplanen, de obligatoriske opgaver, kravene til eksamen og hvad I ellers måtte have af spørgsmål til 1. semester.
 - [Studievejledningen](https://www.ek.dk/kontakt/faa-vejledning)
 
-Rundvisning
+### Rundvisning
 - Vi gå en tur rundt på EK og besøger relevante lokationer
 
-IT systemer
+### IT systemer
 - Vi kigger på relevante IT systemer
   - its
   - GitHub (dette site)
   - UMS
   - TimeEdit
 
-Undervisere
-
-
-
+### Undervisere  
+- Michael Carlson
+- Tobias Grundtvig
+- Mads Nyborg
 
 
 ## Forberedelse
