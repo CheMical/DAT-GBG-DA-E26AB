@@ -13,6 +13,7 @@
 - Vi kigger på relevante IT systemer
   - its
   - GitHub (dette site)
+  - Teams
   - UMS
   - TimeEdit
 
