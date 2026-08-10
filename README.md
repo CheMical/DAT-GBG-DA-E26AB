@@ -12,6 +12,7 @@
 </thead>
 <tbody>
 
+<tr><td colspan="5"><strong>Projekt:</strong>TBD</td></tr>
 <tr><td colspan="5"><strong>Introduktion til programmering</strong></td></tr>
 <tr>
   <td>35</td>
