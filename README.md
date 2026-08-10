@@ -52,21 +52,21 @@
   <td>36</td>
   <td><a href="36/01_man_2026-08-31/README.md">Mandag 31-08-2026</a></td>
   <td>While-loops</td>
-  <td></td>
+  <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="36/02_tir_2026-09-01/README.md">Tirsdag 01-09-2026</a></td>
   <td>For-loops og while-loops</td>
-  <td></td>
+  <td>TOG</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="36/03_ons_2026-09-02/README.md">Onsdag 02-09-2026</a></td>
   <td>Arrays</td>
-  <td></td>
+  <td>MANY/MICA</td>
   <td></td>
 </tr>
 <tr>
@@ -80,7 +80,7 @@
   <td></td>
   <td><a href="36/05_fre_2026-09-04/README.md">Fredag 04-09-2026</a></td>
   <td>Repetition og opsamling på forløb</td>
-  <td></td>
+  <td>MICA</td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Projekt (Klasser og objekter)</strong></td></tr>
