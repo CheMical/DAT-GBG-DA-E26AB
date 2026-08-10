@@ -38,7 +38,7 @@ Ingen
 - Vi benytter bl.a. flipped classroom – en undervisningsstrategi, der vender den traditionelle læringsmodel på hovedet. I stedet for at modtage undervisning (f.eks. forelæsninger) i klassen og lave lektier derhjemme, tilegner man sig nyt indhold (som videoer eller læsematerialer) før undervisningen og bruger derefter klassetiden på interaktive aktiviteter, diskussioner og problemløsning med underviserens vejledning.
 - Overordnet proces for hver time:
     - registrering af fremmødte studerende
-    - summe i 5-10 min om det I har forberedt til timen
+    - summe i 5-10 min i grupperne om det I har forberedt til timen
     - diskussion af vigtige begreber og udfyldelse af klassenote
     - arbejde med opgaver/projekter
 
