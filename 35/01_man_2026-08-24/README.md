@@ -1,10 +1,10 @@
 # Intro
 
 ## Beskrivelse
-Semestret – praktisk info
+Semestret – praktisk info  
 Vi går igennem 
 - [Datamatikeruddannelsen](https://studieordninger.kea.dk/2025/36/225)
-- semesterplanen, de obligatoriske opgaver, kravene til eksamen og hvad I ellers måtte have af spørgsmål til 1. semester.  
+- Semesterplanen, de obligatoriske opgaver, kravene til eksamen og hvad I ellers måtte have af spørgsmål til 1. semester.  
 
 Rundvisning
 - Vi gå en tur rundt på EK og besøger relevante lokationer
