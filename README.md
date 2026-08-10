@@ -631,3 +631,24 @@
 
 </tbody>
 </table>
+
+# Projekter
+```mermaid
+gantt
+    title Projektoverblik – 1. semester E2026
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d-%m
+
+    section TBD
+    TBD            :2026-09-7, 2026-09-18
+    
+    section Adventure
+    Adventure      :2026-09-21, 2026-10-09
+
+    section Filmsamling
+    Filmsamling    :2026-10-19, 2026-11-06
+
+    section Delfinen
+    Delfinen       :2026-11-16, 2026-12-11
+```
+
