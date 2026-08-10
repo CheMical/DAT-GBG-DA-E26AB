@@ -50,7 +50,7 @@ Ingen
 - studiegruppen opdaterer den der fx har været syg om hvad der er foregået i undervisningen
 
 ### Semesterets projekter
-I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel. Bemærk at tre af dem er obligatoriske og skal afleveres for at man kan indstilles til eksamen.
+I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel. Bemærk at tre af disse er obligatoriske og skal afleveres for at man kan indstilles til eksamen.
 
 | Projekt | Bemærkninger                                                                                                                           | Obligatorinsk|
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------|-----|
