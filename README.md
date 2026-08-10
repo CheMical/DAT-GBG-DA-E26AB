@@ -202,21 +202,21 @@
 <tr>
   <td></td>
   <td><a href="40/02_tir_2026-09-29/README.md">Tirsdag 29-09-2026</a></td>
-  <td>ITF</td>
-  <td></td>
-  <td></td>
-</tr>
-<tr>
-  <td></td>
-  <td><a href="40/03_ons_2026-09-30/README.md">Onsdag 30-09-2026</a></td>
   <td>Adventure del 2 - review, refaktorering</td>
   <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
-  <td><a href="40/04_tor_2026-10-01/README.md">Torsdag 01-10-2026</a></td>
+  <td><a href="40/03_ons_2026-09-30/README.md">Onsdag 30-09-2026</a></td>
   <td>Adventure del 3 - arv</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="40/04_tor_2026-10-01/README.md">Torsdag 01-10-2026</a></td>
+  <td>ITF</td>
   <td></td>
   <td></td>
 </tr>
