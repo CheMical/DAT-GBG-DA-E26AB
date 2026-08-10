@@ -17,7 +17,7 @@
   - TimeEdit
 
 ### Undervisere  
-- Michael Carlson
+- Michael Carlsson
 - Tobias Grundtvig
 - Mads Nyborg
 
