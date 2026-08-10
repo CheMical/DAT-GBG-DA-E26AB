@@ -72,15 +72,15 @@
 <tr>
   <td></td>
   <td><a href="36/04_tor_2026-09-03/README.md">Torsdag 03-09-2026</a></td>
-  <td>Loops og Strings</td>
-  <td>IANB</td>
+  <td>ITF</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="36/05_fre_2026-09-04/README.md">Fredag 04-09-2026</a></td>
   <td>Repetition og opsamling på forløb</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Projekt (Klasser og objekter)</strong></td></tr>
@@ -88,7 +88,7 @@
   <td>37</td>
   <td><a href="37/01_man_2026-09-07/README.md">Mandag 07-09-2026</a></td>
   <td>Objekter og klasser</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -109,21 +109,21 @@
   <td></td>
   <td><a href="37/04_tor_2026-09-10/README.md">Torsdag 10-09-2026</a></td>
   <td>Metoder</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="37/05_fre_2026-09-11/README.md">Fredag 11-09-2026</a></td>
   <td>Metoder</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td>38</td>
   <td><a href="38/01_man_2026-09-14/README.md">Mandag 14-09-2026</a></td>
   <td>Design: Aktivitetsdiagram, debugger</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -144,14 +144,14 @@
   <td></td>
   <td><a href="38/04_tor_2026-09-17/README.md">Torsdag 17-09-2026</a></td>
   <td>ArrayList</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="38/05_fre_2026-09-18/README.md">Fredag 18-09-2026</a></td>
   <td>ArrayList - søgning og redigering</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Projekt Adventure-spil (Objekt-referencer, git, SOLID, arv og polymorfi)</strong></td></tr>
@@ -159,7 +159,7 @@
   <td>39</td>
   <td><a href="39/01_man_2026-09-21/README.md">Mandag 21-09-2026</a></td>
   <td>Introduktion til Git</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -180,21 +180,21 @@
   <td></td>
   <td><a href="39/04_tor_2026-09-24/README.md">Torsdag 24-09-2026</a></td>
   <td>Adventure del 1 - vejledning</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="39/05_fre_2026-09-25/README.md">Fredag 25-09-2026</a></td>
   <td>Adventure del 1 - refactor</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td>40</td>
   <td><a href="40/01_man_2026-09-28/README.md">Mandag 28-09-2026</a></td>
   <td>Adventure del 2</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -215,21 +215,21 @@
   <td></td>
   <td><a href="40/04_tor_2026-10-01/README.md">Torsdag 01-10-2026</a></td>
   <td>Adventure del 3 - arv</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="40/05_fre_2026-10-02/README.md">Fredag 02-10-2026</a></td>
   <td>Polymorfi</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td>41</td>
   <td><a href="41/01_man_2026-10-05/README.md">Mandag 05-10-2026</a></td>
   <td>Adventure del 4 - abstrakte klasser</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -250,14 +250,14 @@
   <td></td>
   <td><a href="41/04_tor_2026-10-08/README.md">Torsdag 08-10-2026</a></td>
   <td>Arbejde med Adventure-projekt</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="41/05_fre_2026-10-09/README.md">Fredag 09-10-2026</a></td>
   <td>Præsentation af færdige projekter</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Efterårsferie</strong></td></tr>
@@ -273,7 +273,7 @@
   <td>43</td>
   <td><a href="43/01_man_2026-10-19/README.md">Mandag 19-10-2026</a></td>
   <td>GitHub i grupper</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -294,21 +294,21 @@
   <td></td>
   <td><a href="43/04_tor_2026-10-22/README.md">Torsdag 22-10-2026</a></td>
   <td>Test</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="43/05_fre_2026-10-23/README.md">Fredag 23-10-2026</a></td>
   <td>Test (delopgave 5)</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td>44</td>
   <td><a href="44/01_man_2026-10-26/README.md">Mandag 26-10-2026</a></td>
   <td>FURPS, Datoer (LocalDate) + kode og design review</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
