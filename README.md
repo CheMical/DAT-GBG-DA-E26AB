@@ -413,7 +413,9 @@
   <td></td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Projekt (Git branching, Domænemodel, Scrum)</strong></td></tr>
+
+<tr><td colspan="5"><strong>Projekt: </strong>Delfinen</td></tr>
+<tr><td colspan="5"><strong>Git branching, Domænemodel, Scrum</strong></td></tr>
 <tr>
   <td>47</td>
   <td><a href="47/01_man_2026-11-16/README.md">Mandag 16-11-2026</a></td>
