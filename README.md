@@ -270,7 +270,7 @@
   <td></td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Projekt: Filmsamling</strong>TBD</td></tr>
+<tr><td colspan="5"><strong>Projekt: </strong>Filmsamling</td></tr>
 <tr><td colspan="5"><strong>CRUD,  test, FURPS, filer og sortering</strong></td></tr>
 <tr>
   <td>43</td>
