@@ -39,6 +39,7 @@ Ingen
 
 ### Studiegrupperne
 - I skal sidde sammen i studiegruppen i klasselokalet: de bliver brugt i al undervisning
+- vi fører protokol over de frememødte studerende
 - når I løser opgaver, så spørg først hinanden om hjælp i gruppen (før tutor og underviser)
 - hvis I har fravær, så giv jeres studiegruppe besked
 - studiegruppen opdaterer den der fx har været syg om hvad der er foregået i undervisningen
