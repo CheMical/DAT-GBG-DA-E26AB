@@ -63,3 +63,4 @@ I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel
 
 
 ## Aktiviteter
+Vi skal bruge dagen på at lære hinanden at kende og danne studiegrupper
