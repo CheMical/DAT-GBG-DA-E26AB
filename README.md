@@ -331,21 +331,21 @@
   <td></td>
   <td><a href="44/04_tor_2026-10-29/README.md">Torsdag 29-10-2026</a></td>
   <td>Filer (version 2)</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="44/05_fre_2026-10-30/README.md">Fredag 30-10-2026</a></td>
   <td>Filer</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td>45</td>
   <td><a href="45/01_man_2026-11-02/README.md">Mandag 02-11-2026</a></td>
   <td>Kode review og refactorering</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -366,14 +366,14 @@
   <td></td>
   <td><a href="45/04_tor_2026-11-05/README.md">Torsdag 05-11-2026</a></td>
   <td>Projektvejledning(deadline på filmsamling)</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="45/05_fre_2026-11-06/README.md">Fredag 06-11-2026</a></td>
   <td>Kode review af færdige projekter</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Repetition og evaluering</strong></td></tr>
@@ -381,7 +381,7 @@
   <td>46</td>
   <td><a href="46/01_man_2026-11-09/README.md">Mandag 09-11-2026</a></td>
   <td>Repetition</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -402,14 +402,14 @@
   <td></td>
   <td><a href="46/04_tor_2026-11-12/README.md">Torsdag 12-11-2026</a></td>
   <td>Evaluering</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="46/05_fre_2026-11-13/README.md">Fredag 13-11-2026</a></td>
   <td>ITF</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Projekt (Git branching, Domænemodel, Scrum)</strong></td></tr>
@@ -417,7 +417,7 @@
   <td>47</td>
   <td><a href="47/01_man_2026-11-16/README.md">Mandag 16-11-2026</a></td>
   <td>Projektopstart, Domænemodel</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -438,21 +438,21 @@
   <td></td>
   <td><a href="47/04_tor_2026-11-19/README.md">Torsdag 19-11-2026</a></td>
   <td>Git branching</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="47/05_fre_2026-11-20/README.md">Fredag 20-11-2026</a></td>
   <td>Projektarbejde 1. sprint</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td>48</td>
   <td><a href="48/01_man_2026-11-23/README.md">Mandag 23-11-2026</a></td>
   <td>Projektarbejde 1. sprint</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -473,21 +473,21 @@
   <td></td>
   <td><a href="48/04_tor_2026-11-26/README.md">Torsdag 26-11-2026</a></td>
   <td>Projektarbejde 1. sprint</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="48/05_fre_2026-11-27/README.md">Fredag 27-11-2026</a></td>
   <td>Projektarbejde 1. sprint</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td>49</td>
   <td><a href="49/01_man_2026-11-30/README.md">Mandag 30-11-2026</a></td>
   <td>Kode review OBLIGATORISK</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -508,14 +508,14 @@
   <td></td>
   <td><a href="49/04_tor_2026-12-03/README.md">Torsdag 03-12-2026</a></td>
   <td>Projektarbejde 2. sprint</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="49/05_fre_2026-12-04/README.md">Fredag 04-12-2026</a></td>
   <td>Projektarbejde 2. sprint</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Projektreviews og repetition</strong></td></tr>
@@ -523,7 +523,7 @@
   <td>50</td>
   <td><a href="50/01_man_2026-12-07/README.md">Mandag 07-12-2026</a></td>
   <td>Projektarbejde 2. sprint</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -544,14 +544,14 @@
   <td></td>
   <td><a href="50/04_tor_2026-12-10/README.md">Torsdag 10-12-2026</a></td>
   <td>Peer review, vejleder-feedback OBLIGATORISK</td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="50/05_fre_2026-12-11/README.md">Fredag 11-12-2026</a></td>
   <td>Repetition</td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Prøveeksamen</strong></td></tr>
@@ -559,7 +559,7 @@
   <td>51</td>
   <td><a href="51/01_man_2026-12-14/README.md">Mandag 14-12-2026</a></td>
   <td>Prøveeksamen</td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -580,21 +580,21 @@
   <td></td>
   <td><a href="51/04_tor_2026-12-17/README.md">Torsdag 17-12-2026</a></td>
   <td></td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="51/05_fre_2026-12-18/README.md">Fredag 18-12-2026</a></td>
   <td></td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td>52</td>
   <td><a href="52/01_man_2026-12-21/README.md">Mandag 21-12-2026</a></td>
   <td></td>
-  <td>MANY</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -615,14 +615,14 @@
   <td></td>
   <td><a href="52/04_tor_2026-12-24/README.md">Torsdag 24-12-2026</a></td>
   <td></td>
-  <td>IANB</td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="52/05_fre_2026-12-25/README.md">Fredag 25-12-2026</a></td>
   <td></td>
-  <td>MICA</td>
+  <td></td>
   <td></td>
 </tr>
 
