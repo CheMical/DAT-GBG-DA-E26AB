@@ -9,7 +9,8 @@ Se disse videoer:
 
 
 ## Læringsmål
-- primitive datatyper i Java
+- primitive datatyper
+- artimetiske operatorer
 - Strings 
 
 ## Indhold
