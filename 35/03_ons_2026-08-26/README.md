@@ -2,20 +2,21 @@
 
 ## Beskrivelse
 
-## Forberedelse
-Se disse videoer:  
-[Variables](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=10m58s) (til: 00:31:30)  
-[Aritmetiske operatorer](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=54m8s) (til: 01:02:29 )  
-
+I denne lektion arbejder vi med variable, datatyper og aritmetiske operatorer i Java. Du lærer at gemme og ændre værdier, vælge passende datatyper og udføre simple beregninger med operatorer som +, -, *, /, %, ++ og --.
 
 ## Læringsmål
 - primitive datatyper
 - artimetiske operatorer
 - Strings 
 
-## Indhold
 
-I dette afsnit skal du arbejde med **variable og datatyper i Java**.  
+## Se disse videoer før undervisningen:  
+[Variables](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=10m58s) (til: 00:31:30)  
+[Aritmetiske operatorer](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=54m8s) (til: 01:02:29 )  
+
+
+## Læs nedenstående før nudervisningen
+I dag skal du arbejde med **variable og datatyper i Java**.  
 Afprøv gerne eksemplerne i IntelliJ.
 
 En variabel kan betragtes som en lille navngivet plads i computerens hukommelse, hvor vi kan gemme en værdi.
@@ -1453,5 +1454,5 @@ Efter denne forberedelse skal du især kunne:
 * kende den grundlæggende forskel på `x++` og `++x`
 * kunne forudsige resultatet af simple Java-udtryk
 
-## Aktiviteter
+## Aktiviteter i undervisningen
 Arbejd med disse [opgaver](opgaver.md)  
