@@ -15,7 +15,8 @@ Se disse videoer:
 
 ## Indhold
 
-I dette afsnit skal du arbejde med **variable og datatyper i Java**.
+I dette afsnit skal du arbejde med **variable og datatyper i Java**.  
+Afprøv gerne eksemplerne i IntelliJ.
 
 En variabel kan betragtes som en lille navngivet plads i computerens hukommelse, hvor vi kan gemme en værdi.
 
@@ -137,26 +138,6 @@ Output:
 60
 ```
 
-### Prøv selv
-
-Hvad tror du bliver skrevet ud?
-
-```java
-int x = 10;
-int y = 4;
-
-int result = x + y;
-
-System.out.println(result);
-```
-
-Prøv derefter at ændre `+` til:
-
-```text
--
-*
-/
-```
 
 ---
 
