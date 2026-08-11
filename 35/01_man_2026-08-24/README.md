@@ -13,7 +13,7 @@
 - Vi kigger på relevante IT systemer
   - its [DAT-GBG-DA-E26A 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7838) [DAT-GBG-DA-E26B 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7840)
   - GitHub (dette site)
-  - Teams
+  - [Teams](https://teams.microsoft.com/l/team/19%3A73mRqGmfCm0wJ7F-ftFnXFiyKI0WDJy6nEregr1qQuc1%40thread.tacv2/conversations?groupId=9c32b124-9508-4281-b961-c8b138c3b645&tenantId=9aafd452-b819-40a3-a400-f94ff33b0125)
   - UMS
   - TimeEdit
 
