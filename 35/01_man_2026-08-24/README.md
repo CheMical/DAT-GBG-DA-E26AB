@@ -1,6 +1,26 @@
 # Introdag 1
 
 ## Beskrivelse
+**Velkommen til datamatikeruddannelsen på EK!** I har taget et fantastisk valg, og vi glæder os utroligt meget til at byde jer velkommen til et intenst, lærerigt og superspændende studieliv på [Erhvervsakademi København (EK)](https://ek.dk). 
+
+I træder nu ind i en verden af softwareudvikling, programmering, AI og digitale løsninger. IT-branchen kalder på jeres kommende kompetencer, og jeres rejse mod at blive skarpe udviklere starter lige her.
+
+For at give jer den bedste start, har vi samlet de vigtigste informationer og gode råd til jeres første tid.
+
+### Gør dig klar til studiestart
+Inden jeres første officielle studiedag er det vigtigt, at I får styr på det praktiske:
+* **Tjek intranet:** Find alle vigtige informationer om dit hold og din første studiedag på [mit.ek.dk/studiestart](https://ek.dk).
+* **Aktiver IT-adgang:** Sørg for at logge på EK's systemer, så du har adgang til mail, skemaer og undervisningsmateriale fra dag ét.
+* **Søg SU:** Hvis du ikke allerede har gjort det, skal du huske at søge om SU til din nye uddannelse.
+* **Medbring computer:** Din bærbare computer er dit absolut vigtigste værktøj – husk at have den fuldt opladet og klar.
+
+### Hvad kan du forvente af studiet?
+Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkte til virkeligheden:
+* **Praktisk kodning:** Du kommer til at arbejde med reelle systemer, databaser og moderne programmeringssprog.
+* **Gruppearbejde:** Softwareudvikling er holdsport. Du kommer til at løse mange opgaver og projekter tæt sammen med dine medstuderende.
+* **Tæt kontakt til erhvervslivet:** Uddannelsen veksler mellem teori og praktiske cases, og afsluttes med et tæt virksomhedssamarbejde i din praktikperiode.
+
+
 ## Semestret – praktisk info   
 - [Datamatikeruddannelsen](https://studieordninger.kea.dk/2025/36/225)
 - Semesterplanen, de obligatoriske opgaver, kravene til eksamen og hvad I ellers måtte have af spørgsmål til 1. semester.
@@ -16,6 +36,7 @@
   - [Teams](https://teams.microsoft.com/l/team/19%3A73mRqGmfCm0wJ7F-ftFnXFiyKI0WDJy6nEregr1qQuc1%40thread.tacv2/conversations?groupId=9c32b124-9508-4281-b961-c8b138c3b645&tenantId=9aafd452-b819-40a3-a400-f94ff33b0125) (hver klasse har sin egen kanal)
   - [UMS](https://ums.ek.dk/)
   - [TimeEdit](https://cloud.timeedit.net/dk_ek/web)
+  - [intranet](https://mit.ek.dk/)
 
 ## Undervisere  
 - Michael Carlsson
