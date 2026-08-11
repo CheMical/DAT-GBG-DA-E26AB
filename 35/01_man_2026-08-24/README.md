@@ -1,6 +1,5 @@
 # Introdag 1
 
-## Beskrivelse
 **Velkommen til datamatikeruddannelsen på EK!** I har taget et fantastisk valg, og vi glæder os utroligt meget til at byde jer velkommen til et intenst, lærerigt og superspændende studieliv på [Erhvervsakademi København (EK)](https://ek.dk). 
 
 I træder nu ind i en verden af softwareudvikling, programmering, AI og digitale løsninger. IT-branchen kalder på jeres kommende kompetencer, og jeres rejse mod at blive skarpe udviklere starter lige her.
