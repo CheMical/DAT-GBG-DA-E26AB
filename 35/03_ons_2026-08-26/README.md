@@ -1452,3 +1452,6 @@ Efter denne forberedelse skal du især kunne:
 * bruge `--` til at trække 1 fra en variabel
 * kende den grundlæggende forskel på `x++` og `++x`
 * kunne forudsige resultatet af simple Java-udtryk
+
+## Aktiviteter
+Arbejd med disse [opgaver](opgaver.md)  
