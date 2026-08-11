@@ -11,7 +11,7 @@
 
 ### IT systemer
 - Vi kigger på relevante IT systemer
-  - its
+  - its [DAT-GBG-DA-E26A 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7838)
   - GitHub (dette site)
   - Teams
   - UMS
