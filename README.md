@@ -30,7 +30,7 @@
 <tr>
   <td></td>
   <td><a href="35/03_ons_2026-08-26/README.md">Onsdag 26-08-2026</a></td>
-  <td>Studieliv kommer forbi. Variable og datatyper</td>
+  <td>Studieliv kommer forbi. Variable, datatyper og aritmetiske operatorer</td>
   <td>MANY/TOG</td>
   <td></td>
 </tr>
