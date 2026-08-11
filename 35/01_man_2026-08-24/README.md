@@ -1,15 +1,15 @@
 # Introdag 1
 
 ## Beskrivelse
-### Semestret – praktisk info   
+## Semestret – praktisk info   
 - [Datamatikeruddannelsen](https://studieordninger.kea.dk/2025/36/225)
 - Semesterplanen, de obligatoriske opgaver, kravene til eksamen og hvad I ellers måtte have af spørgsmål til 1. semester.
 - [Studievejledningen](https://www.ek.dk/kontakt/faa-vejledning)
 
-### Rundvisning
+## Rundvisning
 - Vi gå en tur rundt på EK og besøger relevante lokationer
 
-### IT systemer
+## IT systemer
 - Vi kigger på relevante IT systemer
   - its [DAT-GBG-DA-E26A 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7838) [DAT-GBG-DA-E26B 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7840)
   - GitHub (dette site)
@@ -17,7 +17,7 @@
   - [UMS](https://ums.ek.dk/)
   - [TimeEdit](https://cloud.timeedit.net/dk_ek/web)
 
-### Undervisere  
+## Undervisere  
 - Michael Carlsson
 - Tobias Grundtvig
 - Mads Nyborg
