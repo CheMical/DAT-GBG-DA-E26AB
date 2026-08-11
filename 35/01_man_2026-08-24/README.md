@@ -30,8 +30,8 @@ Ingen
 - Fortrolig med udvalgte lokationer på EK
 - Fortrolig med relevante IT systemer
 
-## Indhold
-### Undervisningsform
+
+## Undervisningsform
 - Vi underviser projektbaseret, dvs. at det er projekterne, der er det styrende element.
 - Undervisningen er tværfaglig og dækker Programmering og Systemudvikling.
 - Emnerne, der undervises i, vælges ud fra behovene i det aktuelle projekt. Nye emner bruges med det samme.
@@ -43,14 +43,14 @@ Ingen
     - diskussion af vigtige begreber og udfyldelse af klassenote
     - arbejde med opgaver/projekter
 
-### Studiegrupperne
+## Studiegrupperne
 - I skal sidde sammen i studiegruppen i klasselokalet: de bliver brugt i al undervisning
 - vi fører protokol over de frememødte studerende
 - når I løser opgaver, så spørg først hinanden om hjælp i gruppen (før tutor og underviser)
 - hvis I har fravær, så giv jeres studiegruppe besked
 - studiegruppen opdaterer den der fx har været syg om hvad der er foregået i undervisningen
 
-### Semesterets projekter
+## Semesterets projekter
 I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel. Bemærk at tre af disse er obligatoriske og skal afleveres for at man kan indstilles til eksamen.
 
 | Projekt | Bemærkninger                                                                                                                           | Obligatorisk|
