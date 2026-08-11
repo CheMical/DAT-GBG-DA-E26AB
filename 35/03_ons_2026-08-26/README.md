@@ -809,21 +809,664 @@ System.out.println(x / y);
 Hvad bliver skrevet ud?
 
 ---
+## Aritmetiske operatorer
+
+Når vi har tal gemt i variable, kan vi udføre beregninger på dem ved hjælp af **aritmetiske operatorer**.
+
+De mest almindelige er:
+
+| Operator | Betydning         | Eksempel |
+| -------- | ----------------- | -------- |
+| `+`      | Addition          | `a + b`  |
+| `-`      | Subtraktion       | `a - b`  |
+| `*`      | Multiplikation    | `a * b`  |
+| `/`      | Division          | `a / b`  |
+| `%`      | Rest ved division | `a % b`  |
+
+Eksempel:
+
+```java
+int a = 10;
+int b = 3;
+
+System.out.println(a + b);
+System.out.println(a - b);
+System.out.println(a * b);
+System.out.println(a / b);
+System.out.println(a % b);
+```
+
+Output:
+
+```text
+13
+7
+30
+3
+1
+```
+
+Bemærk især:
+
+```java
+10 / 3
+```
+
+giver `3`, fordi både `10` og `3` er heltal (`int`).
+
+Og:
+
+```java
+10 % 3
+```
+
+giver `1`, fordi der er **1 til rest**, når 10 divideres med 3.
+
+---
+
+## Modulo-operatoren `%`
+
+Operatoren `%` kaldes ofte **modulo** og finder resten efter en division.
+
+Eksempel:
+
+```java
+int rest = 17 % 5;
+
+System.out.println(rest);
+```
+
+Output:
+
+```text
+2
+```
+
+Modulo kan eksempelvis bruges til at undersøge, om et tal er lige:
+
+```java
+int number = 8;
+
+System.out.println(number % 2);
+```
+
+Output:
+
+```text
+0
+```
+
+Et lige tal giver altid resten `0`, når det divideres med 2.
+
+---
+
+## Operatorprioritet
+
+Java udfører ikke nødvendigvis beregninger fra venstre mod højre.
+
+Ligesom i matematik har operatorerne forskellig **prioritet**.
+
+Se dette eksempel:
+
+```java
+int result = 2 + 3 * 4;
+
+System.out.println(result);
+```
+
+Resultatet bliver:
+
+```text
+14
+```
+
+og ikke `20`.
+
+Det skyldes, at multiplikation udføres før addition:
+
+```text
+2 + 3 * 4
+    -----
+      12
+
+2 + 12 = 14
+```
+
+En forenklet prioritering er:
+
+1. Parenteser `()`
+2. Multiplikation `*`, division `/` og modulo `%`
+3. Addition `+` og subtraktion `-`
+
+---
+
+## Brug parenteser
+
+Parenteser kan bruges til at ændre rækkefølgen.
+
+```java
+int result = (2 + 3) * 4;
+
+System.out.println(result);
+```
+
+Nu bliver resultatet:
+
+```text
+20
+```
+
+Fordi parentesen beregnes først:
+
+```text
+(2 + 3) * 4
+    5     * 4
+
+= 20
+```
+
+Selv når parenteser ikke er nødvendige, kan de nogle gange gøre et udtryk lettere at forstå.
+
+Sammenlign:
+
+```java
+double total = price * number + delivery;
+```
+
+med:
+
+```java
+double total = (price * number) + delivery;
+```
+
+De giver samme resultat, men den sidste kan være lettere at læse.
+
+---
+
+## Tildeling kombineret med beregning
+
+Forestil dig, at vi har:
+
+```java
+int score = 10;
+```
+
+og vil lægge 5 til værdien.
+
+Vi kan skrive:
+
+```java
+score = score + 5;
+```
+
+Nu indeholder `score` værdien:
+
+```text
+15
+```
+
+Java har en kortere måde at skrive det på:
+
+```java
+score += 5;
+```
+
+De to udtryk betyder altså det samme:
+
+```java
+score = score + 5;
+```
+
+```java
+score += 5;
+```
+
+Der findes tilsvarende operatorer for de andre regnearter:
+
+| Lang version | Kort version |
+| ------------ | ------------ |
+| `x = x + 5`  | `x += 5`     |
+| `x = x - 5`  | `x -= 5`     |
+| `x = x * 5`  | `x *= 5`     |
+| `x = x / 5`  | `x /= 5`     |
+| `x = x % 5`  | `x %= 5`     |
+
+Eksempel:
+
+```java
+int points = 10;
+
+points += 5;
+points *= 2;
+
+System.out.println(points);
+```
+
+Output:
+
+```text
+30
+```
+
+---
+
+## `++` – læg 1 til en variabel
+
+Når vi programmerer, har vi meget ofte brug for at lægge præcis `1` til en variabel.
+
+Vi kunne skrive:
+
+```java
+int count = 5;
+
+count = count + 1;
+```
+
+eller den kortere version:
+
+```java
+count += 1;
+```
+
+Men Java har en særlig operator til dette:
+
+```java
+count++;
+```
+
+Alle tre udtryk betyder i dette tilfælde det samme:
+
+```java
+count = count + 1;
+
+count += 1;
+
+count++;
+```
+
+Eksempel:
+
+```java
+int count = 5;
+
+count++;
+
+System.out.println(count);
+```
+
+Output:
+
+```text
+6
+```
+
+`++` kaldes **increment-operatoren**.
+
+---
+
+## `--` – træk 1 fra en variabel
+
+På samme måde kan vi trække `1` fra en variabel med `--`.
+
+```java
+int lives = 3;
+
+lives--;
+
+System.out.println(lives);
+```
+
+Output:
+
+```text
+2
+```
+
+Disse tre udtryk betyder i dette tilfælde det samme:
+
+```java
+lives = lives - 1;
+
+lives -= 1;
+
+lives--;
+```
+
+`--` kaldes **decrement-operatoren**.
+
+---
+
+## `count++` eller `++count`?
+
+Du kan møde `++` både **efter** og **før** variablen:
+
+```java
+count++;
+```
+
+og:
+
+```java
+++count;
+```
+
+Hvis de står alene på en linje, er resultatet det samme.
+
+```java
+int count = 5;
+
+count++;
+
+System.out.println(count);
+```
+
+giver:
+
+```text
+6
+```
+
+og:
+
+```java
+int count = 5;
+
+++count;
+
+System.out.println(count);
+```
+
+giver også:
+
+```text
+6
+```
+
+Der er dog en forskel, hvis `++` bruges som en del af et større udtryk.
+
+---
+
+### Post-increment: `count++`
+
+Se dette eksempel:
+
+```java
+int count = 5;
+
+int result = count++;
+
+System.out.println(result);
+System.out.println(count);
+```
+
+Output:
+
+```text
+5
+6
+```
+
+Ved:
+
+```java
+count++
+```
+
+bruges den **gamle værdi først**, og derefter lægges 1 til variablen.
+
+Vi kan tænke på det som:
+
+```text
+Brug count
+derefter:
+count = count + 1
+```
+
+---
+
+### Pre-increment: `++count`
+
+Se nu dette eksempel:
+
+```java
+int count = 5;
+
+int result = ++count;
+
+System.out.println(result);
+System.out.println(count);
+```
+
+Output:
+
+```text
+6
+6
+```
+
+Ved:
+
+```java
+++count
+```
+
+lægges `1` til variablen **før værdien bruges**.
+
+Vi kan tænke på det som:
+
+```text
+count = count + 1
+derefter:
+Brug count
+```
+
+---
+
+## Sammenligning af `count++` og `++count`
+
+Hvis vi starter med:
+
+```java
+int count = 5;
+```
+
+så giver:
+
+```java
+int result = count++;
+```
+
+følgende værdier:
+
+```text
+result = 5
+count  = 6
+```
+
+Mens:
+
+```java
+int result = ++count;
+```
+
+giver:
+
+```text
+result = 6
+count  = 6
+```
+
+Det samme gælder for `--`:
+
+```java
+count--;
+```
+
+og:
+
+```java
+--count;
+```
+
+---
+
+> **Tommelfingerregel:**
+> Når `++` eller `--` står alene på en linje, behøver du normalt ikke bekymre dig om forskellen mellem prefix og postfix.
+>
+> På dette tidspunkt i kurset er det ofte lettest at skrive:
+>
+> ```java
+> count++;
+> ```
+>
+> når du blot vil lægge 1 til en variabel.
+
+---
+
+## Pas på med komplicerede udtryk
+
+Det er muligt at skrive kode som:
+
+```java
+int x = 5;
+int y = x++ + ++x;
+```
+
+Men sådan kode er svær at læse og let at misforstå.
+
+Skriv hellere beregninger i flere tydelige trin.
+
+Kode skal ikke kun kunne forstås af computeren – den skal også kunne forstås af mennesker.
+
+---
+
+## Kan du forudsige resultatet?
+
+Prøv at finde svaret **før du kører koden**.
+
+### Eksempel 1
+
+```java
+int x = 10;
+
+x++;
+
+System.out.println(x);
+```
+
+Hvad bliver skrevet ud?
+
+---
+
+### Eksempel 2
+
+```java
+int x = 10;
+
+x--;
+x--;
+
+System.out.println(x);
+```
+
+Hvad bliver skrevet ud?
+
+---
+
+### Eksempel 3
+
+```java
+int x = 5;
+
+int y = x++;
+
+System.out.println(x);
+System.out.println(y);
+```
+
+Hvad bliver skrevet ud?
+
+---
+
+### Eksempel 4
+
+```java
+int x = 5;
+
+int y = ++x;
+
+System.out.println(x);
+System.out.println(y);
+```
+
+Hvad bliver skrevet ud?
+
+---
+
+### Eksempel 5
+
+```java
+int result = 10 + 2 * 3;
+
+System.out.println(result);
+```
+
+Hvad bliver skrevet ud?
+
+---
+
+### Eksempel 6
+
+```java
+int result = (10 + 2) * 3;
+
+System.out.println(result);
+```
+
+Hvad bliver skrevet ud?
+
+---
+
+### Eksempel 7
+
+```java
+int number = 17;
+
+System.out.println(number % 5);
+```
+
+Hvad bliver skrevet ud?
+
+---
 
 ## Det vigtigste at tage med
 
-Efter denne forberedelse skal du især være fortrolig med:
+Efter denne forberedelse skal du især kunne:
 
-* hvad en **variabel** er
-* hvordan en variabel **deklareres**
-* hvordan en variabel får **tildelt en værdi**
-* forskellen på `int`, `double`, `boolean`, `char` og `String`
-* at Java kontrollerer, om værdien passer til datatypen
-* at værdien i en variabel kan ændres
-* at variable kan bruges i beregninger
-* at gode variabelnavne gør programmer lettere at forstå
+* forklare, hvad en **variabel** er
+* deklarere en variabel og tildele den en værdi
+* kende forskel på de mest almindelige datatyper:
 
-Du behøver ikke kunne huske alle detaljer udenad. Det vigtigste er, at du kan **læse de små kodeeksempler og eksperimentere med dem**.
+  * `int`
+  * `long`
+  * `double`
+  * `float`
+  * `boolean`
+  * `char`
+  * `String`
+* vælge en passende datatype til en værdi
+* bruge de aritmetiske operatorer:
 
-
-## Aktiviteter
+  * `+`
+  * `-`
+  * `*`
+  * `/`
+  * `%`
+* forstå **heltalsdivision**
+* forstå **operatorprioritet**
+* bruge parenteser `()` til at styre rækkefølgen i beregninger
+* bruge sammensatte operatorer som `+=` og `-=`
+* bruge `++` til at lægge 1 til en variabel
+* bruge `--` til at trække 1 fra en variabel
+* kende den grundlæggende forskel på `x++` og `++x`
+* kunne forudsige resultatet af simple Java-udtryk
