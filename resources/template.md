@@ -2,10 +2,10 @@
 
 ## Beskrivelse
 
-## Forberedelse
-
 ## Læringsmål
 
-## Indhold
+## Se disse videoer før undervisningen:  
+
+## Læs nedenstående før undervisningen
 
 ## Aktiviteter
