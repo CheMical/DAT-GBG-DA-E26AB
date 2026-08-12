@@ -16,9 +16,62 @@ I denne lektion arbejder vi med variable, datatyper og aritmetiske operatorer i 
 
 
 ## Læs nedenstående før undervisningen
-I dag skal du arbejde med **variable og datatyper i Java**.  
+I dag skal vi arbejde med **variable og datatyper i Java**.  
 Afprøv gerne eksemplerne i IntelliJ.
+Start med at oprette et nyt Java-projekt i IntelliJ.
 
+Hvis du allerede har et projekt til undervisningen, kan du også bruge dette.
+
+Opret en ny Java-klasse med navnet:
+
+```text
+Main
+```
+
+Din klasse skal se sådan ud:
+
+```java
+public class Main {
+
+}
+```
+
+Inde i klassen skal du oprette en `main`-metode:
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+    }
+}
+```
+
+Det er inde i `main`-metoden, du skal skrive og afprøve dine løsninger.
+
+Eksempel:
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        int age = 25;
+
+        System.out.println(age);
+    }
+}
+```
+
+Når du kører programmet, bliver resultatet vist i konsollen nederst i IntelliJ.
+
+
+
+
+
+---
+
+### Variable
 En variabel kan betragtes som en lille navngivet plads i computerens hukommelse, hvor vi kan gemme en værdi.
 
 For eksempel:
