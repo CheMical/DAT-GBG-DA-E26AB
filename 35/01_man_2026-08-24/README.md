@@ -38,7 +38,7 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
 ## IT systemer
 - Vi kigger på relevante IT systemer
   - its [DAT-GBG-DA-E26A 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7838) [DAT-GBG-DA-E26B 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7840)
-  - GitHub (dette site)
+  - [GitHub](https://github.com/EK-DAT-GBG-1SEM-E26AB/DAT-GBG-DA-E26AB/blob/main/README.md)
   - [Teams](https://teams.microsoft.com/l/team/19%3A73mRqGmfCm0wJ7F-ftFnXFiyKI0WDJy6nEregr1qQuc1%40thread.tacv2/conversations?groupId=9c32b124-9508-4281-b961-c8b138c3b645&tenantId=9aafd452-b819-40a3-a400-f94ff33b0125) (hver klasse har sin egen kanal)
   - [UMS](https://ums.ek.dk/)
   - [TimeEdit](https://cloud.timeedit.net/dk_ek/web)
