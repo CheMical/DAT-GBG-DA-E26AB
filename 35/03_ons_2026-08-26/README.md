@@ -15,7 +15,7 @@ I denne lektion arbejder vi med variable, datatyper og aritmetiske operatorer i 
 [Aritmetiske operatorer](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=54m8s) (til: 01:02:29 )  
 
 
-## Læs nedenstående før nudervisningen
+## Læs nedenstående før undervisningen
 I dag skal du arbejde med **variable og datatyper i Java**.  
 Afprøv gerne eksemplerne i IntelliJ.
 
