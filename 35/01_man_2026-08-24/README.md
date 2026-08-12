@@ -16,7 +16,7 @@ Inden jeres første officielle studiedag er det vigtigt, at I får styr på det 
 ### Hvad kan du forvente af studiet?
 Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkte til virkeligheden:
 * **Praktisk kodning:** Du kommer til at arbejde med reelle systemer, databaser og moderne programmeringssprog.
-* **Gruppearbejde:** Softwareudvikling er holdsport. Du kommer til at løse mange opgaver og projekter tæt sammen med dine medstuderende.
+* **Gruppearbejde:** Softwareudvikling er holdsport. Du kommer til at løse mange opgaver og projekter tæt sammen med dine medstuderende. Det er et krav i studieordningen, at man **skal** arbejde i grupper
 * **Tæt kontakt til erhvervslivet:** Uddannelsen veksler mellem teori og praktiske cases, og afsluttes med et tæt virksomhedssamarbejde i din praktikperiode.
 
 ### Hvad vi forventer af dig
