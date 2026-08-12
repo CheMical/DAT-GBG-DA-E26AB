@@ -37,6 +37,24 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
   - [TimeEdit](https://cloud.timeedit.net/dk_ek/web)
   - [Intranet](https://mit.ek.dk/)
 
+
+Du finder IT-vejledninger og support hos EK ved at besøge den officielle serviceportal. Her kan du oprette supportsager, nulstille kodeord og finde guides til skolens systemer.
+
+### Genveje og Links
+* **IT Service Desk (Info):** [Mit EK IT Service Desk](https://ek.dk)
+* **EK Serviceportal (Selvbetjening):** [Mit EK IT](https://ek.dk)
+
+### Kontakt IT Service Desk
+* **E-mail:** servicedesk@ek.dk
+* **Telefon:** +45 36 15 45 20
+* **Fysisk fremmøde:** Henvend dig i Frontdesk på din campus
+
+### Åbningstider
+* **Mandag – torsdag:** Kl. 08.00 – 15.30
+* **Fredag:** Kl. 08.00 – 15.00
+
+---
+
 ## Undervisere  
 - Michael Carlsson
 - Tobias Grundtvig
