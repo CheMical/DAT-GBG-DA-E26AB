@@ -13,65 +13,6 @@ Forsøg så vidt muligt selv at løse opgaverne, før du sammenligner med andre.
 
 ---
 
-# Kom i gang i IntelliJ
-
-Du skal bruge IntelliJ til at afprøve dine løsninger.
-
-## 1. Opret et Java-projekt
-
-Opret et nyt Java-projekt i IntelliJ.
-
-Hvis du allerede har et projekt til undervisningen, kan du også bruge dette.
-
-## 2. Opret klassen `Main`
-
-Opret en ny Java-klasse med navnet:
-
-```text
-Main
-```
-
-Din klasse skal se sådan ud:
-
-```java
-public class Main {
-
-}
-```
-
-## 3. Opret en `main`-metode
-
-Inde i klassen skal du oprette en `main`-metode:
-
-```java
-public class Main {
-
-    public static void main(String[] args) {
-
-    }
-}
-```
-
-Det er inde i `main`-metoden, du skal skrive og afprøve dine løsninger.
-
-Eksempel:
-
-```java
-public class Main {
-
-    public static void main(String[] args) {
-
-        int age = 25;
-
-        System.out.println(age);
-    }
-}
-```
-
-Når du kører programmet, bliver resultatet vist i konsollen nederst i IntelliJ.
-
----
-
 # Sådan arbejder du med opgaverne
 
 Du må gerne løse alle opgaver i den samme `main`-metode.
@@ -92,8 +33,6 @@ Du kan også udkommentere kode, du ikke arbejder med lige nu:
 // int age = 25;
 // System.out.println(age);
 ```
-
----
 
 # Del 1 – Variable
 
