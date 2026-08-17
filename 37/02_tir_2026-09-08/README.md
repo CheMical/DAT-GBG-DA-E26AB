@@ -735,5 +735,4 @@ Det er en af de vigtigste idéer i objektorienteret programmering:
 > Data, der beskriver den samme ting, kan samles i et objekt.
 
 ## Aktiviteter
-
-I undervisningen arbejder vi videre med egne klasser og opretter flere objekter med forskellige værdier. Vi kombinerer objekter med de variable, betingelser og loops, som vi allerede har arbejdet med.
+Arbejd med disse [opgaver](opgaver.md)  
