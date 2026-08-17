@@ -1,0 +1,220 @@
+# Projekt: Adventure
+
+> Et OOP-projekt i fem afsnit
+
+## Let's code like it is 1977 …
+
+Vi har kun en tekst-terminal. Uden farver, grafik, mus og musik forekommer det nærmest umuligt
+at kode noget, der bare er minimalt underholdende.
+
+Men i midten af 1970'erne lykkedes det alligevel Will Crowther at skabe et spil, der både
+underholdt, inspirerede, og introducerede en masse mennesker til computerens fascinerende verden.
+
+Spillet hed **Colossal Cave Adventure** og udkom fra 1977 og de næste mange år på stort set
+samtlige platforme. Det var opbygget som en interaktiv historie – meget lig det man ville opleve
+som deltager i en omgang Dungeons & Dragons, men med computeren som game master.
+
+> Det oprindelige Adventure er et **stort** kort. Hvis du vil se hvor stort, så kig på
+> [Mari Michaelis' kort over Colossal Cave Adventure](https://www.spitenet.com/cave/) – vi
+> starter noget mere begrænset.
+
+---
+
+## De fem faser
+
+Vi udvikler vores egen udgave i fem faser. Hver fase bygger oven på den forrige, i det samme
+GitHub-repository.
+
+| Fase | Emne | Beskrivelse | Det lærer du |
+|---|---|---|---|
+| **1** | [Rooms](del-1-rooms.md) | Navigation mellem virtuelle rum | Objekt-referencer |
+| **1½** | [Refactor](del-1-refactor.md) | Oprydning før del 2 | SOLID, GRASP, klassediagram |
+| **2** | [Items](del-2-items.md) | Ting man kan samle op og efterlade | `ArrayList`, søgning i lister |
+| **3** | [Food](del-3-food.md) | Mad man kan spise, og health | Arv |
+| **4** | [Weapons](del-4-weapons.md) | Våben man kan equippe og angribe med | Polymorfi, abstrakte klasser |
+| **5** | [Enemies](del-5-enemies.md) | Fjender der slår igen | Samspil mellem objekter, dokumentation |
+
+```mermaid
+flowchart LR
+    R["1 · Rooms"] --> I["2 · Items"] --> F["3 · Food"] --> W["4 · Weapons"] --> E["5 · Enemies"]
+```
+
+### Fase 1 – Rooms
+
+Vi bygger det allermest grundlæggende i spillet – navigationen, hvor spilleren kan bevæge sig
+rundt mellem virtuelle "rum". Hver gang man går `north`, `east`, `south` eller `west`, bevæger
+man sig ind i et nyt rum.
+
+En stor del af spillet er dets *map* over disse rum og deres forbindelser, og det er oplagt at se
+hvert rum som et **objekt**, og forbindelserne som **objektreferencer**.
+
+### Fase 2 – Items
+
+Der skal ligge nogle ting rundt omkring i spillet, som man kan samle op og bære med sig – og
+efterlade i andre rum. Det er endnu mere oplagt at se disse ting som objekter, og have lister,
+hvor der dynamisk kan tilføjes og fjernes objekter.
+
+### Fase 3 – Food
+
+Nogle af de ting, der ligger rundt omkring i rummene, skal have særlige egenskaber – der skal
+være forskellige slags mad, som spilleren kan spise og få energi fra. Måske også mad, der kan
+være giftig at spise!
+
+Det kræver, at vi kan oprette Item-objekter med ekstra egenskaber, så vi skal lære om **arv**,
+før vi kan komme dertil.
+
+### Fase 4 – Weapons
+
+Udover mad der kan spises, skal der også være forskellige slags våben, som spilleren kan samle
+op. Nogle våben kan virke på afstand, nogle har begrænset antal "skud", andre virker kun tæt på,
+men ubegrænset.
+
+Det kræver, at vi har en **abstrakt** type "våben", som vi kan oprette specifikke undertyper af.
+
+### Fase 5 – Enemies
+
+Ting er jo ikke bare ting, og spilleren er ikke alene i verden. I femte fase tilføjer vi
+forskellige typer fjender til spillet. Heldigvis har vi våben og health, så spilleren har en
+chance for at overleve. Men det bestemmer kampsystemet!
+
+---
+
+## Kortet
+
+Spillet skal opbygges af **9 rum**, forbundet som vist her:
+
+![Håndtegnet kort over de ni rum med døre og kompasrose](images/kort-9-rum.jpg)
+
+Spilleren starter altid i **rum 1**, øverst til venstre.
+
+Rummene ligger i et 3×3-gitter:
+
+```text
+     1 --- 2 --- 3
+     |           |
+     4     5     6
+     |     |     |
+     7 --- 8 --- 9
+```
+
+Alle ni døre, hver virker begge veje:
+
+| Fra | Dør | Til |
+|---|---|---|
+| Rum 1 | east / west | Rum 2 |
+| Rum 2 | east / west | Rum 3 |
+| Rum 1 | south / north | Rum 4 |
+| Rum 3 | south / north | Rum 6 |
+| Rum 4 | south / north | Rum 7 |
+| Rum 5 | south / north | Rum 8 |
+| Rum 6 | south / north | Rum 9 |
+| Rum 7 | east / west | Rum 8 |
+| Rum 8 | east / west | Rum 9 |
+
+Det samme som graf – hver kant er en dør:
+
+```mermaid
+graph LR
+    R1["Rum 1 · START"]
+    R5["Rum 5 · ?"]
+    R1 --- R2["Rum 2"]
+    R2 --- R3["Rum 3"]
+    R1 --- R4["Rum 4"]
+    R3 --- R6["Rum 6"]
+    R4 --- R7["Rum 7"]
+    R6 --- R9["Rum 9"]
+    R7 --- R8["Rum 8"]
+    R8 --- R9
+    R8 --- R5
+```
+
+Bemærk at det er en "slags" labyrint, hvor det midterste rum (**rum 5**) er lidt sværere at komme
+til, og kun har **én indgang** – så måske er det rum noget særligt!
+
+Rummene behøver ikke være faktiske "rum" i en bygning, men kan være grotter i en mine, områder i
+en skov, en borg, en rumstation, en fremmed planet – det er helt op til jer. **Gør det spændende
+for spilleren at udforske jeres rum!**
+
+Senere må I gerne udvide jeres kort med flere rum og mere spændende forbindelser.
+
+---
+
+## Praktiske oplysninger
+
+### Obligatorisk opgave
+
+Adventure-projektet er en **bunden forudsætning** – alle fem faser – så det **skal** afleveres.
+
+Hvis det ikke afleveres, bliver man ikke indstillet til eksamen. Som med alt andet
+eksamensrelateret har man selvfølgelig flere forsøg, skulle man for eksempel blive syg.
+
+### Gruppeopgave
+
+Opgaven laves i **små grupper på 2-3 personer**, svarende til en halv studiegruppe.
+
+Der er ikke mange muligheder for at dele arbejdet op imellem sig, så alle i gruppen skal arbejde
+tæt sammen om hele løsningen.
+
+> **Undtagelse:** [Del 5](del-5-enemies.md) – den endelige aflevering – er en **individuel**
+> aflevering. I må stadig gerne arbejde i jeres grupper, men hvert enkelt medlem skal aflevere.
+
+### GitHub
+
+Opgaven afleveres på GitHub.
+
+* Hver fase er blot **mere kode** (flere commits) på det **samme repository**.
+* I alle faser er det meget væsentligt, at flere personer kan pushe til det samme repository.
+* Vi snakker først om **branches** EFTER det her projekt er overstået.
+
+### Brugerfladen er på engelsk
+
+Både kommandoer og beskrivelser af rum skal være på engelsk.
+
+---
+
+## Kommandoer – samlet oversigt
+
+Kommandoerne kommer løbende gennem de fem faser:
+
+| Kommando | Fra del | Betydning |
+|---|---|---|
+| `go north` / `go east` / `go south` / `go west` | 1 | Bevæg dig i den retning |
+| `look` | 1 | Gentag beskrivelsen af det rum, du er i |
+| `help` | 1 | Instruktion og oversigt over mulige kommandoer |
+| `exit` | 1 | Afbryd spillet og afslut programmet |
+| `take <ting>` | 2 | Tag en ting fra rummet |
+| `drop <ting>` | 2 | Efterlad en ting i rummet |
+| `inventory` | 2 | Vis hvad du bærer rundt på |
+| `eat <mad>` | 3 | Spis noget mad, og få health |
+| `health` | 3 | Vis din aktuelle health |
+| `equip <våben>` | 4 | Gør et våben fra dit inventory til det aktuelle |
+| `attack [fjende]` | 4/5 | Angrib med det equippede våben |
+
+Du må gerne forbedre brugerfladen, så man også kan nøjes med at skrive `north`, `east`, `south`,
+`west`, eller måske ligefrem blot `n`, `e`, `s`, `w` – evt. kombineret med `go`. **Men den fulde
+version skal altid være mulig.**
+
+---
+
+## Afleveringer og deadlines
+
+| Del | Undervisning | Deadline |
+|---|---|---|
+| Intro + [del 1](del-1-rooms.md) | ons 23-09-2026 | – |
+| [Del 1 refactor](del-1-refactor.md) | fre 25-09-2026 | **fre 25-09-2026 kl. 23:59** |
+| [Del 2](del-2-items.md) | man 28-09 + tir 29-09 | **tir 29-09-2026 kl. 23:59** |
+| [Del 3](del-3-food.md) | ons 30-09-2026 | **tor 01-10-2026 kl. 23:59** |
+| [Del 4](del-4-weapons.md) | man 05-10-2026 | **man 05-10-2026 kl. 23:59** |
+| [Del 5](del-5-enemies.md) | tir 06-10-2026 | **tor 08-10-2026 kl. 23:59** |
+| Præsentation af færdige projekter | fre 09-10-2026 | – |
+
+Afleveringen sker i itslearning. For del 1-4 afleverer I **linket til jeres GitHub-repository** –
+til repositoriet som et hele, ikke til den enkelte fil eller mappe. Husk at gøre linket klikbart.
+
+For del 5 afleveres desuden en **pdf med dokumentation** – se [del 5](del-5-enemies.md).
+
+---
+
+## Er I klar til et Adventure?
+
+Gå blot i gang med [del 1 – Rooms](del-1-rooms.md).
