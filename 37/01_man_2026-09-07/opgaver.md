@@ -309,7 +309,7 @@ System.out.println(Math.abs(0));    // 0
 
 I vores tilfælde kan vi skrive:  
 ```java
-Math.abs(0)
+Math.abs(number1 - number2)
 ```
 
 
