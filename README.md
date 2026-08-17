@@ -79,7 +79,7 @@
 <tr>
   <td></td>
   <td><a href="36/05_fre_2026-09-04/README.md">Fredag 04-09-2026</a></td>
-  <td>Repetition og opsamling på forløb</td>
+  <td>Loops og Strings, Repetition og opsamling på forløb</td>
   <td>TOG</td>
   <td></td>
 </tr>
