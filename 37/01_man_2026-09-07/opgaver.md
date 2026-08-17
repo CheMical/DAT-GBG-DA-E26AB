@@ -293,7 +293,25 @@ Brug derefter:
 Math.abs(...)
 ```
 
-så resultatet altid bliver positivt.
+så resultatet altid bliver positivt. 
+
+Metoden `Math.abs()` returnerer den **absolutte værdi** af et tal.
+
+Det betyder, at resultatet altid er positivt eller `0`.
+
+Eksempler:
+
+```java
+System.out.println(Math.abs(10));   // 10
+System.out.println(Math.abs(-10));  // 10
+System.out.println(Math.abs(0));    // 0
+```
+
+I vores tilfælde kan vi skrive:  
+```java
+Math.abs(0)
+```
+
 
 Prøv både:
 
