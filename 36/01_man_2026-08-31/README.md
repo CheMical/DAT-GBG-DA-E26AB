@@ -3,7 +3,8 @@
 ## Beskrivelse
 
 ## Læringsmål
-- at kunne bruge whhile loops 
+- at kunne bruge whhile loops
+- at kende forskel på while og do-while 
 
 ## Se disse videoer før undervisningen:  
 [While loops](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h21m23s) (til: 03:33:47)  
