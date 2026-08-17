@@ -257,5 +257,4 @@ String
 Forskellen er, at `Person` er en type, vi selv har lavet.
 
 ## Aktiviteter
-
-I undervisningen arbejder vi videre med klasser og objekter og laver en række små programmer, hvor vi både anvender eksisterende Java-klasser og vores egne klasser.
+Arbejd med disse [opgaver](opgaver.md)  
