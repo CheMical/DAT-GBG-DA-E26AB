@@ -19,10 +19,7 @@ Single Responsibility Principle.
 
 Fordi **teknisk gæld** vokser eksponentielt:
 
-```mermaid
-flowchart LR
-    A["Ryd op nu<br/>$1<br/>Change is easy"] --> B["Ryd op senere<br/>$10<br/>Change is hard"] --> C["Ryd aldrig op<br/>$100<br/>Change? Forget it!"]
-```
+![Graf over teknisk gæld: urefaktoreret kode stiger eksponentielt, refaktoreret kode stiger næsten lineært](images/teknisk-gaeld.png)
 
 Refaktoreret kode holder omkostningen ved en ændring nogenlunde konstant gennem hele projektet.
 Urefaktoreret kode gør den til sidst uoverkommelig. Vi har fire faser tilbage i dette projekt, så
@@ -117,7 +114,11 @@ For at få overblik over jeres nye programdesign skal I lave et **komplet klasse
 
 > Det skal **tegnes** på computer – tegnes, **IKKE** autogenereret fra IntelliJ.
 
-Et muligt resultat kunne se sådan ud:
+Sådan så resultatet ud, da forløbet sidst blev kørt:
+
+![Klassediagram med UserInterface, Adventure, Player, Map og Room](images/klassediagram-refactored.png)
+
+Og som mermaid, hvis I vil have en udgave, I kan rette i:
 
 ```mermaid
 classDiagram
@@ -170,33 +171,13 @@ Det opnås bl.a. med **lav kobling** (low coupling) og **høj samhørighed** (hi
 En klasse skal være så uafhængig som muligt, og kun associeres med de få klasser, der er
 nødvendige for, at den kan opfylde sit ansvarsområde.
 
-**Høj kobling** – svær at forstå og vedligeholde: alle klasser kender alle:
+**Høj kobling** – svær at forstå og vedligeholde: alle klasser kender alle.
 
-```mermaid
-flowchart TB
-    A --- B --- C
-    A --- D & E & F
-    B --- E & G & I
-    C --- F & G
-    D --- E & G & H
-    E --- F & H & I
-    G --- H --- I
-```
+![Ni klasser forbundet på kryds og tværs af mange linjer](images/hoej-kobling.png)
 
-**Lav kobling** – hver klasse kender kun dem, den har brug for:
+**Lav kobling** – hver klasse kender kun dem, den har brug for.
 
-```mermaid
-flowchart TB
-    A --- B --- C
-    D --- E --- F
-    G --- H --- I
-    A --- D
-    B --- E
-    C --- F
-    D --- G
-    E --- H
-    F --- I
-```
+![De samme ni klasser, hvor hver kun er forbundet til sine naboer](images/lav-kobling.png)
 
 ### Diskutér i gruppen
 

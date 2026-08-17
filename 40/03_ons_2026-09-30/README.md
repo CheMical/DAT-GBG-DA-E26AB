@@ -375,7 +375,9 @@ Alle klasser i Java arver i øvrigt automatisk fra `Object` – også dem, du se
 Klon [DAT24_InheritanceExercise](https://github.com/ETALATE/DAT24_InheritanceExercise).
 
 Projektet består af klasserne `Konto`, `OpsparingsKonto`, `NemKonto` og `Main`. Udfyld klasserne
-med kode ud fra klassediagrammet i projektet.
+med kode ud fra dette klassediagram:
+
+![Klassediagram: Konto med subklasserne OpsparingsKonto og NemKonto](images/klassediagram-konto.png)
 
 Klassediagrammet viser en *is-a*-relation, hvor `Konto` er superklasse, og både `OpsparingsKonto` og
 `NemKonto` er subklasser.

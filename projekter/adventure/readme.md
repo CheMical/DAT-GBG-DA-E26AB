@@ -14,6 +14,20 @@ Spillet hed **Colossal Cave Adventure** og udkom fra 1977 og de næste mange år
 samtlige platforme. Det var opbygget som en interaktiv historie – meget lig det man ville opleve
 som deltager i en omgang Dungeons & Dragons, men med computeren som game master.
 
+![Colossal Cave Adventure kørende på en grøn terminalskærm](images/colossal-cave-terminal.jpg)
+
+Læg mærke til, hvad der står på skærmen:
+
+```text
+There are some keys on the ground here.
+There is a shiny brass lamp nearby.
+There is food here.
+There is a bottle of water here.
+```
+
+Nøgler, en lampe, mad, vand. Det er præcis de ting, I selv skal bygge – i
+[del 2](del-2-items.md) og [del 3](del-3-food.md).
+
 > Det oprindelige Adventure er et **stort** kort. Hvis du vil se hvor stort, så kig på
 > [Mari Michaelis' kort over Colossal Cave Adventure](https://web.archive.org/web/2019/http://www.spitenet.com/cave/)
 > (via Internet Archive – originalsiden findes ikke længere). Vi starter noget mere begrænset.
@@ -54,11 +68,18 @@ hvert rum som et **objekt**, og forbindelserne som **objektreferencer**.
 
 ### Fase 2 – Items
 
+<img src="images/item-lanterne.png" alt="En rød lanterne" width="150" align="right">
+
 Der skal ligge nogle ting rundt omkring i spillet, som man kan samle op og bære med sig – og
 efterlade i andre rum. Det er endnu mere oplagt at se disse ting som objekter, og have lister,
 hvor der dynamisk kan tilføjes og fjernes objekter.
 
+*a shiny brass lamp*, *some gold coins*, *a rusty key* – det er helt op til jer, hvad der ligger
+og flyder i jeres verden.
+
 ### Fase 3 – Food
+
+<img src="images/mad-aeble.jpg" alt="Et halvspist æble" width="120" align="right">
 
 Nogle af de ting, der ligger rundt omkring i rummene, skal have særlige egenskaber – der skal
 være forskellige slags mad, som spilleren kan spise og få energi fra. Måske også mad, der kan
@@ -69,6 +90,8 @@ før vi kan komme dertil.
 
 ### Fase 4 – Weapons
 
+<img src="images/vaaben-pistol.jpg" alt="En gammel forladepistol" width="190" align="right">
+
 Udover mad der kan spises, skal der også være forskellige slags våben, som spilleren kan samle
 op. Nogle våben kan virke på afstand, nogle har begrænset antal "skud", andre virker kun tæt på,
 men ubegrænset.
@@ -76,6 +99,8 @@ men ubegrænset.
 Det kræver, at vi har en **abstrakt** type "våben", som vi kan oprette specifikke undertyper af.
 
 ### Fase 5 – Enemies
+
+<img src="images/fjende-trold.png" alt="En hulertrold med en kølle" width="150" align="right">
 
 Ting er jo ikke bare ting, og spilleren er ikke alene i verden. I femte fase tilføjer vi
 forskellige typer fjender til spillet. Heldigvis har vi våben og health, så spilleren har en
@@ -88,6 +113,8 @@ chance for at overleve. Men det bestemmer kampsystemet!
 Spillet skal opbygges af **9 rum**, forbundet som vist her:
 
 ![Håndtegnet kort over de ni rum med døre og kompasrose](images/kort-9-rum.jpg)
+
+<img src="images/kompas.png" alt="Kompasrose" width="110" align="right">
 
 Spilleren starter altid i **rum 1**, øverst til venstre.
 

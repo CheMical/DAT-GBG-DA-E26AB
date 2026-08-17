@@ -29,6 +29,8 @@ Når du er færdig med denne del, skal du kunne:
 
 ### Spillet
 
+<img src="images/mad-aeble.jpg" alt="Et halvspist æble" width="150" align="right">
+
 De ting, der ligger i rummene, skal enten blot være "ting", eller de skal være **mad der kan
 spises**, eller **våben der kan bruges i angreb**.
 

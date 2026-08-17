@@ -27,6 +27,8 @@ Når du er færdig med denne del, skal du kunne:
 
 ### Spillet
 
+<img src="images/item-guldmoenter.jpg" alt="En bunke guldmønter" width="230" align="right">
+
 Hvert rum i spillet skal have mulighed for at have nogle ting liggende i sig, og spilleren skal
 kunne samle disse ting op individuelt, bære dem med sig, og eventuelt efterlade nogle af dem i
 andre rum.

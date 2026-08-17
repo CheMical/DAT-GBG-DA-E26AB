@@ -83,7 +83,7 @@
   <td>TOG</td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Projekt: </strong>Bogsamling</td></tr>
+<tr><td colspan="5"><strong>Projekt: </strong><a href="projekter/bogsamling/readme.md">Bogsamling</a></td></tr>
 <tr><td colspan="5"><strong>Klasser og objekter</strong></td></tr>
 <tr>
   <td>37</td>
@@ -155,7 +155,7 @@
   <td>MICA</td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Projekt: </strong>Adventure-spil</td></tr>
+<tr><td colspan="5"><strong>Projekt: </strong><a href="projekter/adventure/readme.md">Adventure-spil</a></td></tr>
 <tr><td colspan="5"><strong>Objekt-referencer, git, SOLID, arv og polymorfi</strong></td></tr>
 <tr>
   <td>39</td>
@@ -633,6 +633,14 @@
 </table>
 
 # Projekter
+
+| Projekt | Periode | Obligatorisk |
+|---|---|---|
+| [Bogsamling](projekter/bogsamling/readme.md) | uge 37–38 | |
+| [Adventure](projekter/adventure/readme.md) | uge 39–41 | **X** |
+| Filmsamling | uge 43–45 | **X** |
+| Delfinen | uge 47–50 | **X** |
+
 ```mermaid
 gantt
     title Projektoverblik – 1. semester E2026

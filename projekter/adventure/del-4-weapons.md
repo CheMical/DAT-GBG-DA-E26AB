@@ -100,6 +100,11 @@ omkring i spillet, og tilføjer dem til rooms, som var de almindelige items.
 
 `Weapon` skal have yderligere to arvinger:
 
+| | | |
+|:--:|:--:|:--:|
+| <img src="images/vaaben-pistol.jpg" alt="Forladepistol" width="200"> | <img src="images/vaaben-kasteknive.jpg" alt="Kasteknive" width="150"> | <img src="images/vaaben-hellebard.jpg" alt="Hellebard" width="200"> |
+| **RangedWeapon**<br/>begrænset ammunition | **RangedWeapon**<br/>tre kast, så er de væk | **MeleeWeapon**<br/>bruges igen og igen |
+
 * **`RangedWeapon`** – har et begrænset antal brug, før det "løber tør" og bliver ubrugeligt
 * **`MeleeWeapon`** – kan normalt bruges et utal af gange
 

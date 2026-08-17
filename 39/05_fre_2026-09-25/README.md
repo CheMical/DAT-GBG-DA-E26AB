@@ -53,10 +53,7 @@ Derfor: **commit din fungerende kode, før du begynder.** Så kan du altid komme
 
 Fordi teknisk gæld vokser eksponentielt:
 
-```mermaid
-flowchart LR
-    A["Ryd op nu<br/>$1<br/>Change is easy"] --> B["Ryd op senere<br/>$10<br/>Change is hard"] --> C["Ryd aldrig op<br/>$100<br/>Change? Forget it!"]
-```
+![Graf over teknisk gæld](../../projekter/adventure/images/teknisk-gaeld.png)
 
 Rodet kode koster ikke noget den første dag. Den koster hver eneste dag derefter – og prisen
 stiger. Vi har tre uger tilbage i dette projekt, så investeringen tjener sig ind med det samme.
@@ -78,33 +75,13 @@ at hver klasse kun kender de få andre, den har brug for.
 
 **Vi vil have høj cohesion og lav kobling.**
 
-Sådan ser høj kobling ud – alle kender alle:
+Sådan ser høj kobling ud – alle kender alle.
 
-```mermaid
-flowchart TB
-    A --- B --- C
-    A --- D & E & F
-    B --- E & G & I
-    C --- F & G
-    D --- E & G & H
-    E --- F & H & I
-    G --- H --- I
-```
+![Ni klasser forbundet på kryds og tværs](../../projekter/adventure/images/hoej-kobling.png)
 
-Og lav kobling – hver klasse kender kun sine naboer:
+Og lav kobling – hver klasse kender kun sine naboer.
 
-```mermaid
-flowchart TB
-    A --- B --- C
-    D --- E --- F
-    G --- H --- I
-    A --- D
-    B --- E
-    C --- F
-    D --- G
-    E --- H
-    F --- I
-```
+![De samme ni klasser, kun forbundet til naboerne](../../projekter/adventure/images/lav-kobling.png)
 
 Hvorfor betyder det noget? Fordi et godt design er:
 

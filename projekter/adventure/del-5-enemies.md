@@ -42,6 +42,8 @@ Se afsnittet [Anbefalet procedure](#anbefalet-procedure) for, hvordan denne doku
 
 ### Spillet
 
+<img src="images/fjende-trold.png" alt="En hulertrold med en kølle" width="180" align="right">
+
 Der skal også være **fjender** i rummene. Fjenderne er ikke ting, der kan samles op og bæres med,
 men de er heller ikke så levende, at de kan flytte sig fra rum til rum – de kan blot angribe eller
 angribes.
