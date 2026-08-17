@@ -31,14 +31,14 @@
   <td></td>
   <td><a href="35/03_ons_2026-08-26/README.md">Onsdag 26-08-2026</a></td>
   <td>Studieliv kommer forbi. Variable, datatyper og aritmetiske operatorer</td>
-  <td>MANY/TOG</td>
+  <td>MANY/MICA</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="35/04_tor_2026-08-27/README.md">Torsdag 27-08-2026</a></td>
   <td>Logiske operatorer. Betingelser og beslutninger</td>
-  <td>TOG/MICA</td>
+  <td>TOG</td>
   <td></td>
 </tr>
 <tr>
