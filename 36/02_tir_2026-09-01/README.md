@@ -35,6 +35,8 @@ Afprøv gerne eksemplerne i IntelliJ, mens du læser.
 
 ---
 
+<img src="images/vindeltrappe.jpg" alt="Vindeltrappe set nedefra, Vatikanmuseerne" width="300" align="right">
+
 ### Kort repetition: while
 
 Sådan så et `while`-loop ud i går:

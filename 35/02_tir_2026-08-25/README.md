@@ -4,6 +4,8 @@
 
 I dag får vi værktøjerne på plads, og vi skriver vores første Java-program.
 
+<img src="images/hulkortmaskine.jpg" alt="Kvinde ved en hulkortmaskine, US Census Bureau" width="330" align="right">
+
 Vi starter et lidt usædvanligt sted: i en helt almindelig teksteditor og en terminal. Det er
 langsommere end at bruge et rigtigt udviklingsværktøj – men det er også den eneste måde at se,
 hvad der **faktisk** sker, når et Java-program bliver til.
@@ -190,6 +192,10 @@ Programmet kører, og output står i vinduet nederst.
 
 Det, IntelliJ lige har gjort for dig, er præcis de to kommandoer, du selv skrev før: `javac` og
 `java`.
+
+> **Til perspektiv:** Billedet øverst viser en hulkortmaskine hos det amerikanske
+> folketællingsbureau. Sådan skrev man programmer og data i mange årtier — ét hul ad gangen, og
+> tabte man kortbunken på gulvet, var programmet væk. IntelliJ er en ganske god handel.
 
 ### Genveje, det betaler sig at lære nu
 

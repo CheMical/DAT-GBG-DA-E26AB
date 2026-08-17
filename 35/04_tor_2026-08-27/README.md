@@ -54,6 +54,14 @@ public class Main {
 
 ### Alt starter med sandt eller falsk
 
+<img src="images/george-boole.jpg" alt="Portræt af George Boole" width="165" align="right">
+
+Manden til højre er **George Boole**, engelsk matematiker. I 1854 udgav han et værk om at regne
+med sandt og falsk i stedet for tal. Han døde i 1864 og nåede aldrig at se en computer.
+
+Alligevel er det hans algebra, der kører i hver eneste processor i verden — og datatypen
+`boolean` er opkaldt efter ham. Det, du lærer i dag, er 170 år gammelt.
+
 Du har allerede mødt datatypen `boolean`. Den kan kun indeholde to værdier:
 
 ```java

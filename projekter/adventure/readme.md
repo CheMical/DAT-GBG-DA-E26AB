@@ -28,6 +28,8 @@ There is a bottle of water here.
 Nøgler, en lampe, mad, vand. Det er præcis de ting, I selv skal bygge – i
 [del 2](del-2-items.md) og [del 3](del-3-food.md).
 
+<img src="images/grotte-lysskakt.jpg" alt="En lysstråle falder ned gennem en åbning i en hule" width="270" align="right">
+
 > Det oprindelige Adventure er et **stort** kort. Hvis du vil se hvor stort, så kig på
 > [Mari Michaelis' kort over Colossal Cave Adventure](https://web.archive.org/web/2019/http://www.spitenet.com/cave/)
 > (via Internet Archive – originalsiden findes ikke længere). Vi starter noget mere begrænset.
@@ -100,7 +102,7 @@ Det kræver, at vi har en **abstrakt** type "våben", som vi kan oprette specifi
 
 ### Fase 5 – Enemies
 
-<img src="images/fjende-trold.png" alt="En hulertrold med en kølle" width="150" align="right">
+<img src="images/trold-bauer.jpg" alt="John Bauer: trold i en hule ved en dør, 1914" width="230" align="right">
 
 Ting er jo ikke bare ting, og spilleren er ikke alene i verden. I femte fase tilføjer vi
 forskellige typer fjender til spillet. Heldigvis har vi våben og health, så spilleren har en
@@ -161,6 +163,12 @@ graph LR
 
 Bemærk at det er en "slags" labyrint, hvor det midterste rum (**rum 5**) er lidt sværere at komme
 til, og kun har **én indgang** – så måske er det rum noget særligt!
+
+![Romersk mosaikgulv med en labyrint og Theseus mod Minotauros i midten](images/labyrint-pompeji.jpg)
+
+*Labyrinter er ikke en ny idé. Det her gulv lå i "Labyrintens hus" i Pompeji og er næsten
+2000 år gammelt. I midten kæmper Theseus mod Minotauros — det oprindelige monster i det
+oprindelige rum 5.*
 
 Rummene behøver ikke være faktiske "rum" i en bygning, men kan være grotter i en mine, områder i
 en skov, en borg, en rumstation, en fremmed planet – det er helt op til jer. **Gør det spændende

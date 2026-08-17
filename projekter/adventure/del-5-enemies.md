@@ -42,7 +42,7 @@ Se afsnittet [Anbefalet procedure](#anbefalet-procedure) for, hvordan denne doku
 
 ### Spillet
 
-<img src="images/fjende-trold.png" alt="En hulertrold med en kølle" width="180" align="right">
+<img src="images/trold-kittelsen.jpg" alt="Theodor Kittelsen: Skovtrold, 1906" width="215" align="right">
 
 Der skal også være **fjender** i rummene. Fjenderne er ikke ting, der kan samles op og bæres med,
 men de er heller ikke så levende, at de kan flytte sig fra rum til rum – de kan blot angribe eller
@@ -88,6 +88,11 @@ skal foregå:
    af et item, som spilleren også kan samle op.
 
 > Dette er den **grundlæggende** attack-sekvens – I er velkomne til at gøre den mere avanceret :)
+
+<img src="images/fjende-trold.png" alt="En trold med en kølle" width="150" align="right">
+
+Fjender behøver ikke være trolde. De kan være vagtrobotter, sultne planter, en gnaven bibliotekar
+eller noget helt fjerde — det afhænger af, hvilken verden I har bygget.
 
 ### Fjender i rumbeskrivelsen
 

@@ -34,6 +34,12 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 ### En String er en række af tegn
 
+![Sættekasser med løse blytyper på et bogtrykkeri](images/saettekasse.jpg)
+
+*Før computeren blev tekst sat i hånden, ét bogstav ad gangen, fra kasser som disse. Ordet
+"sætte" hænger stadig ved. En `String` er præcis det samme: en række enkelttegn i en bestemt
+rækkefølge.*
+
 Du har brugt `String` siden dag ét:
 
 ```java

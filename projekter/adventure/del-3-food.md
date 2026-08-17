@@ -107,8 +107,13 @@ var de almindelige items.
 
 #### Food
 
+<img src="images/gift-flaske.jpg" alt="Grøn apotekerflaske med riller, mærket gift" width="120" align="right">
+
 `Food`-objekter skal have et antal **`healthPoints`**, som er det, player optager, når den spiser
 et food-objekt. Det kan også være et **negativt tal**, hvis det f.eks. er gift!
+
+> Riflede sider og farvet glas var apotekets måde at gøre giftflasker genkendelige i mørke — man
+> kunne mærke forskel uden at læse etiketten. Jeres spillere har ikke den luksus.
 
 Lav for eksempel en **overloaded constructor**, der udover name og description også tager health –
 så `healthPoints` bliver fastlagt, når `Map` opretter de `Food`-objekter, der skal være i spillet.

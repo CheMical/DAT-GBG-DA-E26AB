@@ -36,6 +36,8 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 # Del 1: Objekter i objekter
 
+<img src="images/matryoshka.jpg" alt="Russiske matryoshka-dukker, den ene inden i den anden" width="300" align="right">
+
 ## En attribut kan være et objekt
 
 Du har allerede skrevet klasser med attributter som `int`, `String` og `boolean`:

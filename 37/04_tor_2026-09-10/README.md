@@ -39,6 +39,8 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 ---
 
+<img src="images/antikythera.jpg" alt="Antikythera-mekanismen, tandhjul i korroderet bronze" width="260" align="right">
+
 ### Hvorfor metoder?
 
 Se på dette program:

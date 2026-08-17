@@ -641,6 +641,8 @@
 | Filmsamling | uge 43–45 | **X** |
 | Delfinen | uge 47–50 | **X** |
 
+<sub>Billeder i repoet er krediteret i [BILLEDER.md](BILLEDER.md).</sub>
+
 ```mermaid
 gantt
     title Projektoverblik – 1. semester E2026

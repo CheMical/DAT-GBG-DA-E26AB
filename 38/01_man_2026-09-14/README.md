@@ -248,6 +248,13 @@ samler det igen. Alle grene skal være færdige, før man kan gå videre:
 
 ## Hvorfor ikke bare println?
 
+![Logbogsside fra 1947 med et møl tapet fast og teksten "First actual case of bug being found"](images/foerste-computerbug.jpg)
+
+*9. september 1947 gik Harvard Mark II-computeren i stå. Fejlen var et møl, der havde sat sig
+fast i relæ 70. Operatørerne tapede det ind i logbogen og skrev: "First actual case of bug being
+found." Ordet **bug** var allerede i brug om tekniske fejl — men det her er den første gang,
+nogen bogstaveligt talt fandt en. Og det er derfor, du i dag skal lære at **debugge**.*
+
 `System.out.println` virker – men den har tre problemer:
 
 1. Du skal **gætte på forhånd**, hvad du vil se. Rammer du forkert, skal du rette og køre igen.
