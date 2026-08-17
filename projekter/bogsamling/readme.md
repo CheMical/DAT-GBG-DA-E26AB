@@ -475,9 +475,11 @@ Når du er færdig med projektet, skal du kunne:
 
 ---
 
-# Aflevering eller fremvisning
+# Aflevering
 
-Du skal kunne fremvise:
+Du afleverer din kode på its ved at kopierer indhold fra IntelliJ som tekst.
+
+Koden skal indeholde:
 
 * klassen `Book`
 * klassen `Library`
@@ -488,5 +490,4 @@ Du skal kunne fremvise:
 * en metode, der udskriver alle bøger
 * en metode, der finder en bog ud fra titel
 
-Du skal også kunne forklare, hvorfor der er en 1:mange-relation mellem `Library` og `Book`.
 
