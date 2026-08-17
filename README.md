@@ -37,14 +37,14 @@
 <tr>
   <td></td>
   <td><a href="35/04_tor_2026-08-27/README.md">Torsdag 27-08-2026</a></td>
-  <td>I/O: Scanner</td>
+  <td>Betingelser og beslutninger</td>
   <td>TOG/MICA</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="35/05_fre_2026-08-28/README.md">Fredag 28-08-2026</a></td>
-  <td>Betingelser og beslutninger, Git bruger</td>
+  <td>I/O: Scanner, print, Git bruger</td>
   <td>MICA</td>
   <td></td>
 </tr>
