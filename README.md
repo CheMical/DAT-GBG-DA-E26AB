@@ -37,7 +37,7 @@
 <tr>
   <td></td>
   <td><a href="35/04_tor_2026-08-27/README.md">Torsdag 27-08-2026</a></td>
-  <td>Betingelser og beslutninger</td>
+  <td>Logiske operatorer. Betingelser og beslutninger</td>
   <td>TOG/MICA</td>
   <td></td>
 </tr>
