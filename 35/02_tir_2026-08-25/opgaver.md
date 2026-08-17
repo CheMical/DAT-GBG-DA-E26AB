@@ -239,7 +239,7 @@ Log på og tjek, at du kan komme ind alle steder:
 ### Opgave 17 – GitHub-konto
 
 Har du ikke allerede en GitHub-konto, så opret en nu på
-[github.com/signup](https://github.com/signup).
+[github.com](https://github.com/) — klik "Sign up".
 
 Skriv dit GitHub-brugernavn ned – du får brug for det, når vi starter på projekterne.
 

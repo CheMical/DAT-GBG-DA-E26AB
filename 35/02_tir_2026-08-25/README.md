@@ -32,7 +32,7 @@ Ingen video i dag. Men gør følgende **inden** du møder op:
 
 * Sørg for at din computer er **fuldt opladet** og har plads på disken (regn med ca. 5 GB).
 * Sørg for at du kan logge på EK's systemer – mail, itslearning og Teams.
-* Hvis du kan, så [opret en GitHub-konto](https://github.com/signup) på forhånd. Brug gerne din
+* Hvis du kan, så [opret en GitHub-konto](https://github.com/) (knappen "Sign up") på forhånd. Brug gerne din
   EK-mail. Vælg et brugernavn, du er tryg ved at have stående offentligt – det følger dig
   resten af studiet og formentlig ind i dit arbejdsliv.
 

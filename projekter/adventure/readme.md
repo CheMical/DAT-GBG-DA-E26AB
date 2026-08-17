@@ -15,8 +15,12 @@ samtlige platforme. Det var opbygget som en interaktiv historie – meget lig de
 som deltager i en omgang Dungeons & Dragons, men med computeren som game master.
 
 > Det oprindelige Adventure er et **stort** kort. Hvis du vil se hvor stort, så kig på
-> [Mari Michaelis' kort over Colossal Cave Adventure](https://www.spitenet.com/cave/) – vi
-> starter noget mere begrænset.
+> [Mari Michaelis' kort over Colossal Cave Adventure](https://web.archive.org/web/2019/http://www.spitenet.com/cave/)
+> (via Internet Archive – originalsiden findes ikke længere). Vi starter noget mere begrænset.
+>
+> Vil du prøve det oprindelige spil, ligger der versioner til download og online på
+> [The Colossal Cave Adventure Page](https://rickadams.org/adventure/), og historien er beskrevet på
+> [Wikipedia](https://en.wikipedia.org/wiki/Colossal_Cave_Adventure).
 
 ---
 
