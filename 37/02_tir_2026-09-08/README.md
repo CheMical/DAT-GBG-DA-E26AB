@@ -20,7 +20,7 @@ Efter lektionen skal du kunne:
 
 ## Se disse videoer før undervisningen
 
-[constructors](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=6h51m38s) (til: 03:43:33)  
+[constructors](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=6h51m38s) (til: 07:01:45)  
 
 ## Læs nedenstående før undervisningen
 
