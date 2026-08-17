@@ -83,7 +83,7 @@
   <td>TOG</td>
   <td></td>
 </tr>
-<tr><td colspan="5"><strong>Projekt:</strong>TBD</td></tr>
+<tr><td colspan="5"><strong>Projekt:</strong>Bogsamling</td></tr>
 <tr><td colspan="5"><strong>Klasser og objekter</strong></td></tr>
 <tr>
   <td>37</td>
