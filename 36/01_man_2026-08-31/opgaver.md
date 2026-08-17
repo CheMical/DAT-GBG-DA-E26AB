@@ -327,32 +327,6 @@ Kør derefter programmet og kontroller dit svar.
 
 ---
 
-## Opgave 14 – Tegn loopet
-
-Tegn et aktivitetsdiagram for følgende kode:
-
-```java
-int number = 1;
-
-while (number <= 5) {
-    System.out.println(number);
-    number++;
-}
-
-System.out.println("Loopet er slut");
-```
-
-Diagrammet skal som minimum vise:
-
-* initialisering af `number`
-* betingelsen `number <= 5`
-* udskriften
-* `number++`
-* hvad der sker, når betingelsen bliver falsk
-
-Du må gerne bruge Mermaid.
-
----
 
 ## Udfordring – Lille menu
 
