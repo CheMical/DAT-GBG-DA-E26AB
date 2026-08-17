@@ -15,6 +15,7 @@ Efter lektionen skal du kunne:
 * bruge en konstruktør til at give et objekt startværdier
 * læse og ændre et objekts attributter
 * anvende objekter sammen med betingelser og loops
+* private / public synlighed
 
 ## Se disse videoer før undervisningen
 
