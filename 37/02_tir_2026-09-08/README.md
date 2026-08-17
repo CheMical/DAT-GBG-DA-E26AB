@@ -20,7 +20,7 @@ Efter lektionen skal du kunne:
 
 ## Se disse videoer før undervisningen
 
-*Videoer indsættes her.*
+[While loops, number guessing game](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h21m23s) (til: 03:43:33)  
 
 ## Læs nedenstående før undervisningen
 
