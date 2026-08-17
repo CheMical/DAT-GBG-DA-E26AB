@@ -13,9 +13,10 @@ Efter lektionen skal du kunne:
 * forklare forskellen på en klasse, en objektvariabel og et objekt
 * lave en simpel konstruktør
 * bruge en konstruktør til at give et objekt startværdier
-* læse og ændre et objekts attributter
+* læse og ændre et objekts attributter - **this**
 * anvende objekter sammen med betingelser og loops
 * private / public synlighed
+* set / get metoder
 
 ## Se disse videoer før undervisningen
 
