@@ -639,8 +639,8 @@ gantt
     dateFormat  YYYY-MM-DD
     axisFormat  %d-%m
 
-    section TBD
-    TBD            :2026-09-7, 2026-09-18
+    section bogsamling
+    Bogsamling            :2026-09-7, 2026-09-18
     
     section Adventure
     Adventure      :2026-09-21, 2026-10-09
