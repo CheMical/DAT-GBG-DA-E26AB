@@ -3,7 +3,7 @@
 ## Beskrivelse
 
 ## Læringsmål
-- at kunne bruge whhile loops
+- at kunne bruge while loops
 - at kende forskel på while og do-while 
 
 ## Se disse videoer før undervisningen:  
