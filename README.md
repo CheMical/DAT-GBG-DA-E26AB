@@ -89,56 +89,56 @@
   <td>37</td>
   <td><a href="37/01_man_2026-09-07/README.md">Mandag 07-09-2026</a></td>
   <td>Objekter og klasser</td>
-  <td></td>
+  <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="37/02_tir_2026-09-08/README.md">Tirsdag 08-09-2026</a></td>
   <td>Objekter og klasser</td>
-  <td></td>
+  <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="37/03_ons_2026-09-09/README.md">Onsdag 09-09-2026</a></td>
   <td>Enum, switch</td>
-  <td></td>
+  <td>MANY/MICA</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="37/04_tor_2026-09-10/README.md">Torsdag 10-09-2026</a></td>
   <td>Metoder</td>
-  <td></td>
+  <td>TOG</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="37/05_fre_2026-09-11/README.md">Fredag 11-09-2026</a></td>
   <td>Metoder</td>
-  <td></td>
+  <td>MICA</td>
   <td></td>
 </tr>
 <tr>
   <td>38</td>
   <td><a href="38/01_man_2026-09-14/README.md">Mandag 14-09-2026</a></td>
   <td>Design: Aktivitetsdiagram, debugger</td>
-  <td></td>
+  <td>TOG</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="38/02_tir_2026-09-15/README.md">Tirsdag 15-09-2026</a></td>
   <td>Objekter i objekter, klassediagrammer</td>
-  <td></td>
+  <td>TOG</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="38/03_ons_2026-09-16/README.md">Onsdag 16-09-2026</a></td>
   <td>ArrayList</td>
-  <td></td>
+  <td>MANY/MICA</td>
   <td></td>
 </tr>
 <tr>
@@ -152,7 +152,7 @@
   <td></td>
   <td><a href="38/05_fre_2026-09-18/README.md">Fredag 18-09-2026</a></td>
   <td>ArrayList - søgning og redigering</td>
-  <td></td>
+  <td>MICA</td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Projekt: </strong>Adventure-spil</td></tr>
@@ -161,56 +161,56 @@
   <td>39</td>
   <td><a href="39/01_man_2026-09-21/README.md">Mandag 21-09-2026</a></td>
   <td>Introduktion til git og GitHub</td>
-  <td></td>
+  <td>MICA</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="39/02_tir_2026-09-22/README.md">Tirsdag 22-09-2026</a></td>
   <td>Design: User stories, Controller, Ansvar og afhængigheder, Coupling og Cohesion</td>
-  <td></td>
+  <td>MICA</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="39/03_ons_2026-09-23/README.md">Onsdag 23-09-2026</a></td>
   <td>Adventure del 1 - intro</td>
-  <td></td>
+  <td>MICA/TOG</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="39/04_tor_2026-09-24/README.md">Torsdag 24-09-2026</a></td>
   <td>Adventure del 1 - vejledning</td>
-  <td></td>
+  <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="39/05_fre_2026-09-25/README.md">Fredag 25-09-2026</a></td>
   <td>Adventure del 1 - refactor</td>
-  <td></td>
+  <td>TOG</td>
   <td></td>
 </tr>
 <tr>
   <td>40</td>
   <td><a href="40/01_man_2026-09-28/README.md">Mandag 28-09-2026</a></td>
   <td>Adventure del 2</td>
-  <td></td>
+  <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="40/02_tir_2026-09-29/README.md">Tirsdag 29-09-2026</a></td>
   <td>Adventure del 2 - review, refaktorering</td>
-  <td></td>
+  <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="40/03_ons_2026-09-30/README.md">Onsdag 30-09-2026</a></td>
   <td>Adventure del 3 - arv</td>
-  <td></td>
+  <td>TOG/MICA</td>
   <td></td>
 </tr>
 <tr>
@@ -224,21 +224,21 @@
   <td></td>
   <td><a href="40/05_fre_2026-10-02/README.md">Fredag 02-10-2026</a></td>
   <td>Polymorfi</td>
-  <td></td>
+  <td>MICA</td>
   <td></td>
 </tr>
 <tr>
   <td>41</td>
   <td><a href="41/01_man_2026-10-05/README.md">Mandag 05-10-2026</a></td>
   <td>Adventure del 4 - abstrakte klasser</td>
-  <td></td>
+  <td>TOG</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="41/02_tir_2026-10-06/README.md">Tirsdag 06-10-2026</a></td>
   <td>Adventure del 5</td>
-  <td></td>
+  <td>TOG</td>
   <td></td>
 </tr>
 <tr>
@@ -252,14 +252,14 @@
   <td></td>
   <td><a href="41/04_tor_2026-10-08/README.md">Torsdag 08-10-2026</a></td>
   <td>Arbejde med Adventure-projekt</td>
-  <td></td>
+  <td>MANY</td>
   <td></td>
 </tr>
 <tr>
   <td></td>
   <td><a href="41/05_fre_2026-10-09/README.md">Fredag 09-10-2026</a></td>
   <td>Præsentation af færdige projekter</td>
-  <td></td>
+  <td>MANY</td>
   <td></td>
 </tr>
 <tr><td colspan="5"><strong>Efterårsferie</strong></td></tr>
