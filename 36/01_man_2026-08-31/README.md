@@ -409,4 +409,4 @@ Når du læser eller skriver et while-loop, kan du derfor kigge efter tre ting:
 
 Hvis den værdi, som betingelsen afhænger af, aldrig ændrer sig, risikerer du at lave et **uendeligt loop**.  
 ## Aktiviteter
-
+Arbejd med disse [opgaver](opgaver.md)  
