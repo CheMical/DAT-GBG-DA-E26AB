@@ -1,0 +1,14 @@
+# While-loops
+
+## Beskrivelse
+
+## Læringsmål
+- at kunne bruge whhile loops 
+
+## Se disse videoer før undervisningen:  
+[While loops](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h21m23s) (til: 00:31:30)  
+
+
+## Læs nedenstående før undervisningen
+
+## Aktiviteter
