@@ -19,7 +19,7 @@ Efter lektionen skal du kunne:
 
 [random numbers](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=1h22m28s) (til: 01:27:28)  
 [math](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=1h27m28s) (til: 01:42:37)  
-[objekt orienteret programmering](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=6h41m47s) (til: 01:42:37) 
+[objekt orienteret programmering](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=6h41m47s) (til: 06:51:38) 
 
 
 ## Læs nedenstående før undervisningen
