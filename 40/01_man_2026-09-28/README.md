@@ -203,7 +203,46 @@ Player
 Item
 ```
 
-og de klasser I allerede har fra del 1.
+samt de øvrige klasser, I allerede har fra del 1.
+
+---
+
+# Overblik over klasserne
+
+Den nye struktur kan illustreres sådan:
+
+```mermaid
+classDiagram
+    class Player {
+        Room currentRoom
+        ArrayList~Item~ inventory
+        takeItem()
+        dropItem()
+    }
+
+    class Room {
+        ArrayList~Item~ items
+        addItem()
+        removeItem()
+        getItems()
+    }
+
+    class Item {
+        String shortName
+        String longName
+    }
+
+    Player --> Room : currentRoom
+    Player "1" --> "0..*" Item : inventory
+    Room "1" --> "0..*" Item : contains
+```
+
+Diagrammet viser blandt andet, at:
+
+* `Player` kender det aktuelle `Room`
+* `Player` har en liste af `Item`-objekter
+* `Room` har en liste af `Item`-objekter
+* et `Item` kan derfor enten ligge i et rum eller være i spillerens inventory
 
 ---
 
@@ -301,32 +340,50 @@ private ArrayList<Item> inventory;
 
 # Det samme objekt flytter sig
 
-Når spilleren samler en lampe op, skal I **ikke oprette en ny lampe**.
+Når spilleren samler en ting op, skal I **ikke oprette et nyt Item-objekt**.
 
-Hvis rummet indeholder:
+Hvis en lampe ligger i et rum, har rummets liste en reference til lampe-objektet.
 
-```text
-lamp ─────► Item-objekt
+Før spilleren tager lampen:
+
+```mermaid
+flowchart LR
+    R[Room] --> I[Item: lamp]
 ```
 
-så skal `take lamp` sørge for, at rummets reference til lampen fjernes, mens spilleren får en reference til **det samme Item-objekt**:
+Når spilleren skriver:
+
+```text
+take lamp
+```
+
+fjernes referencen fra rummets liste og tilføjes til spillerens inventory:
+
+```mermaid
+flowchart LR
+    P[Player] --> I[Item: lamp]
+```
+
+Der bliver altså ikke lavet en ny lampe.
+
+Det er **det samme Item-objekt**, der flyttes fra én `ArrayList` til en anden.
+
+Man kan tænke det sådan:
 
 ```text
 FØR:
 
-Room
-  |
-  +----> lamp
+Room.items
+    |
+    +----> lamp
 
 
 EFTER:
 
-Player
-  |
-  +----> lamp
+Player.inventory
+    |
+    +----> lamp
 ```
-
-Item'et bliver altså flyttet fra én `ArrayList` til en anden.
 
 ---
 
@@ -344,9 +401,9 @@ har programmet kun teksten:
 "lamp"
 ```
 
-Men programmet skal finde det rigtige `Item`-objekt.
+Programmet skal derfor finde det rigtige `Item`-objekt.
 
-I får derfor brug for en metode, der kan søge efter et item ud fra dets korte navn.
+I får brug for en metode, der kan søge efter et item ud fra dets korte navn.
 
 Metoden kan eksempelvis hedde:
 
@@ -362,7 +419,7 @@ Den skal:
 4. returnere det `Item`, der matcher
 5. returnere `null`, hvis der ikke findes et match
 
-Idéen kan illustreres sådan:
+Eksempel:
 
 ```text
 "lamp"
@@ -384,23 +441,92 @@ Når I kalder metoden, skal I derfor huske at kontrollere, om resultatet er `nul
 
 ---
 
-# `takeItem` og `dropItem`
+# `takeItem`
 
-`Player` skal have metoder, der udfører selve flytningen af items.
-
-Eksempelvis:
+`Player` skal have en metode, der kan udføre handlingen:
 
 ```java
 takeItem(...)
+```
+
+Når brugeren eksempelvis skriver:
+
+```text
+take lamp
+```
+
+skal programmet:
+
+```mermaid
+flowchart TD
+    A[Brugeren skriver: take lamp]
+    B[Find lamp i rummets items]
+    C{Blev item fundet?}
+    D[Fjern item fra Room]
+    E[Tilføj item til Player inventory]
+    F[Vis fejlbesked]
+
+    A --> B
+    B --> C
+    C -->|Ja| D
+    D --> E
+    C -->|Nej| F
+```
+
+Det betyder altså, at et item flyttes sådan:
+
+```text
+Room.items
+     |
+     | remove
+     v
+   Item
+     |
+     | add
+     v
+Player.inventory
+```
+
+Hvis `findItem` returnerer `null`, findes det ønskede item ikke i rummet.
+
+---
+
+# `dropItem`
+
+`Player` skal også have en metode:
+
+```java
 dropItem(...)
 ```
 
-### `takeItem`
-
-Når spilleren tager et item:
+Når brugeren eksempelvis skriver:
 
 ```text
-Room.items
+drop lamp
+```
+
+skal programmet:
+
+```mermaid
+flowchart TD
+    A[Brugeren skriver: drop lamp]
+    B[Find lamp i Player inventory]
+    C{Blev item fundet?}
+    D[Fjern item fra Player inventory]
+    E[Tilføj item til aktuelt Room]
+    F[Vis fejlbesked]
+
+    A --> B
+    B --> C
+    C -->|Ja| D
+    D --> E
+    C -->|Nej| F
+```
+
+Et item flyttes altså den modsatte vej:
+
+```text
+Player.inventory
      |
      | remove
      v
@@ -408,26 +534,10 @@ Room.items
      |
      | add
      v
-Player.inventory
-```
-
-### `dropItem`
-
-Når spilleren dropper et item:
-
-```text
-Player.inventory
-     |
-     | remove
-     v
-   Item
-     |
-     | add
-     v
 Room.items
 ```
 
-Husk at `Player` allerede kender det rum, spilleren befinder sig i.
+Husk, at `Player` allerede kender det rum, spilleren befinder sig i.
 
 Det betyder, at `Player` selv kan finde det aktuelle rum, når et item skal tages eller droppes.
 
@@ -526,7 +636,7 @@ lamp
 
 i en liste med forskellige items.
 
-Test også hvad der sker, hvis I leder efter:
+Test også, hvad der sker, hvis I leder efter:
 
 ```text
 sword
@@ -578,7 +688,7 @@ Når ovenstående virker:
 
 Lampen skal stadig ligge i rum B.
 
-Hvis det virker, har I faktisk fået jeres objekter til at udgøre en lille dynamisk verden.
+Hvis det virker, har I fået jeres objekter til at udgøre en lille dynamisk verden.
 
 ---
 
@@ -603,7 +713,7 @@ Kontrollér som minimum følgende:
 
 ---
 
-## Hvis I bliver hurtigt færdige
+# Hvis I bliver hurtigt færdige
 
 Når alle krav ovenfor virker, kan I udvide spillet.
 
