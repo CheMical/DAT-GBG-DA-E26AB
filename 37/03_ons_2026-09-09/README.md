@@ -28,7 +28,9 @@ Efter lektionen skal du kunne:
 
 [While loops, number guessing game](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h21m23s) (til: 03:43:33)  
 
-## 1. Hvad er en enum?
+## Læs nedenstående før undervisningen
+
+### 1. Hvad er en enum?
 
 Forestil dig, at vi skal gemme en ugedag.
 
@@ -92,7 +94,7 @@ Java hjælper os dermed med at sikre, at vi kun bruger gyldige værdier.
 
 ---
 
-## 2. Hvornår kan enum være nyttigt?
+### 2. Hvornår kan enum være nyttigt?
 
 En `enum` er især nyttig, når der findes et begrænset antal muligheder.
 
@@ -130,7 +132,7 @@ CustomerType type = CustomerType.VIP;
 
 ---
 
-## 3. Sammenligning af enum-værdier
+### 3. Sammenligning af enum-værdier
 
 Enum-værdier kan sammenlignes med `==`.
 
@@ -146,7 +148,7 @@ Her sammenligner vi ikke tekst. Vi sammenligner to værdier af typen `Day`.
 
 ---
 
-# switch
+### switch
 
 Nogle gange skal programmet udføre forskellig kode afhængigt af værdien af en variabel.
 
@@ -168,7 +170,7 @@ Her kan `switch` være et alternativ.
 
 ---
 
-## 4. En simpel switch
+### 4. En simpel switch
 
 ```java
 Day day = Day.MONDAY;
@@ -207,7 +209,7 @@ case MONDAY:
 
 ---
 
-## 5. Hvorfor står der break?
+### 5. Hvorfor står der break?
 
 I en klassisk `switch` bruges `break` til at afslutte den aktuelle `case`.
 
@@ -246,7 +248,7 @@ Vi vil normalt undgå dette, og derfor bruger vi `break`.
 
 ---
 
-## 6. default
+### 6. default
 
 En `switch` kan have en `default`.
 
@@ -270,7 +272,7 @@ switch (number) {
 Det minder om den sidste `else` i en `if-else`-konstruktion.
 
 ---
-## Ny switch-syntaks
+### Ny switch-syntaks
 I nyere java (java 12) er der lavet en mere kompakt syntaks for switch:
 ```java
 
@@ -283,7 +285,7 @@ switch (light) {
 }
 ```
 Med den nye ->-syntaks er der ikke fall-through.  
-# Enum og switch sammen
+### Enum og switch sammen
 
 `enum` og `switch` passer godt sammen.
 
@@ -321,7 +323,7 @@ Her ved Java præcis, hvilke værdier `light` kan have.
 
 ---
 
-# Et lidt større eksempel
+### Et lidt større eksempel
 
 Forestil dig, at vi har forskellige typer medlemskab:
 
@@ -374,7 +376,7 @@ double discount = switch (membership) {
 
 ---
 
-# String eller enum?
+### String eller enum?
 
 Man kunne også have skrevet:
 
@@ -407,7 +409,7 @@ Derfor giver `enum` ofte:
 
 ---
 
-# Opsamling
+### Opsamling
 
 En `enum` bruges til at beskrive et fast antal mulige værdier.
 
@@ -443,19 +445,17 @@ switch (size) {
         System.out.println("Stor");
         break;
 }
+```  
+
+`enum` og `switch` bruges derfor ofte sammen.  
+
+Mere kompakt med den nye syntaks:
+```java
+switch (size) {
+    case SMALL  -> System.out.println("Lille");
+    case MEDIUM -> System.out.println("Mellem");
+    case LARGE  -> System.out.println("Stor");
+}
 ```
+hvor vi undgår problemer med fall-through, 
 
-`enum` og `switch` bruges derfor ofte sammen.
-
----
-
-## Inden undervisningen
-
-Når du møder til undervisningen, skal du som minimum kunne svare på:
-
-1. Hvad er en `enum`?
-2. Hvorfor kan en `enum` være bedre end en `String`?
-3. Hvad gør `switch`?
-4. Hvad betyder `case`?
-5. Hvad gør `break`?
-6. Hvad bruges `default` til?
