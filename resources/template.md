@@ -8,4 +8,4 @@
 
 ## Læs nedenstående før undervisningen
 
-## Aktiviteter
+## Aktiviteter i undervisningen
