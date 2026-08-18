@@ -734,5 +734,5 @@ Det er en af de vigtigste idéer i objektorienteret programmering:
 
 > Data, der beskriver den samme ting, kan samles i et objekt.
 
-## Aktiviteter
+## Aktiviteter i undervisningen
 Arbejd med disse [opgaver](opgaver.md)  
