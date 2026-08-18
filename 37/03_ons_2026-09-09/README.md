@@ -24,9 +24,9 @@ Efter lektionen skal du kunne:
 
 ---
 
-# Forberedelse
+## Se disse videoer før undervisningen:
 
-Inden undervisningen skal du gennemgå materialet nedenfor.
+[While loops, number guessing game](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h21m23s) (til: 03:43:33)  
 
 ## 1. Hvad er en enum?
 
@@ -282,6 +282,7 @@ switch (light) {
     case GREEN -> System.out.println("Kør");
 }
 ```
+Med den nye ->-syntaks er der ikke fall-through.  
 # Enum og switch sammen
 
 `enum` og `switch` passer godt sammen.
