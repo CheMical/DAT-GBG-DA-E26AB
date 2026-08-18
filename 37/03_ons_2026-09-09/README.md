@@ -26,7 +26,7 @@ Efter lektionen skal du kunne:
 
 ## Se disse videoer før undervisningen:
 
-[While loops, number guessing game](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h21m23s) (til: 03:43:33)  
+[enhanced switches](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=2h49m05s) (til: 03:43:33)  
 
 ## Læs nedenstående før undervisningen
 
