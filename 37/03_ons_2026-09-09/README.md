@@ -460,5 +460,9 @@ switch (size) {
     case LARGE  -> System.out.println("Stor");
 }
 ```
-hvor vi undgår problemer med fall-through, 
+hvor vi undgår problemer med fall-through.  
+
+## Aktiviteter i undervisningen
+Arbejd med disse [opgaver](opgaver.md)  
+
 
