@@ -49,18 +49,6 @@ uge35-intro-java
 
 Uge 35 bruges til den første introduktion til Java og IntelliJ.
 
-Fokus kan være:
-
-* oprettelse af Java-projekt i IntelliJ
-* `Main`-klassen
-* `main`-metoden
-* `System.out.println`
-* variable
-* simple datatyper
-* simple beregninger
-* brug af kommentarer
-* forståelse af fejlmeddelelser på et helt grundlæggende niveau
-
 Mulig struktur:
 
 ```text
@@ -100,20 +88,6 @@ uge36-betingelser-loops
 ```
 
 Uge 36 bruges til grundlæggende kontrolstrukturer.
-
-Fokus kan være:
-
-* `Scanner`
-* input fra brugeren
-* `if`
-* `else`
-* `else if`
-* sammenligninger
-* boolske udtryk
-* `while`
-* `for`
-* simple gentagelser
-* aktivitetsdiagrammer for betingelser og løkker
 
 Mulig struktur:
 
@@ -161,18 +135,6 @@ uge37-klasser-og-objekter
 
 Uge 37 bruges til introduktion til objektorienteret programmering.
 
-Fokus kan være:
-
-* klasser
-* objekter
-* attributter
-* constructors
-* metoder
-* `this`
-* getters og setters
-* `private` og `public`
-* objektets tilstand
-
 Mulig struktur:
 
 ```text
@@ -216,16 +178,6 @@ uge38-relationer-og-arraylist
 ```
 
 Uge 38 bruges til at arbejde med flere objekter og relationer mellem objekter.
-
-Fokus kan være:
-
-* `ArrayList`
-* flere objekter af samme type
-* løkker over lister
-* søgning i lister
-* objekter, der indeholder andre objekter
-* 1:mange-relationer
-* metoder, der arbejder med samlinger af objekter
 
 Mulig struktur:
 
