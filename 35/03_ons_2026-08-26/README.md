@@ -1507,5 +1507,8 @@ Efter denne forberedelse skal du især kunne:
 * kende den grundlæggende forskel på `x++` og `++x`
 * kunne forudsige resultatet af simple Java-udtryk
 
-## Aktiviteter i undervisningen
+## Aktiviteter i undervisningen  
+Inden vi starter med at løse dagens opgaver skal vi se på hvordan vi kan organisere indhold i de første uger i IntelliJ i projekter og packages.    
+[organisering i IntelliJ](organisering_intellij.md)  
+
 Arbejd med disse [opgaver](opgaver.md)  
