@@ -271,6 +271,9 @@ Det minder om den sidste `else` i en `if-else`-konstruktion.
 
 ---
 ## Ny switch-syntaks
+I nyere java (java 12) er der lavet en mere kompakt syntaks for switch:
+```java
+
 TrafficLight light = TrafficLight.RED;
 
 switch (light) {
@@ -278,7 +281,7 @@ switch (light) {
     case YELLOW -> System.out.println("Gør klar");
     case GREEN -> System.out.println("Kør");
 }
-
+```
 # Enum og switch sammen
 
 `enum` og `switch` passer godt sammen.
