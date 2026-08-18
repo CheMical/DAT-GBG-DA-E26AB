@@ -266,7 +266,6 @@ Et Library har mange Book-objekter
 
 ---
 
-# Sådan opretter du et projekt i IntelliJ
 
 ## Trin 1: Opret et nyt Java-projekt
 
@@ -297,7 +296,6 @@ uge37-klasser-og-objekter
 
 ---
 
-# Sådan opretter du en package
 
 ## Trin 2: Find `src`-mappen
 
@@ -350,8 +348,6 @@ Nu har du oprettet en package.
 
 ---
 
-# Sådan opretter du en Main-klasse i en package
-
 ## Trin 4: Opret klassen Main
 
 Når du har oprettet en package, skal du oprette en `Main`-klasse i den.
@@ -390,7 +386,6 @@ Den fortæller, at klassen ligger i pakken `dag1_klasser`.
 
 ---
 
-# Sådan opretter du main-metoden
 
 ## Trin 5: Tilføj main-metoden
 
