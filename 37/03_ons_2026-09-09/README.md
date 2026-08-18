@@ -26,7 +26,7 @@ Efter lektionen skal du kunne:
 
 ## Se disse videoer før undervisningen:
 
-[enhanced switches](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=2h49m05s) (til: 02:57:33)  
+[enhanced switches](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=2h49m05s) (til: 02:57:42)  
 [enhanced switches](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=2h49m05s) (til: 02:57:33)  
 
 ---
