@@ -256,5 +256,6 @@ String
 
 Forskellen er, at `Person` er en type, vi selv har lavet.
 
-## Aktiviteter
+## Aktiviteter i undervisningen
 Arbejd med disse [opgaver](opgaver.md)  
+
