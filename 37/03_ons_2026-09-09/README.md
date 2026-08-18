@@ -362,6 +362,15 @@ Resultatet bliver:
 Rabat: 0.1
 ```
 
+I den nye switch syntaks kan man skrive det samme mere kompakt og benytte expression syntaks:
+``` java
+double discount = switch (membership) {
+    case BASIC -> 0;
+    case PREMIUM -> 0.10;
+    case VIP -> 0.20;
+};
+```
+
 ---
 
 # String eller enum?
