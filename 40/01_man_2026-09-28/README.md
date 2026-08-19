@@ -30,7 +30,7 @@ Samtidig skal programmet fortsat være opdelt i forskellige objekter med hvert d
 ## Læs nedenstående før undervisningen
 
 **Læs hele [Adventure-projektets forside](../../projekter/adventure/readme.md)** og
-**[del 1 – Rooms](../../projekter/adventure/del-1-rooms.md)**, inden du møder op. Du skal kende
+**[del 2 – Items](../../projekter/adventure/del-2-items.md)**, inden du møder op. Du skal kende
 opgaven, når vi starter.
 
 Derudover:
