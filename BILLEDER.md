@@ -59,7 +59,7 @@ licensen kræver.
 | `38/01_man_2026-09-14/images/foerste-computerbug.jpg` | 14-09 debugger – den foerste rigtige computer-bug | U.S. Naval Surface Warfare Center, Dahlgren | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:First_Computer_Bug,_1947.jpg) |
 | `38/02_tir_2026-09-15/images/matryoshka.jpg` | 15-09 objekter i objekter | Dennis G. Jarvis | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0) | [Commons](https://commons.wikimedia.org/wiki/File:DGJ_4705_-_Russian_Matryoshka_(4312413546).jpg) |
 | `projekter/adventure/images/gift-flaske.jpg` | Adventure del 3 – giftig mad (erstatter vandmaerket stock-foto) | Wellcome Collection | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:Green_Glass_poison_bottle_Wellcome_L0036279.jpg) |
-| `projekter/adventure/images/grotte-lysskakt.jpg` | Adventure forside – stemningsbillede til introen | Ukendt fotograf | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Shaft_of_light_at_natural_entrance._(8a25cd96-de5c-4e5d-ac1b-be268f59b891).jpg) |
+| `projekter/adventure/images/grotte-lysskakt.jpg` | Adventure forside – stemningsbillede til introen | Daniel Burka | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | [Commons](https://commons.wikimedia.org/wiki/File:Son_Doong_Cave_by_Daniel_Burka.jpg) |
 | `projekter/adventure/images/labyrint-pompeji.jpg` | Adventure forside – ved kortet, som en labyrint | Romersk mosaikkunstner, 1. årh. e.Kr. — foto: Peter Grunwald | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Cubiculum_42_mosaic_depicting_a_labyrinth_with_Theseus_and_Minotaur_emblem_House_of_the_Labyrinth_Pompeii.jpg) |
 | `projekter/adventure/images/trold-bauer.jpg` | Adventure forside – fase 5 | John Bauer | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Troll_at_the_door_by_John_Bauer_1914.jpg) |
 | `projekter/adventure/images/trold-kittelsen.jpg` | Adventure del 5 – fjender | Theodor Kittelsen | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Theodor_Kittelsen_-_Forest_Troll_-_NG.K%26H.B.03222_-_National_Museum_of_Art,_Architecture_and_Design.jpg) |
@@ -79,5 +79,6 @@ Disse lå i det gamle materiale i DAT24v2, men er ikke lagt op her, fordi repoet
 | Foto af IT Crowd-holdet | Pressefoto fra tv-serien |
 | "Candlekeep Mysteries" | Illustration af Clint Cearley, Wizards of the Coast |
 | Colossal Cave-kortet | Mari Michaelis, 2009 — der linkes til det med kildeangivelse i stedet |
+| Grotte med lysskakt (NPS-foto fra 1924) | Lå i repoet roteret 90°, og var i forvejen et svagt billede — erstattet af Son Doong-fotoet ovenfor |
 
 De ligger stadig i DAT24v2, hvis vurderingen ændrer sig.

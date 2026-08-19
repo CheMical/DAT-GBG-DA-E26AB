@@ -28,7 +28,7 @@ There is a bottle of water here.
 Nøgler, en lampe, mad, vand. Det er præcis de ting, I selv skal bygge – i
 [del 2](del-2-items.md) og [del 3](del-3-food.md).
 
-<img src="images/grotte-lysskakt.jpg" alt="En lysstråle falder ned gennem en åbning i en hule" width="270" align="right">
+<img src="images/grotte-lysskakt.jpg" alt="En lysstråle falder ned gennem et hul i loftet af den enorme Son Doong-grotte, med en lille menneskeskikkelse på en klippe nedenfor" width="270" align="right">
 
 > Det oprindelige Adventure er et **stort** kort. Hvis du vil se hvor stort, så kig på
 > [Mari Michaelis' kort over Colossal Cave Adventure](https://web.archive.org/web/2019/http://www.spitenet.com/cave/)
