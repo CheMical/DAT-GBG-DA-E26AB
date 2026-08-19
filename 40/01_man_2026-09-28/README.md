@@ -23,6 +23,20 @@ Når denne del er færdig, skal spilleren kunne:
 Samtidig skal programmet fortsat være opdelt i forskellige objekter med hvert deres ansvar.
 
 ---
+## Se disse videoer før undervisningen:
+
+[Primitive Types and Reference Types in Java](https://www.youtube.com/watch?v=OmcFVHpb0v0) (Neso Academy, 6 min.)
+
+## Læs nedenstående før undervisningen
+
+**Læs hele [Adventure-projektets forside](../../projekter/adventure/readme.md)** og
+**[del 1 – Rooms](../../projekter/adventure/del-1-rooms.md)**, inden du møder op. Du skal kende
+opgaven, når vi starter.
+
+Derudover:
+
+---
+
 
 # Krav til spillet
 
