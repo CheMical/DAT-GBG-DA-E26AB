@@ -745,7 +745,7 @@ Men få **først basisfunktionaliteten til at virke**.
 
 Arbejd med [Adventure del 2 – Items](../../projekter/adventure/del-2-items.md).
 
-Følg den [anbefalede procedure](../../projekter/adventure/del-2-items.mdmd#anbefalet-procedure) i
+Følg den [anbefalede procedure](../../projekter/adventure/del-2-items.md#anbefalet-procedure) i
 opgavebeskrivelsen. 
 
 
