@@ -740,3 +740,18 @@ Eksempelvis:
 * gør søgning efter items uafhængig af store og små bogstaver
 
 Men få **først basisfunktionaliteten til at virke**.
+
+## Aktiviteter i undervisningen
+
+Arbejd med [Adventure del 2 – Items](../../projekter/adventure/del-2-items.md).
+
+Følg den [anbefalede procedure](../../projekter/adventure/del-2-items.md.md#anbefalet-procedure) i
+opgavebeskrivelsen. Start med brugerfladen **uden** rum – få den til at genkende kommandoerne
+først. Så ét rum. Så resten.
+
+> **Sid to personer ved én computer, og skriv programmet sammen.** Der er ikke meget at dele op i
+> denne fase, og det er vigtigere at alle forstår referencerne end at koden bliver færdig hurtigt.
+> Brug evt. *Code With Me* i IntelliJ.
+
+**Deadline for del 1: fredag 25-09 kl. 23:59.** På fredag rydder vi op i koden – se
+[del 1 – refactor](../../projekter/adventure/del-1-refactor.md).
