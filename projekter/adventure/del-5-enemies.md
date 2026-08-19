@@ -313,11 +313,12 @@ Upload pdf'en som besvarelse på opgaven i itslearning.
 
 ### Hvornår
 
-Se [deadlines i projektoversigten](readme.md#afleveringer-og-deadlines).
+Se [deadlines i projektoversigten](../../README.md#afleveringer-og-deadlines).
 
 ### Feedback
 
-**Studenterpræsentationer** af kode og diagrammer, fredag 09-10-2026.
+**Studenterpræsentationer** af kode og diagrammer – datoen står i
+[projektoversigten på forsiden](../../README.md#afleveringer-og-deadlines).
 
 Hver gruppe skal give en kort demo af deres applikation og præsentere udvalgte dele af deres
 Adventure-projekt for resten af holdet.

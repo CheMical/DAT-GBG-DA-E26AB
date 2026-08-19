@@ -253,7 +253,7 @@ man kan indstilles til eksamen.
 version er pushet, og gen-aflevér linket som svar på opgaven i itslearning. **Husk at gøre det
 klikbart!**
 
-**Hvornår:** Se [deadlines i projektoversigten](readme.md#afleveringer-og-deadlines).
+**Hvornår:** Se [deadlines i projektoversigten](../../README.md#afleveringer-og-deadlines).
 
 **Feedback:** Som med version 1 – umiddelbart efter deadline, i undervisningen, kigger vi på
 hinandens eksempler, diskuterer eventuelt hvordan nogle af udvidelserne kunne laves, men ser også

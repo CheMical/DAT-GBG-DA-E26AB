@@ -237,15 +237,9 @@ version skal altid være mulig.**
 
 ## Afleveringer og deadlines
 
-| Del | Undervisning | Deadline |
-|---|---|---|
-| Intro + [del 1](del-1-rooms.md) | ons 23-09-2026 | – |
-| [Del 1 refactor](del-1-refactor.md) | fre 25-09-2026 | **fre 25-09-2026 kl. 23:59** |
-| [Del 2](del-2-items.md) | man 28-09 + tir 29-09 | **tir 29-09-2026 kl. 23:59** |
-| [Del 3](del-3-food.md) | ons 30-09-2026 | **tor 01-10-2026 kl. 23:59** |
-| [Del 4](del-4-weapons.md) | man 05-10-2026 | **man 05-10-2026 kl. 23:59** |
-| [Del 5](del-5-enemies.md) | tir 06-10-2026 | **tor 08-10-2026 kl. 23:59** |
-| Præsentation af færdige projekter | fre 09-10-2026 | – |
+Datoerne for alle fem dele står samlet i
+[projektoversigten på forsiden](../../README.md#afleveringer-og-deadlines), sammen med semestrets
+øvrige projekter.
 
 Afleveringen sker i itslearning. For del 1-4 afleverer I **linket til jeres GitHub-repository** –
 til repositoriet som et hele, ikke til den enkelte fil eller mappe. Husk at gøre linket klikbart.

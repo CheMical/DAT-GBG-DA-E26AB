@@ -662,3 +662,47 @@ gantt
     Delfinen       :2026-11-16, 2026-12-11
 ```
 
+
+## Afleveringer og deadlines
+
+Alle afleveringer sker i **itslearning**. Ved kodeafleveringer afleverer I **linket til jeres
+GitHub-repository** – til repositoriet som et hele, ikke til den enkelte fil eller mappe. Husk at
+gøre linket klikbart.
+
+### [Bogsamling](projekter/bogsamling/readme.md)
+
+| Del | Undervisning | Deadline |
+|---|---|---|
+| Hele projektet | uge 37–38 | *meldes ud i undervisningen* |
+
+Bogsamling er ikke en bunden forudsætning. Koden afleveres som tekst, kopieret fra IntelliJ.
+
+### [Adventure](projekter/adventure/readme.md)
+
+Alle fem dele er én samlet **bunden forudsætning**.
+[Del 5](projekter/adventure/del-5-enemies.md) afleveres **individuelt**, og der afleveres desuden
+en pdf med dokumentation.
+
+| Del | Undervisning | Deadline |
+|---|---|---|
+| Intro + [del 1](projekter/adventure/del-1-rooms.md) | ons 23-09-2026 | – |
+| [Del 1 refactor](projekter/adventure/del-1-refactor.md) | fre 25-09-2026 | **fre 25-09-2026 kl. 23:59** |
+| [Del 2](projekter/adventure/del-2-items.md) | man 28-09 + tir 29-09 | **tir 29-09-2026 kl. 23:59** |
+| [Del 3](projekter/adventure/del-3-food.md) | ons 30-09-2026 | **tor 01-10-2026 kl. 23:59** |
+| [Del 4](projekter/adventure/del-4-weapons.md) | man 05-10-2026 | **man 05-10-2026 kl. 23:59** |
+| [Del 5](projekter/adventure/del-5-enemies.md) | tir 06-10-2026 | **tor 08-10-2026 kl. 23:59** |
+| Præsentation af færdige projekter | fre 09-10-2026 | – |
+
+### Filmsamling
+
+| Del | Undervisning | Deadline |
+|---|---|---|
+| Hele projektet | uge 43–45 | **tor 05-11-2026** |
+
+### Delfinen
+
+| Del | Undervisning | Deadline |
+|---|---|---|
+| Hele projektet | uge 47–50 | **tir 08-12-2026** |
+
+Delfinen er eksamensprojektet.

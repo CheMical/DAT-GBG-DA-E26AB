@@ -211,7 +211,7 @@ feedback, før I kaster jer over Weapons.
 **Hvordan:** Push til samme repository som hidtil, og gen-aflevér linket.
 
 **Hvornår:** Inden I går i gang med [Weapons (del 4)](del-4-weapons.md) – se
-[deadlines i projektoversigten](readme.md#afleveringer-og-deadlines).
+[deadlines i projektoversigten](../../README.md#afleveringer-og-deadlines).
 
 I er velkomne til at spørge ind til jeres løsning eller tanker om jeres løsning i dagens vejledning.
 

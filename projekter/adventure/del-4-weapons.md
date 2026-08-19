@@ -188,7 +188,7 @@ om aflevering som sådan, men **aflever gerne inden deadline, for at bekræfte a
 **Hvordan:** Indsæt et link til jeres GitHub-repository.
 
 **Hvornår:** Inden del 5 starter – se
-[deadlines i projektoversigten](readme.md#afleveringer-og-deadlines).
+[deadlines i projektoversigten](../../README.md#afleveringer-og-deadlines).
 
 **Feedback:** Der er ikke planlagt nogen feedback på denne del – vi går direkte over i del 5!
 

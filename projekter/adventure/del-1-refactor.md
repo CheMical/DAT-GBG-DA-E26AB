@@ -200,7 +200,8 @@ Hvordan har I anvendt følgende principper i jeres Adventure?
 **Hvordan:** Gen-aflever blot et link til repositoriet, når I er færdige. Upload også en pdf med
 klassediagrammet.
 
-**Hvornår:** Helst i dag, men bare inden I begynder at arbejde på Adventure del 2.
+**Hvornår:** Helst i dag, men bare inden I begynder at arbejde på Adventure del 2 – se
+[deadlines i projektoversigten](../../README.md#afleveringer-og-deadlines).
 
 **Feedback:** Der gives ingen feedback på denne del af opgaven.
 

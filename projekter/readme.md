@@ -10,3 +10,6 @@ Her ligger projektbeskrivelserne i hver deres folder.
 | Delfinen | uge 47–50 | **X** | Eksamensprojekt. Git branching, domænemodel, Scrum |
 
 De tre obligatoriske projekter skal afleveres, for at man kan indstilles til eksamen.
+
+Afleveringsdatoerne for alle projekter står samlet i
+[projektoversigten på forsiden](../README.md#afleveringer-og-deadlines).

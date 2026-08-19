@@ -260,7 +260,7 @@ alle dele af projektet for at blive indstillet til eksamen.
 deadline. Aflever linket til repositoriet – ikke til den enkelte fil eller mappe, men til
 repositoriet som et hele.
 
-**Hvornår:** Se [deadlines i projektoversigten](readme.md#afleveringer-og-deadlines).
+**Hvornår:** Se [deadlines i projektoversigten](../../README.md#afleveringer-og-deadlines).
 
 **Feedback:** Umiddelbart efter deadline, i undervisningen, kigger vi på hinandens eksempler og
 diskuterer, hvordan koden kan forbedres og forenkles.
