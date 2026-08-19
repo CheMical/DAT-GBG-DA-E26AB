@@ -1,7 +1,7 @@
 # Adventure del 1 - vejledning
 
 ## Beskrivelse
-Heledagen er aafsat til at aarbejde med <del 1
+Hele dagen er aafsat til at aarbejde med <del 1
 
 ## Læringsmål
 
@@ -10,4 +10,4 @@ Heledagen er aafsat til at aarbejde med <del 1
 ## Læs nedenstående før undervisningen
 
 ## Aktiviteter i undervisningen
-Lav Del 1
+Arbejd på Del 1
