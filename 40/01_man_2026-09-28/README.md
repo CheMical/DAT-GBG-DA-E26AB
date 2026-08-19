@@ -25,7 +25,7 @@ Samtidig skal programmet fortsat være opdelt i forskellige objekter med hvert d
 ---
 ## Se disse videoer før undervisningen:
 
-[Java Tutorial for Beginners - Object References](https://www.youtube.com/watch?v=ohCwnRScKU8))
+[Java Tutorial for Beginners - Object References](https://www.youtube.com/watch?v=ohCwnRScKU8)
 
 ## Læs nedenstående før undervisningen
 
