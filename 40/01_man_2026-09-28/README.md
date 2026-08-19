@@ -745,7 +745,7 @@ Men få **først basisfunktionaliteten til at virke**.
 
 Arbejd med [Adventure del 2 – Items](../../projekter/adventure/del-2-items.md).
 
-Følg den [anbefalede procedure](../../projekter/adventure/del-2-items.md.md#anbefalet-procedure) i
+Følg den [anbefalede procedure](../../projekter/adventure/del-2-items.mdmd#anbefalet-procedure) i
 opgavebeskrivelsen. Start med brugerfladen **uden** rum – få den til at genkende kommandoerne
 først. Så ét rum. Så resten.
 
