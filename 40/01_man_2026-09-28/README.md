@@ -25,7 +25,7 @@ Samtidig skal programmet fortsat være opdelt i forskellige objekter med hvert d
 ---
 ## Se disse videoer før undervisningen:
 
-[Primitive Types and Reference Types in Java](https://www.youtube.com/watch?v=OmcFVHpb0v0) (Neso Academy, 6 min.)
+[Java Tutorial for Beginners - Object References](https://www.youtube.com/watch?v=ohCwnRScKU8))
 
 ## Læs nedenstående før undervisningen
 
