@@ -108,7 +108,7 @@ I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel
 ---
 
 
-## Aktiviteter
+## Aktiviteter i undervisningen
 - Vi starter med at se på hvilken studiegruppe I tilhører i its.  
 - I sætter jer herefter sammen i studiegrupperne
 - I skal nu indtaste jeres navne i gruppe regnearket i jeres teams kanal
