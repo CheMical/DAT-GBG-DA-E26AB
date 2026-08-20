@@ -110,4 +110,4 @@ I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel
 
 ## Aktiviteter
 Vi skal have taget foto af jeres studiegrupper med navne.  
-I skal prøve at aflevere jeres første opgave, som er billedet af jeres studiegruppe
+I skal prøve at aflevere jeres første [opgaver](opgaver.md) , som er billedet af jeres studiegruppe
