@@ -109,5 +109,9 @@ I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel
 
 
 ## Aktiviteter
-Vi skal have taget foto af jeres studiegrupper med navne.  
-I skal prøve at aflevere jeres første [opgaver](opgaver.md) , som er billedet af jeres studiegruppe
+- Vi starter med at se på hvilken gruppe I tilhører i its.  
+- I sætter jer herefter sammen i grupperne
+- I skal nu indtaste jeres navne i gruppedannelse regnearket i jeres teams kanal
+- Tag et foto af gruppen med tydeligt navneskilt
+- I skal nu prøve at aflevere jeres første [opgave](opgaver.md) på its, som er billedet af jeres studiegruppe
+
