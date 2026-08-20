@@ -109,4 +109,5 @@ I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel
 
 
 ## Aktiviteter
-Vi skal bruge dagen på at lære hinanden at kende og danne studiegrupper
+Vi skal have taget foto af jeres studiegrupper med navne.  
+I skal prøve at aflevere jeres første opgave, som er billedet af jeres studiegruppe
