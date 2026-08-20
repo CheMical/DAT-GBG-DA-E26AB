@@ -112,6 +112,6 @@ I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel
 - Vi starter med at se på hvilken studiegruppe I tilhører i its.  
 - I sætter jer herefter sammen i studiegrupperne
 - I skal nu indtaste jeres navne i gruppe regnearket i jeres teams kanal
-- Tag et foto af studiegruppen med tydeligt navneskilt
-- I skal nu prøve at aflevere jeres første [opgave](opgaver.md) på its, som er billedet af jeres studiegruppe
+- Tag et foto af studiegruppen
+- I skal nu prøve at aflevere jeres første [opgave](opgaver.md) på its, som er billedet af jeres studiegruppe med tydelige navne
 
