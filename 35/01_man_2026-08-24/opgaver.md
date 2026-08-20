@@ -8,8 +8,7 @@ Der skal tages ét fælles foto af samtlige gruppemedlemmer – billedet skal in
 
 - Navn på gruppen **Brug de officielle gruppenavne som angivet her: [Studiegruper](https://erhvervsakademikbenhavn.sharepoint.com/:x:/r/sites/Team-E26AB/_layouts/15/Doc.aspx?action=edit&sourcedoc=%7B3b88b7b6-20c0-4cac-b2cf-18449771f9ca%7D&wdExp=TEAMS-TREATMENT&web=1)**  
 - Tydeligt ansigt for hvert enkelt gruppemedlem
-- Navn på hvert enkelt gruppemedlem
-Det skal være tydeligt hvilke navne der hører til hvilke personer.
+- Navn på hvert enkelt gruppemedlem. Det skal være tydeligt hvilke navne der hører til hvilke personer.
 
 ### Aflevering
 Hvordan
