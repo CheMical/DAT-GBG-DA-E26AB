@@ -114,4 +114,5 @@ I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel
 - I skal nu indtaste jeres navne i gruppe regnearket i jeres teams kanal
 - Tag et foto af studiegruppen
 - I skal nu prøve at aflevere jeres første [opgave](opgaver.md) på its, som er billedet af jeres studiegruppe med tydelige navne
+- Vi slutter af med en rundvisning på EK
 
