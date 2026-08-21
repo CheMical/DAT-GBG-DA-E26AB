@@ -19,7 +19,7 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
 * **Gruppearbejde:** Softwareudvikling er holdsport. Du kommer til at løse mange opgaver og projekter tæt sammen med dine medstuderende. Det er et krav i studieordningen, at man **skal** arbejde i grupper
 * **Tæt kontakt til erhvervslivet:** Uddannelsen veksler mellem teori og praktiske cases, og afsluttes med et tæt virksomhedssamarbejde i din praktikperiode.
 
-### Hvad vi forventer af dig
+### Hvad vi forventer af dig?
 - At du tager ansvar og aktivt vælger at ville lære   
 - At du deltager i undervisningen og i guppearbejdet
 
