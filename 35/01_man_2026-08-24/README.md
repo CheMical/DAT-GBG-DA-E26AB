@@ -48,7 +48,7 @@ Du finder IT-vejledninger og support hos EK ved at besøge den officielle servic
 - Vi gå en tur rundt på EK og besøger relevante lokationer
 
 ### Genveje og Links
-* **IT Service Desk (Info):** [Mit EK IT Service Desk](https://ek.dk)
+* **IT Service Desk (Info):** [Mit EK IT Service Desk](https://mit.ek.dk/studiehaandbog/it-service-desk)
 * **EK Serviceportal (Selvbetjening):** [Mit EK IT](https://mit.ek.dk/it)
 
 ### Kontakt IT Service Desk
