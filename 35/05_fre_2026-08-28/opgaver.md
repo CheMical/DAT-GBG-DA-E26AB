@@ -538,4 +538,79 @@ Ugyldig operator.
 Hvis input ikke kan bruges, skal du tænke over, hvordan programmet kan reagere på en fornuftig måde.
 
 > **Tip:** Start med at afprøve både heltal og decimaltal, og find ud af, hvad der går galt i de forskellige tilfælde.
+
+---
+
+## Ekstra udfordring – Input via kommandolinjeargumenter
+
+Nogle programmer tager ikke input via `Scanner`, men får i stedet deres input som **kommandolinjeargumenter**. Læs mere om det i [`cmdl.md`](cmdl.md).
+
+Overvej, hvilke af opgaverne i dette ark der **kunne give mening** at løse på den måde.
+
+Svar også på disse spørgsmål:
+
+- Hvilke fordele kan der være ved at bruge kommandolinjeargumenter i stedet for `Scanner`?
+- Hvilke udfordringer kan der være ved at tage input på den måde?
+- Bliver det tydeligt for brugeren, hvad programmet gør, når input gives som argumenter?
+- Hvornår er `Scanner` en bedre løsning end kommandolinjeargumenter?
+
+Skriv derefter en **ny udgave af koden** for en af opgaverne, hvor det giver mening at bruge kommandolinjeargumenter i stedet for `Scanner`.
+
+> **Hint:** Tænk over, hvilke programmer der skal have input **med det samme**, og hvilke der først skal spørge brugeren undervejs.
+> **Hint:** Giv programmet et navn, der tydeligt viser, hvad det gør, fx `ArgCalculator`, `CmdLineConverter` eller lignende.
+
+---
+
+## Ekstra udfordring – Gæt et tal uden løkker
+
+Lav et lille program, der kan gætte et tal mellem **1 og 4**, som brugeren tænker på.
+
+Programmet må stille spørgsmål som fx:
+
+- Er tallet større end 2?
+- Er tallet større end 3?
+
+Ud fra svarene skal programmet kunne finde det tal, brugeren har tænkt på.
+
+> **Bemærk:** Du må **ikke** bruge løkker til denne opgave. Det emne kommer først næste uge.
+
+Når du har fået programmet til at virke for intervallet **1–4**, så prøv at udvide det, så det også kan gætte tal mellem **1 og 8**.
+
+> **Hint:** Tænk i ja/nej-spørgsmål og if/else-strukturer.
+
+---
+
+## Ekstra udfordring – Små skilte med ASCII-grafik
+
+Lav et lille program, der kan printe et “skilt” i konsollen ved hjælp af **ASCII-grafik**.
+
+Lad brugeren skrive den tekst, der skal stå i skiltet, som input, og lav derefter en boks omkring teksten.
+
+Eksempel:
+
+```text
++------------------+
+|   Hej med dig!   |
++------------------+
+```
+
+Prøv at lave flere varianter, hvor teksten kan være forskellig, og hvor boksen stadig passer til teksten.
+
+Overvej også, hvordan du kan lave:
+
+- en overskrift i en ramme
+- en advarselsboks
+- et navneskilt
+- en lille menu med ramme omkring
+
+> **Hint:** Tegn som disse kan være nyttige:
+> - `+`
+> - `-`
+> - `|`
+> - `/`
+> - `\`
+> - `*`
+> - `#`
+
+> **Hint:** Tænk over, hvordan du kan kombinere tekst, mellemrum og gentagne tegn, så udskriften bliver pæn og tydelig.
 ```
