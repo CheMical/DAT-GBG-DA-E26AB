@@ -49,7 +49,7 @@ Du finder IT-vejledninger og support hos EK ved at besøge den officielle servic
 
 ### Genveje og Links
 * **IT Service Desk (Info):** [Mit EK IT Service Desk](https://ek.dk)
-* **EK Serviceportal (Selvbetjening):** [Mit EK IT](https://ek.dk)
+* **EK Serviceportal (Selvbetjening):** [Mit EK IT](https://mit.ek.dk/it)
 
 ### Kontakt IT Service Desk
 * **E-mail:** servicedesk@ek.dk
