@@ -299,10 +299,18 @@ Eksempel: hvis brugeren skriver `212.0`, skal programmet skrive:
 ```
 
 <details>
-<summary>Hint: Vis formel</summary>
+<summary>Hint: Vis formel for Celsius</summary>
 
 ```text
 C = (F - 32) * 5 / 9
+```
+
+</details>
+
+<details>
+<summary>Hint: Vis formel for Kelvin</summary>
+
+```text
 K = C + 273.15
 ```
 
