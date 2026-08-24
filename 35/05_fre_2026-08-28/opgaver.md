@@ -508,19 +508,15 @@ Ugyldig operator.
 
 ---
 
-## Opgave 21 – Hvilken type input kan bruges?
+## Opgave 21 – Minikalkulator med mere robust input
 
-Lav en lille minikalkulator, hvor brugeren indtaster:
+Brug din løsning fra **opgave 20** som udgangspunkt, og lav en ny version af minikalkulatoren, hvor du tænker over, hvilke datatyper der er bedst at bruge til input.
 
-1. første tal
-2. en operator som tekst (`+`, `-`, `*` eller `/`)
-3. andet tal
-
-Men du skal selv overveje, hvilke datatyper der er mest hensigtsmæssige at bruge som input.
+Overvej især:
 
 - Skal tallene være `int`, `double` eller noget tredje?
-- Hvad sker der, hvis brugeren skriver et decimaltal, selvom programmet forventer et heltal?
-- Hvad sker der, hvis brugeren skriver noget helt andet end et tal?
+- Hvad sker der, hvis brugeren skriver et decimaltal?
+- Hvad sker der, hvis brugeren skriver noget, der ikke er et tal?
 - Hvad sker der, hvis der tastes division med 0?
 
 Udskriv regnestykket, hvis input er gyldigt:
@@ -537,7 +533,7 @@ Ugyldig operator.
 
 Hvis input ikke kan bruges, skal du tænke over, hvordan programmet kan reagere på en fornuftig måde.
 
-> **Tip:** Start med at afprøve både heltal og decimaltal, og find ud af, hvad der går galt i de forskellige tilfælde.
+> **Hint:** Sammenlign denne version med opgave 20, og undersøg, hvad der ændrer sig, når du bruger forskellige datatyper.
 
 ---
 
