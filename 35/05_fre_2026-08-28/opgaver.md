@@ -320,9 +320,197 @@ K = C + 273.15
 
 ---
 
-## Opgave 11 – Hvilken type input kan bruges?
+## Opgave 11 – Positiv, negativ eller nul
 
-Lav en lille minikalkulator som i opgave 21, hvor brugeren indtaster:
+Bed brugeren om at indtaste et heltal.
+
+Tjek om tallet er:
+- positivt
+- negativt
+- nul
+
+Udskriv en passende besked.
+
+Eksempel:
+
+```text
+Tallet er positivt.
+```
+
+---
+
+## Opgave 12 – Største af to tal
+
+Bed brugeren om at indtaste to tal.
+
+Udskriv hvilket tal der er størst:
+
+```text
+Det største tal er [tal].
+```
+
+Hvis de er ens, skal du skrive:
+
+```text
+Tallene er ens.
+```
+
+---
+
+## Opgave 13 – Lige eller ulige
+
+Bed brugeren om at indtaste et heltal.
+
+Udskriv:
+
+```text
+Tallet er lige.
+```
+
+eller
+
+```text
+Tallet er ulige.
+```
+
+> **Hint:** Brug resten ved division med 2.
+
+---
+
+## Opgave 14 – Enkel karakterberegning
+
+Bed brugeren om at indtaste en pointscore mellem 0 og 100.
+
+Omsæt scoren til en karakter med følgende skala:
+
+- 90 eller mere: `12`
+- 80–89: `10`
+- 70–79: `7`
+- 60–69: `4`
+- 50–59: `02`
+- under 50: `00`
+
+Udskriv karakteren.
+
+---
+
+## Opgave 15 – Ung, voksen eller senior
+
+Bed brugeren om at indtaste sin alder.
+
+Udskriv:
+- `Du er et barn.` hvis alderen er under 13
+- `Du er teenager.` hvis alderen er mellem 13 og 19
+- `Du er voksen.` hvis alderen er mellem 20 og 64
+- `Du er senior.` hvis alderen er 65 eller derover
+
+---
+
+## Opgave 16 – Rabat på billet
+
+Bed brugeren om at indtaste:
+1. alder
+2. normalpris på en billet
+
+Regler:
+- børn under 12 år får 50% rabat
+- unge mellem 12 og 17 år får 25% rabat
+- voksne får ingen rabat
+
+Udskriv den endelige pris.
+
+Eksempel:
+
+```text
+Prisen efter rabat er 75.0 kr.
+```
+
+---
+
+## Opgave 17 – Tjek adgang
+
+Bed brugeren om at indtaste:
+1. alder
+2. om de har id-kort (`ja` eller `nej`)
+
+Adgang gives kun hvis brugeren er 18 år eller derover **og** har id-kort.
+
+Udskriv enten:
+
+```text
+Adgang godkendt.
+```
+
+eller
+
+```text
+Adgang afvist.
+```
+
+---
+
+## Opgave 18 – Temperatur og beklædning
+
+Bed brugeren om at indtaste temperaturen i grader Celsius.
+
+Udskriv en anbefaling:
+
+- under 0: `Det er meget koldt. Tag vinterjakke på.`
+- 0 til 10: `Det er koldt. Tag en varm jakke på.`
+- 11 til 20: `Det er mildt. En let jakke er fin.`
+- over 20: `Det er varmt. Du behøver ikke en jakke.`
+
+---
+
+## Opgave 19 – Simpel login-kontrol
+
+Opret to faste variabler i koden:
+
+- et brugernavn
+- en adgangskode
+
+Bed brugeren om at indtaste et brugernavn og en adgangskode.
+
+Hvis begge passer, så skriv:
+
+```text
+Login godkendt.
+```
+
+Ellers:
+
+```text
+Forkert brugernavn eller adgangskode.
+```
+
+---
+
+## Opgave 20 – Minikalkulator
+
+Bed brugeren om at indtaste:
+1. første tal
+2. en operator som tekst (`+`, `-`, `*` eller `/`)
+3. andet tal
+
+Udskriv resultatet af regnestykket.
+
+Eksempel:
+
+```text
+8 + 2 = 10
+```
+
+Hvis der tastes en ukendt operator, skal du skrive:
+
+```text
+Ugyldig operator.
+```
+
+---
+
+## Opgave 21 – Hvilken type input kan bruges?
+
+Lav en lille minikalkulator som i opgave 20, hvor brugeren indtaster:
 
 1. første tal
 2. en operator som tekst (`+`, `-`, `*` eller `/`)
@@ -350,190 +538,4 @@ Ugyldig operator.
 Hvis input ikke kan bruges, skal du tænke over, hvordan programmet kan reagere på en fornuftig måde.
 
 > **Tip:** Start med at afprøve både heltal og decimaltal, og find ud af, hvad der går galt i de forskellige tilfælde.
-
-## Opgave 12 – Positiv, negativ eller nul
-
-Bed brugeren om at indtaste et heltal.
-
-Tjek om tallet er:
-- positivt
-- negativt
-- nul
-
-Udskriv en passende besked.
-
-Eksempel:
-
-```text
-Tallet er positivt.
-```
-
----
-
-## Opgave 13 – Største af to tal
-
-Bed brugeren om at indtaste to tal.
-
-Udskriv hvilket tal der er størst:
-
-```text
-Det største tal er [tal].
-```
-
-Hvis de er ens, skal du skrive:
-
-```text
-Tallene er ens.
-```
-
----
-
-## Opgave 14 – Lige eller ulige
-
-Bed brugeren om at indtaste et heltal.
-
-Udskriv:
-
-```text
-Tallet er lige.
-```
-
-eller
-
-```text
-Tallet er ulige.
-```
-
-> **Hint:** Brug resten ved division med 2.
-
----
-
-## Opgave 15 – Enkel karakterberegning
-
-Bed brugeren om at indtaste en pointscore mellem 0 og 100.
-
-Omsæt scoren til en karakter med følgende skala:
-
-- 90 eller mere: `12`
-- 80–89: `10`
-- 70–79: `7`
-- 60–69: `4`
-- 50–59: `02`
-- under 50: `00`
-
-Udskriv karakteren.
-
----
-
-## Opgave 16 – Ung, voksen eller senior
-
-Bed brugeren om at indtaste sin alder.
-
-Udskriv:
-- `Du er et barn.` hvis alderen er under 13
-- `Du er teenager.` hvis alderen er mellem 13 og 19
-- `Du er voksen.` hvis alderen er mellem 20 og 64
-- `Du er senior.` hvis alderen er 65 eller derover
-
----
-
-## Opgave 17 – Rabat på billet
-
-Bed brugeren om at indtaste:
-1. alder
-2. normalpris på en billet
-
-Regler:
-- børn under 12 år får 50% rabat
-- unge mellem 12 og 17 år får 25% rabat
-- voksne får ingen rabat
-
-Udskriv den endelige pris.
-
-Eksempel:
-
-```text
-Prisen efter rabat er 75.0 kr.
-```
-
----
-
-## Opgave 18 – Tjek adgang
-
-Bed brugeren om at indtaste:
-1. alder
-2. om de har id-kort (`ja` eller `nej`)
-
-Adgang gives kun hvis brugeren er 18 år eller derover **og** har id-kort.
-
-Udskriv enten:
-
-```text
-Adgang godkendt.
-```
-
-eller
-
-```text
-Adgang afvist.
-```
-
----
-
-## Opgave 19 – Temperatur og beklædning
-
-Bed brugeren om at indtaste temperaturen i grader Celsius.
-
-Udskriv en anbefaling:
-
-- under 0: `Det er meget koldt. Tag vinterjakke på.`
-- 0 til 10: `Det er koldt. Tag en varm jakke på.`
-- 11 til 20: `Det er mildt. En let jakke er fin.`
-- over 20: `Det er varmt. Du behøver ikke en jakke.`
-
----
-
-## Opgave 20 – Simpel login-kontrol
-
-Opret to faste variabler i koden:
-
-- et brugernavn
-- en adgangskode
-
-Bed brugeren om at indtaste et brugernavn og en adgangskode.
-
-Hvis begge passer, så skriv:
-
-```text
-Login godkendt.
-```
-
-Ellers:
-
-```text
-Forkert brugernavn eller adgangskode.
-```
-
----
-
-## Opgave 21 – Minikalkulator
-
-Bed brugeren om at indtaste:
-1. første tal
-2. en operator som tekst (`+`, `-`, `*` eller `/`)
-3. andet tal
-
-Udskriv resultatet af regnestykket.
-
-Eksempel:
-
-```text
-8 + 2 = 10
-```
-
-Hvis der tastes en ukendt operator, skal du skrive:
-
-```text
-Ugyldig operator.
-```
 ```
