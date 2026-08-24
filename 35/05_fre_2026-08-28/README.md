@@ -1,4 +1,4 @@
-# I/O: Scanner og print
+# I/O: Scanner og print samt statustjek for bruger på Github
 
 ## Beskrivelse
 
@@ -347,3 +347,6 @@ Efter denne forberedelse skal du især kunne:
 ## Aktiviteter i undervisningen
 
 Arbejd med disse [opgaver](opgaver.md)
+
+Statustjek for oprettelse af bruger på Github:
+* Tænke på at finde et passende brugernavn inden undervisningen, hvis du ikke allerede er oprettet.
