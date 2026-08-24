@@ -310,6 +310,8 @@ C = (F - 32) * 5 / 9
 <details>
 <summary>Hint: Vis formel for Kelvin</summary>
 
+Brug først `C` fra hintet for Celsius.
+
 ```text
 K = C + 273.15
 ```
