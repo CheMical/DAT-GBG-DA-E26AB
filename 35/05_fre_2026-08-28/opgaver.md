@@ -510,7 +510,7 @@ Ugyldig operator.
 
 ## Opgave 21 – Hvilken type input kan bruges?
 
-Lav en lille minikalkulator som i opgave 20, hvor brugeren indtaster:
+Lav en lille minikalkulator, hvor brugeren indtaster:
 
 1. første tal
 2. en operator som tekst (`+`, `-`, `*` eller `/`)
