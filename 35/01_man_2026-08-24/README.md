@@ -39,7 +39,7 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
   - [Teams](https://teams.microsoft.com/l/team/19%3A73mRqGmfCm0wJ7F-ftFnXFiyKI0WDJy6nEregr1qQuc1%40thread.tacv2/conversations?groupId=9c32b124-9508-4281-b961-c8b138c3b645&tenantId=9aafd452-b819-40a3-a400-f94ff33b0125) (hver klasse har sin egen kanal)
   - [UMS](https://ums.ek.dk/)
   - [TimeEdit](https://cloud.timeedit.net/dk_ek/web)
-  - [Intranet](https://mit.ek.dk/)
+  - [Intranet](https://mit.ek.dk/studiestart)
 
 
 Du finder IT-vejledninger og support hos EK ved at besøge den officielle serviceportal. Her kan du oprette supportsager, nulstille kodeord og finde guides til skolens systemer.  
