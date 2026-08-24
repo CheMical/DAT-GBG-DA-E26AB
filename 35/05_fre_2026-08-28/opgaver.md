@@ -277,3 +277,43 @@ Eksempel: hvis brugeren skriver `100.0`, skal programmet skrive:
 ```text
 100.0 °C = 212.0 °F = 373.15 K
 ```
+
+---
+
+## Ekstra udfordring – Temperaturomregner (fra Fahrenheit)
+
+Opret en `Scanner`, og bed brugeren om en temperatur i **Fahrenheit** (brug `nextDouble()`).
+
+Omregn til **Celsius** og **Kelvin**.
+
+Udskriv alle tre temperaturer:
+
+```text
+[F] °F = [C] °C = [K] K
+```
+
+Eksempel: hvis brugeren skriver `212.0`, skal programmet skrive:
+
+```text
+212.0 °F = 100.0 °C = 373.15 K
+```
+
+<details>
+<summary>Hint: Vis formel for Celsius</summary>
+
+```text
+C = (F - 32) * 5 / 9
+```
+
+</details>
+
+<details>
+<summary>Hint: Vis formel for Kelvin</summary>
+
+Brug først `C` fra hintet for Celsius.
+
+```text
+K = C + 273.15
+```
+
+</details>
