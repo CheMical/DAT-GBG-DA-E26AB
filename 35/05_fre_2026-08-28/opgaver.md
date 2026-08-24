@@ -280,7 +280,7 @@ Eksempel: hvis brugeren skriver `100.0`, skal programmet skrive:
 
 ---
 
-## Ekstra udfordring – Temperaturomregner (fra Fahrenheit)
+## Udfordring – Temperaturomregner (fra Fahrenheit)
 
 Opret en `Scanner`, og bed brugeren om en temperatur i **Fahrenheit** (brug `nextDouble()`).
 
@@ -537,7 +537,7 @@ Hvis input ikke kan bruges, skal du tænke over, hvordan programmet kan reagere 
 
 ---
 
-## Ekstra udfordring – Input via kommandolinjeargumenter
+## Udfordring – Input via kommandolinjeargumenter
 
 Nogle programmer tager ikke input via `Scanner`, men får i stedet deres input som **kommandolinjeargumenter**. Læs mere om det i [`cmdl.md`](cmdl.md).
 
@@ -557,7 +557,7 @@ Skriv derefter en **ny udgave af koden** for en af opgaverne, hvor det giver men
 
 ---
 
-## Ekstra udfordring – Gæt et tal uden løkker
+## Udfordring – Gæt et tal uden løkker
 
 Lav et lille program, der kan gætte et tal mellem **1 og 4**, som brugeren tænker på.
 
@@ -576,7 +576,7 @@ Når du har fået programmet til at virke for intervallet **1–4**, så prøv a
 
 ---
 
-## Ekstra udfordring – Små skilte med ASCII-grafik
+## Udfordring – Små skilte med ASCII-grafik
 
 Lav et lille program, der kan printe et “skilt” i konsollen ved hjælp af **ASCII-grafik**.
 
