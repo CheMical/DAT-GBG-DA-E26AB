@@ -8,7 +8,7 @@ For at give jer den bedste start, har vi samlet de vigtigste informationer og go
 
 ### Gør dig klar til studiestart
 Inden jeres første officielle studiedag er det vigtigt, at I får styr på det praktiske:
-* **Tjek intranet:** Find alle vigtige informationer om dit hold og din første studiedag på [mit.ek.dk/studiestart](mit.ek.dk/studiestart).
+* **Tjek intranet:** Find alle vigtige informationer om dit hold og din første studiedag på [mit.ek.dk/studiestart](https://mit.ek.dk/studiestart).
 * **Aktiver IT-adgang:** Sørg for at logge på EK's systemer, så du har adgang til mail, skemaer og undervisningsmateriale fra dag ét.
 * **Søg SU:** Hvis du ikke allerede har gjort det, skal du huske at søge om SU til din nye uddannelse.
 * **Medbring computer:** Din bærbare computer er dit absolut vigtigste værktøj – husk at have den fuldt opladet og klar.
