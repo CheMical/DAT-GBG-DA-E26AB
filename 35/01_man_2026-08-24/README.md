@@ -32,9 +32,6 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
 - Semesterplanen, de obligatoriske opgaver, kravene til eksamen og hvad I ellers måtte have af spørgsmål til 1. semester.
 - [Studievejledningen](https://www.ek.dk/kontakt/faa-vejledning)
 
-## Rundvisning
-- Vi gå en tur rundt på EK og besøger relevante lokationer
-
 ## IT systemer
 - Vi kigger på relevante IT systemer
   - its [DAT-GBG-DA-E26A 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7838) [DAT-GBG-DA-E26B 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7840)
@@ -45,7 +42,10 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
   - [Intranet](https://mit.ek.dk/)
 
 
-Du finder IT-vejledninger og support hos EK ved at besøge den officielle serviceportal. Her kan du oprette supportsager, nulstille kodeord og finde guides til skolens systemer.
+Du finder IT-vejledninger og support hos EK ved at besøge den officielle serviceportal. Her kan du oprette supportsager, nulstille kodeord og finde guides til skolens systemer.  
+
+## Rundvisning
+- Vi gå en tur rundt på EK og besøger relevante lokationer
 
 ### Genveje og Links
 * **IT Service Desk (Info):** [Mit EK IT Service Desk](https://ek.dk)
