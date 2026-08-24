@@ -100,7 +100,7 @@ I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel
 
 | Projekt | Bemærkninger                                                                                                                           | Obligatorisk|
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------|-----|
-| TBD        | |
+| Bogsamling        | |
 | Adventure           |                                                                                                             |X |
 | Filmsamling           |                                                                                                             |X |
 | Delfinen    | Eksamensprojekt                                                                                                          | X|
