@@ -8,7 +8,7 @@ For at give jer den bedste start, har vi samlet de vigtigste informationer og go
 
 ### Gør dig klar til studiestart
 Inden jeres første officielle studiedag er det vigtigt, at I får styr på det praktiske:
-* **Tjek intranet:** Find alle vigtige informationer om dit hold og din første studiedag på [mit.ek.dk/studiestart](https://ek.dk).
+* **Tjek intranet:** Find alle vigtige informationer om dit hold og din første studiedag på [mit.ek.dk/studiestart](https://mit.ek.dk/studiestart).
 * **Aktiver IT-adgang:** Sørg for at logge på EK's systemer, så du har adgang til mail, skemaer og undervisningsmateriale fra dag ét.
 * **Søg SU:** Hvis du ikke allerede har gjort det, skal du huske at søge om SU til din nye uddannelse.
 * **Medbring computer:** Din bærbare computer er dit absolut vigtigste værktøj – husk at have den fuldt opladet og klar.
@@ -32,9 +32,6 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
 - Semesterplanen, de obligatoriske opgaver, kravene til eksamen og hvad I ellers måtte have af spørgsmål til 1. semester.
 - [Studievejledningen](https://www.ek.dk/kontakt/faa-vejledning)
 
-## Rundvisning
-- Vi gå en tur rundt på EK og besøger relevante lokationer
-
 ## IT systemer
 - Vi kigger på relevante IT systemer
   - its [DAT-GBG-DA-E26A 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7838) [DAT-GBG-DA-E26B 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7840)
@@ -42,14 +39,17 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
   - [Teams](https://teams.microsoft.com/l/team/19%3A73mRqGmfCm0wJ7F-ftFnXFiyKI0WDJy6nEregr1qQuc1%40thread.tacv2/conversations?groupId=9c32b124-9508-4281-b961-c8b138c3b645&tenantId=9aafd452-b819-40a3-a400-f94ff33b0125) (hver klasse har sin egen kanal)
   - [UMS](https://ums.ek.dk/)
   - [TimeEdit](https://cloud.timeedit.net/dk_ek/web)
-  - [Intranet](https://mit.ek.dk/)
+  - [Intranet](https://mit.ek.dk/studiestart)
 
 
-Du finder IT-vejledninger og support hos EK ved at besøge den officielle serviceportal. Her kan du oprette supportsager, nulstille kodeord og finde guides til skolens systemer.
+Du finder IT-vejledninger og support hos EK ved at besøge den officielle serviceportal. Her kan du oprette supportsager, nulstille kodeord og finde guides til skolens systemer.  
+
+## Rundvisning
+- Vi gå en tur rundt på EK og besøger relevante lokationer
 
 ### Genveje og Links
-* **IT Service Desk (Info):** [Mit EK IT Service Desk](https://ek.dk)
-* **EK Serviceportal (Selvbetjening):** [Mit EK IT](https://ek.dk)
+* **IT Service Desk (Info):** [Mit EK IT Service Desk](https://mit.ek.dk/studiehaandbog/it-service-desk)
+* **EK Serviceportal (Selvbetjening):** [Mit EK IT](https://mit.ek.dk/it)
 
 ### Kontakt IT Service Desk
 * **E-mail:** servicedesk@ek.dk
@@ -100,7 +100,7 @@ I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel
 
 | Projekt | Bemærkninger                                                                                                                           | Obligatorisk|
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------|-----|
-| TBD        | |
+| Bogsamling        | |
 | Adventure           |                                                                                                             |X |
 | Filmsamling           |                                                                                                             |X |
 | Delfinen    | Eksamensprojekt                                                                                                          | X|

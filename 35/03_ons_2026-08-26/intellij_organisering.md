@@ -1,4 +1,4 @@
-# Organisering af Java-projekter og packages i IntelliJ
+# Organisering af Java-projekter, packages og opgaver i IntelliJ
 
 ## Overordnet idé
 
@@ -8,36 +8,58 @@ Derfor organiserer vi koden sådan:
 
 * Vi laver **ét IntelliJ-projekt pr. uge**
 * Inde i projektet laver vi **én package pr. undervisningsgang**
-* Hver package kan have sin egen `Main`-klasse
+* Inde i dagens package laver vi **én klasse pr. opgave**
+* Hver opgaveklasse har sin egen `main`-metode og kan køres separat
+* En eventuel `Main`-klasse bruges til lærerens fælles eksempler eller små forsøg
 * Det gennemgående projekt får sin egen package, når det giver mening
 
-På den måde kan vi gemme koden fra hver undervisningsgang uden at overskrive tidligere eksempler.
+På den måde kan vi gemme alle opgaver og eksempler uden at overskrive tidligere kode. Samtidig kan hver opgave køres og afprøves for sig.
 
 ---
 
 ## Hvorfor bruger vi packages?
 
-I Java kan man ikke have to klasser med samme navn i samme package.
+En package kan sammenlignes med en mappe, der hjælper os med at organisere Java-klasser.
 
-Hvis vi for eksempel har én klasse, der hedder `Main`, kan vi ikke bare oprette en ny klasse med navnet `Main` samme sted.
-
-Men vi må gerne have flere `Main`-klasser, hvis de ligger i forskellige packages.
+Vi bruger én package pr. undervisningsgang. Det gør det let at finde dagens eksempler og opgaver.
 
 Eksempel:
 
 ```text
-dag1_klasser.Main
-dag2_objekter_metoder.Main
-bogsamling.Main
+dag3_variable_datatyper_aritmetik
+dag4_logiske_operatorer_betingelser
+dag5_io_scanner_print_git
 ```
 
-Her hedder klasserne alle sammen `Main`, men de ligger i hver sin package.
+En klasse får et fuldt navn, som består af package-navnet og klassenavnet:
 
-Man kan tænke på en package som en mappe, der hjælper os med at organisere vores Java-klasser.
+```text
+dag3_variable_datatyper_aritmetik.Opgave01
+dag3_variable_datatyper_aritmetik.Opgave02
+dag4_logiske_operatorer_betingelser.Opgave01
+```
+
+---
+
+## Hvorfor laver vi én klasse pr. opgave?
+
+Når mange opgaver skrives i den samme `main`-metode, kan koden hurtigt blive uoverskuelig. Flere opgaver bruger desuden ofte de samme variabelnavne, for eksempel `age`, `number`, `result` eller `score`.
+
+Hvis hver opgave ligger i sin egen klasse:
+
+* kan variabelnavne genbruges fra opgave til opgave
+* kan hver opgave køres separat
+* påvirker fejl i én opgave ikke arbejdet med de andre opgaver
+* er det let at finde en bestemt opgave senere
+* behøver vi ikke oprette ekstra metoder for at adskille opgaverne
+
+Dette er især praktisk, før vi har lært at skrive vores egne metoder.
 
 ---
 
 # Samlet oversigt over projekter og packages
+
+Strukturen kan for eksempel se sådan ud:
 
 ```text
 uge35-intro-java/
@@ -50,30 +72,44 @@ uge35-intro-java/
 
         dag3_variable_datatyper_aritmetik/
             Main.java
+            Opgave01.java
+            Opgave02.java
+            Opgave03.java
+            ...
+            Opgave40.java
 
         dag4_logiske_operatorer_betingelser/
             Main.java
+            Opgave01.java
+            Opgave02.java
+            ...
 
         dag5_io_scanner_print_git/
             Main.java
+            Opgave01.java
+            Opgave02.java
+            ...
 
 
 uge36-loops-arrays-strings/
     src/
         dag1_while_loops/
             Main.java
+            Opgave01.java
+            Opgave02.java
+            ...
 
         dag2_for_loops_while_loops/
             Main.java
+            Opgave01.java
+            Opgave02.java
+            ...
 
         dag3_arrays/
             Main.java
-
-        dag4_itf/
-            Main.java
-
-        dag5_loops_strings_repetition/
-            Main.java
+            Opgave01.java
+            Opgave02.java
+            ...
 
 
 uge37-klasser-objekter-metoder/
@@ -81,19 +117,14 @@ uge37-klasser-objekter-metoder/
         dag1_objekter_klasser_intro/
             Main.java
             Book.java
+            Opgave01.java
+            Opgave02.java
 
         dag2_objekter_klasser_indkapsling/
             Main.java
             Book.java
-
-        dag3_enum_switch/
-            Main.java
-
-        dag4_metoder/
-            Main.java
-
-        dag5_metoder/
-            Main.java
+            Opgave01.java
+            Opgave02.java
 
         bogsamling/
             Main.java
@@ -104,26 +135,22 @@ uge38-relationer-arraylist/
     src/
         dag1_aktivitetsdiagram_debugger/
             Main.java
+            Opgave01.java
+            Opgave02.java
 
         dag2_objekter_i_objekter_klassediagrammer/
             Main.java
             Book.java
             Library.java
-
-        dag3_arraylist/
-            Main.java
-
-        dag4_itf/
-            Main.java
-
-        dag5_arraylist_soegning_redigering/
-            Main.java
+            Opgave01.java
 
         bogsamling/
             Main.java
             Book.java
             Library.java
 ```
+
+Antallet af opgaveklasser afhænger naturligvis af dagens opgaver.
 
 ---
 
@@ -147,13 +174,8 @@ Gør sådan:
 1. Åbn IntelliJ
 2. Vælg **New Project**
 3. Vælg **Java**
-4. Giv projektet et navn, fx:
-
-```text
-uge37-klasser-objekter-metoder
-```
-
-5. Vælg hvor projektet skal gemmes
+4. Giv projektet et navn, fx `uge35-intro-java`
+5. Vælg, hvor projektet skal gemmes
 6. Klik **Create**
 
 ---
@@ -168,20 +190,11 @@ src
 
 Det er i `src`, at Java-koden skal ligge.
 
-Eksempel:
-
-```text
-uge37-klasser-objekter-metoder/
-    src/
-```
-
 ---
 
 # Sådan opretter du en package
 
-## Trin 3: Opret en ny package
-
-En package bruges til at organisere dine Java-klasser.
+## Trin 3: Opret dagens package
 
 Vi laver typisk én package pr. undervisningsgang.
 
@@ -190,7 +203,7 @@ Eksempel på package-navne:
 ```text
 dag1_objekter_klasser_intro
 dag2_objekter_klasser_indkapsling
-dag3_enum_switch
+dag3_variable_datatyper_aritmetik
 bogsamling
 ```
 
@@ -199,133 +212,99 @@ Gør sådan:
 1. Højreklik på `src`
 2. Vælg **New**
 3. Vælg **Package**
-4. Skriv navnet på pakken, fx:
-
-```text
-dag1_objekter_klasser_intro
-```
-
+4. Skriv package-navnet, fx `dag3_variable_datatyper_aritmetik`
 5. Tryk **Enter**
-
-Nu har du oprettet en package.
 
 ---
 
-# Sådan opretter du en Main-klasse i en package
+# Sådan opretter du en klasse til en opgave
 
-## Trin 4: Opret klassen `Main`
+## Trin 4: Opret opgaveklassen
 
-Når du har oprettet en package, skal du oprette en `Main`-klasse i den.
+Hver opgave skal ligge i sin egen Java-klasse.
 
 Gør sådan:
 
-1. Højreklik på pakken, fx `dag1_objekter_klasser_intro`
+1. Højreklik på dagens package
 2. Vælg **New**
 3. Vælg **Java Class**
-4. Skriv:
-
-```text
-Main
-```
-
+4. Skriv klassens navn, fx `Opgave01`
 5. Tryk **Enter**
 
-IntelliJ opretter nu filen `Main.java`.
-
-Den vil typisk se sådan ud:
+IntelliJ opretter nu filen `Opgave01.java`:
 
 ```java
-package dag1_objekter_klasser_intro;
+package dag3_variable_datatyper_aritmetik;
 
-public class Main {
+public class Opgave01 {
 }
 ```
 
-Bemærk den første linje:
+Bemærk, at filnavnet og klassens navn skal være ens:
 
-```java
-package dag1_objekter_klasser_intro;
+```text
+Opgave01.java  →  public class Opgave01
 ```
-
-Den fortæller, at klassen ligger i pakken `dag1_objekter_klasser_intro`.
 
 ---
 
-# Sådan opretter du main-metoden
-
 ## Trin 5: Tilføj `main`-metoden
 
-Inde i `Main`-klassen skal du skrive en `main`-metode:
+Hver opgaveklasse skal have sin egen `main`-metode:
 
 ```java
-package dag1_objekter_klasser_intro;
+package dag3_variable_datatyper_aritmetik;
 
-public class Main {
+public class Opgave01 {
 
     public static void main(String[] args) {
-        System.out.println("Hej fra dag 1");
+        int age = 20;
+        System.out.println(age);
     }
 }
 ```
 
-Du kan køre programmet ved at trykke på den grønne pil ud for `main`-metoden.
+Du kan køre opgaven ved at trykke på den grønne pil ud for `main`-metoden.
 
----
-
-# Sådan opretter du andre klasser
-
-Ud over `Main` skal du ofte oprette andre klasser, fx `Book`, `Library`, `Person` eller `Account`.
-
-Gør sådan:
-
-1. Højreklik på den package, hvor klassen skal ligge
-2. Vælg **New**
-3. Vælg **Java Class**
-4. Skriv klassens navn, fx:
-
-```text
-Book
-```
-
-5. Tryk **Enter**
-
-Eksempel:
+Den næste opgave oprettes i en ny fil:
 
 ```java
-package bogsamling;
+package dag3_variable_datatyper_aritmetik;
 
-public class Book {
+public class Opgave02 {
 
+    public static void main(String[] args) {
+        String name = "Anna";
+        int age = 22;
+
+        System.out.println(name);
+        System.out.println(age);
+    }
 }
 ```
 
+Begge klasser må gerne have en variabel med navnet `age`, fordi de er to separate programmer.
+
 ---
 
-# Eksempel: Flere Main-klasser i samme projekt
+# Hvad bruges `Main.java` til?
 
-I samme IntelliJ-projekt kan du have denne struktur:
+En `Main`-klasse kan bruges til lærerens fælles eksempler, demonstrationer og små forsøg fra undervisningen:
 
-```text
-src/
-    dag1_objekter_klasser_intro/
-        Main.java
+```java
+package dag3_variable_datatyper_aritmetik;
 
-    dag2_objekter_klasser_indkapsling/
-        Main.java
+public class Main {
 
-    bogsamling/
-        Main.java
+    public static void main(String[] args) {
+        System.out.println("Fælles eksempel fra undervisningen");
+    }
+}
 ```
 
-Det er tilladt, fordi de tre `Main`-klasser ligger i hver sin package.
+Opgavebesvarelserne skal stadig ligge i `Opgave01`, `Opgave02` osv. `Main` skal derfor ikke indeholde alle dagens opgaver.
 
-De fulde navne er:
-
-```text
-dag1_objekter_klasser_intro.Main
-dag2_objekter_klasser_indkapsling.Main
-bogsamling.Main
-```
+Hvis der ikke er brug for en fælles `Main`-klasse på en undervisningsdag, kan den udelades.
 
 ---
 
@@ -333,84 +312,44 @@ bogsamling.Main
 
 ## Projektnavne
 
-Projektnavne må gerne være beskrivende.
-
-Eksempler:
+Projektnavne må gerne være beskrivende og kan indeholde bindestreger:
 
 ```text
 uge35-intro-java
 uge36-loops-arrays-strings
-uge37-klasser-objekter-metoder
-uge38-relationer-arraylist
 ```
-
-Det er fint at bruge bindestreg i projektnavne.
-
----
 
 ## Package-navne
 
-Package-navne bør være korte og uden mellemrum.
-
-Eksempler:
+Package-navne skrives med små bogstaver og uden mellemrum:
 
 ```text
-dag1_introdag_studiegrupper
-dag2_variable_datatyper
+dag3_variable_datatyper_aritmetik
 dag3_enum_switch
 bogsamling
 ```
 
-Brug små bogstaver.
-
-Undgå æ, ø og å i package-navne.
-
-Brug derfor ikke:
-
-```text
-dag1_øvelse
-```
-
-Brug i stedet:
-
-```text
-dag1_oevelse
-```
-
-eller endnu bedre et mere præcist navn:
-
-```text
-dag1_klasser
-```
-
-Undgå også mellemrum.
-
-Brug ikke:
-
-```text
-Dag 1 Klasser
-```
-
-Brug i stedet:
-
-```text
-dag1_klasser
-```
-
----
+Undgå æ, ø og å i package-navne. Brug for eksempel `oevelse` i stedet for `øvelse`.
 
 ## Klassenavne
 
-Klassenavne skrives med stort begyndelsesbogstav.
-
-Eksempler:
+Klassenavne skrives med stort begyndelsesbogstav:
 
 ```text
 Main
+Opgave01
+Opgave02
 Book
 Library
-Person
-Account
+```
+
+Brug gerne to cifre i opgavenummeret. Så sorterer IntelliJ filerne i den rigtige rækkefølge:
+
+```text
+Opgave01
+Opgave02
+Opgave09
+Opgave10
 ```
 
 ---
@@ -421,19 +360,21 @@ Når vi starter en ny undervisningsgang:
 
 1. Åbn ugens IntelliJ-projekt
 2. Opret en ny package til dagens kode
-3. Opret en ny `Main`-klasse i pakken
-4. Afprøv dagens eksempler i `main`-metoden
-5. Gem koden, så du kan finde den igen senere
+3. Opret eventuelt `Main.java` til fælles eksempler
+4. Opret én Java-klasse pr. opgave: `Opgave01`, `Opgave02` osv.
+5. Tilføj en `main`-metode i hver opgaveklasse
+6. Kør og afprøv hver opgave separat
+7. Gem koden, så du kan finde den igen senere
 
 Eksempel:
 
 ```text
 src/
-    dag1_objekter_klasser_intro/
+    dag3_variable_datatyper_aritmetik/
         Main.java
-
-    dag2_objekter_klasser_indkapsling/
-        Main.java
+        Opgave01.java
+        Opgave02.java
+        Opgave03.java
 ```
 
 ---
@@ -446,7 +387,7 @@ Når du arbejder med det gennemgående projekt **Min bogsamling**, skal du bruge
 bogsamling
 ```
 
-Her skal dine projektklasser ligge:
+Her ligger de klasser, som tilsammen udgør programmet:
 
 ```text
 src/
@@ -456,50 +397,11 @@ src/
         Library.java
 ```
 
-Du skal altså ikke lave en ny `Book`-klasse hver gang i en ny dag-package, hvis du arbejder videre på projektet.
-
----
-
-# Det gennemgående projekt: Min bogsamling
-
-Ud over de små eksempler laver vi et gennemgående projekt, som hedder:
-
-```text
-Min bogsamling
-```
-
-Projektet placeres i en package med navnet:
-
-```text
-bogsamling
-```
-
-I starten indeholder projektet kun en `Book`-klasse:
-
-```text
-src/
-    bogsamling/
-        Main.java
-        Book.java
-```
-
-Senere udvider vi projektet med en `Library`-klasse:
-
-```text
-src/
-    bogsamling/
-        Main.java
-        Book.java
-        Library.java
-```
-
-På den måde kan vi arbejde videre med det samme lille projekt, efterhånden som vi lærer nye begreber.
+Du skal ikke oprette en ny `Book`-klasse for hver opgave, hvis du arbejder videre på det samme projekt. Reglen om én klasse pr. opgave gælder de selvstændige øvelser. I et samlet projekt bestemmes klasserne i stedet af programmets model og ansvar.
 
 ---
 
 # Samlet progression
-
-Den samlede progression i projekterne kan ses sådan:
 
 ```text
 uge35-intro-java
@@ -508,7 +410,7 @@ IntelliJ, Main, output, variable, datatyper og simple beregninger
 
 uge36-loops-arrays-strings
     ↓
-while-loops, for-loops, arrays, strings og repetition
+while-løkker, for-løkker, arrays, strings og repetition
 
 uge37-klasser-objekter-metoder
     ↓
@@ -528,10 +430,9 @@ Vi bruger denne struktur:
 ```text
 Ét projekt pr. uge
 Én package pr. undervisningsgang
-Én Main-klasse pr. package
-Én separat package til det gennemgående projekt, når det giver mening
+Én klasse med egen main-metode pr. opgave
+En valgfri Main-klasse til fælles eksempler
+En separat package til det gennemgående projekt, når det giver mening
 ```
 
-Det gør det nemmere at holde styr på koden og samtidig gemme tidligere eksempler.
-
-På den måde kan du altid gå tilbage og se, hvad du lavede i tidligere undervisningsgange, uden at din nye kode overskriver den gamle.
+Det gør det lettere at arbejde med små opgaver, genbruge variabelnavne og køre hver løsning separat. Samtidig gemmer vi tidligere eksempler og opgaver, så de er lette at finde igen.

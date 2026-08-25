@@ -6,7 +6,9 @@ Fotoet skal dekoreres med et selvvalgt gruppenavn, og navne på hver enkelt pers
 ### Krav
 Der skal tages ét fælles foto af samtlige gruppemedlemmer – billedet skal indeholde:
 
-- Navn på gruppen **Brug de officielle gruppenavne som angivet her: [Studiegruper](https://erhvervsakademikbenhavn.sharepoint.com/:x:/r/sites/Team-E26AB/_layouts/15/Doc.aspx?action=edit&sourcedoc=%7B3b88b7b6-20c0-4cac-b2cf-18449771f9ca%7D&wdExp=TEAMS-TREATMENT&web=1)**  
+- Navn på gruppen **Brug de officielle gruppenavne som angivet her**:
+  - [Studiegrupper (A-klassen)](https://erhvervsakademikbenhavn.sharepoint.com/:x:/r/sites/Team-E26AB/_layouts/15/Doc.aspx?action=edit&sourcedoc=%7B3b88b7b6-20c0-4cac-b2cf-18449771f9ca%7D&wdExp=TEAMS-TREATMENT&web=1)
+  - [Studiegrupper (B-klassen)](https://erhvervsakademikbenhavn.sharepoint.com/:x:/r/sites/Team-E26AB/Delte%20dokumenter/B/Grupper%20-%20E26B.xlsx?d=w6fbbf83088854e0dba00f8e15f06e3b6&csf=1&web=1&e=Ag8VFN)
 - Tydeligt ansigt for hvert enkelt gruppemedlem
 - Navn på hvert enkelt gruppemedlem. Det skal være tydeligt hvilke navne der hører til hvilke personer.
 
