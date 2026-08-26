@@ -606,13 +606,15 @@ LARGE
 
 ## Din opgave
 
-Opret en enum med navnet:
+Byg videre på `DeliveryType` fra opgave 12, så enum'en nu også gemmer prisen direkte i hver enum-værdi.
+
+Din enum skal stadig hedde:
 
 ```java
 DeliveryType
 ```
 
-Den skal indeholde tre typer levering og deres priser:
+Den skal stadig indeholde tre typer levering og deres priser:
 
 | Leveringstype |   Pris |
 | ------------- | -----: |

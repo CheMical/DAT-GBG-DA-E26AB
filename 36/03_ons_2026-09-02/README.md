@@ -24,7 +24,7 @@ Efter lektionen skal du kunne:
 
 ---
 
-## Se disse videoer før undervisningen:
+## Se disse videoer før undervisningen
 
 [enhanced switches](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=2h49m05s) (02:49:05–02:57:42)  
 [enums](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=11h02m38s) (11:02:38–11:12:45)  
