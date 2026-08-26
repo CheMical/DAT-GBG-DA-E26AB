@@ -65,7 +65,7 @@
 <tr>
   <td></td>
   <td><a href="36/03_ons_2026-09-02/README.md">Onsdag 02-09-2026</a></td>
-  <td>Arrays</td>
+  <td>Enum, switch</td>
   <td>MANY/MICA</td>
   <td></td>
 </tr>
