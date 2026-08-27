@@ -25,9 +25,9 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 ## Se disse videoer før undervisningen
 
-[arrays](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=5h3m26s) (til: 05:12:35)  
-[enter user input into an array](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=5h12m35s) (til: 05:20:38)  
-[search an array](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=5h20m38s) (til: 05:28:07)  
+[Arrays](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=5h3m26s) (til: 05:12:35)  
+[Brugerinput i et array](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=5h12m35s) (til: 05:20:38)  
+[Søg i et array](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=5h20m38s) (til: 05:28:07)  
 
 ## Læs nedenstående før undervisningen
 
