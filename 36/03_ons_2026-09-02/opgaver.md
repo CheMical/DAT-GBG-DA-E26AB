@@ -49,7 +49,7 @@ Forventet output:
 
 Opret et `int`-array med tre værdier: `5`, `10`, `15`.
 
-Ændre andet element (index `1`) til `99`, og udskriv hele arrayet.
+Ændr andet element (index `1`) til `99`, og udskriv hele arrayet.
 
 Forventet output:
 
@@ -488,7 +488,7 @@ Antal swaps: 8
 
 ---
 
-## Udfordring – Mini-ordbok
+## Udfordring – Mini-ordbog
 
 Lav et program, der fungerer som en mini-ordbog.
 
@@ -508,16 +508,16 @@ Programmet skal:
 Eksempel:
 
 ```text
-Skriv et engelskord (eller 'stop' for at afslutte): hello
+Skriv et engelsk ord (eller 'stop' for at afslutte): hello
 Dansk oversættelse: hej
 
-Skriv et engelskord (eller 'stop' for at afslutte): world
+Skriv et engelsk ord (eller 'stop' for at afslutte): world
 Dansk oversættelse: verden
 
-Skriv et engelskord (eller 'stop' for at afslutte): xyz
+Skriv et engelsk ord (eller 'stop' for at afslutte): xyz
 Ordet blev ikke fundet
 
-Skriv et engelskord (eller 'stop' for at afslutte): stop
+Skriv et engelsk ord (eller 'stop' for at afslutte): stop
 Farvel!
 ```
 
