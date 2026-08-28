@@ -109,6 +109,13 @@ Hej Sofie, du er 21 år gammel.
 Opret en `Scanner`, og bed brugeren om at indtaste en pris i kroner som decimaltal med
 `nextDouble()`.
 
+Scanner er afhængig af sproget på din computer, så med dansk opsætning vil decimaltegnet være , (komma) og for at kunne bruge . (punktum), når du skriver kommatal, så du efter oprettelsen af din Scanner skrive sådan her:
+
+```java
+Scanner scanner = new Scanner(System.in);
+scanner.useLocale(Locale.forLanguageTag("en-US"));
+```
+
 Udskriv prisen med teksten:
 
 ```text
