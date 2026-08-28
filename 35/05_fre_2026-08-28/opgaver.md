@@ -214,6 +214,17 @@ Eksempel: hvis brugeren skriver `100.0`, skal programmet skrive:
 
 Brug `String.format("%.2f", ...)` til at formatere eurobeløbet til præcis 2 decimaler.
 
+Eksempel:
+
+```java
+Double d = 3.1415;
+String s = String.format("%.2f", d);
+System.out.println("Med pi med to decimaler: " + s);
+```
+```text
+Med pi med to decimaler: 3.14
+```
+
 ---
 
 ## Opgave 10 – Mini-profil
