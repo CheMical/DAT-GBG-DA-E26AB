@@ -116,6 +116,15 @@ Scanner scanner = new Scanner(System.in);
 scanner.useLocale(Locale.forLanguageTag("en-US"));
 ```
 
+<details>
+<summary>Hint: Hvis IntelliJ ikke selv inkluderer import af <code>Locale</code>:</summary>
+Øverst i din Java-fil skal du tilføje endnu en import, men denne gang af <code>Locale</code> fx lige efter import af <code>Scanner</code>:
+
+```java
+import java.util.Locale;
+```
+</details>
+
 Udskriv prisen med teksten:
 
 ```text
@@ -226,10 +235,10 @@ Eksempel:
 ```java
 Double d = 3.1415;
 String s = String.format("%.2f", d);
-System.out.println("Med pi med to decimaler: " + s);
+System.out.println("Pi med to decimaler: " + s);
 ```
 ```text
-Med pi med to decimaler: 3.14
+Pi med to decimaler: 3.14
 ```
 
 ---
