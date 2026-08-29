@@ -16,10 +16,10 @@ Selvom algoritmen er let at forstå, er den ineffektiv for store lister, da tids
 Startliste: [5, 3, 8, 4, 2]
 
 Pass 1 – Første gennemløb:
-[5, 3, 8, 4, 2]  → sammenlign 5 og 3 → [3, 5, 8, 4, 2]  (3 < 5, bytt)
+[5, 3, 8, 4, 2]  → sammenlign 5 og 3 → [3, 5, 8, 4, 2]  (3 < 5, ombyt)
 [3, 5, 8, 4, 2]  → sammenlign 5 og 8 → [3, 5, 8, 4, 2]  (ok)
-[3, 5, 8, 4, 2]  → sammenlign 8 og 4 → [3, 5, 4, 8, 2]  (4 < 8, bytt)
-[3, 5, 4, 8, 2]  → sammenlign 8 og 2 → [3, 5, 4, 2, 8]  (2 < 8, bytt)
+[3, 5, 8, 4, 2]  → sammenlign 8 og 4 → [3, 5, 4, 8, 2]  (4 < 8, ombyt)
+[3, 5, 4, 8, 2]  → sammenlign 8 og 2 → [3, 5, 4, 2, 8]  (2 < 8, ombyt)
                                           ↑ 8 er nu på plads
 
 Pass 2 – Anden gennemløb (uden sidste element):
@@ -43,17 +43,21 @@ Pass 4 – Sidste gennemløb:
 ```
 BUBBLE_SORT(array):
   n = længden af array
+  i = 0
   
-  FOR i = 0 til n-1:
-    FOR j = 0 til n-i-2:
-      IF array[j] > array[j+1]:
-        bytt array[j] og array[j+1]
+  MENS i < n-1:
+    j = 0
+    MENS j < n-i-1:
+      HVIS array[j] > array[j+1]:
+        ombyt array[j] og array[j+1]
+      j = j + 1
+    i = i + 1
 ```
 
 ### Forklaring af loops
 
 - **Ydre loop** (`i`): Går gennem hver pass. Vi behøver højst `n-1` passes for at sortere listen.
-- **Indre loop** (`j`): Sammenligner naboer og bytter dem. Efter hver pass placeres en element på sin rigtige position, så vi kan reducere område med `n-i`.
+- **Indre loop** (`j`): Sammenligner naboer og ombytter dem. Efter hver pass placeres et element på sin rigtige position, så vi kan reducere område med `n-i`.
 
 ---
 
@@ -66,14 +70,15 @@ Dette diagram viser hvordan bubble sort-algoritmen fungerer med dens indlejrede 
 ```mermaid
 flowchart TD
     S(( )) --> I["n = længden af array"]
-    I --> O1{"i &lt; n-1?"}
+    I --> I_INIT["i = 0"]
+    I_INIT --> O1{"i &lt; n-1?"}
     O1 -->|nej| E((( )))
     O1 -->|ja| J["j = 0"]
     J --> O2{"j &lt; n-i-1?"}
     O2 -->|nej| INC1["i = i + 1"]
     INC1 --> O1
     O2 -->|ja| CMP{"array[j] &gt; array[j+1]?"}
-    CMP -->|ja| SWAP["Bytt array[j] og array[j+1]"]
+    CMP -->|ja| SWAP["Ombyt array[j] og array[j+1]"]
     CMP -->|nej| INC2["j = j + 1"]
     SWAP --> INC2
     INC2 --> O2
