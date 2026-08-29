@@ -7,7 +7,7 @@
 Selection sort virker således:
 1. Find det mindste element i den usorterede del
 2. Bytte det mindste element med det første element i den usorterede del
-3. Flyt grænsen mellem sorteret og usorterede del en plads til højre
+3. Flyt grænsen mellem sorteret og usorteret del en plads til højre
 4. Gentag indtil hele listen er sorteret
 
 ## Visuel demonstration
