@@ -7,7 +7,7 @@
 Selection sort virker således:
 1. Find det mindste element i den usorterede del
 2. Bytte det mindste element med det første element i den usorterede del
-3. Flyt grænsen mellem sorteret og usorteret del en plads til højre
+3. Flyt grænsen mellem sorteret og usorterede del en plads til højre
 4. Gentag indtil hele listen er sorteret
 
 ## Visuel demonstration
@@ -79,14 +79,13 @@ graph TD
     E --> F["j = i + 1"]
     F --> G{"Er j < n?"}
     G -->|Nej| H["Bytte element ved i<br/>med element ved min_index"]
-    G -->|Ja| I{"Er element[j]<br/>< element[min_index]?"}
+    G -->|Ja| I{"Er element[j] < element[min_index]?"}
     I -->|Ja| J["min_index = j"]
-    I -->|Nej| J
-    J --> K["j = j + 1"]
+    I -->|Nej| K["j = j + 1"]
+    J --> K
     K --> G
     H --> L["i = i + 1"]
     L --> C
-    D --> M["Slut"]
 ```
 
 ## Pseudokode
