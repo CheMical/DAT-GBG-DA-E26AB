@@ -50,7 +50,7 @@ Forventet output:
 
 ## Opgave 2 – Tæl ned
 
-Lav et `while`-loop, der tæller ned fra 10 til 1.
+Lav et `while`-loop, der tæller ned fra 10 til 1 og udskriver tallene.
 
 Når loopet er færdigt, skal programmet skrive:
 
