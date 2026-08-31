@@ -6,7 +6,7 @@
 
 Selection sort virker således:
 1. Find det mindste element i den usorterede del
-2. Bytte det mindste element med det første element i den usorterede del
+2. Ombyt det mindste element med det første element i den usorterede del
 3. Flyt grænsen mellem sorteret og usorteret del en plads til højre
 4. Gentag indtil hele listen er sorteret
 
@@ -20,7 +20,7 @@ Lad os sortere listen: `[64, 25, 12, 22, 11]`
       ↑           ↑
     startpos    min=11
 
-↓ Bytte 64 og 11
+↓ Ombyt 64 og 11
 
 [11, 25, 12, 22, 64]
  ✓
@@ -32,7 +32,7 @@ Lad os sortere listen: `[64, 25, 12, 22, 11]`
  ✓       ↑
         min=12
 
-↓ Bytte 25 og 12
+↓ Ombyt 25 og 12
 
 [11, 12, 25, 22, 64]
  ✓  ✓
@@ -44,7 +44,7 @@ Lad os sortere listen: `[64, 25, 12, 22, 11]`
  ✓  ✓       ↑
            min=22
 
-↓ Bytte 25 og 22
+↓ Ombyt 25 og 22
 
 [11, 12, 22, 25, 64]
  ✓  ✓  ✓
@@ -78,7 +78,7 @@ graph TD
     C -->|Ja| E["min_index = i"]
     E --> F["j = i + 1"]
     F --> G{"Er j < n?"}
-    G -->|Nej| H["Bytte element ved i<br/>med element ved min_index"]
+    G -->|Nej| H["Ombyt element ved i<br/>med element ved min_index"]
     G -->|Ja| I{"Er element[j] < element[min_index]?"}
     I -->|Ja| J["min_index = j"]
     I -->|Nej| K["j = j + 1"]
@@ -100,7 +100,7 @@ procedure selectionSort(array A)
         for j from i + 1 to length(A) - 1
             if A[j] < A[min_index]
                 min_index = j
-        // Bytte
+        // Ombytning af elementer
         temp = A[i]
         A[i] = A[min_index]
         A[min_index] = temp
@@ -116,17 +116,17 @@ end procedure
 |--------|-------|
 | **Tidskompleksitet** | O(n²) - både bedste, worst-case og gennemsnit |
 | **Plads kompleksitet** | O(1) - sorterer in-place |
-| **Stabilitet** | Ustabil (bytter kan ændre rækkefølgen af lige elementer) |
+| **Stabilitet** | Ustabil (kan ændre rækkefølgen af lige elementer) |
 | **Adaptivitet** | Ikke adaptiv (samme tid uanset sorterings-tilstand) |
 | **Sammenligninger** | n(n-1)/2 sammenligninger |
-| **Bytninger** | Maksimalt n-1 bytninger |
+| **Ombytninger** | Maksimalt n-1 ombytninger |
 
 ## Fordele og ulemper
 
 ✅ **Fordele:**
 - Meget simpel at implementere
 - Ingen ekstra hukommelse nødvendig (in-place)
-- Få bytninger (god for dyre bytningsoperationer)
+- Få ombytninger (god for dyre ombytningsoperationer)
 
 ❌ **Ulemper:**
 - Langsom for store datasæt (O(n²))
