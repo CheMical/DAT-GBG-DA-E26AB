@@ -30,6 +30,7 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 - refaktorisere statiske hjælpemetoder til instansmetoder
 - vælge metodenavne, der beskriver meningsfulde handlinger
 - skelne mellem en generel setter og en metode, der beskriver adfærd
+- læse og forstå et simpelt klassediagram for en enkelt klasse
 
 ### Se disse videoer før undervisningen
 
@@ -219,7 +220,39 @@ Begge kald kan ændre alderen til 24, men de fortæller ikke det samme.
 
 Et godt metodenavn fortæller, hvad der sker, uden at læseren behøver at kende alle detaljerne.
 
-#### 5. Hvilken klasse skal metoden ligge i?
+##### Klassen visualiseret som et klassediagram
+
+Når vi designer en klasse, kan vi bruge et klassediagram til hurtigt at få overblik over klassens attributter og metoder.
+
+`Person`-klassen kan illustreres sådan:
+
+```text
++----------------------------+
+|           Person           |
++----------------------------+
+| - name : String            |
+| - age : int                |
++----------------------------+
+| + birthday() : void        |
++----------------------------+
+```
+
+Diagrammet består af tre dele:
+
+- øverst står klassens navn
+- i midten står klassens attributter
+- nederst står klassens metoder
+
+Tegnene foran navne har en betydning:
+
+- `+` betyder public
+- `-` betyder private
+
+Vi kan se, at et `Person`-objekt har attributterne `name` og `age`, og at andre klasser må kalde metoden `birthday()`.
+
+Klassediagrammet viser ikke implementeringen af metoderne. Det viser klassens struktur og ansvar.
+
+##### 5. Hvilken klasse skal metoden ligge i?
 
 Se dette eksempel:
 
@@ -316,10 +349,35 @@ Metoden er en intern del af klassens arbejde.
 
 En enkel huskeregel er:
 
-- `public` bruges til funktionalitet, som andre klasser skal kunne anvende.
-- `private` bruges til interne hjælpemetoder, som kun klassen selv har brug for.
+- public bruges til funktionalitet, som andre klasser skal kunne anvende.
+- private bruges til interne hjælpemetoder, som kun klassen selv har brug for.
 
-#### 7. Private hjælpemetoder
+##### Synlighed i et klassediagram
+
+Når vi tegner klassediagrammer, kan vi også vise synligheden af attributter og metoder.
+
+Se dette eksempel:
+
+```text
++-------------------------------------+
+|             BankAccount             |
++-------------------------------------+
+| - balance : double                  |
++-------------------------------------+
+| + deposit(double) : void            |
+| + getBalance() : double             |
++-------------------------------------+
+```
+
+Her kan vi se:
+
+- `balance` er privat
+- `deposit()` er offentlig
+- `getBalance()` er offentlig
+
+Klassediagrammet giver dermed hurtigt overblik over, hvad andre klasser må bruge, og hvad der er skjult inde i klassen.
+
+##### 7. Private hjælpemetoder
 
 En metode kan blive lettere at forstå, hvis dele af arbejdet flyttes ud i tydeligt navngivne hjælpemetoder.
 
@@ -346,7 +404,38 @@ Her er:
 
 Klassen viser dermed kun den funktionalitet, som andre dele af programmet har brug for.
 
-#### 8. Metoder kan kalde andre metoder
+##### Klassediagram for BankAccount
+
+Vi kan også vise private hjælpemetoder i et klassediagram.
+
+```text
++--------------------------------------+
+|             BankAccount              |
++--------------------------------------+
+| - balance : double                   |
++--------------------------------------+
+| + deposit(double) : void             |
+| - isValidAmount(double) : boolean    |
++--------------------------------------+
+```
+
+Diagrammet viser tydeligt forskellen mellem klassens offentlige funktionalitet og dens interne implementering.
+
+Andre klasser må kalde:
+
+```java
+account.deposit(500);
+```
+
+Men andre klasser må ikke kalde:
+
+```java
+account.isValidAmount(500);
+```
+
+fordi metoden er private.
+
+##### 8. Metoder kan kalde andre metoder
 
 Se denne klasse:
 
@@ -568,7 +657,28 @@ Spørgsmål:
 
 ### Det vigtigste at tage med
 
-- en `static` metode hører til klassen
+```text
++---------------------------+
+|            Car            |
++---------------------------+
+| - speed : int             |
++---------------------------+
+| + accelerate() : void     |
+| + brake() : void          |
++---------------------------+
+```
+
+Spørgsmål:
+
+- Hvilke attributter har klassen?
+- Hvilke metoder kan kaldes fra andre klasser?
+- Hvad betyder tegnet `+` foran metoderne?
+- Hvad betyder tegnet `-` foran attributten?
+- Hvordan kunne en Java-klasse se ud, hvis den skulle passe til diagrammet?
+
+#### Det vigtigste at tage med
+
+- en static metode hører til klassen
 - en instansmetode hører til et objekt
 - en instansmetode kan arbejde direkte med objektets attributter
 - generelle beregninger ud fra parametre kan ofte være `static`
@@ -580,6 +690,11 @@ Spørgsmål:
 - ikke alle private attributter behøver en setter
 - metodenavne som `birthday()`, `deposit()` og `withdraw()` beskriver tydeligere handlinger end generelle setters
 - en klasse samler både data og den adfærd, der arbejder med dataene
+- et klassediagram kan bruges til at visualisere en klasses struktur
+- et klassediagram viser typisk klasse, attributter og metoder
+- `+` betyder public
+- `-` betyder private
+- klassediagrammer gør det lettere at se ansvar og synlighed i en klasse
 
 ### Aktiviteter i undervisningen
 
