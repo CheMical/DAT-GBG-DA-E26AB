@@ -689,7 +689,7 @@ Spørgsmål:
 - en `private` metode kan kun bruges internt i sin egen klasse
 - private hjælpemetoder kan skjule interne detaljer
 - metoder kan kalde andre metoder
-- ikke alle private attributter behøver en setter
+- mange objekter bør kun tilbyde meningsfulde handlinger frem for generelle setters. 
 - metodenavne som `birthday()`, `deposit()` og `withdraw()` beskriver tydeligere handlinger end generelle setters
 - en klasse samler både data og den adfærd, der arbejder med dataene
 - et klassediagram kan bruges til at visualisere en klasses struktur
