@@ -33,7 +33,7 @@ Efter lektionen skal du kunne:
 
 ## Læs nedenstående før undervisningen
 
-### 1. Hvad er en enum?
+### Hvad er en enum?
 
 Forestil dig, at vi skal gemme en ugedag.
 
@@ -97,7 +97,7 @@ Java hjælper os dermed med at sikre, at vi kun bruger gyldige værdier.
 
 ---
 
-### 2. Hvornår kan enum være nyttigt?
+### Hvornår kan enum være nyttigt?
 
 En `enum` er især nyttig, når der findes et begrænset antal muligheder.
 
@@ -135,7 +135,7 @@ CustomerType type = CustomerType.VIP;
 
 ---
 
-### 3. Sammenligning af enum-værdier
+### Sammenligning af enum-værdier
 
 Enum-værdier kan sammenlignes med `==`.
 
@@ -173,7 +173,7 @@ Her kan `switch` være et alternativ.
 
 ---
 
-### 4. En simpel switch
+### En simpel switch
 
 ```java
 Day day = Day.MONDAY;
@@ -212,7 +212,7 @@ case MONDAY:
 
 ---
 
-### 5. Hvorfor står der break?
+### Hvorfor står der break?
 
 I en klassisk `switch` bruges `break` til at afslutte den aktuelle `case`.
 
@@ -251,7 +251,7 @@ Vi vil normalt undgå dette, og derfor bruger vi `break`.
 
 ---
 
-### 6. default
+### default
 
 En `switch` kan have en `default`.
 
@@ -273,6 +273,53 @@ switch (number) {
 `default` udføres, hvis ingen af de andre `case` passer.
 
 Det minder om den sidste `else` i en `if-else`-konstruktion.
+
+---
+
+### Hvilke datatyper kan bruges i en switch?
+
+Selvom `enum` og `switch` er et perfekt par, kan en `switch` også bruges med flere andre almindelige datatyper i Java.
+
+Du kan bruge en `switch` sammen med:
+* **Primitive heltal:** `int`, `byte`, `short`, `char`
+* **Wrapper-klasser:** `Integer`, `Byte`, `Short`, `Character`
+* **Tekststrenge:** `String` (siden Java 7)
+
+#### Eksempel med `int`:
+```java
+int month = 2;
+
+switch (month) {
+    case 1:
+        System.out.println("Januar");
+        break;
+    case 2:
+        System.out.println("Februar");
+        break;
+    default:
+        System.out.println("En anden måned");
+}
+```
+
+#### Eksempel med `String`:
+Vær opmærksom på, at når du bruger en `String`, er Javas `switch` **case-sensitive** (der er forskel på store og små bogstaver).
+
+```java
+String role = "admin";
+
+switch (role) {
+    case "admin":
+        System.out.println("Fuld adgang til systemet");
+        break;
+    case "user":
+        System.out.println("Begrænset adgang");
+        break;
+    default:
+        System.out.println("Ukendt rolle");
+}
+```
+
+> ⚠️ **Pas på:** Hvis din `String`-variabel er `null` (altså ikke har nogen værdi), vil programmet kaste en `NullPointerException`. Sørg derfor altid for, at din `String` er valideret, før den rammer en `switch`.
 
 ---
 ### Ny switch-syntaks
