@@ -1,6 +1,6 @@
-## Metoders placering, synlighed og ansvar
+# Metoders placering, synlighed og ansvar
 
-### Beskrivelse
+## Beskrivelse
 
 I går arbejdede vi grundigt med, hvordan metoder skrives og kaldes. Vi så blandt andet på parametre, argumenter, returværdier, `void`, scope, overloading og `static`.
 
@@ -17,7 +17,7 @@ Vi undersøger især:
 
 Målet er ikke blot at skrive kode, der virker. Målet er at skrive kode, hvor ansvar og funktionalitet er placeret tydeligt.
 
-### Læringsmål
+## Læringsmål
 
 Når du har arbejdet med dagens materiale, skal du kunne:
 
@@ -32,13 +32,13 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 - skelne mellem en generel setter og en metode, der beskriver adfærd
 - læse og forstå et simpelt klassediagram for en enkelt klasse
 
-### Se disse videoer før undervisningen
+## Se disse videoer før undervisningen
 
 [static](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=7h14m07s) (til: 07:22:04)
 
-### Læs nedenstående før undervisningen
+## Læs nedenstående før undervisningen
 
-#### 1. Repetition: Vi har allerede brugt forskellige typer metoder
+### Repetition: Vi har allerede brugt forskellige typer metoder
 
 Du har allerede mødt metodekald som disse:
 
@@ -76,7 +76,7 @@ Kort sagt:
 
 I dag skal vi arbejde med, hvordan vi vælger mellem de to.
 
-#### 2. Hvornår giver `static` mening?
+### Hvornår giver static mening?
 
 En metode kan være `static`, når den ikke har brug for tilstanden i et bestemt objekt.
 
@@ -113,7 +113,7 @@ public static boolean isEven(int number) {
 
 Begge metoder får de nødvendige værdier gennem deres parametre.
 
-#### 3. Hvornår bør en metode høre til et objekt?
+### Hvornår bør en metode høre til et objekt?
 
 Se denne klasse:
 
@@ -178,7 +178,7 @@ En nyttig tommelfingerregel er:
 - Hvis metoden udfører en generel beregning ud fra sine parametre, kan `static` give mening.
 - Hvis metoden arbejder med et bestemt objekts data eller beskriver noget, objektet kan gøre, bør den ofte være en instansmetode.
 
-#### 4. Metoder beskriver et objekts adfærd
+### Metoder beskriver et objekts adfærd
 
 En klasse beskriver ikke kun, hvilke data et objekt indeholder. Den kan også beskrive, hvad objektet kan gøre.
 
@@ -220,7 +220,7 @@ Begge kald kan ændre alderen til 24, men de fortæller ikke det samme.
 
 Et godt metodenavn fortæller, hvad der sker, uden at læseren behøver at kende alle detaljerne.
 
-##### Klassen visualiseret som et klassediagram
+#### Klassen visualiseret som et klassediagram
 
 Når vi designer en klasse, kan vi bruge et klassediagram til hurtigt at få overblik over klassens attributter og metoder.
 
@@ -252,7 +252,7 @@ Vi kan se, at et `Person`-objekt har attributterne `name` og `age`, og at andre 
 
 Klassediagrammet viser ikke implementeringen af metoderne. Det viser klassens struktur og ansvar.
 
-##### 5. Hvilken klasse skal metoden ligge i?
+### Hvilken klasse skal metoden ligge i?
 
 Se dette eksempel:
 
@@ -305,7 +305,7 @@ Når du skal placere en metode, kan du spørge:
 3. Beskriver metoden noget, et objekt af denne klasse kan gøre?
 4. Kan metoden arbejde direkte med objektets attributter i stedet for at modtage objektet som parameter?
 
-#### 6. `public` og `private` metoder
+### public og private metoder
 
 Du har tidligere brugt `private` til attributter:
 
@@ -352,7 +352,7 @@ En enkel huskeregel er:
 - public bruges til funktionalitet, som andre klasser skal kunne anvende.
 - private bruges til interne hjælpemetoder, som kun klassen selv har brug for.
 
-##### Synlighed i et klassediagram
+#### Synlighed i et klassediagram
 
 Når vi tegner klassediagrammer, kan vi også vise synligheden af attributter og metoder.
 
@@ -377,7 +377,7 @@ Her kan vi se:
 
 Klassediagrammet giver dermed hurtigt overblik over, hvad andre klasser må bruge, og hvad der er skjult inde i klassen.
 
-##### 7. Private hjælpemetoder
+### Private hjælpemetoder
 
 En metode kan blive lettere at forstå, hvis dele af arbejdet flyttes ud i tydeligt navngivne hjælpemetoder.
 
@@ -404,7 +404,7 @@ Her er:
 
 Klassen viser dermed kun den funktionalitet, som andre dele af programmet har brug for.
 
-##### Klassediagram for BankAccount
+#### Klassediagram for BankAccount
 
 Vi kan også vise private hjælpemetoder i et klassediagram.
 
@@ -435,7 +435,7 @@ account.isValidAmount(500);
 
 fordi metoden er private.
 
-##### 8. Metoder kan kalde andre metoder
+### Metoder kan kalde andre metoder
 
 Se denne klasse:
 
@@ -478,7 +478,7 @@ Det giver en tydelig fordeling af ansvar:
 - den offentlige metode beskriver, hvad objektet tilbyder
 - den private metode hjælper objektet med at udføre arbejdet korrekt
 
-#### 9. Setter eller meningsfuld handling?
+### Setter eller meningsfuld handling?
 
 Det er ikke alle private attributter, der behøver en setter.
 
@@ -525,7 +525,7 @@ account.withdraw(300);
 
 Metoderne beskriver både intentionen og reglerne for ændringen.
 
-#### 10. Refaktorisering: fra `Main` til den relevante klasse
+### Refaktorisering: fra `Main` til den relevante klasse
 
 Antag, at vi begynder med denne kode i `Main`:
 
@@ -573,9 +573,9 @@ public static void main(String[] args) {
 
 Refaktorisering betyder, at vi forbedrer kodens struktur uden at ændre det, programmet gør.
 
-### Kan du forklare forskellen?
+## Kan du forklare forskellen?
 
-#### Eksempel 1
+### Eksempel 1
 
 ```java
 public static int square(int number) {
@@ -589,7 +589,7 @@ Spørgsmål:
 - Hvilke oplysninger har metoden brug for?
 - Hvor kommer oplysningerne fra?
 
-#### Eksempel 2
+### Eksempel 2
 
 ```java
 public class Person {
@@ -607,7 +607,7 @@ Spørgsmål:
 - Hvilket objekts alder bruges?
 - Hvorfor behøver metoden ikke modtage `age` som parameter?
 
-#### Eksempel 3
+### Eksempel 3
 
 ```java
 public void withdraw(double amount) {
@@ -627,7 +627,7 @@ Spørgsmål:
 - Hvorfor kan `canWithdraw()` være privat?
 - Hvilken metode kan kaldes fra `Main`?
 
-#### Eksempel 4
+### Eksempel 4
 
 ```java
 public void setSpeed(int speed) {
@@ -655,7 +655,9 @@ Spørgsmål:
 - Hvilken løsning giver klassen mest kontrol over hastigheden?
 - Skal en bil nødvendigvis have en offentlig `setSpeed()`?
 
-### Det vigtigste at tage med
+### Eksempel 5
+
+Se dette klassediagram:
 
 ```text
 +---------------------------+
@@ -676,7 +678,7 @@ Spørgsmål:
 - Hvad betyder tegnet `-` foran attributten?
 - Hvordan kunne en Java-klasse se ud, hvis den skulle passe til diagrammet?
 
-#### Det vigtigste at tage med
+## Det vigtigste at tage med
 
 - en static metode hører til klassen
 - en instansmetode hører til et objekt
@@ -696,7 +698,7 @@ Spørgsmål:
 - `-` betyder private
 - klassediagrammer gør det lettere at se ansvar og synlighed i en klasse
 
-### Aktiviteter i undervisningen
+## Aktiviteter i undervisningen
 
 Arbejd med disse [opgaver](opgaver.md).
 
