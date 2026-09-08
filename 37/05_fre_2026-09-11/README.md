@@ -220,6 +220,64 @@ Begge kald kan ændre alderen til 24, men de fortæller ikke det samme.
 
 Et godt metodenavn fortæller, hvad der sker, uden at læseren behøver at kende alle detaljerne.
 
+#### Alle objekter har allerede nogle metoder
+
+Når vi opretter vores egne klasser, får objekterne ikke kun de metoder, vi selv skriver.
+
+I Java arver alle klasser direkte eller indirekte fra klassen `Object`. Det betyder, at alle objekter automatisk har adgang til en række metoder, blandt andet:
+
+- `toString()`
+- `equals()`
+- `hashCode()`
+
+Du har måske allerede set noget lignende:
+
+```java
+Person person = new Person("Anna", 23);
+System.out.println(person);
+```
+
+Når et objekt bruges sammen med `System.out.println()`, kalder Java automatisk objektets `toString()`-metode.
+
+Hvis vi ikke selv skriver en `toString()`, vil Java bruge den version, der kommer fra `Object`. Resultatet kan eksempelvis se sådan ud:
+
+```text
+Person@6d06d69c
+```
+
+Det er sjældent særlig informativt.
+
+Vi kan derfor overskrive metoden i vores egen klasse:
+
+```java
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + age + " år)";
+    }
+}
+```
+
+`@Override` fortæller, at metoden overskriver en metode, som klassen har arvet. Java kan dermed kontrollere, at metoden har det korrekte navn, de korrekte parametre og den korrekte returtype.
+
+Nu bliver resultatet:
+
+```text
+Anna (23 år)
+```
+
+Bemærk, at `toString()` er en instansmetode. Den arbejder med det konkrete objekts attributter og kan derfor bruge `name` og `age` direkte.
+
+`toString()` beskriver ikke nødvendigvis en handling, som objektet udfører. I stedet beskriver den, hvordan objektet skal repræsenteres som tekst.
+
 #### Klassen visualiseret som et klassediagram
 
 Når vi designer en klasse, kan vi bruge et klassediagram til hurtigt at få overblik over klassens attributter og metoder.
