@@ -32,9 +32,13 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 - skelne mellem en generel setter og en metode, der beskriver adfærd
 - læse og forstå et simpelt klassediagram for en enkelt klasse
 
+> Et klassediagram er en del af UML (Unified Modeling Language). UML er et grafisk modelleringssprog, der bruges til at beskrive softwarestrukturer, ansvar og relationer mellem klasser. Et klassediagram viser derfor ikke hele koden, men en visuel oversigt over, hvordan klassen er bygget op.
+
 ## Se disse videoer før undervisningen
 
 [static](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=7h14m07s) (til: 07:22:04)
+[toString](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=7h46m08s) (til: 07:51:58)
+[setters and getters](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=8h19m35s) (til: 08:29:39)
 
 ## Læs nedenstående før undervisningen
 
