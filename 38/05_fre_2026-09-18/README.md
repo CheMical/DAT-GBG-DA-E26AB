@@ -363,49 +363,6 @@ Mønstrene fra denne lektion kan senere genbruges i Adventure:
 
 På den måde bliver `ArrayList` ikke kun en teknisk struktur, men en måde at organisere spillens data på.
 
-## Aktiviteter i undervisningen
-
-### Aktivitet 1: Søg efter en bog
-
-Implementér `findBook(String title)` i `Library`.
-
-Afprøv metoden med:
-
-- en titel, der findes
-- en titel, der ikke findes
-- samme titel skrevet med andre store og små bogstaver
-
-### Aktivitet 2: Rediger en bog
-
-Implementér en metode, der ændrer forfatteren på en bog. Metoden skal returnere `true`, hvis bogen blev fundet, og ellers `false`.
-
-### Aktivitet 3: Fjern en bog
-
-Implementér en metode, der finder og fjerner en bog ud fra dens titel. Udskriv efterfølgende alle bøger, så resultatet kan kontrolleres.
-
-### Aktivitet 4: Flere resultater
-
-Implementér `findBooksByAuthor(String author)`. Metoden skal returnere alle bøger af den angivne forfatter.
-
-### Aktivitet 5: Edge cases og fejlsikring
-
-Test følgende situationer:
-
-- listen er tom
-- søgningen giver ingen match
-- søgningen finder flere matches
-- søgningen bruger store og små bogstaver
-- du forsøger at fjerne en bog, der ikke findes
-
-### Aktivitet 6: Videreudvikling
-
-Udvid løsningen med én eller flere af følgende muligheder:
-
-- søg efter en del af en titel med `contains()`
-- rediger både titel og forfatter
-- undgå at tilføje to bøger med samme titel og forfatter
-- vis en besked, hvis en søgning giver en tom liste
-
 ## Det vigtigste at tage med
 
 - En søgning efter ét objekt kan returnere objektet eller `null`.
@@ -417,3 +374,8 @@ Udvid løsningen med én eller flere af følgende muligheder:
 - Et objekt kan findes først og derefter redigeres eller fjernes.
 - Før vi bruger et resultat, skal vi altid kontrollere, om det faktisk blev fundet.
 - Søge- og redigeringsmetoder hører naturligt hjemme i den klasse, der administrerer listen.
+ 
+## Aktiviteter i undervisningen
+
+Arbejd med disse [opgaver](opgaver.md).
+
