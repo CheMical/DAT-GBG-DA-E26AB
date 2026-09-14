@@ -2,7 +2,7 @@
 
 I disse opgaver arbejder du videre med søgning, validering, redigering og fjernelse i en `ArrayList`.
 
-Opgaverne bygger på begreberne fra undervisningsmaterialet, men kræver, at du selv skriver og afprøver løsningerne i kode.
+Du skal bruge klasser med en `main`-metode og arbejde med en `ArrayList<Book>` i en `Library`-klasse.
 
 Fokus er på:
 
@@ -93,7 +93,7 @@ Test metoden med:
 
 - en titel, der findes
 - en titel, der ikke findes
-- en titel skrevet med andre store og små bogstaver
+- en titel skrevet med blandede store og små bogstaver
 
 Skriv derefter kode, der udskriver:
 
@@ -102,9 +102,7 @@ Skriv derefter kode, der udskriver:
 
 ### Opgave 2 – Håndter `null` korrekt
 
-Skab en ny `Library` og tilføj tre bøger.
-
-Kald derefter:
+Skab en ny `Library`, tilføj tre bøger, og kald derefter:
 
 ```java
 Book book = library.findBook("Moby Dick");
@@ -247,7 +245,7 @@ Forklar, hvorfor det er vigtigt at kontrollere, om bogen findes, før du fjerner
 
 ### Opgave 8 – Fjern via indeks
 
-Skriv en metode, der finder indekset for en bog og derefter fjerner den med `remove(index)`.
+Skriv en metode, der finder indekset for en bog og derefter fjerner den med `remove(index)`:
 
 ```java
 public boolean removeBookByIndex(String title) {
@@ -359,17 +357,17 @@ Udvid programmet med mindst én af disse funktioner:
 
 Skriv en kort forklaring på, hvorfor din løsning er nyttig i praksis.
 
-## Afslutning
+## Opsamling
 
-Når du har løst opgaverne, skal du kunne:
+Når du er færdig, bør du kunne forklare:
 
-- finde en bog i en `ArrayList`
-- kontrollere, om en søgning fandt noget
-- redigere et objekt, der allerede ligger i listen
-- få indekset for et objekt
-- fjerne et objekt sikkert
-- håndtere flere søgeresultater
-- læse og forstå, når `null`, `-1` eller en tom liste er gyldige svar
+- hvordan du finder en bog i en `ArrayList`
+- hvordan du kontrollerer, om en søgning fandt noget
+- hvordan du redigerer et objekt, der allerede ligger i listen
+- hvordan du får indekset for et objekt
+- hvordan du fjerner et objekt sikkert
+- hvordan du håndterer flere søgeresultater
+- forskellen på `null`, `-1` og en tom liste
 
 Det vigtigste princip er:
 
@@ -378,4 +376,3 @@ Det vigtigste princip er:
 - brug objektet kun, hvis det faktisk blev fundet
 
 Dette er grundlaget for sikker og effektiv håndtering af data i en `ArrayList`.
-
