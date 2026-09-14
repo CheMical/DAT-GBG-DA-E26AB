@@ -4,7 +4,7 @@
 
 I den forrige lektion arbejdede vi med at oprette og anvende en `ArrayList`. Vi brugte blandt andet `add()`, `get()`, `set()`, `remove()` og `size()`, gennemløb lister med løkker og anvendte en `ArrayList` med objekter fra egne klasser.
 
-I denne lektion arbejder vi videre med at søge efter, redigere og fjerne objekter i en `ArrayList`. Eksemplerne tager udgangspunkt i klasserne `Book` og `Library`.
+I denne lektion arbejder vi videre med at søge efter, validere, redigere og fjerne objekter i en `ArrayList`. Fokus er ikke kun at kunne bruge listemetoder, men at kunne administrere en liste af egne objekter på en sikker og fornuftig måde. Eksemplerne tager udgangspunkt i klasserne `Book` og `Library`.
 
 ## Læringsmål
 
@@ -109,6 +109,45 @@ if (book != null) {
 
 Kontrollen er nødvendig, før der kaldes en metode på resultatet. Ellers kan programmet få en `NullPointerException`.
 
+Lignende mønstre bruges ofte i programmering:
+
+- søg efter et objekt
+- tjek om det blev fundet
+- gør noget med objektet, hvis det findes
+- vis ellers en passende fejlmeddelelse
+
+## Hvad hvis søgningen ikke finder noget?
+
+Hvis ingen bog matcher, er det vigtigt at håndtere dette tydeligt. Der er flere almindelige eksempler:
+
+```java
+Book book = library.findBook("Moby Dick");
+
+if (book == null) {
+    System.out.println("Bogen findes ikke i biblioteket");
+} else {
+    book.printInfo();
+}
+```
+
+Det samme gælder, hvis listen er tom:
+
+```java
+if (books.isEmpty()) {
+    System.out.println("Biblioteket er tomt");
+}
+```
+
+Derfor er den typiske struktur altid:
+
+```java
+if (resultat != null) {
+    // brug resultatet
+} else {
+    // vis besked eller håndter fejlen
+}
+```
+
 ## Rediger et fundet objekt
 
 Når søgemetoden returnerer et `Book`-objekt, kan objektet ændres gennem dets set-metoder:
@@ -167,6 +206,13 @@ book.setAuthor("Frank Herbert");
 
 `ArrayList.set()` erstatter altså et element på en bestemt plads i listen. `Book.setAuthor()` ændrer objektets tilstand.
 
+Det er vigtigt at forstå forskellen:
+
+- `books.set(0, nyBog)` = listen får et nyt objekt på pladsen
+- `book.setAuthor(...)` = samme objekt ændres, listen ændres ikke structuralt
+
+Det er derfor, at vi ofte først finder et objekt i listen og derefter ændrer det objekt direkte.
+
 ## Find et indeks
 
 Nogle operationer kræver, at vi kender elementets placering:
@@ -185,7 +231,41 @@ public int findBookIndex(String title) {
 }
 ```
 
-Returværdien `-1` betyder, at bogen ikke blev fundet.
+Returværdien `-1` betyder, at bogen ikke blev fundet. Det er derfor nyttigt at kunne teste, om indekset er gyldigt, før vi bruger det i `remove()` eller `get()`.
+
+Eksempel:
+
+```java
+int index = library.findBookIndex("Dune");
+
+if (index == -1) {
+    System.out.println("Bogen findes ikke");
+} else {
+    System.out.println("Bogen ligger på indeks " + index);
+}
+```
+
+## Fejlsikring og edge cases
+
+Når vi arbejder med søgning og redigering, skal vi tænke på nogle typiske problemer:
+
+```java
+if (books.isEmpty()) {
+    System.out.println("Listen er tom");
+}
+
+Book book = findBook("Dune");
+if (book == null) {
+    System.out.println("Ikke fundet");
+}
+
+int index = findBookIndex("Dune");
+if (index == -1) {
+    System.out.println("Indekset findes ikke");
+}
+```
+
+Det vigtigste er, at vi ikke bruger et resultat, før vi har kontrollert, om det faktisk findes.
 
 ## Fjern en bog
 
@@ -218,6 +298,8 @@ public boolean removeBookByIndex(String title) {
     return true;
 }
 ```
+
+Når vi fjerner et objekt, er det vigtigt at sikre, at vi kun prøver at fjerne noget, der faktisk findes. Ellers får vi enten en fejlsituation eller en uønsket handling.
 
 ## Søg med flere kriterier
 
@@ -268,6 +350,19 @@ for (Book book : matches) {
 
 Hvis ingen bøger matcher, returnerer metoden en tom liste i stedet for `null`.
 
+Det er vigtigt at vide, at en tom liste stadig er en gyldig returværdi. Den betyder ikke “fejl”, men “ikke fundet nogen match”.
+
+## Kobl søgning og redigering til Adventure
+
+Mønstrene fra denne lektion kan senere genbruges i Adventure:
+
+- findItem() kan søge efter et objekt i et rum
+- updateItem() kan ændre en ting, f.eks. dens navn eller status
+- removeItem() kan fjerne en ting fra inventaret eller rummet
+- findItemsByType() kan returnere flere resultater i en liste
+
+På den måde bliver `ArrayList` ikke kun en teknisk struktur, men en måde at organisere spillens data på.
+
 ## Aktiviteter i undervisningen
 
 ### Aktivitet 1: Søg efter en bog
@@ -292,7 +387,17 @@ Implementér en metode, der finder og fjerner en bog ud fra dens titel. Udskriv 
 
 Implementér `findBooksByAuthor(String author)`. Metoden skal returnere alle bøger af den angivne forfatter.
 
-### Aktivitet 5: Videreudvikling
+### Aktivitet 5: Edge cases og fejlsikring
+
+Test følgende situationer:
+
+- listen er tom
+- søgningen giver ingen match
+- søgningen finder flere matches
+- søgningen bruger store og små bogstaver
+- du forsøger at fjerne en bog, der ikke findes
+
+### Aktivitet 6: Videreudvikling
 
 Udvid løsningen med én eller flere af følgende muligheder:
 
@@ -310,4 +415,5 @@ Udvid løsningen med én eller flere af følgende muligheder:
 - `ArrayList.set()` erstatter et element i listen.
 - En set-metode på objektet ændrer objektets tilstand.
 - Et objekt kan findes først og derefter redigeres eller fjernes.
+- Før vi bruger et resultat, skal vi altid kontrollere, om det faktisk blev fundet.
 - Søge- og redigeringsmetoder hører naturligt hjemme i den klasse, der administrerer listen.
