@@ -236,7 +236,7 @@ for (int i = 0; i <= text.length(); i++) {
 ## Opgave 10 – Evaluate Expression
 
 ```java
-int[] grades = {12, 7, 4, 10, 2};
+int[] grades = {12, 7, 4, 10, 4};
 int sum = 0;
 
 for (int i = 0; i < grades.length; i++) {
@@ -248,8 +248,7 @@ double average = sum / grades.length;
 System.out.println("Gennemsnit: " + average);
 ```
 
-1. Gennemsnittet bliver `7.0`. Men det rigtige svar er `7.0`... eller er det?
-   Regn det ud i hånden først.
+1. Programmet skriver `Gennemsnit: 7.0`. Er det rigtigt? Regn det ud i hånden først.
 2. Sæt et breakpoint på linjen med `average`.
 3. Åbn **Evaluate Expression** (<kbd>Alt</kbd>+<kbd>F8</kbd>), og prøv:
    * `sum`
