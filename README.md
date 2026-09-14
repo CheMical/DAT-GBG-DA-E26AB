@@ -125,7 +125,7 @@
   <td><a href="38/01_man_2026-09-14/README.md">Mandag 14-09-2026</a></td>
   <td>Design: Aktivitetsdiagram, debugger</td>
   <td>TOG</td>
-  <td></td>
+  <td>MICA er på eftermiddag</td>
 </tr>
 <tr>
   <td></td>
