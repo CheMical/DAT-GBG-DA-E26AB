@@ -8,6 +8,9 @@ Mermaid – hvad du har det bedst med. Papir er hurtigst, når man skal prøve s
 > **Arbejd sammen om tegningerne.** Et diagram bliver næsten altid bedre af, at en anden prøver at
 > læse det. Byt diagrammer med sidemanden, og se om hun kan følge det uden din forklaring.
 
+Der er [vejledende løsninger](loesninger.md) til tegneopgaverne – men prøv selv først. Det er
+selve tegningen, der er øvelsen, ikke facit.
+
 ---
 
 # Del 1 – Aktivitetsdiagrammer
