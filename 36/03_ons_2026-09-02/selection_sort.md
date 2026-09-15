@@ -17,8 +17,8 @@ Lad os sortere listen: `[64, 25, 12, 22, 11]`
 **Iteration 1:** Find minimum blandt alle 5 elementer
 ```
 [64, 25, 12, 22, 11]
-      ↑           ↑
-    startpos    min=11
+  ↑               ↑
+startpos        min=11
 
 ↓ Ombyt 64 og 11
 
@@ -41,8 +41,8 @@ Lad os sortere listen: `[64, 25, 12, 22, 11]`
 **Iteration 3:** Find minimum blandt de sidste 3 elementer
 ```
 [11, 12, 25, 22, 64]
- ✓  ✓       ↑
-           min=22
+ ✓   ✓       ↑
+            min=22
 
 ↓ Ombyt 25 og 22
 

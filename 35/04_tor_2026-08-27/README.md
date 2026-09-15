@@ -30,18 +30,20 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 ## Se disse videoer før undervisningen:
 
-[if statements](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=1h9m0s) (til: 01:22:28)
-[nested if statements](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=2h3m47s) (til: 02:10:20)
-[logical operators](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h9m58s) (til: 03:21:23)
+* [if statements](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=1h9m0s) (til: 01:22:28)
+* [nested if statements](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=2h3m47s) (til: 02:10:20)
+* [logical operators](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h9m58s) (til: 03:21:23)
 
 ## Læs nedenstående før undervisningen
 
 Afprøv gerne eksemplerne i IntelliJ, mens du læser.
 
-Brug samme fremgangsmåde som de foregående dage: opret en klasse `Main` med en `main`-metode, og
-skriv koden derinde.
+Afprøv eksemplerne i en klasse i dagens package `dag4_logiske_operatorer_betingelser` i ugens
+projekt – se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md).
 
 ```java
+package dag4_logiske_operatorer_betingelser;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -60,7 +62,7 @@ Manden til højre er **George Boole**, engelsk matematiker. I 1854 udgav han et 
 med sandt og falsk i stedet for tal. Han døde i 1864 og nåede aldrig at se en computer.
 
 Alligevel er det hans algebra, der kører i hver eneste processor i verden — og datatypen
-`boolean` er opkaldt efter ham. Det, du lærer i dag, er 170 år gammelt.
+`boolean` er opkaldt efter ham. Det, du lærer i dag, er over 170 år gammelt.
 
 Du har allerede mødt datatypen `boolean`. Den kan kun indeholde to værdier:
 
@@ -133,8 +135,8 @@ true
 Det her er en af de klassiske begynderfejl, og den bliver ved med at drille længe:
 
 ```java
-int age = 20;    // tildeling: put 20 ind i age
-age == 20        // sammenligning: er age lig med 20?
+int age = 20;                    // tildeling: put 20 ind i age
+boolean isTwenty = age == 20;    // sammenligning: er age lig med 20?
 ```
 
 * Ét lighedstegn `=` **sætter** en værdi.

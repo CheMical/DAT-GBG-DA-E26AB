@@ -2,7 +2,7 @@
 
 I Adventure del 1 og 2 har I gradvist udbygget jeres spil med rum, navigation og items.
 
-Når et program vokser, sker der ofte det, at klasser får flere og flere opgaver, og at klasserne bliver tættere afhængige af hinanden. Programmet virker måske stadig, men det bliver vanskeligere at forstå, ændre og teste.
+Når et program vokser, sker der ofte det, at klasser får flere og flere opgaver, og at klasserne bliver mere afhængige af hinanden (tættere koblet). Programmet virker måske stadig, men det bliver vanskeligere at forstå, ændre og teste.
 
 Inden vi bygger yderligere funktionalitet på Adventure-spillet, skal vi derfor rydde op i designet.
 
@@ -10,7 +10,7 @@ Inden vi bygger yderligere funktionalitet på Adventure-spillet, skal vi derfor 
 
 I denne opgave skal I **reviewe og refaktorere** jeres Adventure-spil.
 
-Refaktorering betyder, at man ændrer strukturen i eksisterende kode **uden bevidst at ændre programmets funktionalitet**.
+Refaktorering betyder, at man ændrer strukturen i eksisterende kode **uden at ændre programmets funktionalitet**.
 
 Målet er at gøre jeres program:
 
@@ -145,7 +145,7 @@ dropItem()
 Derimod ville denne metode være mistænkelig i `Player`:
 
 ```java
-buildMap();
+public void buildMap()
 ```
 
 At bygge spillets kort har ikke noget med spillerens ansvar at gøre.
@@ -173,7 +173,7 @@ Overvej eksempelvis en `Adventure`-klasse, som:
 * efterlader items
 * håndterer brugerinput
 
-Her har én klasse fået mange forskellige typer ansvar.
+Sådan så mange løsninger ud **før del 1 – refactor**. Her har én klasse fået mange forskellige typer ansvar.
 
 Det gør klassen vanskeligere at forstå og vanskeligere at ændre.
 
@@ -208,35 +208,12 @@ Det er derfor oplagt at samle denne opgave i en klasse, som repræsenterer spill
 
 ## Opgave
 
-Opret en klasse:
+I lavede `Map` i del 1 – refactor. Kontrollér, at den stadig er det eneste sted, hvor spillets verden bygges – også efter del 2:
 
-```java
-Map
-```
+* Oprettes alle `Item`-objekter i `Map` (sammen med rummene), eller er de sneget sig ind i `Adventure` eller `UserInterface`?
+* Placeres items i rummene i `Map.buildMap()`?
 
-`Map` skal have ansvaret for at bygge og konfigurere spillets verden.
-
-Den kunne eksempelvis have metoder som:
-
-```java
-public void buildMap()
-```
-
-og:
-
-```java
-public Room getStartRoom()
-```
-
-`Adventure` skal altså ikke længere indeholde en lang række:
-
-```java
-Room room1 = new Room(...);
-Room room2 = new Room(...);
-Room room3 = new Room(...);
-```
-
-Det ansvar flyttes til `Map`.
+`Adventure` og `UserInterface` må ikke indeholde `new Room(...)` eller `new Item(...)`. Findes det, så flyt det til `Map`.
 
 En mulig struktur er:
 
@@ -309,47 +286,17 @@ Undgå, at `UserInterface` direkte manipulerer `Room`, `Item`, `Map` osv.
 
 ---
 
-# 6. Introducer en Player-klasse
+# 6. Player efter del 2
 
-Efter Adventure del 2 kan `Adventure` hurtigt få mange opgaver.
+I del 2 fik `Player` et inventory og metoderne `takeItem` og `dropItem`. Kontrollér nu, at alt det spillerrelaterede faktisk ligger i `Player`, og ikke i `Adventure` eller `UserInterface`:
 
-Eksempelvis:
+* hvor befinder spilleren sig? (`currentRoom`)
+* kan spilleren gå mod nord? (`move`)
+* hvilke ting har spilleren? (`inventory`)
+* kan spilleren tage et bestemt item? (`takeItem`)
+* kan spilleren efterlade et item? (`dropItem`)
 
-* hvor befinder spilleren sig?
-* kan spilleren gå mod nord?
-* hvilke ting har spilleren?
-* kan spilleren tage et bestemt item?
-* kan spilleren efterlade et item?
-
-Disse opgaver handler i virkeligheden om **spilleren**.
-
-Opret derfor en klasse:
-
-```java
-Player
-```
-
-`Player` skal blandt andet kende spillerens aktuelle rum:
-
-```java
-private Room currentRoom;
-```
-
-`Player` kan desuden have sit inventory:
-
-```java
-private ArrayList<Item> inventory;
-```
-
-Flyt derefter spillerrelateret funktionalitet fra `Adventure` til `Player`.
-
-Det kunne eksempelvis være:
-
-```java
-move(...)
-takeItem(...)
-dropItem(...)
-```
+Typiske ting, der skal flyttes: `findItem`-løkken, hvis den ligger i `UserInterface`; kode i `Adventure`, der selv henter `getItems()` fra rummet og fjerner/tilføjer; `System.out.println` i `Player` eller `Room`.
 
 En mulig struktur efter denne refaktorering kunne være:
 
@@ -376,8 +323,8 @@ classDiagram
         -Map map
         -Player player
         +go(String direction)
-        +take(String itemName)
-        +drop(String itemName)
+        +take(String shortName)
+        +drop(String shortName)
     }
 
     class Map {
@@ -390,8 +337,8 @@ classDiagram
         -Room currentRoom
         -ArrayList~Item~ inventory
         +move(String direction) boolean
-        +takeItem(String itemName)
-        +dropItem(String itemName)
+        +takeItem(String shortName) boolean
+        +dropItem(String shortName) boolean
     }
 
     class Room {
@@ -401,7 +348,8 @@ classDiagram
     }
 
     class Item {
-        -String name
+        -String shortName
+        -String longName
     }
 ```
 
@@ -494,7 +442,7 @@ Hvis strukturen senere ændres, kan mange steder i programmet skulle ændres.
 Bed hellere det relevante objekt om at udføre operationen:
 
 ```java
-adventure.takeItem(itemName);
+adventure.take(itemName);
 ```
 
 som eksempelvis kan delegere videre:
@@ -647,6 +595,19 @@ Diskuter følgende spørgsmål i gruppen:
 12. Har klasserne fået højere samhørighed?
 
 Lav gerne et nyt klassediagram efter refaktoreringen og sammenlign det med jeres første diagram.
+
+---
+
+## Aktiviteter i undervisningen
+
+1. **Aflever del 2 først.** Deadline er i dag kl. 23:59 – sørg for at have en fungerende version
+   pushet og linket afleveret i itslearning, **inden** I begynder at rykke rundt i koden.
+   Se [del 2 – Items](../../projekter/adventure/del-2-items.md).
+2. Review af jeres nuværende løsning (afsnit 1) – tegn klassediagrammet.
+3. Refaktorér (afsnit 9) og test løbende (afsnit 10).
+4. Review efter refaktoreringen (afsnit 11).
+
+**Deadline for del 2: i dag, tirsdag 29-09 kl. 23:59.** I morgen starter [del 3 – arv](../03_ons_2026-09-30/README.md).
 
 ---
 

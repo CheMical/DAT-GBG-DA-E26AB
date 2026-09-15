@@ -185,8 +185,12 @@ public static void Main(String[] args) {
 
 ### Opgave 12 – Samme program i IntelliJ
 
-Opret et nyt Java-projekt i IntelliJ, lav en klasse `Main`, og få den til at skrive
-`Hello, world!` ud.
+Opret et nyt Java-projekt i IntelliJ med navnet `uge35-intro-java` (hvis du ikke allerede
+gjorde det, da vi gennemgik [Fra Notepad til IntelliJ](README.md#fra-notepad-til-intellij)),
+lav en klasse `Main`, og få den til at skrive `Hello, world!` ud.
+
+Husk at fjerne fluebenet ved **Add sample code**, når du opretter projektet – ellers har IntelliJ
+allerede lavet en `Main.java` for dig.
 
 Brug genvejene:
 

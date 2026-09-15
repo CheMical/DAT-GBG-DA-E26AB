@@ -25,7 +25,7 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 ## Se disse videoer før undervisningen:
 
-[string methods](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=2h10m20s) (til: 02:18:55)
+[string methods](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=2h10m20s) (til: 02:18:55)  
 [substrings](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=2h18m55s) (til: 02:27:00)
 
 ## Læs nedenstående før undervisningen
@@ -339,7 +339,7 @@ altid bruge `.equals()`:
 System.out.println(a.equals(c));    // true
 ```
 
-> **Regel indtil videre:** Brug `==` til tal (`int`, `double`) og `boolean`.
+> **Regel indtil videre:** Brug `==` til tal (`int`, `double`), `char` og `boolean`.
 > Brug `.equals()` til `String`.
 >
 > Vi kommer til at forstå *hvorfor*, når vi arbejder med objekter og referencer i uge 37 og 39. For
@@ -446,10 +446,10 @@ til at spørge.
 | Dag | Emne | Kan du ...? |
 | --- | --- | --- |
 | ma 24-08 | Introdag, studiegrupper | – |
-| ti 25-08 | Installation, Java i Notepad | forklare hvad `javac` og `java` gør |
-| on 26-08 | Variable, datatyper, aritmetik | vælge mellem `int` og `double`, og forklare heltalsdivision |
+| ti 25-08 | [Installation, Java i Notepad](../../35/02_tir_2026-08-25/README.md) | forklare hvad `javac` og `java` gør |
+| on 26-08 | [Variable, datatyper, aritmetik](../../35/03_ons_2026-08-26/README.md) | vælge mellem `int` og `double`, og forklare heltalsdivision |
 | to 27-08 | [Logiske operatorer, betingelser](../../35/04_tor_2026-08-27/README.md) | skrive en `if`/`else if`/`else`-kæde og bruge `&&`, `\|\|`, `!` |
-| fr 28-08 | I/O: Scanner, print, Git-bruger | læse et tal og en tekst fra brugeren |
+| fr 28-08 | [I/O: Scanner, print, Git-bruger](../../35/05_fre_2026-08-28/README.md) | læse et tal og en tekst fra brugeren |
 
 ### Uge 36
 

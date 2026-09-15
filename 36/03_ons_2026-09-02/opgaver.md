@@ -2,6 +2,30 @@
 
 I disse opgaver skal du arbejde med **arrays** i Java.
 
+## Kom i gang
+
+Åbn ugens IntelliJ-projekt `uge36-loops-arrays-strings` (se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)).
+
+Opret dagens package under `src`:
+
+```text
+dag3_arrays
+```
+
+Opret én klasse pr. opgave – `Opgave01`, `Opgave02` osv. – hver med sin egen `main`-metode:
+
+```java
+package dag3_arrays;
+
+public class Opgave01 {
+
+    public static void main(String[] args) {
+
+    }
+}
+```
+
+Kør og afprøv hver opgave for sig med den grønne pil ud for `main`.
 
 ---
 
@@ -27,7 +51,7 @@ Forventet output:
 
 Opret et `int`-array med tre værdier: `5`, `10`, `15`.
 
-Ændre andet element (index `1`) til `99`, og udskriv hele arrayet.
+Ændr det andet element (index `1`) til `99`, og udskriv hele arrayet.
 
 Forventet output:
 
@@ -91,7 +115,7 @@ Forventet output:
 
 ---
 
-## Opgave 6 – Summer af tal
+## Opgave 6 – Summen af tallene
 
 Opret et `int`-array med værdier: `5`, `10`, `15`, `20`, `25`.
 
@@ -180,7 +204,7 @@ Hvilket tal skal jeg søge efter? 5
 Tallet blev ikke fundet
 ```
 
-> **Hint:** Brug `-1` som startværdi for `foundAt`. Hvis den stadig er `-1` efter løkket, blev tallet ikke fundet.
+> **Hint:** Brug `-1` som startværdi for `foundAt`. Hvis den stadig er `-1` efter løkken, blev tallet ikke fundet.
 
 ---
 
@@ -266,7 +290,7 @@ int[] factor1 = {2, 3, 4};
 int[] factor2 = {1, 2, 3};
 ```
 
-Brug **nested loops** (løkke i løkke) til at udskrive et lille multiplikationsbord.
+Brug **nested loops** (løkke i løkke) til at udskrive en lille gangetabel.
 
 Forventet output:
 
@@ -345,17 +369,17 @@ Forventet output:
 90
 ```
 
-> **Hint:** Implementer en enkel sorteringsalgoritme, f.eks. "bubble sort" eller "selection sort", se filerne til dagens lektion.
+> **Hint:** Implementer en enkel sorteringsalgoritme, f.eks. [bubble sort](bubble-sort.md) eller [selection sort](selection_sort.md).
 
 ---
 
-## Opgave 18 – Invert arrayet
+## Opgave 18 – Vend arrayet om
 
 Opret et `int`-array med værdier: `1`, `2`, `3`, `4`, `5`.
 
 Lav en **ny version** af arrayet, hvor alle elementer er i omvendt rækkefølge.
 
-Udskriv det inverterede array.
+Udskriv det omvendte array.
 
 Forventet output:
 
@@ -472,9 +496,9 @@ I Java bruger man egenskaben `.length` til at styre løkkerne dynamisk:
 **Eksempel på udskrivning af en tabel:**
 
 ```java
-for (int række = 0; række < tabel.length; række++) {
-    for (int kolonne = 0; kolonne < tabel[række].length; kolonne++) {
-        System.out.print(tabel[række][kolonne] + " ");
+for (int row = 0; row < tabel.length; row++) {
+    for (int col = 0; col < tabel[row].length; col++) {
+        System.out.print(tabel[row][col] + " ");
     }
     System.out.println(); // Skifter linje efter hver række
 }
@@ -483,7 +507,7 @@ for (int række = 0; række < tabel.length; række++) {
 ### Tre vigtige Java-faldgruber
 
 *   **Række før kolonne:** Husk altid rækkefølgen `[række][kolonne]`. Hvis du bytter om på dem, leder du det forkerte sted.
-*   **ArrayIndexOutOfBoundsException:** Hvis dit array har 3 rækker, stopper indeksene ved 2 (0, 1, 2). Forsøger du at kalde `tabel[3][0]`, crasher dit program.
+*   **ArrayIndexOutOfBoundsException:** Hvis dit array har 3 rækker, stopper indeksene ved 2 (0, 1, 2). Forsøger du at tilgå `tabel[3][0]`, crasher dit program.
 *   **Ujævne arrays (Jagged arrays):** Fordi Java ser et 2D-array som arrays-i-arrays, kan rækkerne teknisk set have forskellige længder. Brug altid `tabel[række].length` i stedet for at gætte på kolonneantallet.
 
 
@@ -521,7 +545,7 @@ Eksempel:
 ```text
 Før: 64 34 25 12 22
 Efter: 12 22 25 34 64
-Antal swaps: 8
+Antal swaps: 9
 ```
 
 ---

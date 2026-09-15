@@ -91,7 +91,7 @@ flowchart TD
 | Egenskab | Værdi |
 |----------|-------|
 | **Tidskompleksitet (dårligste)** | O(n²) |
-| **Tidskompleksitet (bedste)** | O(n) |
+| **Tidskompleksitet (bedste)** | O(n²) (O(n) hvis man stopper, når et gennemløb ikke bytter noget) |
 | **Tidskompleksitet (gennemsnit)** | O(n²) |
 | **Rumkompleksitet** | O(1) |
 | **Stabil?** | Ja ✓ |
@@ -124,7 +124,7 @@ flowchart TD
 
 | Algoritme | Bedste | Gennemsnit | Dårligste | Rum | Stabil |
 |-----------|--------|-----------|----------|-----|--------|
-| **Bubble Sort** | O(n) | O(n²) | O(n²) | O(1) | Ja |
+| **Bubble Sort** | O(n²) (O(n) hvis man stopper, når et gennemløb ikke bytter noget) | O(n²) | O(n²) | O(1) | Ja |
 | Selection Sort | O(n²) | O(n²) | O(n²) | O(1) | Nej |
 | Insertion Sort | O(n) | O(n²) | O(n²) | O(1) | Ja |
 | Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | Ja |
@@ -138,7 +138,7 @@ flowchart TD
 2. Den er **O(n²)** i værste tilfælde – ikke praktisk for store datasæt
 3. Algoritmen er **stabil** og **in-place**
 4. Den "bobler" større værdier til slutningen gennem gentagne sammenligninger
-5. Den bruges primært til **undervisning** af algoritmekoncepeter
+5. Den bruges primært til **undervisning** af algoritmekoncepter
 6. For produktion: Brug QuickSort, MergeSort eller andre moderne algoritmer
 
 ---

@@ -86,8 +86,8 @@ public abstract class Weapon extends Item {
 
     private int damage;
 
-    public Weapon(String longName, String description, int damage) {
-        super(longName, description);
+    public Weapon(String shortName, String longName, int damage) {
+        super(shortName, longName);
         this.damage = damage;
     }
 
@@ -104,7 +104,7 @@ public abstract class Weapon extends Item {
 Prøver du:
 
 ```java
-Weapon w = new Weapon("a weapon", "generic", 10);
+Weapon w = new Weapon("weapon", "a weapon", 10);
 ```
 
 siger compileren:
@@ -145,8 +145,8 @@ Punkt 2 er guld værd: compileren minder dig om det, du har glemt.
 ```java
 public class MeleeWeapon extends Weapon {
 
-    public MeleeWeapon(String longName, String description, int damage) {
-        super(longName, description, damage);
+    public MeleeWeapon(String shortName, String longName, int damage) {
+        super(shortName, longName, damage);
     }
 
     @Override
@@ -166,8 +166,8 @@ public class RangedWeapon extends Weapon {
 
     private int ammunition;
 
-    public RangedWeapon(String longName, String description, int damage, int ammunition) {
-        super(longName, description, damage);
+    public RangedWeapon(String shortName, String longName, int damage, int ammunition) {
+        super(shortName, longName, damage);
         this.ammunition = ammunition;
     }
 
@@ -216,6 +216,9 @@ classDiagram
     Weapon <|-- RangedWeapon
 ```
 
+Opgavens diagram lader `use()` returnere `boolean` og har desuden `remainingUses()` – navne og
+returtyper er op til jer, det afgørende er, at metoderne er erklæret i `Weapon`.
+
 ---
 
 ### Og nu bliver attack simpel
@@ -248,6 +251,11 @@ public class MagicWand extends Weapon {
 
     private int charges;
     private int turnsSinceUse;
+
+    public MagicWand(String shortName, String longName, int damage, int charges) {
+        super(shortName, longName, damage);
+        this.charges = charges;
+    }
 
     @Override
     public boolean canUse() {
@@ -287,9 +295,9 @@ Derfor kan du gøre sådan her:
 
 ```java
 Weapon[] weapons = {
-    new MeleeWeapon("a rusty sword", "It has seen better days", 12),
-    new RangedWeapon("an old revolver", "Six shots", 25, 6),
-    new MagicWand("a gnarled wand", "It hums faintly", 40, 3)
+    new MeleeWeapon("sword", "a rusty sword", 12),
+    new RangedWeapon("revolver", "an old revolver", 25, 6),
+    new MagicWand("wand", "a gnarled wand", 40, 3)
 };
 
 for (Weapon weapon : weapons) {
@@ -333,7 +341,7 @@ familie. **Interface** når helt forskellige klasser skal kunne det samme.
 
 `Weapon` er en abstrakt klasse, fordi alle våben har `damage` – altså fælles data.
 
-> I møder interfaces rigtigt i uge 45, når vi skal sortere.
+> I møder interfaces rigtigt i uge 43–45, når vi skal sortere i filmsamlingen.
 
 ---
 

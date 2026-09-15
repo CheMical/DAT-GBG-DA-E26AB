@@ -18,7 +18,7 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 * gemme og hente værdier ved hjælp af et **index**
 * forklare at det første index er `0` og det sidste er `length - 1`
 * løbe et array igennem med et `for`-loop
-* bruge `foreach` til at gå gennem et array uden at arbejde med index
+* bruge en for-each-loop til at gå gennem et array uden at arbejde med index
 * bruge `array.length` til at styre et loop
 * forklare hvad en `ArrayIndexOutOfBoundsException` er og hvornår den opstår
 * tage imod arrayværdier fra brugeren via `Scanner`
@@ -113,7 +113,7 @@ int[] numbers = {5, 8, 3};
 System.out.println(numbers.length);   // 3
 ```
 
-Bemærk: det skrives **uden** parenteser – i modsætning til `String`'s `length()`.
+Bemærk: det skrives **uden** parenteser, fordi `length` ikke er en metode. (På fredag møder vi `String`, hvor længden hentes med metoden `length()` – med parenteser.)
 
 Det sidste gyldige index er altid `length - 1`. For et array med tre elementer er det index `2`.
 
@@ -146,16 +146,17 @@ forbi det sidste element.
 
 ---
 
-### Gennemløb et array med foreach
+### Gennemløb et array med en for-each-loop
 
-Når vi kun vil læse værdierne i et array, kan vi bruge en `foreach`-løkke. Den er kortere og
-oftest lettere at læse:
+Når vi kun vil læse værdierne i et array, kan vi bruge en for-each-loop. Den skrives stadig
+med nøgleordet `for`, men med et kolon: `for (int number : numbers)`. Den er kortere og oftest
+lettere at læse:
 
 ```java
 int[] numbers = {5, 8, 3, 7, 1};
 
-for (int tal : numbers) {
-    System.out.println(tal);
+for (int number : numbers) {
+    System.out.println(number);
 }
 ```
 
@@ -169,9 +170,9 @@ Output:
 1
 ```
 
-Her får variablen `tal` værdien af hvert element i arrayet, én efter én.
+Her får variablen `number` værdien af hvert element i arrayet, én efter én.
 
-`foreach` er især nyttig, når vi:
+En for-each-loop er især nyttig, når vi:
 
 * kun vil læse værdierne
 * ikke har brug for indexet
@@ -182,8 +183,8 @@ Eksempel med `String[]`:
 ```java
 String[] names = {"Anna", "Bo", "Clara"};
 
-for (String navn : names) {
-    System.out.println("Hej, " + navn);
+for (String name : names) {
+    System.out.println("Hej, " + name);
 }
 ```
 
@@ -195,7 +196,7 @@ Hej, Bo
 Hej, Clara
 ```
 
-Vigtigt: i en `foreach`-løkke har vi **ikke** adgang til indexet. Hvis vi vil ændre værdierne
+Vigtigt: i en for-each-loop har vi **ikke** adgang til indexet. Hvis vi vil ændre værdierne
 eller bruge deres placering i arrayet, skal vi bruge et almindeligt `for`-loop:
 
 ```java
@@ -321,7 +322,7 @@ double average = (double) sum / numbers.length;
 System.out.println("Gennemsnit: " + average);
 ```
 
-`(double) sum` sikrer, at divisionen bliver decimaltal og ikke heltalsdivision.
+`(double) sum` kaldes et **cast**: det konverterer `int`-værdien i `sum` til en `double`, inden der divideres. Så bliver divisionen en decimaldivision (5.0-agtig), ikke en heltalsdivision. Bemærk at kun `sum` castes – `(double) (sum / numbers.length)` ville dividere som heltal først og derefter konvertere resultatet, hvilket giver `4.0` i stedet for `4.8`.
 
 ---
 
@@ -392,8 +393,8 @@ for (int i = 0; i < names.length; i++) {
 * index starter ved `0`, det sidste gyldige index er `length - 1`
 * `array.length` (uden parenteser) giver arrayets størrelse
 * mønsteret `for (int i = 0; i < array.length; i++)` bruges til at løbe et array igennem
-* `foreach` bruges, når vi kun vil læse værdierne i et array
-* i en `foreach`-løkke har vi ikke adgang til indexet
+* en for-each-loop bruges, når vi kun vil læse værdierne i et array
+* i en for-each-loop har vi ikke adgang til indexet
 * går du uden for arrayet, får du en `ArrayIndexOutOfBoundsException`
 * brug `-1` som startværdi, når du søger efter noget
 

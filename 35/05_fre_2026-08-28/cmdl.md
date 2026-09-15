@@ -131,12 +131,9 @@ konfigurere dem i selve IntelliJ.
 Klik på rullemenuen øverst til højre (ved siden af den grønne play-knap) og vælg
 **Edit Configurations...**.
 
-![Edit Configurations](https://i.imgur.com/placeholder.png)
-
 ### Trin 2 – Find feltet Program arguments
 
-I vinduet der åbner, finder du feltet **Program arguments** (under fanen *Run* eller direkte synligt,
-afhængigt af din IntelliJ-version).
+I vinduet der åbner, finder du feltet **Program arguments** under **Build and run**.
 
 ### Trin 3 – Skriv dine argumenter
 
@@ -178,6 +175,8 @@ public class Main {
 ```
 
 `args.length` fortæller, hvor mange argumenter der er givet.
+
+`return;` afslutter `main`-metoden med det samme, så resten af koden ikke køres.
 
 ---
 

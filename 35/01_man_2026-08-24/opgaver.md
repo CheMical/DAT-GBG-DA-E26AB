@@ -1,3 +1,5 @@
+# Opgaver – Introdag 1
+
 ## Foto af studiegruppen
 I skal tage et gruppefoto af jeres studiegruppe – om det er et “selfie” (wefie?) eller et foto taget af en anden, er ikke vigtigt, blot skal alle gruppemedlemmer være synlige på fotoet.
 
@@ -13,8 +15,7 @@ Der skal tages ét fælles foto af samtlige gruppemedlemmer – billedet skal in
 - Navn på hvert enkelt gruppemedlem. Det skal være tydeligt hvilke navne der hører til hvilke personer.
 
 ### Aflevering
-Hvordan
-Upload det færdig-redigerede foto som besvarelse på denne opgave.
+Upload det færdigredigerede foto som besvarelse på denne opgave.
 
 Lav afleveringen som en gruppe-aflevering – sørg for at alle deltagere er med i afleveringen.
 

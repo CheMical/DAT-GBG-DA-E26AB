@@ -5,11 +5,30 @@ at vælge det rigtige loop til opgaven.
 
 ## Kom i gang
 
-Opret et nyt Java-projekt i IntelliJ, eller brug det, du har til undervisningen.
+Åbn ugens IntelliJ-projekt `uge36-loops-arrays-strings` (se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)).
 
-Opret en klasse `Main` med en `main`-metode, og lav løsningerne der. Afprøv dem undervejs.
+Opret dagens package under `src`:
 
-Nogle opgaver bruger `Scanner`. Husk importen øverst i filen:
+```text
+dag2_for_loops_while_loops
+```
+
+Opret én klasse pr. opgave – `Opgave01`, `Opgave02` osv. – hver med sin egen `main`-metode:
+
+```java
+package dag2_for_loops_while_loops;
+
+public class Opgave01 {
+
+    public static void main(String[] args) {
+
+    }
+}
+```
+
+Kør og afprøv hver opgave for sig med den grønne pil ud for `main`.
+
+Nogle opgaver bruger `Scanner`. Husk importen øverst i den opgaveklasse, der bruger den:
 
 ```java
 import java.util.Scanner;
@@ -406,7 +425,7 @@ int number = 29;
 Output:
 
 ```text
-29 is a prime number
+29 er et primtal
 ```
 
 Hjælp: et tal er et primtal, hvis det kun kan divideres med 1 og sig selv. Prøv at dividere med
@@ -469,17 +488,23 @@ Hjælp: `System.out.printf("%4d", tal)` skriver et tal ud med fast bredde på 4 
 Lav et program, der kaster to terninger 1000 gange og tæller, hvor mange gange hver sum (2 til 12)
 forekommer.
 
-Til at slå en terning kan du bruge:
+Til at slå en terning kan du bruge klassen `Random`. Importen skal stå øverst i filen ligesom
+`Scanner`:
 
 ```java
 import java.util.Random;
-
-Random random = new Random();
-
-int die = random.nextInt(6) + 1;
 ```
 
-Skriv resultatet ud som et lille søjlediagram:
+Og i `main`:
+
+```java
+Random random = new Random();
+
+int die = random.nextInt(6) + 1;   // nextInt(6) giver 0-5, så vi lægger 1 til
+```
+
+Skriv resultatet ud som et lille søjlediagram. Lad hver stjerne stå for 10 kast (ellers bliver
+linjerne meget lange) – så får sum 7, der forekommer ca. 167 gange, 16 stjerner:
 
 ```text
  2: ***
@@ -487,7 +512,7 @@ Skriv resultatet ud som et lille søjlediagram:
  4: *********
  5: ************
  6: ***************
- 7: *****************
+ 7: ****************
  8: **************
  ...
 ```

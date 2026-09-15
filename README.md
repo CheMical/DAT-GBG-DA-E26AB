@@ -663,6 +663,12 @@ gantt
 ```
 
 
+## Vejledninger
+
+Se [00_vejledninger](00_vejledninger/README.md) – bl.a.
+[Organisering i IntelliJ](00_vejledninger/intellij_organisering.md), som gælder for alle dagens
+opgaver i uge 35–38.
+
 ## Afleveringer og deadlines
 
 Alle afleveringer sker i **itslearning**. Ved kodeafleveringer afleverer I **linket til jeres
@@ -685,8 +691,8 @@ en pdf med dokumentation.
 
 | Del | Undervisning | Deadline |
 |---|---|---|
-| Intro + [del 1](projekter/adventure/del-1-rooms.md) | ons 23-09-2026 | – |
-| [Del 1 refactor](projekter/adventure/del-1-refactor.md) | fre 25-09-2026 | **fre 25-09-2026 kl. 23:59** |
+| Intro + [del 1](projekter/adventure/del-1-rooms.md) | ons 23-09-2026 | **fre 25-09-2026 kl. 23:59** |
+| [Del 1 refactor](projekter/adventure/del-1-refactor.md) | fre 25-09-2026 | inden del 2 (man 28-09-2026) |
 | [Del 2](projekter/adventure/del-2-items.md) | man 28-09 + tir 29-09 | **tir 29-09-2026 kl. 23:59** |
 | [Del 3](projekter/adventure/del-3-food.md) | ons 30-09-2026 | **tor 01-10-2026 kl. 23:59** |
 | [Del 4](projekter/adventure/del-4-weapons.md) | man 05-10-2026 | **man 05-10-2026 kl. 23:59** |

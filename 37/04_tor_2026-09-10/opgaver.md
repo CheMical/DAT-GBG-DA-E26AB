@@ -4,10 +4,14 @@ I disse opgaver skal du skrive metoder: med og uden parametre, med og uden retur
 
 ## Kom i gang
 
-Opret en klasse `Main`. Alle metoder i dag skrives som `static` metoder i `Main`, **uden for**
-`main`-metoden – men inde i klassen:
+Åbn ugens projekt `uge37-klasser-objekter-metoder`, og opret dagens package `dag4_metoder`.
+**I dag afviger vi fra reglen om én klasse pr. opgave:** opret én klasse `Main` i dagens package,
+og skriv alle dagens metoder som `static` metoder i den, **uden for** `main`-metoden – men inde i
+klassen:
 
 ```java
+package dag4_metoder;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -30,7 +34,7 @@ ikke testet.
 
 ### Opgave 1 – Uden parametre, uden returværdi
 
-Skriv en metode:
+Startkoden ovenfor indeholder allerede metoden:
 
 ```java
 public static void sayHello()
@@ -130,10 +134,9 @@ Afprøv med tre forskellige tal.
 
 ### Opgave 7 – Byg videre
 
-Skriv disse tre metoder:
+Du har allerede `square` fra opgave 3. Skriv nu også:
 
 ```java
-public static int square(int number)
 public static int cube(int number)
 public static int sumOfSquares(int a, int b)
 ```
@@ -275,7 +278,7 @@ Pas på det sidste komma.
 
 ### Opgave 16 – Tre versioner af greet
 
-Skriv tre metoder med samme navn:
+Du har allerede `greet(String name)` fra opgave 2. Skriv de to andre, så du har tre metoder med samme navn:
 
 ```java
 public static void greet()                              // "Hello!"
@@ -498,7 +501,7 @@ Skriv derefter selv:
 
 ```java
 public static int sumTo(int n)        // 1 + 2 + 3 + ... + n
-public static int fibonacci(int n)    // 0, 1, 1, 2, 3, 5, 8, 13, ...
+public static int fibonacci(int n)    // fibonacci(0) = 0, fibonacci(1) = 1, derefter summen af de to foregående: 0, 1, 1, 2, 3, 5, 8, 13, ...
 ```
 
 > Rekursion er ikke pensum lige nu, men det er godt at have set. Vi kommer tilbage til det.

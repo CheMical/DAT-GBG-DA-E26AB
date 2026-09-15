@@ -56,7 +56,7 @@ Fordi teknisk gæld vokser eksponentielt:
 ![Graf over teknisk gæld](../../projekter/adventure/images/teknisk-gaeld.png)
 
 Rodet kode koster ikke noget den første dag. Den koster hver eneste dag derefter – og prisen
-stiger. Vi har tre uger tilbage i dette projekt, så investeringen tjener sig ind med det samme.
+stiger. Vi har to uger tilbage i dette projekt, så investeringen tjener sig ind med det samme.
 
 ---
 
@@ -107,10 +107,11 @@ Prøv at spørge: **hvorfor kunne jeg få brug for at ændre i denne klasse?**
 * Fordi udskrifterne skal se anderledes ud
 * Fordi kortet skal have flere rum
 * Fordi reglerne for at flytte sig ændrer sig
+* Fordi spillet skal have nye kommandoer eller regler
 
-Tre svar = tre ansvar = klassen skal deles.
+Fire svar = fire ansvar = klassen skal deles.
 
-### De fire klasser
+### Klasserne og deres ansvar
 
 | Klasse | Ansvar | Ændres når ... |
 | --- | --- | --- |
@@ -132,7 +133,8 @@ en grafisk brugerflade uden at røre spillogikken.
 ### GRASP: hvem skal have ansvaret?
 
 GRASP er en samling navngivne svar på spørgsmålet "hvilken klasse skal have dette ansvar?". Vi
-bruger fire af dem i dag.
+bruger tre af dem i dag – Controller, Creator og Information Expert – samt et beslægtet princip,
+Law of Demeter.
 
 #### Controller – hvem styrer flowet?
 
@@ -169,10 +171,10 @@ den nye `currentRoom`. Men så skal `Adventure` kende både `Player` og `Room` i
 public boolean move(String direction) {
 
     Room desiredRoom = switch (direction) {
-        case "north", "n" -> currentRoom.getNorthRoom();
-        case "south", "s" -> currentRoom.getSouthRoom();
-        case "east",  "e" -> currentRoom.getEastRoom();
-        case "west",  "w" -> currentRoom.getWestRoom();
+        case "north", "n" -> currentRoom.getNorth();
+        case "south", "s" -> currentRoom.getSouth();
+        case "east",  "e" -> currentRoom.getEast();
+        case "west",  "w" -> currentRoom.getWest();
         default -> null;
     };
 
@@ -198,7 +200,7 @@ Kort sagt: **undgå lange kæder af punktummer.**
 Dette er et dårligt tegn:
 
 ```java
-adventure.getPlayer().getCurrentRoom().getNorthRoom().getName()
+adventure.getPlayer().getCurrentRoom().getNorth().getName()
 ```
 
 Her kender den, der skriver linjen, hele strukturen fire niveauer ned. Ændrer noget sig undervejs,
@@ -288,7 +290,7 @@ Læg mærke til, at `UserInterface` kun har **én** pil ud. Den kender ikke `Roo
 
 ### Rækkefølge, der plejer at virke
 
-1. Træk **al** input/output ud i `UserInterface`. Ingen `println` andre steder. Denne alene er den
+1. Træk **al** input/output ud i `UserInterface`. Ingen `println` andre steder. Det trin alene er den
    største forbedring.
 2. Træk opbygningen af kortet ud i `Map`.
 3. Lav `Player`, og flyt `currentRoom` og bevægelsen derover.

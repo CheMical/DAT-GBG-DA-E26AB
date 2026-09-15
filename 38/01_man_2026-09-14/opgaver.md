@@ -167,19 +167,23 @@ Brug et **signal** (flag) til de steder, hvor brugeren gør noget.
 
 # Del 2 – Debuggeren
 
-For hver af de følgende opgaver:
+For de opgaver, hvor der er en fejl i programmet (8–11 og 13):
 
 1. **Skriv først ned, hvad du forventer**, programmet gør
 2. Kør det, og se hvad der faktisk sker
 3. **Find fejlen med debuggeren** – ikke ved at stirre på koden
 4. Ret fejlen
 
+Ny uge – opret projektet `uge38-relationer-arraylist` og dagens package
+`dag1_aktivitetsdiagram_debugger`. Skriv hvert af de følgende programmer af i sin egen klasse –
+`Opgave07`, `Opgave11` osv. efter opgavens nummer – så du kan vende tilbage til dem.
+
 ## Opgave 7 – Kom i gang
 
 Skriv dette program af:
 
 ```java
-public class Main {
+public class Opgave07 {
 
     public static void main(String[] args) {
 
@@ -201,6 +205,9 @@ public class Main {
 5. Hvorfor findes `product` ikke fra starten?
 
 ## Opgave 8 – Summen der ikke bliver til noget
+
+> Det er programmet fra "Prøv det selv inden timen" i README. Har du allerede gjort det, så gå
+> videre til opgave 9.
 
 ```java
 int[] numbers = {5, 10, 15, 20};
@@ -261,7 +268,7 @@ System.out.println("Gennemsnit: " + average);
 ## Opgave 11 – Step Into
 
 ```java
-public class Main {
+public class Opgave11 {
 
     public static void main(String[] args) {
         int result = calculate(4, 3);
@@ -319,7 +326,7 @@ Prøv derefter uden betingelsen. Hvor mange gange skulle du trykke <kbd>F9</kbd>
 Her er et program, der skal finde det største tal i et array. Det virker ikke altid.
 
 ```java
-public class Main {
+public class Opgave13 {
 
     public static void main(String[] args) {
 
@@ -350,7 +357,7 @@ public class Main {
 
 ## Opgave 14 – Debug dit eget
 
-Find et program, du selv har skrevet tidligere i denne uge – gerne et fra
+Find et program, du selv har skrevet i sidste uge – gerne et fra
 [bogsamlingsprojektet](../../projekter/bogsamling/readme.md).
 
 1. Sæt et breakpoint et sted midt i det

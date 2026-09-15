@@ -11,6 +11,16 @@ Fokus er på:
 * dataindkapsling
 * validering af data
 
+## Kom i gang
+
+Åbn ugens projekt `uge37-klasser-objekter-metoder` (se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)), og opret dagens package:
+
+```text
+dag2_objekter_klasser_indkapsling
+```
+
+Opret en ny `Person`-klasse og en `Main`-klasse i dagens package (du kan kopiere `Person` fra mandagens package). Mandagens udgave skal blive liggende, som den er. Klasserne `Book`, `Product` og `Car` laver du forfra i dagens package – de har ikke helt de samme attributter som i går.
+
 ---
 
 # Del 1 – Konstruktører
@@ -26,7 +36,7 @@ person.name = "Anna";
 person.age = 23;
 ```
 
-Nu skal du ændre klassen, så navn og alder gives, når objektet bliver oprettet.
+Nu skal du ændre dagens udgave af klassen, så navn og alder gives, når objektet bliver oprettet.
 
 Klassen skal have en konstruktør:
 
@@ -369,13 +379,15 @@ public double balance;
 
 ?
 
-Hvis `balance` var `public`, kunne enhver del af programmet skrive:
+Svar (læs først, når du selv har svaret):
 
-```java
-account.balance = -1000000;
-```
-
-Når attributten er `private`, kan klassen selv bestemme, hvordan saldoen må ændres.
+> Hvis `balance` var `public`, kunne enhver del af programmet skrive:
+>
+> ```java
+> account.balance = -1000000;
+> ```
+>
+> Når attributten er `private`, kan klassen selv bestemme, hvordan saldoen må ændres.
 
 ---
 
@@ -492,6 +504,8 @@ med:
 ```java
 private double degrees;
 ```
+
+Klassen skal ikke have nogen konstruktør. Skriver man ingen konstruktør, laver Java automatisk en tom, så man kan skrive `new Temperature()`. `degrees` starter så på `0.0`.
 
 Temperaturen må ikke være lavere end cirka:
 
@@ -657,6 +671,8 @@ private int speed;
 ```
 
 Når en bil oprettes, skal hastigheden være `0`.
+
+Lav en konstruktør, der kun modtager `model`, og som sætter `speed` til `0`. Lav også `getModel()` og `getSpeed()`.
 
 Lav metoden:
 

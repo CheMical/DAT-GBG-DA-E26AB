@@ -1,4 +1,4 @@
-# Adventure – del 2: Items og inventory
+# Adventure del 2 – Items og inventory
 
 I **Adventure del 1** byggede I grundstrukturen til jeres adventure-spil. Spilleren kunne bevæge sig rundt mellem rummene og undersøge den verden, I havde bygget.
 
@@ -10,7 +10,7 @@ Start med det samme kort som i version 1. Når funktionaliteten virker, må I me
 
 ---
 
-## Målet med del 2
+## Beskrivelse
 
 Når denne del er færdig, skal spilleren kunne:
 
@@ -22,6 +22,16 @@ Når denne del er færdig, skal spilleren kunne:
 
 Samtidig skal programmet fortsat være opdelt i forskellige objekter med hvert deres ansvar.
 
+## Læringsmål
+
+Når du er færdig med denne dag, skal du kunne:
+
+* bruge `ArrayList` til at holde en samling af objekter, der ændrer sig over tid
+* tilføje og fjerne objekter fra en liste under kørsel
+* skrive en søgemetode, der løber en liste igennem og finder et objekt ud fra en egenskab
+* returnere `null` som "ikke fundet", og håndtere det hos kalderen
+* flytte det samme objekt fra én samling til en anden uden at kopiere det
+
 ---
 ## Se disse videoer før undervisningen:
 
@@ -32,10 +42,12 @@ Samtidig skal programmet fortsat være opdelt i forskellige objekter med hvert d
 **[del 2 – Items](../../projekter/adventure/del-2-items.md)**, inden du møder op. Du skal kende
 opgaven, når vi starter.
 
-Derudover:
+Derudover: læs afsnittet nedenfor. Det er en uddybning af opgavebeskrivelsen med fokus på,
+hvordan det samme `Item`-objekt flyttes mellem to `ArrayList`s. Genopfrisk evt.
+[ArrayList-noterne fra 16-09](../../38/03_ons_2026-09-16/README.md) (`add`, `remove`, søgning
+blandt objekter).
 
 ---
-
 
 # Krav til spillet
 
@@ -137,7 +149,7 @@ Hvis spilleren forsøger at tage noget, der ikke findes i rummet:
 skal spillet eksempelvis svare:
 
 ```text
-There is nothing like sword to take around here.
+There is nothing like sword to take around here
 ```
 
 ---
@@ -163,7 +175,7 @@ Hvis spilleren forsøger at droppe noget, som ikke findes i spillerens inventory
 skal spillet eksempelvis svare:
 
 ```text
-You don't have anything like sword in your inventory.
+You don't have anything like sword in your inventory
 ```
 
 ---
@@ -204,7 +216,7 @@ skal lampen fremover ligge i **det nye rum**.
 
 # Koden
 
-Det er vigtigt, at I bygger videre på den objektorienterede struktur fra **Adventure del 1 – refactored**.
+Det er vigtigt, at I bygger videre på den objektorienterede struktur fra **[Adventure del 1 – refactor](../../projekter/adventure/del-1-refactor.md)**.
 
 Programmet må derfor **ikke** implementeres som én stor `Main`-klasse.
 
@@ -255,7 +267,9 @@ Diagrammet viser blandt andet, at:
 * `Player` kender det aktuelle `Room`
 * `Player` har en liste af `Item`-objekter
 * `Room` har en liste af `Item`-objekter
-* et `Item` kan derfor enten ligge i et rum eller være i spillerens inventory
+* et `Item` skal kun ligge ét sted ad gangen – enten i et rum eller i spillerens
+  inventory. Det sikrer diagrammet ikke; det er `takeItem`/`dropItem`, der skal sørge for at fjerne
+  fra den ene liste og tilføje til den anden.
 
 ---
 
@@ -619,27 +633,7 @@ Items:
 
 ---
 
-## 3. Lav inventory
-
-Tilføj en:
-
-```java
-ArrayList<Item>
-```
-
-til `Player`.
-
-Få kommandoen:
-
-```text
-inventory
-```
-
-til at vise indholdet.
-
----
-
-## 4. Lav `findItem`
+## 3. Lav `findItem`
 
 Få først metoden til at kunne finde:
 
@@ -656,6 +650,26 @@ sword
 ```
 
 som ikke findes.
+
+---
+
+## 4. Lav inventory
+
+Tilføj en:
+
+```java
+ArrayList<Item>
+```
+
+til `Player`.
+
+Få kommandoen:
+
+```text
+inventory
+```
+
+til at vise indholdet.
 
 ---
 
@@ -745,9 +759,10 @@ Men få **først basisfunktionaliteten til at virke**.
 
 Arbejd med [Adventure del 2 – Items](../../projekter/adventure/del-2-items.md).
 
-Følg den [anbefalede procedure](../../projekter/adventure/del-2-items.md#anbefalet-procedure) i
-opgavebeskrivelsen. 
+Følg [arbejdsgangen ovenfor](#forslag-til-arbejdsgang) – den svarer til den
+[anbefalede procedure](../../projekter/adventure/del-2-items.md#anbefalet-procedure) i
+opgavebeskrivelsen, blot opdelt i mindre skridt.
 
 
-**Deadline for del 1: fredag 25-09 kl. 23:59.** På fredag rydder vi op i koden – se
-[del 1 – refactor](../../projekter/adventure/del-1-refactor.md).
+**Deadline for del 2: tirsdag 29-09 kl. 23:59.** I morgen reviewer og refaktorerer vi del 2 –
+se [Adventure del 2 – Review / refaktorering](../02_tir_2026-09-29/README.md).

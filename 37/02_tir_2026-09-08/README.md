@@ -13,12 +13,13 @@ Efter lektionen skal du kunne:
 * forklare forskellen på en klasse, en objektvariabel og et objekt
 * lave en simpel konstruktør
 * bruge en konstruktør til at give et objekt startværdier
-* læse og ændre et objekts attributter - **this**
+* læse og ændre et objekts attributter
+* forklare, hvad `this` betyder i en konstruktør
 * anvende objekter sammen med betingelser og loops
-* private / public synlighed
-* set / get metoder
+* forklare forskellen på `private` og `public`
+* skrive get- og set-metoder (getters og setters)
 
-## Se disse videoer før undervisningen
+## Se denne video før undervisningen
 
 [constructors](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=6h51m38s) (til: 07:01:45)  
 
@@ -79,7 +80,7 @@ er typen.
 person
 ```
 
-er en variabel.
+er en variabel. Den indeholder ikke selv objektet, men en **reference** til det – derfor kalder man den også en objektvariabel eller en reference.
 
 ```java
 new Person()
@@ -345,6 +346,8 @@ person.printName();
 
 Metoden `printName()` er `public` og kan derfor kaldes udefra.
 
+Vi ser nærmere på metoder på torsdag. Indtil da er det nok at vide: `void` betyder, at metoden ikke giver noget tilbage – den *gør* bare noget. Står der i stedet en type, fx `public String getName()`, giver metoden en værdi af den type tilbage, og det sker med `return`.
+
 Attributten `name` er derimod `private`:
 
 ```java
@@ -458,6 +461,8 @@ public String getName() {
     return name;
 }
 ```
+
+`return name;` sender værdien af `name` tilbage til den, der kaldte metoden. Derfor står der `String` i stedet for `void` foran `getName`.
 
 Hele klassen kan eksempelvis se sådan ud:
 
@@ -666,7 +671,7 @@ public class Main {
 Vi har her:
 
 * én klasse: `BankAccount`
-* to objekter: `account1` og `account2`
+* to objekter, som variablerne `account1` og `account2` refererer til
 * private attributter
 * en konstruktør
 * public metoder

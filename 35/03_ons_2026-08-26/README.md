@@ -6,7 +6,7 @@ I denne lektion arbejder vi med variable, datatyper og aritmetiske operatorer i 
 
 ## Læringsmål
 - primitive datatyper
-- artimetiske operatorer
+- aritmetiske operatorer
 - Strings 
 
 
@@ -18,9 +18,7 @@ I denne lektion arbejder vi med variable, datatyper og aritmetiske operatorer i 
 ## Læs nedenstående før undervisningen
 I dag skal vi arbejde med **variable og datatyper i Java**.  
 Afprøv gerne eksemplerne i IntelliJ.
-Start med at oprette et nyt Java-projekt i IntelliJ.
-
-Hvis du allerede har et projekt til undervisningen, kan du også bruge dette.
+Brug ugens IntelliJ-projekt `uge35-intro-java`. Har du ikke et endnu, så opret det (se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)).
 
 Opret en ny Java-klasse med navnet:
 
@@ -47,7 +45,7 @@ public class Main {
 }
 ```
 
-Det er inde i `main`-metoden, du skal skrive og afprøve dine løsninger.
+Det er inde i en `main`-metode, du afprøver eksemplerne – i opgaverne får hver opgave sin egen klasse.
 
 Eksempel:
 
@@ -71,7 +69,7 @@ Når du kører programmet, bliver resultatet vist i konsollen nederst i IntelliJ
 
 ---
 
-### Variable
+## Variable
 En variabel kan betragtes som en lille navngivet plads i computerens hukommelse, hvor vi kan gemme en værdi.
 
 For eksempel:
@@ -100,7 +98,7 @@ Output:
 
 ---
 
-### Variable kan ændre værdi
+## Variable kan ændre værdi
 
 Navnet *variabel* kommer af, at værdien kan variere.
 
@@ -482,6 +480,8 @@ age >= 18
 
 er enten sandt eller falsk.
 
+`>=` betyder "større end eller lig med". Vi ser nærmere på den slags sammenligninger i morgen.
+
 ---
 
 ## `char` – ét tegn
@@ -723,6 +723,12 @@ double discount = 20.0;
 double finalPrice = price - discount;
 
 System.out.println(finalPrice);
+```
+
+Output:
+
+```text
+80.0
 ```
 
 ---

@@ -15,24 +15,30 @@ Forsøg så vidt muligt selv at løse opgaverne, før du sammenligner med andre.
 
 # Sådan arbejder du med opgaverne
 
-Du må gerne løse alle opgaver i den samme `main`-metode.
+Åbn ugens IntelliJ-projekt `uge35-intro-java` (se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md) – den gennemgår vi i starten af timen).
 
-Det kan være en god idé at skrive en overskrift før hver opgave:
+Opret dagens package under `src`:
 
-```java
-System.out.println("Opgave 1");
-
-int age = 25;
-
-System.out.println(age);
+```text
+dag3_variable_datatyper_aritmetik
 ```
 
-Du kan også udkommentere kode, du ikke arbejder med lige nu:
+Lav én klasse pr. opgave – `Opgave01`, `Opgave02` osv. – hver med sin egen `main`-metode:
 
 ```java
-// int age = 25;
-// System.out.println(age);
+package dag3_variable_datatyper_aritmetik;
+
+public class Opgave01 {
+
+    public static void main(String[] args) {
+        int age = 25;
+
+        System.out.println(age);
+    }
+}
 ```
+
+Så kan du genbruge variabelnavne som `age` og `number` fra opgave til opgave, og du kan køre hver opgave for sig.
 
 # Del 1 – Variable
 
@@ -626,7 +632,7 @@ Tre personer er:
 
 ```text
 20 år
-24 år
+23 år
 28 år
 ```
 
@@ -637,7 +643,7 @@ Pas på med heltalsdivision.
 Resultatet skal være:
 
 ```text
-24.0
+23.666666666666668
 ```
 
 ---
@@ -723,7 +729,7 @@ Forventet resultat:
 En vare koster:
 
 ```text
-800 kr.
+800.0 kr.
 ```
 
 Der gives:
@@ -740,6 +746,8 @@ Opret variable til:
 * rabatprocent
 * rabat i kroner
 * pris efter rabat
+
+Brug `double` til pris og rabat.
 
 Beregn den nye pris.
 
@@ -782,7 +790,7 @@ Du skal bruge de eksisterende variable og må gerne oprette én ekstra variabel.
 
 ---
 
-## Opgave 37 – Dage til timer
+## Opgave 37 – Dage til timer, minutter og sekunder
 
 Opret:
 
@@ -838,6 +846,8 @@ System.out.println(age);
 ```
 
 Find og ret fejlene.
+
+Der er fire fejl – én på hver af de fire første linjer. Compileren viser ikke nødvendigvis alle på én gang, så ret én ad gangen og kompilér igen.
 
 ---
 

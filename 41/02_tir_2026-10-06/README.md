@@ -90,6 +90,7 @@ classDiagram
         -ArrayList~Enemy~ enemies
         +addEnemy(Enemy enemy)
         +removeEnemy(Enemy enemy)
+        +getEnemies() ArrayList~Enemy~
         +findEnemy(String name) Enemy
     }
     class Player {
@@ -100,6 +101,7 @@ classDiagram
     }
     class Enemy {
         -String name
+        -String description
         -int health
         -Weapon weapon
         +attack(Player player)
@@ -142,7 +144,8 @@ rette en pil end at omskrive en metode.
 
 ### Husk reglen om Weapon
 
-Når du tegner, skal du huske kravet fra [del 4](../../projekter/adventure/del-4-weapons.md):
+Når du tegner, skal du huske kravet fra [del 4](../../projekter/adventure/del-4-weapons.md), som
+[del 5](../../projekter/adventure/del-5-enemies.md) gentager i den anbefalede procedure:
 
 > **Ingen test på, om det er et `RangedWeapon`.** `Weapon`-objektet skal selv fortælle, om det
 > stadig kan bruges.
@@ -243,7 +246,7 @@ Det skal vise alle klasser, arveforhold og associationer med multiplicitet.
 
 | Dag | |
 | --- | --- |
-| **ons 07-10** | UDVIKLINGSDAG DIGITAL – ingen undervisning |
+| **ons 07-10** | UDVIKLINGSDAG DIGITAL – tjek TimeEdit/itslearning for, om der er undervisning |
 | **tor 08-10** | Arbejde med Adventure-projektet. **Endelig aflevering kl. 23:59** |
 | **fre 09-10** | Præsentation af færdige projekter |
 

@@ -30,7 +30,7 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 ## Læs nedenstående før undervisningen
 
-## Fra array til ArrayList
+### Fra array til ArrayList
 
 Et array har en fast størrelse:
 
@@ -53,7 +53,7 @@ names.add("Noah");
 
 Vi behøver ikke beslutte størrelsen på forhånd.
 
-## Import
+### Import
 
 `ArrayList` er ikke automatisk tilgængelig på samme måde som eksempelvis `String`.
 
@@ -79,7 +79,7 @@ public class Main {
 
 IntelliJ kan normalt tilføje importen automatisk.
 
-## Typen mellem `<` og `>`
+### Typen mellem `<` og `>`
 
 I denne linje:
 
@@ -103,7 +103,7 @@ names.add(42);
 
 Java kan derfor opdage mange fejl, allerede inden programmet køres.
 
-## Tilføj elementer med `add()`
+### Tilføj elementer med `add()`
 
 Et element tilføjes normalt bagest i listen:
 
@@ -123,7 +123,7 @@ fruits.add(1, "Appelsin");
 
 De efterfølgende elementer flyttes én plads mod højre.
 
-## Indeks og `get()`
+### Indeks og `get()`
 
 Ligesom i et array begynder indeks ved `0`.
 
@@ -144,7 +144,7 @@ fruits.get(0)
 
 Hvis man forsøger at hente en plads, der ikke findes, får man en `IndexOutOfBoundsException`.
 
-## Antal elementer med `size()`
+### Antal elementer med `size()`
 
 Et array bruger attributten `length`:
 
@@ -164,7 +164,7 @@ Eksempel:
 System.out.println("Antal frugter: " + fruits.size());
 ```
 
-## Ændr et element med `set()`
+### Ændr et element med `set()`
 
 Et eksisterende element kan udskiftes:
 
@@ -174,7 +174,7 @@ fruits.set(1, "Mango");
 
 `set()` ændrer elementet på en eksisterende plads. Den tilføjer ikke en ny plads.
 
-## Fjern elementer med `remove()`
+### Fjern elementer med `remove()`
 
 Et element kan fjernes ved hjælp af dets indeks:
 
@@ -190,7 +190,7 @@ fruits.remove("Banan");
 
 Når et element fjernes, flyttes de efterfølgende elementer mod venstre. Listen får dermed én plads mindre.
 
-## Søg i listen
+### Søg i listen
 
 `contains()` undersøger, om en værdi findes:
 
@@ -208,7 +208,7 @@ int index = fruits.indexOf("Pære");
 
 Hvis værdien ikke findes, returneres `-1`.
 
-## Er listen tom?
+### Er listen tom?
 
 ```java
 if (fruits.isEmpty()) {
@@ -222,7 +222,7 @@ Alle elementer kan fjernes med:
 fruits.clear();
 ```
 
-## Gennemløb med et almindeligt for-loop
+### Gennemløb med et almindeligt for-loop
 
 Når vi har brug for elementets indeks, kan vi skrive:
 
@@ -234,9 +234,10 @@ for (int i = 0; i < fruits.size(); i++) {
 
 Læg mærke til `size()` og `get(i)`.
 
-## Gennemløb med enhanced for-loop
+### Gennemløb med enhanced for-loop
 
-Hvis vi kun skal bruge elementerne, er et enhanced for-loop ofte nemmere at læse:
+Hvis vi kun skal bruge elementerne, er et enhanced for-loop (det, vi kaldte `foreach` på array-dagen)
+ofte nemmere at læse:
 
 ```java
 for (String fruit : fruits) {
@@ -248,7 +249,7 @@ Det kan læses som:
 
 > For hver `fruit` i `fruits`, udskriv `fruit`.
 
-## ArrayList med tal
+### ArrayList med tal
 
 En `ArrayList` kan kun indeholde objekter. Derfor kan vi ikke skrive:
 
@@ -277,7 +278,7 @@ Andre eksempler er:
 | `boolean` | `Boolean` |
 | `char` | `Character` |
 
-## Pas på `remove()` med Integer
+### Pas på `remove()` med Integer
 
 For en liste med tekster er forskellen tydelig:
 
@@ -298,7 +299,11 @@ numbers.remove(1);                 // fjerner elementet på indeks 1
 numbers.remove(Integer.valueOf(10)); // fjerner værdien 10
 ```
 
-## ArrayList med egne objekter
+Skriver man `numbers.remove(10);` for at fjerne værdien 10, opfatter Java 10 som et indeks. Listen har
+kun indeks 0–2, så man får en `IndexOutOfBoundsException`. Brug derfor `Integer.valueOf(...)`, når du
+vil fjerne en værdi fra en `ArrayList<Integer>`.
+
+### ArrayList med egne objekter
 
 En liste kan også indeholde objekter fra en klasse, vi selv har lavet:
 
@@ -341,7 +346,7 @@ for (Book book : books) {
 }
 ```
 
-## Søg blandt objekter
+### Søg blandt objekter
 
 Vi kan genbruge søgemønstret fra arrays:
 
@@ -365,7 +370,7 @@ else {
 
 Vi bruger stadig `.equals()` til at sammenligne tekster.
 
-## ArrayList som attribut i en klasse
+### ArrayList som attribut i en klasse
 
 Et bibliotek kan selv holde styr på sin liste af bøger:
 
@@ -418,7 +423,7 @@ Det samme princip kan senere bruges i Adventure:
 - en spiller kan have en liste af ting i sit inventory
 - når en ting samles op, fjernes den fra rummet og tilføjes til spilleren
 
-## Array og ArrayList sammenlignet
+### Array og ArrayList sammenlignet
 
 | Array | ArrayList |
 |---|---|
@@ -429,7 +434,7 @@ Det samme princip kan senere bruges i Adventure:
 | Kan indeholde primitive typer | Indeholder objekter; brug wrapper-klasser til tal |
 | Ingen `add()` eller `remove()` | Har blandt andet `add()` og `remove()` |
 
-Et array er ikke dårligt. Brug et array, når antallet af pladser er fast og kendt. Brug ofte en `ArrayList`, når antallet ændrer sig.
+Et array er ikke dårligt. Brug et array, når antallet af pladser er fast og kendt. Brug en `ArrayList`, når antallet ændrer sig.
 
 ## Det vigtigste at tage med
 

@@ -31,8 +31,8 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 ## Se disse videoer før undervisningen:
 
-[methods](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=4h4m27s) (til: 04:19:51)
-[overloaded methods](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=4h19m51s) (til: 04:25:59)
+[methods](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=4h4m27s) (til: 04:19:51)  
+[overloaded methods](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=4h19m51s) (til: 04:25:59)  
 [variable scope](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=4h25m59s) (til: 04:30:57)
 
 ## Læs nedenstående før undervisningen
@@ -85,6 +85,9 @@ public static void main(String[] args) {
     printFrame("Farvel!");
 }
 ```
+
+Rammen er her forenklet – den lukkes ikke til højre. I opgave 9 skriver du en `printFrame`, hvor
+rammen tilpasser sig tekstens længde.
 
 Metoder giver os tre ting:
 
@@ -457,9 +460,9 @@ Java kan ikke se på kaldet `getValue()`, hvilken af dem du mente.
 
 ### Hvorfor står der `static`?
 
-Det korte svar for i dag: `main` er `static`, og en `static` metode kan kun kalde andre `static`
-metoder direkte. Så når du skriver hjælpemetoder, som `main` skal bruge, skal de også være
-`static`:
+Det korte svar for i dag: `main` er `static`, fordi Java skal kunne kalde den, før der er oprettet
+et eneste objekt. Og en `static` metode kan kun kalde andre `static` metoder direkte. Så når du
+skriver hjælpemetoder, som `main` skal bruge, skal de også være `static`:
 
 ```java
 public class Main {
@@ -478,7 +481,7 @@ Det lange svar hænger sammen med objekter: en **ikke**-static metode hører til
 kaldes på et objekt:
 
 ```java
-Book book = new Book("The Hobbit", "Tolkien", 1937);
+Book book = new Book("The Hobbit", "J.R.R. Tolkien", 1937);
 
 book.printInfo();          // metode på et objekt – ikke static
 ```

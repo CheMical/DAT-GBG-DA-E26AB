@@ -1,4 +1,4 @@
-# I/O: Scanner og print samt statustjek for bruger på Github
+# I/O: Scanner og print samt statustjek for bruger på GitHub
 
 ## Beskrivelse
 
@@ -19,11 +19,12 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 * bruge `System.out.print()` og `System.out.println()`
 * oprette en `Scanner` og læse input fra brugeren
 * læse tekst med `nextLine()`
+* læse ét ord med `next()`
 * læse tal med `nextInt()` og `nextDouble()`
 * kombinere input og output i et lille program
 * forstå forskellen på `print()` og `println()`
 
-## Se disse videoer før undervisninge
+## Se disse videoer før undervisningen
 
 [Brugerinput](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=31m30s) (til: 00:47:25)
 
@@ -31,8 +32,8 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 Afprøv gerne eksemplerne i IntelliJ, mens du læser.
 
-Brug samme fremgangsmåde som de foregående dage: opret en klasse `Main` med en `main`-metode, og
-skriv koden derinde.
+Afprøv eksemplerne i en klasse i dagens package `dag5_io_scanner_print_git` i ugens projekt – se
+[Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md).
 
 ```java
 public class Main {
@@ -165,6 +166,19 @@ Hej Sofie
 
 ---
 
+## Læs ét ord med `next()`
+
+`next()` læser kun det næste **ord** (tekst uden mellemrum). Det er praktisk, når svaret er ét ord,
+fx en farve eller `ja`/`nej`, og – i modsætning til `nextLine()` – virker det også fint lige efter
+`nextInt()` og `nextDouble()`.
+
+```java
+System.out.print("Hvad er din yndlingsfarve? ");
+String color = scanner.next();
+```
+
+---
+
 ## Læs heltal med `nextInt()`
 
 Hvis vi vil læse et helt tal, bruger vi `nextInt()`.
@@ -204,6 +218,7 @@ Hvis vi vil læse et decimaltal, bruger vi `nextDouble()`.
 Eksempel:
 
 ```java
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -211,6 +226,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
 
         System.out.print("Hvor høj er du? ");
         double height = scanner.nextDouble();
@@ -227,7 +243,10 @@ Hvor høj er du? 1.72
 Du er 1.72 meter høj
 ```
 
-> Husk: Java bruger **punktum** som decimaltegn.
+> Husk: I Java-kode skrives decimaltal med **punktum** (`1.72`). Men `Scanner` følger computerens
+> sprogindstilling, så på en dansk computer forventer den **komma** (`1,72`) – og `1.72` giver en fejl
+> (`InputMismatchException`). Med `scanner.useLocale(Locale.US);` lige efter du har oprettet din
+> `Scanner`, accepterer den punktum. Husk `import java.util.Locale;` øverst i filen.
 
 ---
 
@@ -286,6 +305,7 @@ Det er altså brugeren, der bestemmer værdien.
 * `println()` skriver med ny linje
 * `Scanner` bruges til at læse input
 * `nextLine()` læser tekst
+* `next()` læser ét ord
 * `nextInt()` læser heltal
 * `nextDouble()` læser decimaltal
 
@@ -319,7 +339,7 @@ public class Main {
         int age = scanner.nextInt();
 
         System.out.print("Hvad er din yndlingsfarve? ");
-        String color = scanner.nextLine();
+        String color = scanner.next();
 
         System.out.println("Navn: " + name);
         System.out.println("Alder: " + age);
@@ -328,8 +348,9 @@ public class Main {
 }
 ```
 
-> Tip: I nogle tilfælde kan `nextInt()` og `nextDouble()` efterlade en linjeskiftkarakter i input,
-> så man skal være opmærksom på det. Det kigger vi nærmere på senere.
+> Tip: `nextInt()` og `nextDouble()` læser kun tallet – ikke det Enter-tryk, der kommer efter. Kalder du
+> `nextLine()` lige bagefter, får du derfor en tom tekst. Brug `next()` (læser ét ord) efter et tal, eller
+> kald `scanner.nextLine()` én gang ekstra for at "spise" linjeskiftet. Det kigger vi nærmere på senere.
 
 ---
 
@@ -348,5 +369,5 @@ Efter denne forberedelse skal du især kunne:
 
 Arbejd med disse [opgaver](opgaver.md)
 
-Statustjek for oprettelse af bruger på Github:
-* Tænke på at finde et passende brugernavn inden undervisningen, hvis du ikke allerede er oprettet.
+Statustjek for oprettelse af bruger på GitHub:
+* Tænk på at finde et passende brugernavn inden undervisningen, hvis du ikke allerede er oprettet.

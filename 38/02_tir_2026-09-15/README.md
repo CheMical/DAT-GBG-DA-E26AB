@@ -27,7 +27,9 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 ## Se disse videoer før undervisningen:
 
 [array of objects](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=7h8m22s) (til: 07:14:07)
+
 [aggregation](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=8h29m39s) (til: 08:39:02)
+
 [composition](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=8h39m2s) (til: 08:45:17)
 
 ## Læs nedenstående før undervisningen
@@ -261,8 +263,8 @@ else {
 }
 ```
 
-> I morgen lærer I `ArrayList`, som gør det hele nemmere – man behøver ikke bestemme størrelsen på
-> forhånd. Men princippet er det samme.
+> I morgen gennemgår vi `ArrayList`, som I allerede har mødt i bogsamlingsprojektet. Den gør det
+> hele nemmere – man behøver ikke bestemme størrelsen på forhånd. Men princippet er det samme.
 
 ---
 
@@ -304,7 +306,7 @@ classDiagram
 | --- | --- |
 | `-` | `private` |
 | `+` | `public` |
-| `#` | `protected` |
+| `#` | `protected` (kommer, når vi lærer arv) |
 
 Attributter er næsten altid `private` (`-`), og metoder næsten altid `public` (`+`).
 
@@ -517,7 +519,7 @@ classDiagram
 
 ---
 
-### Kan du forudsige resultatet?
+## Kan du forudsige resultatet?
 
 #### Eksempel 1
 
@@ -535,9 +537,9 @@ System.out.println(a);
 Book book1 = new Book("Dune", "Herbert", 1965);
 Book book2 = book1;
 
-book2.setTitle("The Hobbit");
+book2.markAsRead();
 
-System.out.println(book1.getTitle());
+System.out.println(book1.isRead());
 ```
 
 > Hvorfor er svaret forskelligt fra eksempel 1?

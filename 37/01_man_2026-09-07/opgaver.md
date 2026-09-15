@@ -1,9 +1,16 @@
 # Opgaver – Objekter og klasser
 
+## Kom i gang
 
-Du skal afprøve dine løsninger fra `main`-metoden.
+Ny uge – opret et nyt IntelliJ-projekt med navnet `uge37-klasser-objekter-metoder` (se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)), og opret dagens package:
 
-Når du senere i opgaverne skal oprette dine egne klasser, skal de oprettes som separate Java-klasser i projektet.
+```text
+dag1_objekter_klasser_intro
+```
+
+Del 1 og 2 løses som hidtil i én klasse pr. opgave (`Opgave01`, `Opgave02` …), hver med sin egen `main`-metode.
+
+Fra del 3 opretter du dine egne klasser (`Person`). De skal ligge som separate Java-filer i dagens package – og du afprøver dem fra en klasse `Main` i samme package.
 
 ---
 
@@ -14,6 +21,8 @@ Når du senere i opgaverne skal oprette dine egne klasser, skal de oprettes som 
 Du har allerede arbejdet med klassen `Scanner`.
 
 Skriv følgende program:
+
+Husk importen øverst i filen: `import java.util.Scanner;`
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -32,120 +41,9 @@ Besvar derefter følgende spørgsmål:
 4. Hvilken metode kaldes på objektet?
 
 ---
-## Klassen `Random`
-
-Java indeholder en række klasser, som vi kan bruge i vores programmer. En af dem er klassen `Random`, som kan bruges til at generere tilfældige tal.
-
-For at bruge `Random` skal klassen først importeres:
-
-```java
-import java.util.Random;
-```
-
-Derefter kan vi oprette et objekt af klassen `Random`:
-
-```java
-Random random = new Random();
-```
-
-Her er:
-* **`Random`**: navnet på klassen
-* **`random`**: en variabel, som refererer til objektet
-* **`new Random()`**: opretter et nyt objekt af klassen `Random`
-
-Vi kan nu bruge objektet til at generere tilfældige tal.
-
-### `nextInt()`
-
-Metoden `nextInt()` kan bruges til at generere et tilfældigt heltal.
-
-**Eksempel:**
-```java
-int number = random.nextInt(10);
-```
-
-`random.nextInt(10)` giver et tilfældigt heltal fra **0 til 9**. Tallet 10 er altså ikke med.
-
-Generelt gælder det, at `random.nextInt(n)` giver et tilfældigt heltal fra **0 til n - 1**.
-
-**Eksempel:**
-```java
-random.nextInt(6);
-```
-Kan give: `0`, `1`, `2`, `3`, `4` eller `5`.
-
-**Et andet eksempel:**
-```java
-random.nextInt(100);
-```
-Kan give et heltal fra **0 til 99**.
-
-### Tilfældigt tal fra 1 til 10
-
-Hvis vi ønsker et tilfældigt tal fra 1 til 10, kan vi lægge 1 til resultatet:
-
-```java
-int number = random.nextInt(10) + 1;
-```
-
-* `random.nextInt(10)` giver: **0 til 9**
-* Når vi lægger 1 til, får vi: **1 til 10**
-
-### Eksempel – kast med en terning
-
-En almindelig terning kan give værdierne: `1`, `2`, `3`, `4`, `5` eller `6`. Vi kan derfor simulere et terningekast med:
-
-```java
-int dice = random.nextInt(6) + 1;
-System.out.println("Du slog " + dice);
-```
-
-Her giver `random.nextInt(6)` et tal fra 0 til 5. Når vi lægger 1 til, får vi et tal fra 1 til 6.
-
-### Et andet starttal
-
-Vi kan også lave tilfældige tal, som starter ved andre værdier end 1. Hvis vi eksempelvis ønsker et tal fra 10 til 19, kan vi skrive:
-
-```java
-int number = random.nextInt(10) + 10;
-```
-
-* `random.nextInt(10)` giver: **0 til 9**
-* Når vi lægger 10 til, får vi: **10 til 19**
-
-### Husk
-
-* `random.nextInt(10)` giver: **0 - 9**
-* `random.nextInt(10) + 1` giver: **1 - 10**
-
-Tallet, der står inde i `nextInt()`, angiver altså hvor mange forskellige værdier der kan genereres, ikke det største tal.
-
-> **Vigtigt for begyndere:** Argumentet til `nextInt()` angiver antallet af mulige værdier, når man bruger varianten med én parameter. Det er ofte lettere at forstå end kun at huske reglen "0 til n - 1".
-Use 
-
 ## Opgave 2 – Random
 
-Klassen `Random` kan bruges til at generere tilfældige tal.
-
-Start med:
-
-```java
-import java.util.Random;
-```
-
-Opret derefter et `Random`-objekt:
-
-```java
-Random random = new Random();
-```
-
-Brug:
-
-```java
-random.nextInt(10);
-```
-
-til at generere et tilfældigt tal.
+Brug klassen `Random` (husk `import java.util.Random;`).
 
 ### a)
 
@@ -318,7 +216,7 @@ Nu skal du for første gang selv oprette en klasse.
 ### Opret klassen `Person` i IntelliJ
 
 1. Find mappen `src` i **Project**-vinduet i venstre side af IntelliJ.
-2. Højreklik på `dag1_objekter_klasser_intro`pakken.
+2. Højreklik på packagen `dag1_objekter_klasser_intro`.
 3. Vælg **New → Java Class**.
 4. Skriv navnet:
 
@@ -356,7 +254,7 @@ Du har nu lavet din første klasse.
 
 ### Opret et objekt
 
-Gå tilbage til `Main.java`.
+Opret klassen `Main` i samme package (hvis du ikke allerede har den), og gå ind i dens `main`-metode.
 
 Inde i `main`-metoden skal du oprette et objekt af klassen `Person`:
 
@@ -566,9 +464,9 @@ Eksempel:
 
 ```text
 Produkt: Kaffe
-Pris: 45.95
+Pris: 45.5
 Antal: 3
-Samlet værdi: 137.85
+Samlet værdi: 136.5
 ```
 
 ---
@@ -652,13 +550,13 @@ Hint: Læg spillerne i et array:
 ```java
 Player[] players = {player1, player2};
 ```
-Lav en ydre for-each der gennemløber spillerne.  
-I hvert genemløb af den ydre løkke laves en for løkke der gennemløbes tre gange.  
-i hvert gennemløb af den indre løkke findes et tilfældigt tal mellem 1 og 6 der adderes til spillerens score
+Lav en ydre for-each-løkke, der gennemløber spillerne.  
+I hvert gennemløb af den ydre løkke laves en for-løkke, der gennemløbes tre gange.  
+I hvert gennemløb af den indre løkke findes et tilfældigt tal mellem 1 og 6, der lægges til spillerens `score`.
 
 ---
 
-## Udfordring 2 – Find fejlen
+## Udfordring 2 – Forudsig resultatet
 
 Se på følgende kode:
 

@@ -1,6 +1,8 @@
 # Opgaver – ArrayList
 
-Brug en klasse med en `main`-metode til hver opgave. Husk:
+Åbn ugens projekt `uge38-relationer-arraylist`, og opret dagens package `dag3_arraylist`. Brug én
+klasse med en `main`-metode til hver opgave – `Opgave01`, `Opgave02` osv. Klasserne `Book`, `Library`
+og `Item` i del 5 og udfordringen opretter du som separate filer i samme package. Husk:
 
 ```java
 import java.util.ArrayList;
@@ -70,7 +72,7 @@ Udskriv alle elementer og deres indeks.
 
 Opret en liste med mindst fem bynavne.
 
-Gennemløb listen med et enhanced for-loop, og udskriv hvert bynavn.
+Gennemløb listen med et enhanced for-loop (`foreach`), og udskriv hvert bynavn.
 
 Udskriv derefter kun de bynavne, der har mere end fem bogstaver.
 
@@ -120,7 +122,7 @@ Opret en `ArrayList<Integer>` med mindst fem tal.
 Brug et loop til at beregne:
 
 - summen
-- gennemsnittet
+- gennemsnittet (som `double` – husk heltalsdivision)
 - det største tal
 
 Udskriv alle tre resultater.
@@ -161,6 +163,9 @@ Spørg først brugeren, hvor mange varer der skal indtastes.
 
 Brug et loop til at læse varerne og tilføje dem til listen.
 
+Husk, at `nextInt()` ikke læser linjeskiftet efter tallet. Kald derfor `scanner.nextLine();` én gang
+lige efter `nextInt()`, inden du begynder at læse varerne med `nextLine()`.
+
 Udskriv til sidst hele indkøbslisten, én vare pr. linje.
 
 Eksempel:
@@ -193,6 +198,9 @@ Programmet skal til sidst udskrive listen og antallet af varer.
 
 ## Del 5 – ArrayList med egne objekter
 
+Du kan tage udgangspunkt i `Book`-klassen fra [bogsamlingsprojektet](../../projekter/bogsamling/readme.md)
+– opgaverne her passer direkte til projektet.
+
 ### Opgave 13 – Bøger
 
 Opret klassen `Book` med:
@@ -208,6 +216,9 @@ Tilføj:
 - en konstruktør
 - getters
 - en metode `printInfo()`
+
+Klassen hedder det samme som i bogsamlingsprojektet, men det er en ny, uafhængig udgave i dagens
+package – rør ikke ved den i `bogsamling`.
 
 Opret derefter en `ArrayList<Book>` med mindst tre bøger.
 
@@ -239,6 +250,9 @@ private ArrayList<Book> books;
 ```
 
 Listen skal oprettes i konstruktøren.
+
+Klassen hedder det samme som i bogsamlingsprojektet, men det er en ny, uafhængig udgave i dagens
+package – rør ikke ved den i `bogsamling`.
 
 Tilføj metoderne:
 
@@ -275,11 +289,11 @@ Tilføj metoder, så man kan:
 - udskrive alle ting
 - få antallet af ting
 - beregne den samlede vægt
-- undersøge, om inventory er tomt
+- undersøge, om `Inventory` er tomt (`isEmpty()`)
 
 Afprøv klassen med mindst fire `Item`-objekter.
 
-Ekstra: Giv inventory en maksimal samlet vægt. En ting må kun tilføjes, hvis grænsen ikke overskrides.
+Ekstra: Giv `Inventory` en maksimal samlet vægt. En ting må kun tilføjes, hvis grænsen ikke overskrides.
 
 ## Opsamling
 

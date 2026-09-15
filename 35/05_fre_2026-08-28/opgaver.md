@@ -4,24 +4,20 @@ I disse opgaver skal du arbejde med `System.out.print`, `System.out.println` og 
 
 ## Kom i gang
 
-Opret et nyt Java-projekt i IntelliJ, eller brug det projekt, du allerede har til undervisningen.
+Åbn ugens IntelliJ-projekt `uge35-intro-java` (se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)).
 
-Husk at importere `Scanner` øverst i filen:
+Opret dagens package under `src`:
 
-```java
-import java.util.Scanner;
+```text
+dag5_io_scanner_print_git
 ```
 
-Opret en klasse med navnet:
+Opret én klasse pr. opgave – `Opgave01`, `Opgave02` osv. – hver med sin egen `main`-metode:
 
 ```java
-Main
-```
+package dag5_io_scanner_print_git;
 
-Lav en `main`-metode i klassen:
-
-```java
-public class Main {
+public class Opgave01 {
 
     public static void main(String[] args) {
 
@@ -29,7 +25,9 @@ public class Main {
 }
 ```
 
-Lav løsningerne på opgaverne i `main`-metoden, og afprøv dem undervejs.
+Husk `import java.util.Scanner;` øverst i hver opgaveklasse, der bruger `Scanner` – lige under `package`-linjen.
+
+Kør og afprøv hver opgave for sig med den grønne pil ud for `main`.
 
 ---
 
@@ -109,7 +107,7 @@ Hej Sofie, du er 21 år gammel.
 Opret en `Scanner`, og bed brugeren om at indtaste en pris i kroner som decimaltal med
 `nextDouble()`.
 
-Scanner er afhængig af sproget på din computer, så med dansk opsætning vil decimaltegnet være , (komma) og for at kunne bruge . (punktum), når du skriver kommatal, så du efter oprettelsen af din Scanner skrive sådan her:
+`Scanner` følger sproget på din computer. Med dansk opsætning er decimaltegnet derfor komma (`,`). Vil du kunne skrive decimaltal med punktum (`.`), skal du lige efter oprettelsen af din `Scanner` skrive sådan her:
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -182,7 +180,7 @@ Eksempel: højde `1.75` og vægt `70.0` giver:
 Dit BMI er: 22.857142857142858
 ```
 
-> **Bemærk:** Vi bruger ikke `if`-sætninger endnu – udregn og udskriv blot resultatet.
+> **Bemærk:** Du skal ikke vurdere BMI'et (normal/overvægt osv.) – udregn og udskriv blot tallet.
 
 ---
 
@@ -228,18 +226,20 @@ Eksempel: hvis brugeren skriver `100.0`, skal programmet skrive:
 100.0 DKK svarer til 13.40 EUR.
 ```
 
-Brug `String.format("%.2f", ...)` til at formatere eurobeløbet til præcis 2 decimaler.
+Brug `String.format(Locale.US, "%.2f", ...)` til at formatere eurobeløbet til præcis 2 decimaler.
 
 Eksempel:
 
 ```java
-Double d = 3.1415;
-String s = String.format("%.2f", d);
+double d = 3.1415;
+String s = String.format(Locale.US, "%.2f", d);
 System.out.println("Pi med to decimaler: " + s);
 ```
 ```text
 Pi med to decimaler: 3.14
 ```
+
+`Locale.US` sørger for, at der bruges punktum som decimaltegn – ellers følger `String.format` computerens sprog og skriver `13,40`. Husk `import java.util.Locale;` (samme import som i opgave 5).
 
 ---
 
@@ -274,76 +274,6 @@ Favoritfarve: blå
 > **Tip:** Brug en kombination af `System.out.println()` og `System.out.print()` til at styre
 > linjeskiftene. Pas på rækkefølgen af dine kald til `Scanner`, når du blander `nextLine()`,
 > `nextInt()` og `next()`.
-
----
-
-## Udfordring – Temperaturomregner
-
-Opret en `Scanner`, og bed brugeren om en temperatur i **Celsius** (brug `nextDouble()`).
-
-Omregn til **Fahrenheit** med formlen:
-
-```text
-F = C * 9 / 5 + 32
-```
-
-og til **Kelvin** med formlen:
-
-```text
-K = C + 273.15
-```
-
-Udskriv alle tre temperaturer:
-
-```text
-[C] °C = [F] °F = [K] K
-```
-
-Eksempel: hvis brugeren skriver `100.0`, skal programmet skrive:
-
-```text
-100.0 °C = 212.0 °F = 373.15 K
-```
-
----
-
-## Udfordring – Temperaturomregner (fra Fahrenheit)
-
-Opret en `Scanner`, og bed brugeren om en temperatur i **Fahrenheit** (brug `nextDouble()`).
-
-Omregn til **Celsius** og **Kelvin**.
-
-Udskriv alle tre temperaturer:
-
-```text
-[F] °F = [C] °C = [K] K
-```
-
-Eksempel: hvis brugeren skriver `212.0`, skal programmet skrive:
-
-```text
-212.0 °F = 100.0 °C = 373.15 K
-```
-
-<details>
-<summary>Hint: Vis formel for Celsius</summary>
-
-```text
-C = (F - 32) * 5 / 9
-```
-
-</details>
-
-<details>
-<summary>Hint: Vis formel for Kelvin</summary>
-
-Brug først `C` fra hintet for Celsius.
-
-```text
-K = C + 273.15
-```
-
-</details>
 
 ---
 
@@ -421,7 +351,7 @@ Udskriv karakteren.
 
 ---
 
-## Opgave 15 – Ung, voksen eller senior
+## Opgave 15 – Barn, teenager, voksen eller senior
 
 Bed brugeren om at indtaste sin alder.
 
@@ -458,7 +388,7 @@ Prisen efter rabat er 75.0 kr.
 
 Bed brugeren om at indtaste:
 1. alder
-2. om de har id-kort (`ja` eller `nej`)
+2. om de har id-kort (`ja` eller `nej`, med `next()`)
 
 Adgang gives kun hvis brugeren er 18 år eller derover **og** har id-kort.
 
@@ -478,7 +408,7 @@ Adgang afvist.
 
 ## Opgave 18 – Temperatur og beklædning
 
-Bed brugeren om at indtaste temperaturen i grader Celsius.
+Bed brugeren om at indtaste temperaturen i **hele** grader Celsius (brug `nextInt()`).
 
 Udskriv en anbefaling:
 
@@ -516,7 +446,7 @@ Forkert brugernavn eller adgangskode.
 
 Bed brugeren om at indtaste:
 1. første tal
-2. en operator som tekst (`+`, `-`, `*` eller `/`)
+2. en operator som tekst (`+`, `-`, `*` eller `/`, med `next()`)
 3. andet tal
 
 Udskriv resultatet af regnestykket.
@@ -561,6 +491,76 @@ Ugyldig operator.
 Hvis input ikke kan bruges, skal du tænke over, hvordan programmet kan reagere på en fornuftig måde.
 
 > **Hint:** Sammenlign denne version med opgave 20, og undersøg, hvad der ændrer sig, når du bruger forskellige datatyper.
+
+---
+
+## Udfordring – Temperaturomregner (fra Celsius)
+
+Opret en `Scanner`, og bed brugeren om en temperatur i **Celsius** (brug `nextDouble()`).
+
+Omregn til **Fahrenheit** med formlen:
+
+```text
+F = C * 9 / 5 + 32
+```
+
+og til **Kelvin** med formlen:
+
+```text
+K = C + 273.15
+```
+
+Udskriv alle tre temperaturer:
+
+```text
+[C] °C = [F] °F = [K] K
+```
+
+Eksempel: hvis brugeren skriver `100.0`, skal programmet skrive:
+
+```text
+100.0 °C = 212.0 °F = 373.15 K
+```
+
+---
+
+## Udfordring – Temperaturomregner (fra Fahrenheit)
+
+Opret en `Scanner`, og bed brugeren om en temperatur i **Fahrenheit** (brug `nextDouble()`).
+
+Omregn til **Celsius** og **Kelvin**.
+
+Udskriv alle tre temperaturer:
+
+```text
+[F] °F = [C] °C = [K] K
+```
+
+Eksempel: hvis brugeren skriver `212.0`, skal programmet skrive:
+
+```text
+212.0 °F = 100.0 °C = 373.15 K
+```
+
+<details>
+<summary>Hint: Vis formel for Celsius</summary>
+
+```text
+C = (F - 32) * 5 / 9
+```
+
+</details>
+
+<details>
+<summary>Hint: Vis formel for Kelvin</summary>
+
+Brug først `C` fra hintet for Celsius.
+
+```text
+K = C + 273.15
+```
+
+</details>
 
 ---
 
@@ -636,4 +636,3 @@ Overvej også, hvordan du kan lave:
 > - `#`
 
 > **Hint:** Tænk over, hvordan du kan kombinere tekst, mellemrum og gentagne tegn, så udskriften bliver pæn og tydelig.
-```

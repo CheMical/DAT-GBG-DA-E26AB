@@ -19,9 +19,9 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
 * **Gruppearbejde:** Softwareudvikling er holdsport. Du kommer til at løse mange opgaver og projekter tæt sammen med dine medstuderende. Det er et krav i studieordningen, at man **skal** arbejde i grupper
 * **Tæt kontakt til erhvervslivet:** Uddannelsen veksler mellem teori og praktiske cases, og afsluttes med et tæt virksomhedssamarbejde i din praktikperiode.
 
-### Hvad vi forventer af dig?
+### Hvad vi forventer af dig
 - At du tager ansvar og aktivt vælger at ville lære   
-- At du deltager i undervisningen og i guppearbejdet
+- At du deltager i undervisningen og i gruppearbejdet
 
 ### Vores motto: "Du skal ikke bare vide - du skal kunne!"
 
@@ -34,7 +34,7 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
 
 ## IT systemer
 - Vi kigger på relevante IT systemer
-  - its [DAT-GBG-DA-E26A 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7838) [DAT-GBG-DA-E26B 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7840)
+  - itslearning: [DAT-GBG-DA-E26A 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7838) / [DAT-GBG-DA-E26B 1. semester](https://ek.itslearning.com/Course/Course.aspx?CourseId=7840)
   - [GitHub](https://github.com/EK-DAT-GBG-1SEM-E26AB/DAT-GBG-DA-E26AB/blob/main/README.md)
   - [Teams](https://teams.microsoft.com/l/team/19%3A73mRqGmfCm0wJ7F-ftFnXFiyKI0WDJy6nEregr1qQuc1%40thread.tacv2/conversations?groupId=9c32b124-9508-4281-b961-c8b138c3b645&tenantId=9aafd452-b819-40a3-a400-f94ff33b0125) (hver klasse har sin egen kanal)
   - [UMS](https://ums.ek.dk/)
@@ -42,10 +42,7 @@ Datamatikeruddannelsen er en praksisorienteret uddannelse, der ruster dig direkt
   - [Intranet](https://mit.ek.dk/studiestart)
 
 
-Du finder IT-vejledninger og support hos EK ved at besøge den officielle serviceportal. Her kan du oprette supportsager, nulstille kodeord og finde guides til skolens systemer.  
-
-## Rundvisning
-- Vi gå en tur rundt på EK og besøger relevante lokationer
+Du finder IT-vejledninger og support hos EK ved at besøge [EK's serviceportal](https://mit.ek.dk/it). Her kan du oprette supportsager, nulstille kodeord og finde guides til skolens systemer.
 
 ### Genveje og Links
 * **IT Service Desk (Info):** [Mit EK IT Service Desk](https://mit.ek.dk/studiehaandbog/it-service-desk)
@@ -59,6 +56,9 @@ Du finder IT-vejledninger og support hos EK ved at besøge den officielle servic
 ### Åbningstider
 * **Mandag – torsdag:** Kl. 08.00 – 15.30
 * **Fredag:** Kl. 08.00 – 15.00
+
+## Rundvisning
+- Vi går en tur rundt på EK og besøger relevante lokationer
 
 ---
 
@@ -90,17 +90,17 @@ Ingen
 
 ## Studiegrupperne
 - I skal sidde sammen i studiegruppen i klasselokalet: de bliver brugt i al undervisning
-- vi fører protokol over de frememødte studerende
+- vi fører protokol over de fremmødte studerende
 - når I løser opgaver, så spørg først hinanden om hjælp i gruppen (før tutor og underviser)
 - hvis I har fravær, så giv jeres studiegruppe besked
 - studiegruppen opdaterer den der fx har været syg om hvad der er foregået i undervisningen
 
 ## Semesterets projekter
-I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel. Bemærk at tre af disse er obligatoriske og skal afleveres for at man kan indstilles til eksamen.
+I skal i løbet af semesteret lave fire projekter, som vist i nedenstående tabel. Bemærk at tre af disse er obligatoriske og skal afleveres for at man kan indstilles til eksamen.
 
 | Projekt | Bemærkninger                                                                                                                           | Obligatorisk|
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------|-----|
-| Bogsamling        | |
+| Bogsamling        |                                                                                                             |  |
 | Adventure           |                                                                                                             |X |
 | Filmsamling           |                                                                                                             |X |
 | Delfinen    | Eksamensprojekt                                                                                                          | X|
@@ -109,10 +109,10 @@ I skal i løbet af semesteret lave tre projekter, som vist i nedenstående tabel
 
 
 ## Aktiviteter i undervisningen
-- Vi starter med at se på hvilken studiegruppe I tilhører i its.  
+- Vi starter med at se på hvilken studiegruppe I tilhører i itslearning.
 - I sætter jer herefter sammen i studiegrupperne
-- I skal nu indtaste jeres navne i gruppe regnearket i jeres teams kanal
+- I skal nu indtaste jeres navne i grupperegnearket i jeres Teams-kanal
 - Tag et foto af studiegruppen
-- I skal nu prøve at aflevere jeres første [opgave](opgaver.md) på its, som er billedet af jeres studiegruppe med tydelige navne
+- I skal nu prøve at aflevere jeres første [opgave](opgaver.md) i itslearning, som er billedet af jeres studiegruppe med tydelige navne
 - Vi slutter af med en rundvisning på EK
 

@@ -53,7 +53,7 @@ b = 10;
 System.out.println(a);      // 5
 ```
 
-**Referencetyper** – alle klasser, herunder `String`, arrays og dine egne klasser. Variablen
+**Referencetyper** – alle klasser (herunder `String` og dine egne klasser) og arrays. Variablen
 indeholder en **henvisning** til, hvor objektet ligger.
 
 ```java
@@ -101,7 +101,7 @@ Det virker først lidt underligt – kan et rum indeholde fire rum, som hver ind
 det uendelige?
 
 Nej. For der ligger ikke *rum* i attributterne. Der ligger **henvisninger** til rum, som findes
-andre steder. Ligesom en vejskilt ikke indeholder byen, den peger på.
+andre steder. Ligesom et vejskilt ikke indeholder byen, det peger på.
 
 ### Kortet er rummene
 
@@ -119,8 +119,8 @@ Efter de to sidste linjer:
 
 ```mermaid
 flowchart LR
-    R1["room1<br/>east →"] --> R2["room2"]
-    R2 -- "west →" --> R1
+    R1["room1"] -- "east" --> R2["room2"]
+    R2 -- "west" --> R1
 ```
 
 > **Der er ingen liste, intet array, ingen tabel over kortet.** Kortet er den struktur, der opstår,

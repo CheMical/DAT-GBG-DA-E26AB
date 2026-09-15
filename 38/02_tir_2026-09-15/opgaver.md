@@ -4,9 +4,14 @@ Dagens opgaver veksler mellem at **kode** og at **tegne**. Begge dele tæller.
 
 ## Kom i gang
 
-Opret et nyt Java-projekt, eller arbejd videre i det, du har.
+Åbn ugens projekt `uge38-relationer-arraylist`, og opret dagens package
+`dag2_objekter_i_objekter_klassediagrammer`. Alle dagens klasser oprettes som separate filer i den
+package – se [vejledningen](../../00_vejledninger/intellij_organisering.md).
 
 Til tegneopgaverne: papir, [draw.io](https://app.diagrams.net/) eller Mermaid – hvad du foretrækker.
+
+Der er [vejledende løsninger](loesninger.md) til alle opgaverne – men prøv selv først. Især
+tegningerne af hukommelsen i opgave 1-2 er noget, du skal kunne lave selv.
 
 ---
 
@@ -36,6 +41,9 @@ public class Counter {
     public int value = 0;
 }
 ```
+
+(`value` er `public` her, kun for at holde eksemplet kort – i rigtig kode ville den være `private`
+med getter og setter.)
 
 Og kør så:
 
@@ -186,6 +194,8 @@ Krav:
 
 * en `Car` har **præcis fire** hjul, som oprettes af bilen selv i constructoren
 * en `Car` får sin `Engine` **udefra** i constructoren
+* `Car`-constructoren tager `model`, en `Engine` og en hjulstørrelse (`int wheelSize`) og opretter
+  de fire hjul med den størrelse
 * `Car` skal have en metode `printInfo()`, der skriver model, motorens hestekræfter og hjulstørrelsen
 
 Afprøv i `main`.
@@ -199,8 +209,9 @@ komposition? Begrund dit svar.
 
 ## Opgave 9 – Et array af bøger
 
-Brug `Book`-klassen fra [bogsamlingsprojektet](../../projekter/bogsamling/readme.md), eller lav en
-simpel udgave.
+Kopiér `Book`-klassen fra din `bogsamling`-package ind i dagens package, eller lav en simpel udgave
+med titel, forfatter, udgivelsesår og gettere. Det er en ny, uafhængig udgave – rør ikke ved den i
+[bogsamlingsprojektet](../../projekter/bogsamling/readme.md).
 
 1. Lav et array med plads til 5 bøger
 2. Skriv `books.length` ud
@@ -239,7 +250,7 @@ Alle tre skal kunne håndtere, at nogle pladser i arrayet er `null`.
 
 ## Opgave 12 – Bibliotek som klasse
 
-Lav en klasse `Library`, der har:
+Lav en klasse `Library` i dagens package (ikke i din bogsamling), der har:
 
 * et navn
 * et array af `Book` med plads til 100
@@ -249,13 +260,17 @@ Metoder:
 
 ```java
 public void addBook(Book book)
-public void printAllBooks()
+public void printBooks()
 public int getNumberOfBooks()
-public Book findByTitle(String title)
+public Book findBookByTitle(String title)
 ```
 
 Nu ligger metoderne fra opgave 10 og 11 der, hvor de hører hjemme – **på objektet**, ikke som
 `static` metoder i `Main`.
+
+Klassen hedder det samme som i bogsamlingsprojektet, og det er med vilje: det er præcis den
+`Library`, du har i bogsamlingen – bare med et array i stedet for `ArrayList`. I morgen ser du,
+hvorfor `ArrayList` er nemmere. Men lad din bogsamling være, som den er.
 
 Sammenlign med opgave 10-11: hvad blev nemmere?
 
@@ -325,13 +340,16 @@ Sammenlign med diagrammet nederst i projektbeskrivelsen. Er dit anderledes? Hvor
 
 ## Opgave 18 – Kig frem
 
-Læs beskrivelsen af [Adventure del 1](../../projekter/adventure/del-1-rooms.md), afsnittet **Koden**.
+Læs beskrivelsen af [Adventure del 1](../../projekter/adventure/del-1-rooms.md), afsnittet **Koden** –
+men kun teksten under **Room**. Stop, før du når til diagrammet.
 
-Tegn klassediagrammet for `Room`, som det er beskrevet der – inklusive relationen til sig selv.
+Tegn klassediagrammet for `Room` ud fra beskrivelsen – inklusive relationen til sig selv.
 
 Hvad bliver multipliciteten? Hvorfor?
 
-> Om halvanden uge skal I bygge det. Nu har I set det.
+Sammenlign bagefter med diagrammet i beskrivelsen.
+
+> I næste uge skal I bygge det. Nu har I set det.
 
 ---
 
@@ -356,7 +374,7 @@ Tegn klassediagrammet, **inden** du koder.
 
 ## Udfordring 2 – Cirkulære referencer
 
-Lav to klasser, hvor **begge** kender hinanden:
+Lav to klasser, hvor **begge** kender hinanden. Brug `Teacher` fra opgave 16 som underviser:
 
 ```java
 public class Student {
@@ -366,6 +384,7 @@ public class Student {
 
 public class Course {
     private String title;
+    private Teacher teacher;
     private Student[] students;
 }
 ```

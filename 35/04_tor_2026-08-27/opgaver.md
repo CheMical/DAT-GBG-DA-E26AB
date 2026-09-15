@@ -5,18 +5,20 @@ de logiske operatorer `&&`, `||` og `!`.
 
 ## Kom i gang
 
-Opret et nyt Java-projekt i IntelliJ, eller brug det projekt, du allerede har til undervisningen.
+Åbn ugens IntelliJ-projekt `uge35-intro-java` (se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)).
 
-Opret en klasse med navnet:
+Opret dagens package under `src`:
 
-```java
-Main
+```text
+dag4_logiske_operatorer_betingelser
 ```
 
-Lav en `main`-metode i klassen:
+Opret én klasse pr. opgave – `Opgave01`, `Opgave02` osv. – hver med sin egen `main`-metode:
 
 ```java
-public class Main {
+package dag4_logiske_operatorer_betingelser;
+
+public class Opgave01 {
 
     public static void main(String[] args) {
 
@@ -24,7 +26,7 @@ public class Main {
 }
 ```
 
-Lav løsningerne på opgaverne i `main`-metoden, og afprøv dem undervejs.
+Kør og afprøv hver opgave for sig med den grønne pil ud for `main`.
 
 > **Vi bruger ikke `Scanner` i dag.** Sæt i stedet værdierne direkte i koden, og **ændr dem
 > manuelt** for at afprøve de forskellige tilfælde. Det er en vigtig vane: for hver opgave skal du
@@ -494,6 +496,9 @@ false && false = false
 Du skal ikke bruge løkker – skriv de fire linjer, og lad Java beregne resultaterne med
 `System.out.println`.
 
+> Hint: sæt parenteser om det logiske udtryk, når du sætter det sammen med tekst:
+> `System.out.println("true  && true  = " + (true && true));`
+
 ### Ekstra
 
 Lav det samme for `||`.
@@ -509,10 +514,12 @@ String player1 = "rock";
 String player2 = "scissors";
 ```
 
-Programmet skal skrive, hvem der vinder:
+Programmet skal skrive, hvem der vinder – én af disse tre linjer:
 
 ```text
 Player 1 wins
+Player 2 wins
+It's a tie
 ```
 
 Reglerne er: rock slår scissors, scissors slår paper, paper slår rock. Er de ens, er det uafgjort.

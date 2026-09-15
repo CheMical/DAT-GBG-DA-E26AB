@@ -1,4 +1,4 @@
-﻿# Opgaver – Metoders placering, synlighed og ansvar
+# Opgaver – Metoders placering, synlighed og ansvar
 
 I disse opgaver arbejder du videre med metoder.
 
@@ -16,18 +16,24 @@ Fokus er på:
 
 ## Kom i gang
 
-Opret et nyt Java-projekt i IntelliJ.
+Åbn ugens IntelliJ-projekt `uge37-klasser-objekter-metoder`, og opret dagens package:
 
-Opret klassen `Main` med en `main`-metode:
+```text
+dag5_metoder_placering_ansvar
+```
+
+Opret klassen `Main` med en `main`-metode i dagens package – i dag afprøver du dine klasser derfra, fordi opgaverne handler om samspillet mellem `Main` og de andre klasser:
 
 ```java
+package dag5_metoder_placering_ansvar;
+
 public class Main {
     public static void main(String[] args) {
     }
 }
 ```
 
-Når du opretter klasser som `LibraryBook`, `Course` og `CoffeeMachine`, skal hver klasse ligge i sin egen Java-fil.
+Klasser som `LibraryBook`, `Course`, `CoffeeMachine` og `Person` opretter du i **samme package**, hver i sin egen Java-fil. Fordi de ligger i dagens package, kolliderer de ikke med klasser fra tidligere dage.
 
 Afprøv løbende dine løsninger fra `main`.
 
@@ -166,74 +172,11 @@ Besvar herefter:
 
 `@Override` er ikke nødvendigt for at få et program til at køre, men den er stadig nyttig.
 
-Diskuter med din gruppen:
+Diskuter med din gruppe:
 
 - hvorfor Java ikke skal have `@Override` for at overskrive en metode
 - hvorfor `@Override` gør koden mere sikker og lettere at forstå
 - hvordan `@Override` kan hjælpe med at fange stavefejl i metodenavnet eller fejlagtige parametre
-
-## Den lette udfordring
-
-Som en lille udfordring, der viser, at meget kan programmeres, er her et spil, der viser programmering på en mere visuel måde:
-
-https://armorgames.com/play/6061/light-bot-20/
-
-En lille robot skal bevæge sig rundt og aktivere nogle kontakter, så felterne lyser op. Start med at løse de 6 opgaver under Basics, så du får en fornemmelse af spillet.
-
-Derefter er det selve udfordringen at se, hvordan du kan løse opgaverne under Recursion, hvor funktions- eller metodekald bruges til at løse opgaverne. Grunden til, at opgaverne kaldes Recursion (eller rekursion), er, at programmeringssproget ikke har løkke-instruktioner. Derfor bruges funktions- eller metodekald til at skabe gentagelse ved at kalde funktionen eller metoden selv. Det er ikke sikkert, at rekursion er nødvendig, og når I sammenligner løsninger i gruppen, kan I have forskellige løsninger til den samme opgave.
-
-Arbejdet med at lave en funktion eller metode handler om at finde ud af, præcis hvad metoden skal gøre.
-
-I spillet kan der arbejdes hurtigt og upræcist, fordi målet blot er at få tændt alle felterne. I Java skal vi derimod være mere omhyggelige, fordi programmet kører til ende.
-
-## Udfordring – Lucas-tal
-
-Denne opgave er en ekstra udfordring om rekursion og metodekald.
-
-I denne version af Lucas-tallene er første værdi valgt, så den fås ved at give `1` som argument:
-
-```java
-lucas(1) = 1
-lucas(2) = 3
-lucas(n) = lucas(n - 1) + lucas(n - 2)
-```
-
-Det vil sige, at talrækken bliver:
-
-```text
-1, 3, 4, 7, 11, 18, 29, ...
-```
-
-Skriv en rekursiv metode, der beregner det n’te tal i rækken.
-
-Eksempel:
-
-```java
-System.out.println(lucas(1)); // 1
-System.out.println(lucas(2)); // 3
-System.out.println(lucas(3)); // 4
-System.out.println(lucas(5)); // 11
-```
-
-Tænk over:
-
-- Hvad er base cases i denne metode?
-- Hvorfor må metoden ikke kalde sig selv uden at komme tættere på et base case?
-- Hvorfor er rekursion her passende?
-- Hvilken metode skal være `public`, og hvilken kan være `private`?
-- Hvordan kan metoden opdeles i mindre dele, så den løser en simplere version af samme problem?
-
-#### Tænk videre
-
-Dette er en ekstra udfordring, hvor fokus er på rekursion og metoder, ikke på objekter og tilstand.
-
-Diskuter med din gruppe:
-
-- hvorfor en rekursiv metode ofte er lettere at læse, når problemet kan beskrives som “det samme problem i mindre skala”
-- hvorfor det er vigtigt at have klare base cases
-- hvordan en metode kan kalde sig selv, men stadig bevare kontrol over, når den stopper
-- Hvad kan gå galt, hvis vi prøver at beregne et stort Lucas-tal rekursivt (prøv det i praksis)?
-- Er rekursion her den mest effektive løsning, eller kan vi løse det mere enkelt med en løkke?
 
 ## Klassediagrammer som del af opgaven
 
@@ -246,7 +189,7 @@ Det skal gøres i to faser:
 
 Klassediagrammet skal være retvisende i forhold til koden. Når du ændrer klassen, skal du også ændre klassediagrammet, så det altid matcher den aktuelle løsning.
 
-### Klassediagrammer til de næste 5 dele
+### Klassediagrammer til fem af de følgende opgavesæt
 
 Disse opgaver er gode til klassediagrammer, fordi de har tydelige attributter, offentlige metoder og ansvar, der ligger i klassen:
 
@@ -270,7 +213,7 @@ Disse opgaver er gode til klassediagrammer, fordi de har tydelige attributter, o
    - attributter: `owner`, `clips`
    - metoder: `getOwner()`, `getClips()`, `useClip()`, `addClips()`, `describe()`
 
-Det kan være en fordel at lave klassediagrammet sammen med gruppen, idet diagrammet bruges som kommunikation om koden, der skal skrives. Der er nogle informationer, som ikke er specificeret ovenfor, så forsøg at sætte fornuftige datatyper på, hvor det er relevant. UML, både klassediagram og de andre diagrammer som vi endnu ikke har set på, er så stærk et værktøj, at det er muligt at genere hele skelettet til Java-koden ud fra diagrammerne automatisk ved hjælp af programmer, som også har føre ændringer på koden tilbage til diagrammerne.
+Det kan være en fordel at lave klassediagrammet sammen med gruppen, idet diagrammet bruges som kommunikation om koden, der skal skrives. Der er nogle informationer, som ikke er specificeret ovenfor, så forsøg at sætte fornuftige datatyper på, hvor det er relevant. UML, både klassediagram og de andre diagrammer som vi endnu ikke har set på, er så stærkt et værktøj, at programmer automatisk kan generere hele skelettet til Java-koden ud fra diagrammerne – og føre ændringer i koden tilbage til diagrammerne.
 
 ### Krav til klassediagrammet
 
@@ -307,7 +250,7 @@ Hvis diagrammet ikke er opdateret, er det ikke retvisende.
 2. Kontroller, at det matcher den aktuelle kode.
 3. Lav samme diagram i draw.io (https://draw.io, UML-figurerne er nederst til venstre).
 4. Opdater diagrammet hver gang koden ændres.
-5. Få en anden fra gruppen til at sammenlign diagram og kode at de stemmer overens.
+5. Få en anden fra gruppen til at sammenligne diagram og kode og tjekke, at de stemmer overens.
 
 ## Del 2 – En biblioteksbog
 
@@ -343,65 +286,6 @@ Eksempel:
 LibraryBook book1 = new LibraryBook("Clean Code");
 LibraryBook book2 = new LibraryBook("The Pragmatic Programmer");
 ```
-
-### Udfordring – Person med for- og efternavn
-
-Opret en klasse `Person`, hvor navnet er opdelt i to attributter:
-
-```java
-public class Person {
-    private String firstName;
-    private String lastName;
-}
-```
-
-Lav derefter to konstruktører:
-
-```java
-public Person(String firstName, String lastName)
-public Person(String fullName)
-```
-
-Den første konstruktor skal tage fornavn og efternavn som to separate parametre.
-
-Den anden konstruktor skal tage det fulde navn som én streng, for eksempel:
-
-```java
-Person person1 = new Person("Anna", "Jensen");
-Person person2 = new Person("Anna Jensen");
-```
-
-Overvej, hvordan den ene konstruktor kan bruge den anden, eller hvordan du kan dele navnet op i fornavn og efternavn, når én streng modtages.
-
-Tilføj derefter relevante metoder, for eksempel:
-
-```java
-public String getFirstName()
-public String getLastName()
-public String getFullName()
-```
-
-Tænk over:
-
-- Hvorfor er det nyttigt at gemme fornavn og efternavn i hver deres attribut?
-- Hvordan kan du lave en metode, der returnerer det fulde navn igen?
-- Hvilke problemer kan opstå, hvis et fuldt navn bliver sendt ind som én streng?
-- Hvorfor kan det være relevant at kende både fornavn og efternavn, hvis du senere vil lave en `LibraryBook`-klasse med en ejer eller en låner?
-- Hvorfor er det nyttigt at kunne hente det fulde navn i stedet for kun at gemme én samlet streng?
-
-#### Tænk videre om biblioteksbogen
-
-Overvej, om en `LibraryBook` kunne have en ejer eller en låner repræsenteret som et `Person`-objekt.
-
-Hvor kunne metoden `getFullName()` være relevant i en biblioteksapplikation?
-
-For eksempel:
-
-- når du vil udskrive, hvem der har lånt en bog
-- når du vil vise lånerens navn i en liste over udlån
-- når du vil sammenligne navneoplysninger mellem flere personer
-
-Dette er et eksempel på, at et objekt ikke kun skal kunne gemme data, men også tilbyde tydelige metoder til at arbejde med den data, som objektet indeholder.
 
 ### Opgave 5 – Lån en bog
 
@@ -470,6 +354,65 @@ Afprøv følgende rækkefølge:
 3. Lån den samme bog igen.
 4. Aflever bogen.
 5. Aflever den samme bog igen.
+
+### Udfordring – Person med for- og efternavn
+
+Udvid din `Person`-klasse fra opgave 3, så navnet er opdelt i to attributter i stedet for én (`age` kan du beholde eller fjerne):
+
+```java
+public class Person {
+    private String firstName;
+    private String lastName;
+}
+```
+
+Lav derefter to konstruktører:
+
+```java
+public Person(String firstName, String lastName)
+public Person(String fullName)
+```
+
+Den første konstruktør skal tage fornavn og efternavn som to separate parametre.
+
+Den anden konstruktør skal tage det fulde navn som én streng, for eksempel:
+
+```java
+Person person1 = new Person("Anna", "Jensen");
+Person person2 = new Person("Anna Jensen");
+```
+
+Overvej, hvordan du kan dele navnet op i fornavn og efternavn med `indexOf()` og `substring()`, når én streng modtages.
+
+Tilføj derefter relevante metoder, for eksempel:
+
+```java
+public String getFirstName()
+public String getLastName()
+public String getFullName()
+```
+
+Tænk over:
+
+- Hvorfor er det nyttigt at gemme fornavn og efternavn i hver deres attribut?
+- Hvordan kan du lave en metode, der returnerer det fulde navn igen?
+- Hvilke problemer kan opstå, hvis et fuldt navn bliver sendt ind som én streng?
+- Hvorfor kan det være relevant at kende både fornavn og efternavn, hvis du senere vil udvide `LibraryBook` med en ejer eller en låner?
+- Hvorfor er det nyttigt at kunne hente det fulde navn i stedet for kun at gemme én samlet streng?
+
+#### Tænk videre om biblioteksbogen
+
+Overvej, om en `LibraryBook` kunne have en ejer eller en låner repræsenteret som et `Person`-objekt.
+
+Hvor kunne metoden `getFullName()` være relevant i en biblioteksapplikation?
+
+For eksempel:
+
+- når du vil udskrive, hvem der har lånt en bog
+- når du vil vise lånerens navn i en liste over udlån
+- når du vil sammenligne navneoplysninger mellem flere personer
+
+Dette er et eksempel på, at et objekt ikke kun skal kunne gemme data, men også tilbyde tydelige metoder til at arbejde med den data, som objektet indeholder.
 
 ## Del 3 – Et valgfag med begrænset antal pladser
 
@@ -633,6 +576,12 @@ Foretag følgende ændringer:
 
 ```java
 machine.brewCoffee();
+```
+
+6. Ændr udskriften i `Main` til:
+
+```java
+System.out.println(machine.getWaterInMilliliters());
 ```
 
 Afprøv programmet igen.
@@ -924,6 +873,8 @@ Besvar:
 
 Ret klassen, så temperaturen ikke kan komme uden for intervallet.
 
+Tilføj også en konstruktør, der giver termostaten en gyldig starttemperatur, fx `public Thermostat(double temperature)` – og overvej, hvad der skal ske, hvis startværdien er ugyldig.
+
 Tilføj eventuelt:
 
 ```java
@@ -982,6 +933,71 @@ Afprøv mindst:
 - Hvorfor er handlingerne instansmetoder?
 - Hvorfor bør klassen ikke have en almindelig `setClips()`?
 - Hvilke metoder kalder andre metoder?
+
+## Den lette udfordring
+
+Her er et lille spil, der viser programmering på en mere visuel måde:
+
+https://armorgames.com/play/6061/light-bot-20/
+
+En lille robot skal bevæge sig rundt og aktivere nogle kontakter, så felterne lyser op. Start med at løse de 6 opgaver under Basics, så du får en fornemmelse af spillet.
+
+Derefter er det selve udfordringen at se, hvordan du kan løse opgaverne under Recursion, hvor funktions- eller metodekald bruges til at løse opgaverne. Grunden til, at opgaverne kaldes Recursion (eller rekursion), er, at programmeringssproget ikke har løkke-instruktioner. Derfor bruges funktions- eller metodekald til at skabe gentagelse ved at kalde funktionen eller metoden selv. Det er ikke sikkert, at rekursion er nødvendig, og når I sammenligner løsninger i gruppen, kan I have forskellige løsninger til den samme opgave.
+
+Arbejdet med at lave en funktion eller metode handler om at finde ud af, præcis hvad metoden skal gøre.
+
+I spillet kan der arbejdes hurtigt og upræcist, fordi målet blot er at få tændt alle felterne. I Java skal vi være mere omhyggelige: en metode skal gøre præcis det, dens navn lover, hver gang den kaldes.
+
+## Udfordring – Lucas-tal
+
+Denne opgave er en ekstra udfordring om rekursion og metodekald.
+
+Vi starter rækken ved `lucas(1)` (de 'rigtige' Lucas-tal har også et nulte tal, 2, som vi springer over):
+
+```java
+lucas(1) = 1
+lucas(2) = 3
+lucas(n) = lucas(n - 1) + lucas(n - 2)
+```
+
+Det vil sige, at talrækken bliver:
+
+```text
+1, 3, 4, 7, 11, 18, 29, ...
+```
+
+Skriv en rekursiv metode, der beregner det n’te tal i rækken.
+
+Eksempel:
+
+```java
+System.out.println(lucas(1)); // 1
+System.out.println(lucas(2)); // 3
+System.out.println(lucas(3)); // 4
+System.out.println(lucas(5)); // 11
+```
+
+Lav to metoder: en offentlig `lucas(int n)`, der kontrollerer, at `n` er mindst 1, og en privat rekursiv hjælpemetode, som udfører selve beregningen.
+
+Tænk over:
+
+- Hvad er base cases i denne metode?
+- Hvorfor må metoden ikke kalde sig selv uden at komme tættere på et base case?
+- Hvorfor er rekursion her passende?
+- Hvilken metode skal være `public`, og hvilken kan være `private`?
+- Hvordan kan metoden opdeles i mindre dele, så den løser en simplere version af samme problem?
+
+#### Tænk videre
+
+Dette er en ekstra udfordring, hvor fokus er på rekursion og metoder, ikke på objekter og tilstand.
+
+Diskuter med din gruppe:
+
+- hvorfor en rekursiv metode ofte er lettere at læse, når problemet kan beskrives som “det samme problem i mindre skala”
+- hvorfor det er vigtigt at have klare base cases
+- hvordan en metode kan kalde sig selv, men stadig bevare kontrol over, når den stopper
+- Hvad kan gå galt, hvis vi prøver at beregne et stort Lucas-tal rekursivt (prøv det i praksis)?
+- Er rekursion her den mest effektive løsning, eller kan vi løse det mere enkelt med en løkke?
 
 ## Opsamling
 

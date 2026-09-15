@@ -1,6 +1,8 @@
 # Opgaver – Enum og switch
 
-Brug `main`-metoden til at afprøve dine løsninger.
+## Kom i gang
+
+Åbn ugens projekt `uge37-klasser-objekter-metoder`, og opret dagens package `dag3_enum_switch`. Enums og klasser (`Day`, `Task`, …) opretter du som separate filer i dagens package, og du afprøver dem fra en klasse `Main` i samme package.
 
 ---
 
@@ -102,13 +104,13 @@ switch (light) {
 
 Prøv programmet med alle tre værdier.  
 
-Prøv herefter at udskrive alle værdier i ```TrafficLight```. Det kan gæres ved at  bruge .values()-metoden, som returnerer et arrray med alle værdier i enum typen.
-Man kan nu bruge en for-each løkke til at iterer over disse:  
+Prøv herefter at udskrive alle værdier i `TrafficLight`. Det kan gøres ved at bruge metoden `values()`, som returnerer et array med alle værdier i enum-typen.
+Man kan nu bruge en for-each-løkke til at iterere over disse:  
 
 ```java
-// Løkken kører igennem alle værdier i TrafficLight enum én efter én
-for (TrafficLight light : TrafficLight.values()) {
-    System.out.println(light);
+// Løkken kører igennem alle værdier i TrafficLight én efter én
+for (TrafficLight value : TrafficLight.values()) {
+    System.out.println(value);
 }
 ```
 
@@ -401,7 +403,7 @@ Overvej:
 
 ---
 
-## Opgave 12 – Lidt sværere: Leveringspris
+## Opgave 12 – Leveringspris
 
 Opret en enum:
 
@@ -508,7 +510,7 @@ public int getPrice()
 som bruger en `switch` expression til at returnere prisen ud fra størrelsen.
 
 ---
-# Enum med konstruktør og værdier
+## Enum med konstruktør og værdier
 
 Indtil nu har vores enums kun bestået af navngivne værdier:
 
@@ -590,13 +592,9 @@ LARGE
 
 ---
 
-## Din opgave
+## Opgave 14 – DeliveryType med pris
 
-Opret en enum med navnet:
-
-```java
-DeliveryType
-```
+Tag din `DeliveryType` fra opgave 12 og udvid den, så prisen ligger i selve enum'en i stedet for i en `switch`.
 
 Den skal indeholde tre typer levering og deres priser:
 
@@ -638,6 +636,8 @@ Programmet skal fx skrive:
 Leveringstype: EXPRESS
 Pris: 99 kr.
 ```
+
+Sammenlign med din løsning fra opgave 12: hvor ligger priserne nu, og hvad er fordelen?
 
 ### Prøv selv
 
@@ -750,7 +750,7 @@ En god tommelfingerregel er:
 
 ---
 
-## Ekstra opgave
+## Opgave 15 – Ekstra: leveringsdage
 
 Udvid `DeliveryType`, så den også indeholder et forventet antal leveringsdage:
 
@@ -789,9 +789,9 @@ Leveringstid: 1 dag
 
 * Hvorfor passer `DeliveryType` godt som en enum?
 * Hvorfor ville en almindelig klasse være mere passende, hvis brugeren selv skulle kunne oprette nye leveringstyper?
-* Hvor bliver værdien `99` gemt, når `EXPRESS(99)` oprettes?
+* Hvor bliver værdierne `99` og `1` gemt, når `EXPRESS(99, 1)` oprettes?
 
-# Opsamling
+## Opsamling
 
 Når du har løst opgaverne, bør du kunne forklare:
 
@@ -803,5 +803,5 @@ Når du har løst opgaverne, bør du kunne forklare:
 6. Hvad er forskellen på den klassiske `switch` og den nye `->`-syntaks?
 7. Hvorfor behøver den nye syntaks ikke `break`?
 8. Hvordan kan en `switch` returnere en værdi?
-9. Hvordan udvider vi Enum med konstruktør og værdier?
+9. Hvordan udvider vi en `enum` med attributter, konstruktør og metoder?
 

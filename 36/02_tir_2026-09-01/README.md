@@ -25,8 +25,8 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 ## Se disse videoer før undervisningen:
 
-[for loops](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h43m33s) (til: 03:53:33)
-[break & continue](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h53m33s) (til: 03:55:45)
+[for loops](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h43m33s) (til: 03:53:33)  
+[break & continue](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h53m33s) (til: 03:55:45)  
 [nested loops](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h55m45s) (til: 04:04:27)
 
 ## Læs nedenstående før undervisningen
@@ -150,7 +150,7 @@ Her bliver der ikke skrevet noget som helst.
 Tælleren i et `for`-loop hedder traditionelt `i` – for *index* eller *iteration*. Bruger man to
 loops inde i hinanden, hedder den næste `j`, og så `k`.
 
-Det er en af de få steder, hvor et enkelt bogstav er et godt variabelnavn, fordi alle
+Det er et af de få steder, hvor et enkelt bogstav er et godt variabelnavn, fordi alle
 programmører genkender det med det samme.
 
 Men hvis tælleren betyder noget bestemt, så giv den et rigtigt navn:
@@ -314,8 +314,10 @@ Output:
 Summen er 55
 ```
 
-Bemærk at `sum` bliver oprettet **før** loopet. Havde vi skrevet `int sum = 0;` inde i loopet,
-ville den blive nulstillet ved hvert gennemløb, og resultatet ville blive `10`.
+Bemærk at `sum` bliver oprettet **før** loopet. Havde vi skrevet `sum = 0;` inde i loopet,
+ville den blive nulstillet ved hvert gennemløb, og resultatet ville blive `10`. Og havde vi
+*erklæret* den inde i loopet (`int sum = 0;`), ville den slet ikke findes efter loopet – så
+ville `System.out.println("Summen er " + sum)` ikke engang kompilere.
 
 Det samme mønster bruges til at tælle noget:
 
@@ -466,7 +468,7 @@ Output:
 *****
 ```
 
-Læg mærke til to ting:
+Læg mærke til tre ting:
 
 * Det indre loop bruger `System.out.print` **uden** `ln` – så alt kommer på samme linje.
 * `System.out.println()` uden noget imellem parenteserne laver et linjeskift. Den står i det

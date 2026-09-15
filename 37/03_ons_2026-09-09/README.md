@@ -214,7 +214,7 @@ case MONDAY:
 
 ### Hvorfor står der break?
 
-I en klassisk `switch` bruges `break` til at afslutte den aktuelle `case`.
+I en klassisk `switch` bruges `break` til at hoppe ud af hele `switch`-sætningen – ligesom `break` i et loop.
 
 ```java
 case MONDAY:
@@ -281,7 +281,7 @@ Det minder om den sidste `else` i en `if-else`-konstruktion.
 Selvom `enum` og `switch` er et perfekt par, kan en `switch` også bruges med flere andre almindelige datatyper i Java.
 
 Du kan bruge en `switch` sammen med:
-* **Primitive heltal:** `int`, `byte`, `short`, `char`
+* **Primitive typer:** `int`, `byte`, `short` og `char` (men ikke `long`, `double` eller `boolean`)
 * **Wrapper-klasser:** `Integer`, `Byte`, `Short`, `Character`
 * **Tekststrenge:** `String` (siden Java 7)
 
@@ -322,19 +322,7 @@ switch (role) {
 > ⚠️ **Pas på:** Hvis din `String`-variabel er `null` (altså ikke har nogen værdi), vil programmet kaste en `NullPointerException`. Sørg derfor altid for, at din `String` er valideret, før den rammer en `switch`.
 
 ---
-### Ny switch-syntaks
-I nyere java (java 12) er der lavet en mere kompakt syntaks for switch:
-```java
 
-TrafficLight light = TrafficLight.RED;
-
-switch (light) {
-    case RED -> System.out.println("Stop");
-    case YELLOW -> System.out.println("Gør klar");
-    case GREEN -> System.out.println("Kør");
-}
-```
-Med den nye ->-syntaks er der ikke fall-through.  
 ### Enum og switch sammen
 
 `enum` og `switch` passer godt sammen.
@@ -370,6 +358,24 @@ switch (light) {
 ```
 
 Her ved Java præcis, hvilke værdier `light` kan have.
+
+---
+
+### Ny switch-syntaks
+
+I nyere Java (fra Java 14) er der lavet en mere kompakt syntaks for switch:
+
+```java
+TrafficLight light = TrafficLight.RED;
+
+switch (light) {
+    case RED -> System.out.println("Stop");
+    case YELLOW -> System.out.println("Gør klar");
+    case GREEN -> System.out.println("Kør");
+}
+```
+
+Med den nye ->-syntaks er der ikke fall-through.
 
 ---
 
@@ -415,7 +421,7 @@ Resultatet bliver:
 Rabat: 0.1
 ```
 
-I den nye switch syntaks kan man skrive det samme mere kompakt og benytte expression syntaks:
+Med den nye syntaks kan en `switch` også være et **udtryk** (en *switch-expression*), der giver en værdi tilbage. Så kan det samme skrives mere kompakt:
 ``` java
 double discount = switch (membership) {
     case BASIC -> 0;

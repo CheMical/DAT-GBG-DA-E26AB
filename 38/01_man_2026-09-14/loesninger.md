@@ -104,7 +104,7 @@ Bemærk:
   ikke, hvor "Har kørekort?" kommer fra, så her er det bare en variabel.
 * Diagrammet har **tre slutninger**, og koden har tre `println`-linjer, som hver især er det sidste,
   der sker. Det passer.
-* Man kan også skrive det som en flad kæde med `&&`:
+* Man kan også skrive det som en flad `else if`-kæde:
 
 ```java
 if (alder < 18) {
@@ -200,7 +200,7 @@ Sådan opfylder diagrammet kravene:
 * **Timeglas** på "Vent 5 minutter".
 * **Én slutning**, og katten går altid ud.
 
-Prøv at følge de fire forløb fra opgaveteksten igennem:
+Prøv at følge disse fire typiske forløb igennem:
 
 | Forløb | Vej gennem diagrammet |
 | --- | --- |
@@ -280,9 +280,9 @@ public class HungryCat {
 ```
 
 **Får katten mad så ofte, som du forventede?** Sandsynligvis oftere. Med `nextBoolean()` er der
-50 % chance, hver gang der tjekkes, og katten tjekker mindst seks gange (én gang, når den kommer
-ind, og én gang efter hvert af de fem miav). Chancen for, at *alle* seks tjek fejler, er
-0,5⁶ ≈ 1,6 % – så katten får mad i omkring 98 % af kørslerne, før den overhovedet når til
+50 % chance, hver gang der tjekkes, og katten når op på seks tjek, før den overhovedet kommer til
+vindueskarmen (ét, når den kommer ind, og ét efter hvert af de fem miav). Chancen for, at *alle*
+seks tjek fejler, er 0,5⁶ ≈ 1,6 % – så i omkring 98 % af kørslerne får katten mad, før den når til
 vindueskarmen.
 
 Vil du se de andre forløb, skal du gøre det sværere for katten. Fx:

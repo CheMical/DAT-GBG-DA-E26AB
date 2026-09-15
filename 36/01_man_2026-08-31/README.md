@@ -20,7 +20,7 @@ Vi ser også kort på `do-while` og forskellen mellem `while` og `do-while`.
 
 [While loops, number guessing game](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=3h21m23s) (til: 03:43:33)  
 
-## Læs dette før undervisningen
+## Læs nedenstående før undervisningen
 
 ### Gentagelser i programmer
 
@@ -296,7 +296,7 @@ false
 
 ---
 
-## Do-while
+### Do-while
 
 Java har også et loop, der hedder `do-while`.
 
@@ -329,7 +329,7 @@ Dette giver samme resultat som vores tidligere eksempel:
 5
 ```
 
-### Forskellen på while og do-while
+#### Forskellen på while og do-while
 
 Den vigtigste forskel er, **hvornår betingelsen undersøges**.
 
@@ -377,7 +377,7 @@ Her bliver teksten skrevet én gang.
 
 ---
 
-## Kort opsummering
+### Kort opsummering
 
 Et `while`-loop bruges til at gentage kode:
 
@@ -407,6 +407,8 @@ Når du læser eller skriver et while-loop, kan du derfor kigge efter tre ting:
 2. **Betingelse** – hvornår skal loopet fortsætte?
 3. **Ændring** – hvad ændrer sig for hver gennemløb?
 
-Hvis den værdi, som betingelsen afhænger af, aldrig ændrer sig, risikerer du at lave et **uendeligt loop**.  
-## Aktiviteter
-Arbejd med disse [opgaver](opgaver.md)  
+Hvis den værdi, som betingelsen afhænger af, aldrig ændrer sig, risikerer du at lave et **uendeligt loop**.
+
+## Aktiviteter i undervisningen
+
+Arbejd med disse [opgaver](opgaver.md)

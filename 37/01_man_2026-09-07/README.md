@@ -19,7 +19,7 @@ Efter lektionen skal du kunne:
 
 [random numbers](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=1h22m28s) (til: 01:27:28)  
 [math](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=1h27m28s) (til: 01:42:37)  
-[objekt orienteret programmering](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=6h41m47s) (til: 06:51:38) 
+[objektorienteret programmering](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=6h41m47s) (til: 06:51:38) 
 
 
 ## Læs nedenstående før undervisningen
@@ -62,27 +62,91 @@ Java indeholder mange klasser, som vi kan bruge direkte.
 
 Klassen `Random` kan bruges til at generere tilfældige tal.
 
+For at bruge `Random` skal klassen først importeres:
+
 ```java
 import java.util.Random;
+```
 
+Derefter kan vi oprette et objekt af klassen `Random`:
+
+```java
 Random random = new Random();
+```
 
+Her er:
+* **`Random`**: navnet på klassen
+* **`random`**: en variabel, som refererer til objektet
+* **`new Random()`**: opretter et nyt objekt af klassen `Random`
+
+Vi kan nu bruge objektet til at generere tilfældige tal.
+
+##### `nextInt()`
+
+Metoden `nextInt()` kan bruges til at generere et tilfældigt heltal.
+
+**Eksempel:**
+```java
 int number = random.nextInt(10);
-
-System.out.println(number);
 ```
 
-Her opretter vi først et `Random`-objekt:
+`random.nextInt(10)` giver et tilfældigt heltal fra **0 til 9**. Tallet 10 er altså ikke med.
+
+Generelt gælder det, at `random.nextInt(n)` giver et tilfældigt heltal fra **0 til n - 1**.
+
+**Eksempel:**
+```java
+random.nextInt(6);
+```
+Kan give: `0`, `1`, `2`, `3`, `4` eller `5`.
+
+**Et andet eksempel:**
+```java
+random.nextInt(100);
+```
+Kan give et heltal fra **0 til 99**.
+
+##### Tilfældigt tal fra 1 til 10
+
+Hvis vi ønsker et tilfældigt tal fra 1 til 10, kan vi lægge 1 til resultatet:
 
 ```java
-Random random = new Random();
+int number = random.nextInt(10) + 1;
 ```
 
-Derefter bruger vi objektets metode:
+* `random.nextInt(10)` giver: **0 til 9**
+* Når vi lægger 1 til, får vi: **1 til 10**
+
+##### Eksempel – kast med en terning
+
+En almindelig terning kan give værdierne: `1`, `2`, `3`, `4`, `5` eller `6`. Vi kan derfor simulere et terningekast med:
 
 ```java
-random.nextInt(10);
+int dice = random.nextInt(6) + 1;
+System.out.println("Du slog " + dice);
 ```
+
+Her giver `random.nextInt(6)` et tal fra 0 til 5. Når vi lægger 1 til, får vi et tal fra 1 til 6.
+
+##### Et andet starttal
+
+Vi kan også lave tilfældige tal, som starter ved andre værdier end 1. Hvis vi eksempelvis ønsker et tal fra 10 til 19, kan vi skrive:
+
+```java
+int number = random.nextInt(10) + 10;
+```
+
+* `random.nextInt(10)` giver: **0 til 9**
+* Når vi lægger 10 til, får vi: **10 til 19**
+
+##### Husk
+
+* `random.nextInt(10)` giver: **0 - 9**
+* `random.nextInt(10) + 1` giver: **1 - 10**
+
+Tallet, der står inde i `nextInt()`, angiver altså hvor mange forskellige værdier der kan genereres, ikke det største tal.
+
+> **Huskeregel:** Tallet i `nextInt(n)` er antallet af mulige værdier – ikke det største tal. `nextInt(6)` giver 6 forskellige værdier: 0, 1, 2, 3, 4 og 5.
 
 ---
 
@@ -156,7 +220,7 @@ kaldes direkte på en **klasse**.
 
 ---
 
-## Vores egen klasse
+### Vores egen klasse
 
 Vi kan også selv lave klasser.
 
@@ -183,7 +247,7 @@ Disse kaldes klassens **attributter** eller **felter**.
 
 ---
 
-## Opret et objekt
+### Opret et objekt
 
 I `Main` kan vi oprette en person:
 
@@ -220,7 +284,7 @@ person.age
 
 ---
 
-## Flere objekter af samme klasse
+### Flere objekter af samme klasse
 
 En klasse kan bruges til at oprette mange objekter.
 

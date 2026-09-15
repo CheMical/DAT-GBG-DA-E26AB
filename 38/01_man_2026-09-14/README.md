@@ -194,8 +194,8 @@ Et spørgsmål med tre svar er i virkeligheden to spørgsmål. Del det op.
 
 ### 2. Linjerne må ikke krydse
 
-Hvis resultatet af én decision både optræder i ja-grenen og inde i en anden decisions nej-gren, er
-diagrammet forkert.
+Hvis det samme resultat af en decision optræder både i den ene og den anden forgrening (både under
+[ja] og under [nej]), er diagrammet forkert – linjerne kommer til at krydse.
 
 > Tænk på det som kode: du kan ikke få den **samme** kodeblok til både at køre i en `else` **og**
 > længere inde i en anden `if`-sætning. Kan det ikke skrives, kan det heller ikke tegnes.
@@ -282,8 +282,8 @@ Programmet kører, indtil det rammer dit breakpoint, og standser så.
 
 ### 3. Kig på variablene
 
-Nederst dukker **Debug**-vinduet op. I fanen **Variables** kan du se alle variable, der findes lige
-nu, og hvad de indeholder.
+Nederst dukker **Debug**-vinduet op. I fanen **Threads & Variables** (i ældre versioner bare
+**Variables**) kan du se alle variable, der findes lige nu, og hvad de indeholder.
 
 IntelliJ viser også værdierne **direkte i koden**, i grå tekst til højre for hver linje.
 
@@ -297,8 +297,13 @@ IntelliJ viser også værdierne **direkte i koden**, i grå tekst til højre for
 | **Resume** | <kbd>F9</kbd> | Kør videre til næste breakpoint |
 | **Stop** | <kbd>Ctrl</kbd>+<kbd>F2</kbd> | Afbryd programmet |
 
+> På Mac: Resume er <kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>R</kbd> og Stop er <kbd>⌘</kbd>+<kbd>F2</kbd>.
+> Resten er ens. Knapperne i Debug-vinduet virker uanset – hold musen over dem for at se genvejen.
+
 **Step Over** er den, du bruger mest. Brug **Step Into**, når du er i tvivl om, hvad en af dine egne
-metoder gør – men ikke på `System.out.println`, medmindre du gerne vil se Javas indmad.
+metoder gør. På `System.out.println` og andre af Javas egne metoder springer IntelliJ som standard
+*over* (den går ikke ind i Javas indmad, medmindre du beder om det med *Force Step Into*,
+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F7</kbd>).
 
 Er du hoppet et sted hen, hvor du ikke vil være, så brug **Step Out**.
 

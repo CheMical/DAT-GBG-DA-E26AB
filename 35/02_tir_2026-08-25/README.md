@@ -182,7 +182,7 @@ Nu hvor du har set, hvad der sker, kan vi lade værktøjet gøre det.
 1. Start IntelliJ IDEA
 2. **New Project**
 3. Vælg **Java**, og vælg din JDK i feltet *JDK* (vælg "Download JDK", hvis den er tom)
-4. Giv projektet et navn, og opret det
+4. Giv projektet navnet `uge35-intro-java`, **fjern fluebenet ved "Add sample code"**, og opret det – det er ugens projekt, som vi bruger resten af ugen
 5. Højreklik på mappen `src` → **New → Java Class** → navngiv den `Main`
 6. Skriv `main` og tryk <kbd>Tab</kbd> – IntelliJ udfylder hele `main`-metoden for dig
 7. Skriv `sout` og tryk <kbd>Tab</kbd> – IntelliJ skriver `System.out.println();`
@@ -212,8 +212,8 @@ Det, IntelliJ lige har gjort for dig, er præcis de to kommandoer, du selv skrev
 
 ## Aktiviteter i undervisningen
 
-Arbejd med disse [opgaver](opgaver.md)
+Arbejd med disse [opgaver](opgaver.md).
 
-Dagens mål er, at **alle** i studiegruppen går herfra med et virkende opsætning. Er du hurtigt
+Dagens mål er, at **alle** i studiegruppen går herfra med en virkende opsætning. Er du hurtigt
 færdig, så hjælp dem ved siden af dig – det er sådan, studiegruppen kommer til at fungere resten
 af semesteret.

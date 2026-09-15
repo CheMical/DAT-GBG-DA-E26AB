@@ -85,10 +85,10 @@ Sådan kan `Player.move()` for eksempel se ud:
 public boolean move(String direction) {
 
     Room desiredRoom = switch (direction) {
-        case "north", "n" -> currentRoom.getNorthRoom();
-        case "south", "s" -> currentRoom.getSouthRoom();
-        case "east",  "e" -> currentRoom.getEastRoom();
-        case "west",  "w" -> currentRoom.getWestRoom();
+        case "north", "n" -> currentRoom.getNorth();
+        case "south", "s" -> currentRoom.getSouth();
+        case "east",  "e" -> currentRoom.getEast();
+        case "west",  "w" -> currentRoom.getWest();
         default -> null;
     };
 

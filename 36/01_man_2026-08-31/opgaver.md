@@ -4,18 +4,20 @@ I disse opgaver skal du arbejde med `while`-loops og `do-while` i Java.
 
 ## Kom i gang
 
-Opret et nyt Java-projekt i IntelliJ.
+Ny uge – opret et nyt IntelliJ-projekt med navnet `uge36-loops-arrays-strings` (se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)).
 
-Opret herefter en klasse med navnet:
+Opret dagens package under `src`:
 
-```java
-Main
+```text
+dag1_while_loops
 ```
 
-Lav en `main`-metode i klassen:
+Opret én klasse pr. opgave – `Opgave01`, `Opgave02` osv. – hver med sin egen `main`-metode:
 
 ```java
-public class Main {
+package dag1_while_loops;
+
+public class Opgave01 {
 
     public static void main(String[] args) {
 
@@ -23,7 +25,13 @@ public class Main {
 }
 ```
 
-Lav løsningerne på opgaverne i `main`-metoden og afprøv dem undervejs.
+Kør og afprøv hver opgave for sig med den grønne pil ud for `main`.
+
+Til opgave 6 og frem skal du bruge `Scanner`. Husk at importere den øverst i filen:
+
+```java
+import java.util.Scanner;
+```
 
 ---
 
@@ -245,7 +253,7 @@ Udvid opgave 9.
 
 Programmet skal lægge alle de indtastede tal sammen.
 
-Tallet `0` skal ikke medregnes.
+Overvej: Gør det nogen forskel, om `0` bliver lagt til summen eller ej?
 
 Eksempel:
 

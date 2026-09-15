@@ -272,7 +272,7 @@ public class Person {
 
 `@Override` fortæller, at metoden overskriver en metode, som klassen har arvet. Java kan derfor kontrollere, at navnet, parametrene og returtypen passer.
 
-`@Override` er en Java-annotation. En annotation er metadata, det vil sige ekstra information, som vi skriver i koden for at markere noget. Her bruges annotationen til at vise, at vi vil overskrive en metode fra en superclass, og at Java skal kontrollere dette.
+`@Override` er en Java-annotation. En annotation er metadata, det vil sige ekstra information, som vi skriver i koden for at markere noget. Her bruges annotationen til at vise, at vi vil overskrive en metode fra en superklasse (den klasse, vi arver fra), og at Java skal kontrollere dette.
 
 Det er teknisk set valgfrit, men meget nyttigt, fordi det fanger stavefejl og andre fejltastninger, før programmet kører.
 
@@ -299,6 +299,7 @@ Når vi designer en klasse, kan vi bruge et klassediagram til hurtigt at få ove
 | - name : String            |
 | - age : int                |
 +----------------------------+
+| + Person(String, int)      |
 | + birthday() : void        |
 +----------------------------+
 ```
@@ -308,6 +309,8 @@ Diagrammet består af tre dele:
 - øverst står klassens navn
 - i midten står klassens attributter
 - nederst står klassens metoder
+
+Konstruktøren står sammen med metoderne og skrives som en metode med klassens navn og uden returtype.
 
 Tegnene foran navne har en betydning:
 
@@ -430,6 +433,7 @@ Se dette eksempel:
 +-------------------------------------+
 | - balance : double                  |
 +-------------------------------------+
+| + BankAccount(double)               |
 | + deposit(double) : void            |
 | + getBalance() : double             |
 +-------------------------------------+
@@ -755,7 +759,7 @@ Spørgsmål:
 - en `private` metode kan kun bruges internt i sin egen klasse
 - private hjælpemetoder kan skjule interne detaljer
 - metoder kan kalde andre metoder
-- mange objekter bør kun tilbyde meningsfulde handlinger frem for generelle setters. 
+- mange objekter bør kun tilbyde meningsfulde handlinger frem for generelle setters
 - metodenavne som `birthday()`, `deposit()` og `withdraw()` beskriver tydeligere handlinger end generelle setters
 - en klasse samler både data og den adfærd, der arbejder med dataene
 - et klassediagram kan bruges til at visualisere en klasses struktur

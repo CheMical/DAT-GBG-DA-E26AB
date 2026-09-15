@@ -28,9 +28,9 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 ## Se disse videoer før undervisningen:
 
-[inheritance](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=7h22m4s) (til: 07:31:09)
-[super](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=7h31m9s) (til: 07:41:37)
-[method overriding](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=7h41m37s) (til: 07:46:08)
+* [inheritance](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=7h22m4s) (til: 07:31:09)
+* [super](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=7h31m9s) (til: 07:41:37)
+* [method overriding](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=7h41m37s) (til: 07:46:08)
 
 ## Læs nedenstående før undervisningen
 
@@ -42,15 +42,13 @@ Efter [del 2](../../projekter/adventure/del-2-items.md) har I en `Item`-klasse:
 
 ```java
 public class Item {
-    private String longName;
     private String shortName;
-    private String description;
+    private String longName;
 
-    public Item(String longName, String description) { ... }
+    public Item(String shortName, String longName) { ... }
 
-    public String getLongName() { ... }
     public String getShortName() { ... }
-    public String getDescription() { ... }
+    public String getLongName() { ... }
 }
 ```
 
@@ -89,7 +87,7 @@ public class Food extends Item {
 
 Ordet `extends` siger: `Food` er en **subklasse** af `Item`, og `Item` er `Food`s **superklasse**.
 
-`Food` arver nu alt, hvad `Item` har: `longName`, `shortName`, `description` og alle de metoder.
+`Food` arver nu alt, hvad `Item` har: `shortName`, `longName` og alle de metoder.
 Uden at vi skriver en linje.
 
 I et klassediagram tegnes arv med en **åben trekantpil**, der peger på superklassen:
@@ -97,11 +95,10 @@ I et klassediagram tegnes arv med en **åben trekantpil**, der peger på superkl
 ```mermaid
 classDiagram
     class Item {
-        -String longName
         -String shortName
-        -String description
-        +getLongName() String
+        -String longName
         +getShortName() String
+        +getLongName() String
     }
     class Food {
         -int healthPoints
@@ -121,9 +118,9 @@ Det er værd at holde de to fra hinanden:
 | **is-a** | er en særlig slags | `extends` | `Food` **er et** `Item` |
 | **has-a** | indeholder / kender | en attribut | `Room` **har** `Item`s |
 
-Test dig selv med sætningen: "En Food **er en** Item" – giver den mening? Ja. Så er det arv.
+Test dig selv med sætningen: "En Food **er et** Item" – giver den mening? Ja. Så er det arv.
 
-"En Room **er en** Item"? Nej – et rum er ikke en ting, man kan samle op. Rummet **har** items. Det
+"Et Room **er et** Item"? Nej – et rum er ikke en ting, man kan samle op. Rummet **har** items. Det
 er has-a, altså en attribut.
 
 > **Fælde:** Arv skal bruges til *er-en*-relationer, ikke bare til at spare skrivearbejde. To
@@ -133,7 +130,7 @@ er has-a, altså en attribut.
 
 ### `super(...)` – constructoren
 
-Et `Food`-objekt skal jo også have et navn og en beskrivelse. Dem sætter `Item`s constructor. Så
+Et `Food`-objekt skal jo også have et kort og et langt navn. Dem sætter `Item`s constructor. Så
 `Food`s constructor skal kalde den:
 
 ```java
@@ -141,8 +138,8 @@ public class Food extends Item {
 
     private int healthPoints;
 
-    public Food(String longName, String description, int healthPoints) {
-        super(longName, description);      // kalder Item(...)
+    public Food(String shortName, String longName, int healthPoints) {
+        super(shortName, longName);        // kalder Item(...)
         this.healthPoints = healthPoints;
     }
 
@@ -160,9 +157,9 @@ To regler om `super(...)`:
 Nu kan `Map` oprette mad:
 
 ```java
-Item lamp = new Item("a shiny brass lamp", "It glows faintly");
-Food bread = new Food("a loaf of stale bread", "It looks edible. Barely.", 10);
-Food mushroom = new Food("a pale glowing mushroom", "It smells odd", -50);
+Item lamp = new Item("lamp", "a shiny brass lamp");
+Food bread = new Food("bread", "a loaf of stale bread", 10);
+Food mushroom = new Food("mushroom", "a pale glowing mushroom", -50);
 
 room1.addItem(lamp);
 room1.addItem(bread);
@@ -182,6 +179,8 @@ Der er én ting, der overrasker: `Food` arver `longName`, men kan ikke tilgå de
 
 ```java
 public class Food extends Item {
+
+    // (constructor som ovenfor)
 
     public void printName() {
         System.out.println(longName);      // ← fejl! longName er private i Item
@@ -221,8 +220,8 @@ En subklasse må gerne **erstatte** en af superklassens metoder:
 ```java
 public class Item {
 
-    public String getDescription() {
-        return description;
+    public String getLongName() {
+        return longName;
     }
 }
 ```
@@ -231,13 +230,13 @@ public class Item {
 public class Food extends Item {
 
     @Override
-    public String getDescription() {
-        return getLongName() + " (" + healthPoints + " health)";
+    public String getLongName() {
+        return "something edible (" + healthPoints + " health)";
     }
 }
 ```
 
-Nu bruges `Food`s udgave, når man kalder `getDescription()` på et `Food`-objekt.
+Nu bruges `Food`s udgave, når man kalder `getLongName()` på et `Food`-objekt.
 
 **`@Override` er ikke påkrævet, men skriv den altid.** Den fortæller compileren, at du *mener* at
 overskrive noget – og så får du en fejl, hvis du staver metodenavnet forkert. Uden den har du bare
@@ -247,8 +246,8 @@ Vil du **udvide** superklassens metode i stedet for at erstatte den, kan du kald
 
 ```java
 @Override
-public String getDescription() {
-    return super.getDescription() + " (" + healthPoints + " health)";
+public String getLongName() {
+    return super.getLongName() + " (" + healthPoints + " health)";
 }
 ```
 
@@ -264,7 +263,7 @@ Bemærk forskellen:
 Dette er tilladt:
 
 ```java
-Item something = new Food("bread", "It looks edible", 10);
+Item something = new Food("bread", "a loaf of stale bread", 10);
 ```
 
 Variablen har typen `Item`, men objektet er et `Food`.
@@ -274,14 +273,14 @@ Det betyder også, at når `Room` har en `ArrayList<Item>`, kan der ligge både 
 ```java
 ArrayList<Item> items = new ArrayList<>();
 
-items.add(new Item("a lamp", "It glows"));
-items.add(new Food("bread", "Edible", 10));
+items.add(new Item("lamp", "a shiny brass lamp"));
+items.add(new Food("bread", "a loaf of stale bread", 10));
 ```
 
 Men pas på – variablens **type** bestemmer, hvad du må kalde:
 
 ```java
-Item something = new Food("bread", "Edible", 10);
+Item something = new Food("bread", "a loaf of stale bread", 10);
 
 something.getLongName();        // OK – Item har den
 something.getHealthPoints();    // ← fejl! Item har den ikke
@@ -308,8 +307,8 @@ else {
 
 > **Bemærk:** Det er i orden her, hvor vi netop *skal* skelne. Men i
 > [del 4](../../projekter/adventure/del-4-weapons.md) er `instanceof` **eksplicit forbudt** for
-> våben. Der skal objektet selv fortælle, hvad det kan – og det hedder **polymorfi**, som I får i
-> næste uge.
+> våben. Der skal objektet selv fortælle, hvad det kan – og det hedder **polymorfi**, som I får på
+> fredag.
 >
 > Læg mærke til forskellen allerede nu: `instanceof` er et tegn på, at man beder objektet om at
 > afsløre sin type, i stedet for bare at bede det gøre noget.
@@ -349,7 +348,7 @@ Alle klasser i Java arver i øvrigt automatisk fra `Object` – også dem, du se
 | Det du lærte | Sådan bruges det i del 3 |
 | --- | --- |
 | `extends` | `class Food extends Item` |
-| `super(...)` | `Food`s constructor sætter navn og beskrivelse |
+| `super(...)` | `Food`s constructor sætter de to navne |
 | is-a | et `Food` kan ligge i en `ArrayList<Item>` |
 | `instanceof` og cast | `eat`-kommandoens tre udfald |
 | Ingen ændringer i eksisterende kode | `take`, `drop`, `inventory` virker uændret |
@@ -392,6 +391,18 @@ Læs og forstå koden i rækkefølgen `Konto.java` → `NemKonto.java` → `Opsp
 ### 2. Øvelse med abstrakte klasser
 
 > Et forvarsel om næste uge.
+
+En abstrakt klasse kan man ikke lave objekter af, og en abstrakt metode har ingen krop – subklasserne
+skal selv implementere den (med `@Override`). Mere om det på mandag. Syntaksen ser sådan ud:
+
+```java
+public abstract class Animal {          // abstract: kan ikke oprettes med new
+    public abstract void makeSound();   // ingen krop – subklasserne skal skrive den
+}
+```
+
+Lav øvelsen i et lille selvstændigt IntelliJ-projekt `uge40-arv-polymorfi` (package
+`dag3_abstrakte_klasser`) – vi bygger videre på den på mandag.
 
 1. Lav en klasse `Animal`. Klassen skal være **abstrakt**.
 2. En `Animal` har en alder i år.

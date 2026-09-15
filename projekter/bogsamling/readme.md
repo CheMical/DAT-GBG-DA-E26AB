@@ -23,9 +23,11 @@ Projektet er et konsolprogram og skal laves i IntelliJ.
 
 ## Kom godt i gang
 
-Opret et nyt Java-projekt i IntelliJ.
+Opret packagen `bogsamling` i ugens IntelliJ-projekt `uge37-klasser-objekter-metoder` (se
+[Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)). I uge 38 kopierer du
+packagen over i `uge38-relationer-arraylist` og arbejder videre der.
 
-Opret derefter en klasse med navnet `Main`.
+Opret derefter en klasse med navnet `Main` i packagen.
 
 I `Main` skal du oprette en `main`-metode:
 

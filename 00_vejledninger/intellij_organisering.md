@@ -111,6 +111,12 @@ uge36-loops-arrays-strings/
             Opgave02.java
             ...
 
+        dag5_loops_strings_repetition/
+            Main.java
+            Opgave01.java
+            Opgave02.java
+            ...
+
 
 uge37-klasser-objekter-metoder/
     src/
@@ -123,6 +129,19 @@ uge37-klasser-objekter-metoder/
         dag2_objekter_klasser_indkapsling/
             Main.java
             Book.java
+            Opgave01.java
+            Opgave02.java
+
+        dag3_enum_switch/
+            Main.java
+            Opgave01.java
+            Opgave02.java
+
+        dag4_metoder/
+            Main.java
+
+        dag5_metoder_placering_ansvar/
+            Main.java
             Opgave01.java
             Opgave02.java
 
@@ -144,6 +163,12 @@ uge38-relationer-arraylist/
             Library.java
             Opgave01.java
 
+        dag3_arraylist/
+            Opgave01.java
+            Opgave02.java
+            Book.java
+            Library.java
+
         bogsamling/
             Main.java
             Book.java
@@ -151,6 +176,9 @@ uge38-relationer-arraylist/
 ```
 
 Antallet af opgaveklasser afhænger naturligvis af dagens opgaver.
+
+Package-navnene i oversigten er de navne, dagenes opgavesider bruger – brug dem, så I kan hjælpe
+hinanden.
 
 ---
 
@@ -399,6 +427,8 @@ src/
 
 Du skal ikke oprette en ny `Book`-klasse for hver opgave, hvis du arbejder videre på det samme projekt. Reglen om én klasse pr. opgave gælder de selvstændige øvelser. I et samlet projekt bestemmes klasserne i stedet af programmets model og ansvar.
 
+Bogsamlingen strækker sig over uge 37 og 38. Da vi laver ét projekt pr. uge, kopierer du packagen `bogsamling` fra `uge37-klasser-objekter-metoder` over i `uge38-relationer-arraylist`, når uge 38 begynder, og arbejder videre der. Se [projektbeskrivelsen](../projekter/bogsamling/readme.md).
+
 ---
 
 # Samlet progression
@@ -420,6 +450,10 @@ uge38-relationer-arraylist
     ↓
 Library med mange Book-objekter, ArrayList og 1:mange-relation
 ```
+
+Fra uge 39 arbejder vi mest i projekter (Adventure), som har deres eget GitHub-repository. De små
+selvstændige øvelser, der stadig dukker op, lægges i et ugeprojekt efter samme mønster – fx
+`uge40-arv-polymorfi` med packagen `dag3_abstrakte_klasser`.
 
 ---
 

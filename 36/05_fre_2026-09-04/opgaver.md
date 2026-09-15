@@ -11,11 +11,30 @@ interessante ud.
 
 ## Kom i gang
 
-Opret en klasse `Main` med en `main`-metode. Husk importen, hvor du bruger `Scanner`:
+Åbn ugens IntelliJ-projekt `uge36-loops-arrays-strings` (se [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)).
+
+Opret dagens package under `src`:
+
+```text
+dag5_loops_strings_repetition
+```
+
+Opret én klasse pr. opgave – `Opgave01`, `Opgave02` osv. – hver med sin egen `main`-metode:
 
 ```java
-import java.util.Scanner;
+package dag5_loops_strings_repetition;
+
+public class Opgave01 {
+
+    public static void main(String[] args) {
+
+    }
+}
 ```
+
+Kør og afprøv hver opgave for sig med den grønne pil ud for `main`.
+
+Husk `import java.util.Scanner;` i de opgaveklasser, der bruger `Scanner`.
 
 ---
 
@@ -185,8 +204,8 @@ Et palindrom er et ord, der staves ens forfra og bagfra – f.eks. `regninger` e
 Lav et program, der undersøger, om en tekst er et palindrom.
 
 ```text
-"racecar" is a palindrom
-"hello" is not a palindrom
+"racecar" er et palindrom
+"hello" er ikke et palindrom
 ```
 
 Prøv med: `racecar`, `hello`, `regninger`, `abba`, `a`
@@ -283,7 +302,7 @@ Programmet skal blive ved med at vise menuen, indtil brugeren vælger `5`.
 
 Gem tallene i et array med plads til 100 tal, og hold styr på, hvor mange der faktisk er indtastet.
 
-Her skal du bruge: `while`, `switch` eller `if`/`else if`, `Scanner`, array, og de fire mønstre.
+Her skal du bruge: `while`, `if`/`else if`, `Scanner`, et array og de fire mønstre.
 
 ### Opgave 19 – Ordanalyse
 
@@ -327,7 +346,8 @@ Håndtér at `z` skal blive til `c` (altså rundt om enden). Du kan nøjes med s
 
 ### Ekstra
 
-Lav også en funktion, der dekrypterer igen.
+Udvid programmet, så det også kan dekryptere: forskyd hvert bogstav tre pladser **tilbage**, så
+`"def"` bliver til `"abc"` igen. Husk at `a` skal blive til `x`.
 
 ---
 
@@ -345,7 +365,7 @@ Ordet: ___________
 Gæt et bogstav: r
 Rigtigt!
 
-Ordet: _r_ _r___ __
+Ordet: _r__r______
 Gæt et bogstav: z
 Forkert. Du har 7 forsøg tilbage.
 ```
@@ -373,6 +393,8 @@ Hjælp: brug et array med 26 pladser. Bogstavet `'a'` svarer til index `0`:
 ```java
 int index = c - 'a';
 ```
+
+Tæl kun tegn, der er små bogstaver (`c >= 'a' && c <= 'z'`) – brug `toLowerCase()` først, og spring alt andet over.
 
 ---
 
