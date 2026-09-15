@@ -4,7 +4,7 @@
 
 I den forrige lektion arbejdede vi med arrays af objekter. Et array virker godt, når vi på forhånd ved, hvor mange elementer der skal være plads til.
 
-I mange programmer ændrer antallet af elementer sig imidlertid, mens programmet kører. Et bibliotek får nye bøger, en indkøbskurv får flere varer, og spilleren i Adventure kan samle ting op og lægge dem fra sig.
+I mange programmer ændrer antallet af elementer sig imidlertid, mens programmet kører. Et bibliotek får nye bøger og en indkøbskurv får flere varer.
 
 Her kan vi bruge `ArrayList`. En `ArrayList` minder om et array, men den kan vokse og blive mindre efter behov.
 
