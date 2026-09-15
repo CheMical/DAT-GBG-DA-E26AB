@@ -298,7 +298,7 @@ if (item instanceof Food) {
     player.changeHealth(food.getHealthPoints());
 }
 else {
-    // "You cannot eat that"
+    // "You cannot eat the " + item.getLongName()
 }
 ```
 

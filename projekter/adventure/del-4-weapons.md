@@ -33,7 +33,7 @@ klar til brug.
 
 ### Brugerfladen
 
-Spillet skal udvides med kommandoen:
+Spillet skal udvides med to kommandoer:
 
 | Kommando | Betydning |
 |---|---|
@@ -52,12 +52,15 @@ Så **kun** hvis man har tingen, **og** tingen er et våben, kan det rent faktis
 
 > Man kan altså **ikke** equippe noget, der ligger i rummet!
 
+> Og hvis man `drop`'er det våben, man har equipped, har man ikke længere noget våben equipped.
+
 #### attack
 
-`attack` er i denne udgave en lidt "amputeret" kommando – da der ikke er nogle fjender endnu, vil
+`attack` er i denne udgave en lidt "amputeret" kommando – da der ikke er nogen fjender endnu, vil
 `attack` blot resultere i, at det våben, man har equipped, bliver brugt mod den tomme luft.
 
-* Er det et **slagvåben**, sker der sandsynligvis ingenting.
+* Er det et **slagvåben**, sker der ikke noget med våbenet – men spilleren skal stadig have en
+  besked, fx `You swing the rusty sword at the empty air.`
 * Er det et **skydevåben**, bliver der affyret et skud – hvis der altså er ammunition i våbenet.
 * Prøver man at angribe med et **tømt våben**, skal man have at vide, at det mislykkedes.
 * Har man **ikke et våben equipped**, skal man også have at vide, at det mislykkedes.
@@ -98,7 +101,7 @@ omkring i spillet, og tilføjer dem til rooms, som var de almindelige items.
 
 #### Weapon
 
-`Weapon` skal have yderligere to arvinger:
+`Weapon` skal selv have to arvinger:
 
 | | | |
 |:--:|:--:|:--:|
@@ -111,21 +114,32 @@ omkring i spillet, og tilføjer dem til rooms, som var de almindelige items.
 ```mermaid
 classDiagram
     class Item {
-        -String longName
         -String shortName
+        -String longName
     }
     class Weapon {
         <<abstract>>
         -int damage
         +getDamage() int
-        +canUse() boolean
-        +use() boolean
-        +remainingUses() int
+        +canUse()* boolean
+        +use()*
     }
-    class MeleeWeapon
+    class MeleeWeapon {
+        +canUse() boolean
+        +use()
+    }
     class RangedWeapon {
         -int ammunition
+        +canUse() boolean
+        +use()
+        +getAmmunition() int
     }
+    class Player {
+        -Weapon equipped
+        +equip(String shortName)
+        +attack()
+    }
+    Player "1" --> "0..1" Weapon : equipped
 
     Item <|-- Weapon
     Weapon <|-- MeleeWeapon
@@ -140,9 +154,10 @@ refereres til superklassen `Weapon`.
 Altså: Når `Player` equipper et våben eller bruger det til `attack`, må koden kun tilgå metoder,
 der er erklærede i `Weapon`-klassen.
 
-Så hvis `RangedWeapon` skal kunne returnere, hvor mange skud der er tilbage, er der nødt til at
-være en metode i `Weapon` (fx `remainingUses()` eller `canUse()`), der så **overrides** i
-`RangedWeapon`.
+Så hvis `RangedWeapon` skal kunne sige, om der er skud tilbage, er der nødt til at være en metode
+i `Weapon` (`canUse()`), som **overrides** i både `MeleeWeapon` (altid `true`) og `RangedWeapon`
+(`ammunition > 0`). Vil I vise antal skud tilbage (som i eksemplet), så lad `use()` returnere
+antallet af resterende brug, og lad `MeleeWeapon` returnere fx `-1` for "ubegrænset".
 
 > **Så altså: der må IKKE være noget kode, der tjekker typen af et weapon-objekt**, som f.eks.:
 >
@@ -182,8 +197,9 @@ Efter hvert trin skal I selvfølgelig teste, at spillet stadig virker som forven
 
 ## Aflevering
 
-Denne del indgår blot i samme GitHub-repository, som I hidtil har arbejdet i – og der er ikke krav
-om aflevering som sådan, men **aflever gerne inden deadline, for at bekræfte at I er med!**
+Denne del afleveres som de foregående: push til samme GitHub-repository, og gen-aflevér linket i
+itslearning inden deadline. Det er ikke den endelige aflevering, men den er en del af den bundne
+forudsætning – så aflevér, selv om I ikke er helt færdige.
 
 **Hvordan:** Indsæt et link til jeres GitHub-repository.
 

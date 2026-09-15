@@ -86,6 +86,9 @@ You have dropped the shiny brass lamp
 There is nothing like sandwich to take around here
 ```
 
+Eksemplet viser den pæne udgave. I første omgang er det helt fint med én ting pr. linje og
+`You have taken a shiny brass lamp` – se udvidelserne nederst.
+
 ### Koden
 
 Det er **absolut nødvendigt**, at koden er delt op i flere objekter, som beskrevet i
@@ -98,13 +101,18 @@ Lav en `Item`-klasse til de ting, der kan samles op. Ting skal have både et **l
 **kort** navn, så en ting for eksempel kan være navngivet `a shiny brass lamp`, men brugeren kan
 nøjes med at skrive `take lamp`.
 
+Constructoren tager det korte navn først: `new Item("lamp", "a shiny brass lamp")`.
+
 #### Lister af items
 
 Både `Room` og `Player` skal have en `ArrayList` af `Item`-objekter, og metoder til at tilføje og
 fjerne items, samt en metode til at få hele listen af items.
 
-`Player` skal også have metoder til `dropItem` og `takeItem`, der henholdsvis flytter et item fra
-det rum, player er i, til player-objektet selv, og omvendt.
+`Player` skal også have metoderne `takeItem` og `dropItem`, der henholdsvis flytter et item fra
+det rum, player er i, til player-objektet selv – og omvendt.
+
+`takeItem` og `dropItem` returnerer det `Item`, der blev flyttet – eller `null`, hvis der ikke var
+noget med det navn. Så kan brugerfladen skrive tingens lange navn i beskeden.
 
 #### findItem
 
@@ -114,6 +122,9 @@ og iterere over en liste af `Item`-objekter og finde det objekt, der matcher nav
 Sådan at brugeren kan indtaste `take lamp`, og programmet tager listen af items i det aktuelle
 rum, bladrer igennem for at se, om et af dem passer med navnet `lamp`, og returnerer det
 `Item`-objekt – eller `null`, hvis det ikke kunne findes.
+
+Både `Room` (til `take`) og `Player` (til `drop`, søger i inventory) skal have sådan en metode –
+løkken er den samme, kun listen er en anden.
 
 ```mermaid
 classDiagram
@@ -129,16 +140,17 @@ classDiagram
     class Player {
         -Room currentRoom
         -ArrayList~Item~ inventory
-        +takeItem(String shortName) boolean
-        +dropItem(String shortName) boolean
+        +takeItem(String shortName) Item
+        +dropItem(String shortName) Item
+        +findItem(String shortName) Item
         +getInventory() ArrayList~Item~
     }
     class Item {
-        -String longName
         -String shortName
-        -String description
-        +getLongName() String
+        -String longName
+        +Item(String shortName, String longName)
         +getShortName() String
+        +getLongName() String
     }
 
     Room "1" --> "0..*" Item : ligger i
@@ -197,8 +209,8 @@ et spil med lidt mere historie!
 ### Overload addItem, så den også konstruerer et item
 
 Hvis I har en `addItem`-metode på `Room`, der modtager et `Item`-objekt, så overload den med en
-metode, der modtager et navn og en beskrivelse og selv opretter et `Item`-objekt og tilføjer det
-til listen – så sparer I en masse ekstra kode i den del, der opretter rooms og items.
+metode, der modtager et kort og et langt navn og selv opretter et `Item`-objekt og tilføjer det til
+listen – så sparer I en masse ekstra kode i den del, der opretter rooms og items.
 
 ### Opret automatisk short-name
 
@@ -218,10 +230,9 @@ til at vælge et enkelt.
 
 ### Pænere udskrifter – kommaseparerede lister
 
-Sandsynligvis har I lavet det sådan, at lister af items i et rum eller player inventory bliver
-vist som en liste med ét item pr. linje. Men lav en metode til at tage en liste og returnere en
-pæn kommasepareret streng, hvor der ikke er komma efter det allersidste element, og der står `and`
-mellem de to næstsidste.
+Sandsynligvis viser I lister med ét item pr. linje, eller med komma mellem alle. Lav i stedet en
+metode til at tage en liste og returnere en pæn kommasepareret streng, hvor der ikke er komma efter
+det allersidste element, og der står `and` mellem de to sidste.
 
 Det kræver en lidt fancy løkke og nogle length-beregninger, for metoden skal selvfølgelig også
 virke, når der kun er ét eller to items i listen!
@@ -229,9 +240,9 @@ virke, når der kun er ét eller to items i listen!
 ### Better grammar
 
 Hvis I har brugt navne og beskrivelser som `a shiny brass lamp` og `some gold coins`, så vil det
-være ret cool, hvis brugerfladen selv kan finde ud af at skrive `You have taken the shiny brass
-lamp` eller `You have dropped the gold coins` – altså skifter mellem *indefinite* og *definite
-article*.
+være ret cool, hvis brugerfladen selv kan skifte til `the` – `You have taken the shiny brass lamp`
+eller `You have dropped the gold coins` – som i eksemplet ovenfor, altså skifte mellem *indefinite*
+og *definite article*.
 
 Så prøv at tilføje ekstra metoder til `Item`, der kan give navnet helt uden article, og med enten
 definite eller indefinite – gør den eventuelt så "klog", at den selv kan finde ud af, om det er
@@ -255,9 +266,10 @@ klikbart!**
 
 **Hvornår:** Se [deadlines i projektoversigten](../../README.md#afleveringer-og-deadlines).
 
-**Feedback:** Som med version 1 – umiddelbart efter deadline, i undervisningen, kigger vi på
-hinandens eksempler, diskuterer eventuelt hvordan nogle af udvidelserne kunne laves, men ser også
-på yderligere design-principper til at forbedre den eksisterende kode.
+**Feedback:** Tirsdag 29-09 – samme dag som deadline – reviewer og refaktorerer vi del 2 i
+undervisningen: vi kigger på hinandens løsninger, diskuterer eventuelt hvordan nogle af
+udvidelserne kunne laves, og ser på design-principper til at forbedre den eksisterende kode.
+Aflever derfor en fungerende version, *før* I begynder at rykke rundt i koden.
 
 ---
 

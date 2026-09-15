@@ -388,7 +388,7 @@ flowchart TD
     C1 --> Z
     C -- "[ja]" --> D{"Blev der angivet et navn?"}
     D -- "[ja]" --> D1("Find fjenden med det navn")
-    D -- "[nej]" --> D2("Find den nærmeste fjende")
+    D -- "[nej]" --> D2("Tag den første fjende i rummet")
     D1 --> E{"Blev der fundet en fjende?"}
     D2 --> E
     E -- "[nej]" --> E1("Skriv 'Du angriber den tomme luft'")

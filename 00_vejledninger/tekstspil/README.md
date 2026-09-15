@@ -8,19 +8,19 @@ Du skriver **to klasser**. Resten klarer et bibliotek.
 
 ```java
 public void play(Room room) {
-    int hemmeligt = 1 + (int) (Math.random() * 100);
+    int secret = 1 + (int) (Math.random() * 100);
     room.tellAll("Jeg tænker på et tal mellem 1 og 100.");
 
     while (true) {
         for (Player p : room.players()) {
-            int gæt = p.askInt("Dit gæt?", 1, 100);
+            int guess = p.askInt("Dit gæt?", 1, 100);
 
-            if (gæt == hemmeligt) {
-                room.tellAll(p.name() + " ramte det! Det var " + hemmeligt + ".");
+            if (guess == secret) {
+                room.tellAll(p.name() + " ramte det! Det var " + secret + ".");
                 return;
             }
-            room.tellAll(p.name() + " gættede " + gæt + " — for "
-                         + (gæt < hemmeligt ? "lavt" : "højt") + ".");
+            room.tellAll(p.name() + " gættede " + guess + " — for "
+                         + (guess < secret ? "lavt" : "højt") + ".");
         }
     }
 }
@@ -94,12 +94,15 @@ ud med en anden persons computer.**
 
 ## To ting du kan gøre — og hvornår
 
-**Spille andres spil.** Det kan du med det samme. Du skal bare åbne skabelonen og
-køre `StartPlayer`. Du behøver ikke selv at lave et spil for at være med.
+**Spille andres spil.** Det kan du med det samme. Du skal bare åbne skabelonen,
+lave `kodeord.txt` (se nedenfor) og køre `StartPlayer`. Du behøver ikke selv at
+lave et spil for at være med.
 
-**Lave dit eget spil.** Her skriver du `implements Game`, og det giver først
-mening, når vi har haft **interfaces** — det gør vi omkring Adventure-projektet.
-Prøv endelig før, men bliv ikke overrasket, hvis `implements` ligner volapyk
+**Lave dit eget spil.** Skabelonen bruger `implements Game` og `implements Match`.
+Det giver først rigtig mening, når vi har haft **interfaces** — vi kigger kort på
+dem ved abstrakte klasser (5. oktober) og arbejder rigtigt med dem i uge 43–45 i
+filmsamlingen. Men du behøver ikke forstå `implements` for at komme i gang: du
+skal bare fylde metoderne ud. Bliv ikke overrasket, hvis ordet ligner volapyk
 indtil da.
 
 ## Kom i gang
@@ -109,7 +112,13 @@ indtil da.
 2. **Kopiér `skabelon`-mappen** ud et sted, hvor du har dine egne projekter, og
    omdøb den til dit spil.
 3. **Åbn mappen i IntelliJ** — File → Open → vælg mappen, ikke filerne i den.
-   IntelliJ henter selv biblioteket. Første gang tager det et øjeblik.
+   Svar **Trust Project**, hvis IntelliJ spørger. Projektet er et *Maven-projekt*:
+   filen `pom.xml` fortæller IntelliJ, at spil-biblioteket skal hentes fra nettet,
+   så du skal være online første gang. Det tager et øjeblik – vent, til den blå
+   "indexing"-bjælke nederst er væk. Ser `import textgame.…` rødt ud bagefter, så
+   højreklik på `pom.xml` → **Maven → Reload Project**. Projektet forventer
+   **JDK 21** (det, du installerede i uge 35); står der en anden version under
+   File → Project Structure → SDK, så vælg 21.
 4. **Lav `kodeord.txt`** (se nedenfor).
 5. **Omdøb de to klasser**, når du skal lave dit eget spil: højreklik på
    klassenavnet → Refactor → Rename. `MyGame` og `MyGameMatch` skal begge
@@ -196,7 +205,7 @@ public String name() {
 }
 
 public String description() {
-    return "Alle slår med en terning. Hojeste slag vinder.";
+    return "Alle slår med en terning. Højeste slag vinder.";
 }
 
 public int minPlayers() {
@@ -234,6 +243,11 @@ public class DiceGameMatch implements Match {
     }
 }
 ```
+
+`Math.random()` giver et decimaltal fra 0 op til (men ikke med) 1. Ganger vi med
+6 og caster til `int`, får vi 0–5, og `1 +` gør det til 1–6. Du kan lige så godt
+bruge `Random` fra uge 37: `Random random = new Random();` som felt i klassen og
+`int roll = random.nextInt(6) + 1;`.
 
 Læg mærke til `for (Player p : room.players())` — den løber igennem spillerne i
 den rækkefølge, de satte sig ved bordet. Det er sådan, du giver folk tur på skift.
@@ -321,9 +335,15 @@ public class DiceGameMatch implements Match {
 }
 ```
 
+`room.players()` giver en `List<Player>`. `List` er den generelle type, som
+`ArrayList` er én udgave af – du bruger den præcis som en `ArrayList`: `size()`
+og `get(i)`. (Du kan ikke skrive `ArrayList<Player>` her; biblioteket lover kun
+en `List`.)
+
 **Hvorfor virker `points[i]`?** Fordi `players` og `points` står i samme
-rækkefølge: spiller nummer `i` har sine point i felt nummer `i`. Det er
-parallelle arrays, præcis som du har brugt til navne og karakterer.
+rækkefølge: spiller nummer `i` har sine point i felt nummer `i`. Det kaldes
+*parallelle arrays*: to lister, hvor plads nummer `i` i den ene hører sammen med
+plads nummer `i` i den anden.
 
 Spillerlisten laver ikke numre om undervejs — den er den samme hele spillet
 igennem — så det holder.
@@ -357,7 +377,8 @@ de engelske `yes`/`no` — så dine spillere kan svare på dansk.
 ### Trin 6: Alle vælger samtidig
 
 Vil du lave sten-saks-papir eller en afstemning, skal alle svare **på én gang** —
-ingen må kunne se de andres valg først. Det er `room.askAllChoice`:
+ingen må kunne se de andres valg først. Det er `room.askAllChoice`. Du skal
+bruge én import mere øverst i filen: `import textgame.Answers;`.
 
 ```java
 Answers choices = room.askAllChoice("Sten, saks eller papir?",
@@ -426,10 +447,10 @@ Et `Room` — hele bordet:
 | `room.only(p)` / `room.without(p)` | kun nogle af dem |
 | `room.askAll("...")`, `askAllInt`, `askAllYesNo`, `askAllChoice` | spørg alle på én gang |
 
-Spørger du alle på én gang, får du et `Answers` tilbage: `svar.get(p)`,
-`svar.getInt(p)`, `svar.getYesNo(p)`, `svar.getIndex(p)`. Det er dét, der gør
-sten-saks-papir muligt: alle svarer samtidig, og ingen kan nå at se de andres
-træk først.
+Spørger du alle på én gang, får du et `Answers` tilbage (husk
+`import textgame.Answers;`): `svar.get(p)`, `svar.getInt(p)`, `svar.getYesNo(p)`,
+`svar.getIndex(p)`. Det er dét, der gør sten-saks-papir muligt: alle svarer
+samtidig, og ingen kan nå at se de andres træk først.
 
 ## De fem regler
 
@@ -464,7 +485,8 @@ Biblioteket klarer dem:
   det forkerte sted. Programmet skriver selv, hvor det har ledt.
 - **"not the class password"** — der står noget forkert i filen. Kun ordet, intet
   andet. Tjek det mod opslaget i Teams; pas på med mellemrum, du kom til at
-  kopiere med.
+  kopiere med. Lav filen inde i IntelliJ (højreklik på projektmappen → New → File),
+  ikke i Notepad — så slipper du for skjulte tegn i starten af filen.
 - **Kodeordet er blevet skiftet** — så skriver serveren det samme. Hent det nye
   fra Teams og ret `kodeord.txt`.
 - **IntelliJ starter den samme spiller igen i stedet for en ny** — sæt flueben i

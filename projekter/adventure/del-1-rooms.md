@@ -55,7 +55,7 @@ gerne forbedre brugerfladen, så man også kan nøjes med at skrive `north`, `ea
 version skal altid være mulig.
 
 Hvis man kan flytte sig i den ønskede retning, udskrives navn og beskrivelse for det nye rum, man
-er i. Hvis det ikke er muligt at flytte sig, får man beskeden `you cannot go that way` og
+er i. Hvis det ikke er muligt at flytte sig, får man beskeden `You cannot go that way` og
 forbliver, hvor man var.
 
 Man skal derudover kunne skrive disse kommandoer:
@@ -125,6 +125,9 @@ classDiagram
     Room "1" --> "0..4" Room : forbindelser
 ```
 
+(`setEast`/`getEast`, `setSouth`/`getSouth` og `setWest`/`getWest` er udeladt i diagrammet for at
+spare plads – de skal selvfølgelig også være der.)
+
 #### Kortet bygges i Adventure
 
 Det er **`Adventure`**-klassen, der skal bygge "kortet" ved at oprette og forbinde de ni
@@ -140,7 +143,7 @@ attribut som navnet på variablen, du opretter rummet med i `Adventure`-klassen.
 langt lettere at debugge koden!
 
 ```java
-Room room1 = new Room("Room 1", "room with no distinct features, except two doors");
+Room room1 = new Room("Room 1", "A room with no distinct features, except two doors.");
 ```
 
 #### Ansvar
@@ -159,7 +162,7 @@ Det er et gruppe/par-projekt, og her i første omgang er det vigtigt at arbejde 
 sammen, så **sid to personer ved én computer og skriv programmet sammen!** Brug evt. *Code With
 Me*-funktionen i IntelliJ, hvis hele studiegruppen arbejder sammen.
 
-1. **Start med at lave brugerfladen – uden nogle rooms.** Bare tag imod input og fortolk det, så
+1. **Start med at lave brugerfladen – helt uden rum.** Bare tag imod input og fortolk det, så
    programmet for eksempel udskriver `going north`, når brugeren har skrevet en af kommandoerne
    for at `go north`, og `looking around`, når brugeren har skrevet `look`, og så fremdeles.
 
@@ -177,7 +180,7 @@ Me*-funktionen i IntelliJ, hvis hele studiegruppen arbejder sammen.
    spilleren p.t. befinder sig. Når der bliver skrevet `go north`, så beder spilleren om at blive
    flyttet til det room, der er north for `currentRoom` – og hvis det room findes, så er alt godt,
    og `currentRoom` er nu det nye requested room. Men hvis der ikke var noget room, skal spilleren
-   have `you cannot go that way`-beskeden.
+   have `You cannot go that way`-beskeden.
 
 ---
 
@@ -262,8 +265,8 @@ repositoriet som et hele.
 
 **Hvornår:** Se [deadlines i projektoversigten](../../README.md#afleveringer-og-deadlines).
 
-**Feedback:** Umiddelbart efter deadline, i undervisningen, kigger vi på hinandens eksempler og
-diskuterer, hvordan koden kan forbedres og forenkles.
+**Feedback:** Fredag 25-09, i undervisningen, kigger vi på hinandens løsninger og diskuterer, hvordan
+koden kan forbedres og forenkles – derfor skal en fungerende version være pushet, inden I møder op.
 
 ---
 

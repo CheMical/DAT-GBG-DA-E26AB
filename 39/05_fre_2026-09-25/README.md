@@ -171,10 +171,10 @@ den nye `currentRoom`. Men så skal `Adventure` kende både `Player` og `Room` i
 public boolean move(String direction) {
 
     Room desiredRoom = switch (direction) {
-        case "north", "n" -> currentRoom.getNorth();
-        case "south", "s" -> currentRoom.getSouth();
-        case "east",  "e" -> currentRoom.getEast();
-        case "west",  "w" -> currentRoom.getWest();
+        case "north" -> currentRoom.getNorth();
+        case "south" -> currentRoom.getSouth();
+        case "east"  -> currentRoom.getEast();
+        case "west"  -> currentRoom.getWest();
         default -> null;
     };
 
@@ -189,6 +189,10 @@ public boolean move(String direction) {
 ```
 
 `Adventure` beder blot: `player.move("north")` og får `true` eller `false` tilbage.
+
+Bemærk at `Player` kun kender de fulde retninger. Hvis jeres brugerflade også accepterer `n`, `e`,
+`s`, `w`, er det `UserInterface`, der oversætter `n` til `north`, *før* den sender det videre –
+`Player` skal ikke vide, hvordan brugeren har stavet.
 
 #### Law of Demeter – tal kun med dine venner
 

@@ -190,8 +190,8 @@ public class RangedWeapon extends Weapon {
 ```mermaid
 classDiagram
     class Item {
-        -String longName
         -String shortName
+        -String longName
     }
     class Weapon {
         <<abstract>>
@@ -216,8 +216,8 @@ classDiagram
     Weapon <|-- RangedWeapon
 ```
 
-Opgavens diagram lader `use()` returnere `boolean` og har desuden `remainingUses()` – navne og
-returtyper er op til jer, det afgørende er, at metoderne er erklæret i `Weapon`.
+Det er det samme diagram som i opgaven – navne og returtyper er i øvrigt op til jer, det afgørende
+er, at metoderne er erklæret i `Weapon`.
 
 ---
 
@@ -342,6 +342,9 @@ familie. **Interface** når helt forskellige klasser skal kunne det samme.
 `Weapon` er en abstrakt klasse, fordi alle våben har `damage` – altså fælles data.
 
 > I møder interfaces rigtigt i uge 43–45, når vi skal sortere i filmsamlingen.
+
+> Vil du prøve at *bruge* et interface allerede nu, så se den frivillige vejledning
+> [Lav dit eget tekstspil](../../00_vejledninger/tekstspil/README.md) – der skriver du to klasser med `implements`.
 
 ---
 

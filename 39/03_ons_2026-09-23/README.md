@@ -65,6 +65,8 @@ r2.setName("Room X");
 System.out.println(r1.getName());      // Room X
 ```
 
+(Forudsat `Room` har en `setName`-metode – det behøver jeres ikke.)
+
 Der er stadig kun **ét** Room-objekt. To variable peger bare på det.
 
 ```mermaid
@@ -178,7 +180,7 @@ Det er præcis den samme `null`, I mødte i sidste uge – og den samme
 | To variable, ét objekt | `room1.east` og variablen `room2` peger på det samme |
 | `null` | "der er ingen dør denne vej" |
 | Objekter i objekter (15-09) | selve kortet |
-| Metoder (10-09) | `move()`, `getNorth()`, `setEast()` |
+| Metoder (10-09) | `getNorth()`, `setEast()` – og den metode, der flytter spilleren |
 | Betingelser (27-08) | "kan jeg gå den vej?" |
 | Loops (01-09) | spillets hovedloop, der læser kommandoer |
 | Strings (04-09) | fortolkning af `"go north"` |
@@ -197,7 +199,8 @@ skal de bare bruges sammen på noget større.
   indstillet til eksamen.
 * [Alle deadlines står på projektets forside](../../projekter/adventure/readme.md#afleveringer-og-deadlines).
 
-Git og GitHub blev gennemgået i mandags. Er du usikker på det, så sig til med det samme – I skal
+Git og GitHub blev gennemgået [i mandags](../01_man_2026-09-21/README.md). Er du usikker på det, så
+sig til med det samme – I skal
 bruge det hver dag de næste tre uger.
 
 ---

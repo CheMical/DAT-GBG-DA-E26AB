@@ -64,8 +64,8 @@ public class Room {
 
 ### Hvad Enemy skal kunne
 
-En enemy har et navn, en beskrivelse, et health-niveau og **ét** weapon. Til forskel fra `Player`
-har den altid sit eneste våben equipped og kan ikke skifte.
+En enemy har et kort og et langt navn (som `Item`), en beskrivelse, et health-niveau og **ét**
+weapon. Til forskel fra `Player` har den altid sit eneste våben equipped og kan ikke skifte.
 
 Enemyens våben er et ganske almindeligt `Weapon`-objekt, som spilleren kan overtage, når enemyen
 dør – så det skal kunne droppes i rummet.
@@ -81,7 +81,9 @@ Og – det her er den vigtige del:
 > over enemies, samt eventuelt efterlade et item.
 
 Det er Information Expert igen. `Enemy` er den eneste, der kender sin egen health. Så det er også
-`Enemy`, der skal opdage, at den er nået til nul – ikke `Player`, og ikke `Adventure`.
+`Enemy`, der skal opdage, at den er nået til nul – ikke `Player`, og ikke `Adventure`. For at kunne
+fjerne sig selv fra rummet skal `Enemy` kende det rum, den står i – deraf `Room`-attributten i
+diagrammet.
 
 ```mermaid
 classDiagram
@@ -91,7 +93,7 @@ classDiagram
         +addEnemy(Enemy enemy)
         +removeEnemy(Enemy enemy)
         +getEnemies() ArrayList~Enemy~
-        +findEnemy(String name) Enemy
+        +findEnemy(String shortName) Enemy
     }
     class Player {
         -int health
@@ -100,10 +102,12 @@ classDiagram
         +hit(int damage)
     }
     class Enemy {
-        -String name
+        -String shortName
+        -String longName
         -String description
         -int health
         -Weapon weapon
+        -Room room
         +attack(Player player)
         +hit(int damage)
     }
@@ -116,6 +120,7 @@ classDiagram
     Room "1" --> "0..*" Enemy
     Enemy "1" --> "1" Weapon
     Player "1" --> "0..1" Weapon
+    Enemy --> Room
 ```
 
 ---
@@ -187,7 +192,8 @@ To ting at være opmærksom på:
   Det viser, hvordan I tænkte, før I kodede.
 
 > **Afleveringen er individuel.** I må stadig gerne arbejde i gruppen – men hvert enkelt medlem skal
-> aflevere sin egen pdf. Alle skal kunne stå inde for diagrammerne og forklare dem.
+> aflevere sin egen pdf. Det er i orden, at gruppens medlemmer afleverer den samme pdf – kravet er,
+> at hver enkelt afleverer den og kan stå inde for og forklare både koden og diagrammerne.
 
 ---
 

@@ -19,7 +19,7 @@ Når du er færdig med denne del, skal du kunne:
 * forklare hvad **arv** er, og hvad en subklasse arver fra sin superklasse
 * skrive `class Food extends Item`
 * forklare hvorfor et `Food`-objekt **også er** et `Item` (*is-a*-relationen)
-* bruge en overloaded constructor og kalde `super(...)`
+* skrive en constructor i subklassen, der kalder `super(...)`
 * skrive kode, der behandler subklasse-objekter gennem superklassens type
 * håndtere flere forskellige udfald af én kommando
 
@@ -58,16 +58,17 @@ health: 50 - you are in good health, but avoid fighting right now
 ```mermaid
 flowchart TD
     A["eat <navn>"] --> B{"Findes tingen i<br/>rummet eller inventory?"}
-    B -- nej --> C["'There is nothing like ... here'"]
+    B -- nej --> C["'There is nothing like ... to eat around here'"]
     B -- ja --> D{"Er tingen spiselig?<br/>(er den et Food?)"}
-    D -- nej --> E["'You cannot eat that'"]
+    D -- nej --> E["'You cannot eat the ...'"]
     D -- ja --> F["Spis den:<br/>health ændres,<br/>maden fjernes"]
 ```
 
 * Hvis man skriver `eat` efterfulgt af en ting, som **hverken er i rummet eller i inventory**,
-  svarer det til at `take` eller `drop` et item, der ikke findes.
-* Hvis man skriver `eat` efterfulgt af en ting, der **ikke er spiseligt**, skal programmet udskrive,
-  at man ikke kan spise den pågældende ting.
+  skal programmet skrive `There is nothing like ... to eat around here` – på samme måde som ved
+  `take` og `drop`.
+* Hvis man skriver `eat` efterfulgt af en ting, der **ikke er spiselig**, skal programmet skrive
+  `You cannot eat the ...` med tingens lange navn.
 * **Kun** hvis tingen findes *og* er spiselig, bliver den spist.
 
 Når maden er spist, **holder den op med at eksistere**, og spilleren får en mængde health fra den.
@@ -80,6 +81,9 @@ health: 100 - you are in perfect health
 
 > eat lamp
 You cannot eat the shiny brass lamp
+
+> eat sandwich
+There is nothing like sandwich to eat around here
 
 > eat bread
 You eat the loaf of stale bread. You feel a little better.
@@ -112,30 +116,36 @@ var de almindelige items.
 `Food`-objekter skal have et antal **`healthPoints`**, som er det, player optager, når den spiser
 et food-objekt. Det kan også være et **negativt tal**, hvis det f.eks. er gift!
 
-> Riflede sider og farvet glas var apotekets måde at gøre giftflasker genkendelige i mørke — man
+> Riflede sider og farvet glas var apotekets måde at gøre giftflasker genkendelige i mørke – man
 > kunne mærke forskel uden at læse etiketten. Jeres spillere har ikke den luksus.
 
-Lav for eksempel en **overloaded constructor**, der udover name og description også tager health –
-så `healthPoints` bliver fastlagt, når `Map` opretter de `Food`-objekter, der skal være i spillet.
+Lav en constructor, der udover det korte og det lange navn også tager `healthPoints`, og som
+sender de to navne videre til `Item`s constructor med `super(shortName, longName)` – så
+`healthPoints` bliver fastlagt, når `Map` opretter de `Food`-objekter, der skal være i spillet:
+
+```java
+Food bread = new Food("bread", "a loaf of stale bread", 10);
+Food mushroom = new Food("mushroom", "a pale glowing mushroom", -50);
+```
 
 ```mermaid
 classDiagram
     class Item {
-        -String longName
         -String shortName
-        -String description
-        +getLongName() String
+        -String longName
+        +Item(String shortName, String longName)
         +getShortName() String
+        +getLongName() String
     }
     class Food {
         -int healthPoints
-        +Food(String longName, String description, int healthPoints)
+        +Food(String shortName, String longName, int healthPoints)
         +getHealthPoints() int
     }
     class Player {
         -int health
         -ArrayList~Item~ inventory
-        +eat(String shortName)
+        +eat(String shortName) EatResult
         +getHealth() int
     }
 
@@ -145,6 +155,17 @@ classDiagram
 
 Bemærk at `Player` stadig har en liste af **`Item`** – ikke af `Food`. Et `Food`-objekt kan ligge i
 den liste, fordi et `Food` **er et** `Item`.
+
+`eat` skal fortælle brugerfladen, hvilket af de tre udfald der skete. En `boolean` kan kun to ting,
+så brug en enum:
+
+```java
+public enum EatResult { NOT_FOUND, NOT_FOOD, EATEN }
+```
+
+`Player.eat` finder tingen (i inventory eller i `currentRoom`), tjekker med `instanceof Food`,
+ændrer `health`, fjerner maden fra listen og returnerer det passende `EatResult`. Brugerfladen
+`switch`er på resultatet og skriver beskeden.
 
 ---
 
@@ -156,7 +177,7 @@ den liste, fordi et `Food` **er et** `Item`.
 
    1. Start med at oprette klassen, og tilføj nogle `Food`-objekter til mappet. Test at man kan
       samle dem op og droppe dem, som almindelige items.
-   2. Lav derefter `eat`-kommandoen, og vær især opmærksom på **de tre forskellige outcomes**, og
+   2. Lav derefter `eat`-kommandoen, og vær især opmærksom på **de tre forskellige udfald**, og
       sørg for at alt output er i `UserInterface`.
    3. Tilføj i `eat`-metoden, at health forandres med madens `healthPoints`, og husk at fjerne
       `Food`-objektet fra rummet eller inventory, så det ikke kan spises igen!
@@ -185,7 +206,7 @@ Det kræver endnu en returværdi fra `eat`-metoden, og måske en opdeling i en `
 I stedet for at alt spiseligt er `Food`, kunne der være både `Food` og `Liquid`, der hver især
 arver fra `Consumable`, der så arver fra `Item`.
 
-De to klasser skal fungere ens mht. healthpoints, og den eneste forskel er, at brugeren skal skrive
+De to klasser skal fungere ens mht. `healthPoints`, og den eneste forskel er, at brugeren skal skrive
 `eat` for food-objekter, og `drink` for liquid-objekter.
 
 ```mermaid
@@ -205,12 +226,12 @@ classDiagram
 
 ## Aflevering
 
-Det er ikke super-vigtigt at aflevere denne udgave, men brug den gerne som mulighed for at få
-feedback, før I kaster jer over Weapons.
+Del 3 afleveres som de øvrige dele – det er sådan, vi kan se, at I er med, og I får feedback, før
+I kaster jer over Weapons.
 
 **Hvordan:** Push til samme repository som hidtil, og gen-aflevér linket.
 
-**Hvornår:** Inden I går i gang med [Weapons (del 4)](del-4-weapons.md) – se
+**Hvornår:** torsdag 01-10 kl. 23:59 – se
 [deadlines i projektoversigten](../../README.md#afleveringer-og-deadlines).
 
 I er velkomne til at spørge ind til jeres løsning eller tanker om jeres løsning i dagens vejledning.
@@ -225,7 +246,7 @@ Til undervisningen hører disse to øvelser, som træner arv isoleret fra Advent
   Klon [DAT24_InheritanceExercise](https://github.com/ETALATE/DAT24_InheritanceExercise) og udfyld
   klasserne ud fra klassediagrammet.
 * **Abstrakte klasser** – lav en abstrakt klasse `Animal` med en alder og en abstrakt metode
-  `makeSound()`. Lav `Dog` og `Cat`, der extender `Animal` og implementerer `makeSound()`. `Dog`
+  `makeSound()`. Lav `Dog` og `Cat`, der arver fra `Animal` og implementerer `makeSound()`. `Dog`
   skal desuden have en metode `dogYears()`, der skriver hundens alder ud i både år og hundeår
   (alder gange 7).
 

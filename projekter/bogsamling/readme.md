@@ -10,7 +10,7 @@ Formålet er, at du træner centrale begreber inden for objektorienteret program
 
 * klasser og objekter
 * attributter
-* constructors
+* konstruktører
 * metoder
 * objektets tilstand
 * samarbejde mellem objekter
@@ -23,11 +23,15 @@ Projektet er et konsolprogram og skal laves i IntelliJ.
 
 ## Kom godt i gang
 
-Opret packagen `bogsamling` i ugens IntelliJ-projekt `uge37-klasser-objekter-metoder` (se
+Opret pakken `bogsamling` i ugens IntelliJ-projekt `uge37-klasser-objekter-metoder` (se
 [Organisering i IntelliJ](../../00_vejledninger/intellij_organisering.md)). I uge 38 kopierer du
-packagen over i `uge38-relationer-arraylist` og arbejder videre der.
+pakken over i `uge38-relationer-arraylist` og arbejder videre der.
 
-Opret derefter en klasse med navnet `Main` i packagen.
+**Tidsplan:** Del 1 (`Book`) laver du i uge 37, når konstruktører og `private` er gennemgået (tirsdag 08-09).
+Del 2 (`Library`) bruger `ArrayList`, som gennemgås onsdag 16-09 – men du kan sagtens gå i gang før: de tre
+ting, du skal bruge, står i boksen i starten af Del 2. Projektet afleveres fredag 18-09.
+
+Opret derefter en klasse med navnet `Main` i pakken.
 
 I `Main` skal du oprette en `main`-metode:
 
@@ -44,9 +48,9 @@ Alle løsninger skal afprøves fra `main`-metoden.
 
 ---
 
-# Del 1: Klassen Book
+## Del 1: Klassen Book
 
-## Opgave 1: Opret klassen Book
+### Opgave 1: Opret klassen Book
 
 Opret en ny klasse med navnet `Book`.
 
@@ -60,9 +64,9 @@ private int publicationYear;
 
 ---
 
-## Opgave 2: Tilføj en constructor
+### Opgave 2: Tilføj en konstruktør
 
-Tilføj en constructor til `Book`, så man kan oprette en bog med titel, forfatter og udgivelsesår.
+Tilføj en konstruktør til `Book`, så man kan oprette en bog med titel, forfatter og udgivelsesår.
 
 Eksempel på brug:
 
@@ -72,7 +76,7 @@ Book book = new Book("The Hobbit", "J.R.R. Tolkien", 1937);
 
 ---
 
-## Opgave 3: Opret bogobjekter i Main
+### Opgave 3: Opret bogobjekter i Main
 
 I `main`-metoden skal du oprette mindst tre forskellige bøger.
 
@@ -86,7 +90,7 @@ Book book3 = new Book("1984", "George Orwell", 1949);
 
 ---
 
-## Opgave 4: Tilføj metoden printInfo
+### Opgave 4: Tilføj metoden printInfo
 
 Tilføj en metode i `Book`, der udskriver information om bogen.
 
@@ -110,7 +114,7 @@ Afprøv metoden i `main`.
 
 ---
 
-## Opgave 5: Tilføj læsestatus
+### Opgave 5: Tilføj læsestatus
 
 Tilføj en ny attribut til `Book`:
 
@@ -124,7 +128,7 @@ Udvid `printInfo()`, så den også udskriver, om bogen er læst.
 
 ---
 
-## Opgave 6: Tilføj metoder til læsestatus
+### Opgave 6: Tilføj metoder til læsestatus
 
 Tilføj følgende metoder til `Book`:
 
@@ -141,7 +145,7 @@ Afprøv begge metoder i `main`.
 
 ---
 
-## Opgave 7: Tilføj getters
+### Opgave 7: Tilføj getters
 
 Tilføj getters for alle attributter i `Book`.
 
@@ -153,11 +157,18 @@ public String getTitle() {
 }
 ```
 
-Du skal som minimum bruge en getter for `title` senere i projektet.
+Getteren til en `boolean`-attribut hedder efter konvention `isX()` i stedet for `getX()`, så getteren til `read`
+skal hedde:
+
+```java
+public boolean isRead()
+```
+
+Du skal bruge `getTitle()` og `isRead()` senere i projektet.
 
 ---
 
-## Opgave 8: Klassisk bog
+### Opgave 8: Klassisk bog
 
 Tilføj en metode til `Book`, der undersøger, om en bog er mere end 20 år gammel.
 
@@ -177,7 +188,7 @@ Metoden skal returnere `true`, hvis bogen er mere end 20 år gammel. Ellers skal
 
 ---
 
-# Del 2: Klassen Library
+## Del 2: Klassen Library
 
 Nu skal projektet udvides med en ny klasse, `Library`.
 
@@ -189,9 +200,20 @@ Det betyder, at der er en 1:mange-relation mellem `Library` og `Book`:
 Et Library har mange Book-objekter
 ```
 
+> **Det du skal bruge fra `ArrayList`** (gennemgås onsdag 16-09 – se
+> [38/03](../../38/03_ons_2026-09-16/README.md), afsnittet "Læs nedenstående før undervisningen"):
+>
+> ```java
+> books.add(book);                 // tilføj en bog bagerst i listen
+> int antal = books.size();        // antal bøger i listen
+> for (Book book : books) {        // gennemløb listen – som for-each på et array
+>     book.printInfo();
+> }
+> ```
+
 ---
 
-## Opgave 9: Opret klassen Library
+### Opgave 9: Opret klassen Library
 
 Opret en ny klasse med navnet `Library`.
 
@@ -210,9 +232,9 @@ import java.util.ArrayList;
 
 ---
 
-## Opgave 10: Tilføj constructor til Library
+### Opgave 10: Tilføj konstruktør til Library
 
-Tilføj en constructor, hvor man kan give biblioteket et navn.
+Tilføj en konstruktør, hvor man kan give biblioteket et navn.
 
 Når et `Library`-objekt oprettes, skal listen med bøger også oprettes.
 
@@ -233,7 +255,7 @@ Library library = new Library("Min bogsamling");
 
 ---
 
-## Opgave 11: Tilføj bøger til biblioteket
+### Opgave 11: Tilføj bøger til biblioteket
 
 Tilføj en metode i `Library`, der kan tilføje en bog til listen.
 
@@ -253,7 +275,7 @@ library.addBook(book3);
 
 ---
 
-## Opgave 12: Udskriv alle bøger
+### Opgave 12: Udskriv alle bøger
 
 Tilføj en metode i `Library`, der udskriver alle bøger i biblioteket.
 
@@ -269,7 +291,7 @@ Afprøv metoden i `main`.
 
 ---
 
-## Opgave 13: Antal bøger
+### Opgave 13: Antal bøger
 
 Tilføj en metode i `Library`, der returnerer antallet af bøger i biblioteket.
 
@@ -287,7 +309,7 @@ System.out.println("Antal bøger: " + library.getNumberOfBooks());
 
 ---
 
-## Opgave 14: Find en bog ud fra titel
+### Opgave 14: Find en bog ud fra titel
 
 Tilføj en metode i `Library`, der kan finde en bog ud fra dens titel.
 
@@ -303,6 +325,8 @@ Hvis titlen findes, skal metoden returnere den fundne bog.
 
 Hvis titlen ikke findes, skal metoden returnere `null`.
 
+Husk reglen fra uge 36: tekster sammenlignes med `.equals()` (eller `.equalsIgnoreCase()`), aldrig med `==`.
+
 Eksempel på brug:
 
 ```java
@@ -317,7 +341,7 @@ if (foundBook != null) {
 
 ---
 
-## Opgave 15: Vis ulæste bøger
+### Opgave 15: Vis ulæste bøger
 
 Tilføj en metode i `Library`, der kun viser de bøger, som ikke er læst.
 
@@ -329,17 +353,17 @@ public void printUnreadBooks()
 
 Metoden skal gennemløbe listen af bøger og kun udskrive de bøger, hvor `read` er `false`.
 
-Overvej hvilken getter du har brug for i `Book`.
+Brug `isRead()` fra opgave 7.
 
 ---
 
-# Del 3: Ekstra opgaver
+## Del 3: Ekstraopgaver
 
 Hvis du bliver færdig, kan du arbejde videre med en eller flere af disse opgaver.
 
 ---
 
-## Ekstraopgave 1: Fjern en bog
+### Ekstraopgave 1: Fjern en bog
 
 Lav en metode i `Library`, der kan fjerne en bog ud fra titel.
 
@@ -353,7 +377,7 @@ Metoden skal returnere `true`, hvis en bog blev fjernet, og `false`, hvis bogen 
 
 ---
 
-## Ekstraopgave 2: Genre
+### Ekstraopgave 2: Genre
 
 Tilføj en genre til `Book`.
 
@@ -363,7 +387,7 @@ Start simpelt med en `String`:
 private String genre;
 ```
 
-Udvid constructor og `printInfo()`.
+Udvid konstruktøren og `printInfo()`.
 
 Derefter kan du overveje at lave genre som en `enum`.
 
@@ -381,7 +405,7 @@ public enum Genre {
 
 ---
 
-## Ekstraopgave 3: Søg efter forfatter
+### Ekstraopgave 3: Søg efter forfatter
 
 Lav en metode i `Library`, der viser alle bøger af en bestemt forfatter.
 
@@ -393,7 +417,7 @@ public void printBooksByAuthor(String author)
 
 ---
 
-## Ekstraopgave 4: Tæl læste bøger
+### Ekstraopgave 4: Tæl læste bøger
 
 Lav en metode i `Library`, der returnerer antallet af læste bøger.
 
@@ -405,7 +429,7 @@ public int getNumberOfReadBooks()
 
 ---
 
-## Ekstraopgave 5: Simpel menu
+### Ekstraopgave 5: Simpel menu
 
 Lav en simpel tekstmenu i `main`.
 
@@ -424,9 +448,13 @@ Du kan bruge `Scanner` til at læse input fra brugeren.
 
 ---
 
-# Klassediagram
+## Klassediagram
 
 Projektet kan beskrives med følgende klassediagram:
+
+Diagrammet viser kun de gettere, som `Library` bruger (`getTitle()` og `isRead()`) – de øvrige gettere fra
+opgave 7 er udeladt for overskuelighedens skyld. Ekstraopgavernes metoder er heller ikke med. Returtyper kan
+skrives på (`+getTitle() String`), som I ser det i uge 38.
 
 ```mermaid
 classDiagram
@@ -460,7 +488,7 @@ classDiagram
 
 ---
 
-# Læringsmål
+## Læringsmål
 
 Når du er færdig med projektet, skal du kunne:
 
@@ -468,7 +496,7 @@ Når du er færdig med projektet, skal du kunne:
 * oprette objekter ud fra en klasse
 * forklare forskellen på en klasse og et objekt
 * bruge attributter til at gemme data i et objekt
-* skrive constructors
+* skrive konstruktører
 * skrive metoder, der ændrer objektets tilstand
 * bruge getters
 * arbejde med `ArrayList`
@@ -477,9 +505,12 @@ Når du er færdig med projektet, skal du kunne:
 
 ---
 
-# Aflevering
+## Aflevering
 
-Du afleverer din kode på its ved at kopierer indhold fra IntelliJ som tekst.
+Du afleverer din kode i itslearning ved at kopiere indholdet af dine tre klasser fra IntelliJ ind som tekst.
+
+**Deadline: fredag 18-09-2026** – se også
+[afleveringsoversigten på forsiden](../../README.md#afleveringer-og-deadlines).
 
 Koden skal indeholde:
 

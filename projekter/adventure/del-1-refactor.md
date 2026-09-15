@@ -11,9 +11,9 @@ der ryddes op.
 Koden skal **refaktoreres** – altså funktionalitet skal flyttes, uden ellers at ændres – og der
 skal benyttes nogle gode design-principper, så det bliver nemmere at arbejde med koden fremover.
 
-Det betyder, at der skal laves nogle flere **klasser**: en der tager rollen som brugerflade, en
-der påtager sig at være controller, en der er creator, og eventuelt endnu flere for at sikre
-Single Responsibility Principle.
+Det betyder, at der skal laves nogle flere **klasser**: én til brugerfladen (`UserInterface`), én
+der er controller (`Adventure`), én der er creator og bygger kortet (`Map`), og én der er spilleren
+(`Player`) – og eventuelt endnu flere, hvis Single Responsibility Principle kræver det.
 
 ### Hvorfor nu?
 
@@ -64,7 +64,11 @@ spillets map. Den klasse **kaldes af controlleren, inden spillet går i gang**.
 > **Creator-princippet:** Hvem har ansvaret for at skabe et nyt objekt? Normalt vil "container"-klassen
 > få tildelt ansvaret for at oprette de "indeholdte" objekter. Men at konfigurere kortet ved opstart
 > er en specialopgave, og vi skal passe på med at overbebyrde `Adventure` med for mange forskellige
-> typer opgaver. I følge problemdomænet er en ny klasse `Map` et oplagt bud.
+> typer opgaver. Ifølge problemdomænet er en ny klasse `Map` et oplagt bud.
+
+> Java har selv en `Map` i `java.util`. Det giver ingen problemer, så længe I ikke importerer den –
+> hvis IntelliJ foreslår `import java.util.Map;`, så sig nej. Vil I undgå forvekslingen helt, kan
+> klassen hedde fx `GameMap` eller `World`.
 
 ### Adventure vs Player
 
@@ -75,9 +79,11 @@ Så I skal have en spiller-klasse (`Player`) og hermed et spiller-objekt, der ke
 position på spillepladen (hvilket rum spilleren er i). Det er også det objekt, der bør håndtere at
 flytte "sig selv" rundt og tjekke, om en ønsket retning overhovedet er mulig.
 
-> **Information Expert:** `Adventure` kunne godt bede `Player` om at returnere `currentRoom` og
-> selv foretage flytningen – men det er i modstrid med Information Expert-princippet (og Law of
-> Demeter), som altid uddelegerer opgaven til den, der er tættest på data.
+> **Information Expert:** `Adventure` kunne godt bede `Player` om at returnere `currentRoom` og selv
+> foretage flytningen – men det strider mod Information Expert-princippet, der siger, at ansvaret skal
+> ligge hos den klasse, der har data (her: `Player`, som kender `currentRoom`). Det ville også give en
+> kæde som `player.getCurrentRoom().getNorth()` i `Adventure` – netop det, Law of Demeter advarer imod:
+> tal kun med dine nærmeste, ikke med deres bekendte.
 
 Sådan kan `Player.move()` for eksempel se ud:
 
@@ -85,10 +91,10 @@ Sådan kan `Player.move()` for eksempel se ud:
 public boolean move(String direction) {
 
     Room desiredRoom = switch (direction) {
-        case "north", "n" -> currentRoom.getNorth();
-        case "south", "s" -> currentRoom.getSouth();
-        case "east",  "e" -> currentRoom.getEast();
-        case "west",  "w" -> currentRoom.getWest();
+        case "north" -> currentRoom.getNorth();
+        case "south" -> currentRoom.getSouth();
+        case "east"  -> currentRoom.getEast();
+        case "west"  -> currentRoom.getWest();
         default -> null;
     };
 
@@ -102,6 +108,10 @@ public boolean move(String direction) {
 }
 ```
 
+Bemærk at `Player` kun kender de fulde retninger. Hvis jeres brugerflade også accepterer `n`, `e`,
+`s`, `w`, er det `UserInterface`, der oversætter `n` til `north`, *før* den sender det videre –
+`Player` skal ikke vide, hvordan brugeren har stavet.
+
 ### Navngivning
 
 Brug gode, sigende navne til klasserne – ord som `Controller` og `Creator` er alt for generiske.
@@ -114,7 +124,8 @@ For at få overblik over jeres nye programdesign skal I lave et **komplet klasse
 
 > Det skal **tegnes** på computer – tegnes, **IKKE** autogenereret fra IntelliJ.
 
-Sådan så resultatet ud, da forløbet sidst blev kørt:
+Sådan så resultatet ud, da forløbet sidst blev kørt (billedet er forenklet – mermaid-udgaven
+nedenfor er komplet):
 
 ![Klassediagram med UserInterface, Adventure, Player, Map og Room](images/klassediagram-refactored.png)
 
@@ -123,12 +134,18 @@ Og som mermaid, hvis I vil have en udgave, I kan rette i:
 ```mermaid
 classDiagram
     class UserInterface {
+        -Scanner scanner
+        -Adventure adventure
+        +startProgram()
         +parseInput(String command)
         +showHelp()
     }
     class Adventure {
         -Player player
-        +go(String direction)
+        -Map map
+        +startGame()
+        +go(String direction) boolean
+        +look() String
     }
     class Map {
         +buildMap()
@@ -137,10 +154,13 @@ classDiagram
     class Player {
         -Room currentRoom
         +move(String direction) boolean
+        +getCurrentRoom() Room
     }
     class Room {
         -String name
         -String description
+        +getName() String
+        +getDescription() String
     }
 
     UserInterface --> Adventure
@@ -190,15 +210,15 @@ Hvordan har I anvendt følgende principper i jeres Adventure?
 * Law of Demeter
 * Lav kobling
 
-> Ved at anvende principperne bliver koden også nemmere at teste. Husk negative tests – f.eks.
-> "ingen udgang mod nord".
+> Ved at anvende principperne bliver koden også nemmere at afprøve. Husk at prøve det, der *ikke*
+> må virke – f.eks. `go north`, hvor der ingen dør er.
 
 ---
 
 ## Aflevering
 
-**Hvordan:** Gen-aflever blot et link til repositoriet, når I er færdige. Upload også en pdf med
-klassediagrammet.
+**Hvordan:** Aflever et link til repositoriet (samme link som til del 1) som besvarelse på opgaven
+*Del 1 – refactor* i itslearning, sammen med en pdf med klassediagrammet.
 
 **Hvornår:** Helst i dag, men bare inden I begynder at arbejde på Adventure del 2 – se
 [deadlines i projektoversigten](../../README.md#afleveringer-og-deadlines).

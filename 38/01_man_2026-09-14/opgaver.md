@@ -369,8 +369,8 @@ Find et program, du selv har skrevet i sidste uge – gerne et fra
 
 ## Udfordring 1 – Diagram over noget, du har kodet
 
-Tag et program, du selv har skrevet – gerne `findBookByTitle` eller `printUnreadBooks` fra
-bogsamlingen.
+Tag et program, du selv har skrevet – gerne `isClassic` eller `printInfo` fra bogsamlingen (eller
+`findBookByTitle`/`printUnreadBooks`, hvis du er nået til Del 2).
 
 Tegn aktivitetsdiagrammet **bagefter**, ud fra koden.
 

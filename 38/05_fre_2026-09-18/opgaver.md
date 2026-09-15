@@ -16,7 +16,9 @@ Fokus er på:
 
 ## Kom i gang
 
-Opret et nyt Java-projekt i IntelliJ.
+Åbn ugens projekt `uge38-relationer-arraylist`, og opret dagens package
+`dag5_arraylist_soegning_redigering`. Klassen hedder det samme som i bogsamlingsprojektet, men det er en ny,
+uafhængig udgave i dagens package – rør ikke ved den i `bogsamling` (den afleveres i dag).
 
 Opret klassen `Book`:
 

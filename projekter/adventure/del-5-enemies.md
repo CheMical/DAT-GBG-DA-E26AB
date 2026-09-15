@@ -57,12 +57,15 @@ Spillet skal ikke udvides med flere kommandoer, men `attack` skal ændres:
 
 | Kommando | Betydning |
 |---|---|
-| `attack [fjende]` | Det aktuelle våben bliver brugt til et angreb på den nævnte fjende, alternativt den fjende der er nærmest |
+| `attack [fjende]` | Det aktuelle våben bliver brugt til et angreb på den nævnte fjende – eller, hvis der ikke angives et navn, på den første fjende i rummet |
 
 `attack` er nu mere kompliceret end nogen anden kommando:
 
-* Hvis der **ikke angives et navn**, angribes den nærmeste fjende i rummet.
-* Hvis der **ikke er nogle fjender** i rummet, angribes den tomme luft.
+* Hvis der **ikke angives et navn**, angribes den første fjende i rummets liste (I kan selv vælge
+  en anden regel – bare den er entydig).
+* Hvis der **ikke er nogen fjender** i rummet, angribes den tomme luft.
+* Hvis der angives et navn, som **ikke passer på en fjende i rummet**, skal spilleren have det at
+  vide (som ved `take`) – der bliver ikke angrebet, og der bruges ikke et skud.
 * Skydevåben har et begrænset antal skud i sig. Prøver man at angribe med et **tømt våben**, skal
   man have at vide, at det mislykkes.
 * Har man **ikke et våben equipped**, skal man også få at vide, at det mislykkes.
@@ -73,26 +76,29 @@ Attack af fjender er endnu mere kompliceret – så her følger en detaljeret ge
 skal foregå:
 
 1. **Først angribes fjenden** med det våben, som spilleren har equippet. Fjenden mister health
-   svarende til den damage, våbenet giver.
+   svarende til den damage, våbenet giver – og våbenet bruges (et skud mindre).
 
-2. **Derefter angriber fjenden spilleren** – det sker med det samme, og spilleren kan ikke nå at
-   flygte ud af rummet, selv ikke hvis der er angrebet med et langdistancevåben. Fjenden er også
+2. **Hvis fjenden derved mister al sin health**, dør den og drop'er sit våben (som spilleren
+   efterfølgende kan samle op), og forsvinder selv fra rummet – måske efterlader den et lig i form
+   af et item, som spilleren også kan samle op. Så er sekvensen slut.
+
+3. **Overlever fjenden, angriber den spilleren** – det sker med det samme, og spilleren kan ikke nå
+   at flygte ud af rummet, selv ikke hvis der er angrebet med et langdistancevåben. Fjenden er også
    udstyret med et våben, og spilleren mister health svarende til den damage, dét våben giver.
 
-3. **Forudsat at begge parter stadig er i live**, er attack-sekvensen sådan set ovre – og spilleren
-   kan vælge at gå ud af rummet, skifte våben, eller attack'e igen. Fjender angriber ikke
-   uprovokeret (i hvert fald ikke i grundversionen).
+4. **Forudsat at spilleren stadig er i live**, er attack-sekvensen ovre – og spilleren kan vælge at
+   gå ud af rummet, skifte våben, eller attack'e igen. Fjender angriber ikke uprovokeret (i hvert
+   fald ikke i grundversionen).
 
-4. **Hvis fjenden mister al sin health**, dør vedkommende og drop'er sit våben (som spilleren
-   efterfølgende kan samle op), og forsvinder selv fra rummet – måske efterlader den et lig i form
-   af et item, som spilleren også kan samle op.
+5. **Hvis spilleren mister al sin health**, er spillet slut: spilleren får det at vide, og
+   programmet afsluttes (som ved `exit`). Det gælder også, hvis man spiser sig ihjel i giftig mad.
 
 > Dette er den **grundlæggende** attack-sekvens – I er velkomne til at gøre den mere avanceret :)
 
 <img src="images/fjende-trold.png" alt="En trold med en kølle" width="150" align="right">
 
 Fjender behøver ikke være trolde. De kan være vagtrobotter, sultne planter, en gnaven bibliotekar
-eller noget helt fjerde — det afhænger af, hvilken verden I har bygget.
+eller noget helt fjerde – det afhænger af, hvilken verden I har bygget.
 
 ### Fjender i rumbeskrivelsen
 
@@ -121,6 +127,8 @@ You hit the cave troll with the rusty sword for 12 damage.
 The cave troll dies, dropping its club.
 ```
 
+> `troll` er det korte navn, `a cave troll` det lange – nøjagtig som `lamp` / `a shiny brass lamp`.
+
 ### Koden
 
 **`Enemy` skal være en klasse helt for sig selv, og altså IKKE arve fra `Item`.**
@@ -131,7 +139,8 @@ The cave troll dies, dropping its club.
 
 Enemy-objekter er ikke Items, men deres helt egne!
 
-* En enemy skal have et **navn**, en **beskrivelse**, et **health-niveau** og et **enkelt weapon**.
+* En enemy skal have et **kort og et langt navn** (som `Item`), en **beskrivelse**, et
+  **health-niveau** og et **enkelt weapon**.
 * Til forskel fra player har en enemy altid sit eneste våben equipped, og kan ikke skifte mellem
   våben.
 * En enemys våben er et almindeligt `Weapon`-objekt, som kan overtages af playeren, når enemyen er
@@ -140,6 +149,8 @@ Enemy-objekter er ikke Items, men deres helt egne!
   (`attack`) player med sit våben, og blive angrebet (`hit`) af players våben.
 * `Enemy` skal **selv** opdage, om den er død, droppe sit weapon, og forsvinde fra rummets liste
   over enemies, samt eventuelt efterlade et item (sit lig).
+* For at kunne gøre det, skal `Enemy` kende det rum, den står i – giv den en `Room`-attribut, der
+  sættes i constructoren (ligesom `Player` har `currentRoom`).
 
 ```mermaid
 classDiagram
@@ -149,25 +160,29 @@ classDiagram
         +addEnemy(Enemy enemy)
         +removeEnemy(Enemy enemy)
         +getEnemies() ArrayList~Enemy~
-        +findEnemy(String name) Enemy
+        +findEnemy(String shortName) Enemy
     }
     class Player {
         -int health
         -Weapon equipped
+        +equip(String shortName)
         +attack(String name)
         +hit(int damage)
     }
     class Enemy {
-        -String name
+        -String shortName
+        -String longName
         -String description
         -int health
         -Weapon weapon
+        -Room room
         +attack(Player player)
         +hit(int damage)
     }
     class Weapon {
         <<abstract>>
         +getDamage() int
+        +use()
         +canUse() boolean
     }
 
@@ -175,16 +190,21 @@ classDiagram
     Room "1" --> "0..*" Item : ligger i
     Enemy "1" --> "1" Weapon : equipped
     Player "1" --> "0..1" Weapon : equipped
+    Enemy --> Room : står i
     Player --> Room : currentRoom
 ```
+
+> **Bemærk:** Diagrammet viser ikke returtyper. Da al udskrift skal ske i `UserInterface`, skal
+> `attack` og `hit` returnere noget, som fortæller, hvad der skete – fx en `enum` med udfaldene
+> (`NO_WEAPON`, `WEAPON_EMPTY`, `NO_ENEMY`, `ENEMY_HIT`, `ENEMY_DIED`, …) eller en `int` med den
+> damage, der blev givet. Det er en del af designet, I skal tage stilling til i aktivitetsdiagrammet.
 
 ---
 
 ## Anbefalet procedure
 
-1. **Lav `attack`-kommandoen** uden at tage en fjende som parameter, men så spilleren blot attacker
-   det tomme rum og for eksempel affyrer et skud (hvis det er et `RangedWeapon`) – den del har du
-   nok allerede lavet i forbindelse med [Weapon](del-4-weapons.md).
+1. **Tjek, at `attack` fra [del 4](del-4-weapons.md) virker** – uden fjender, med og uden equipped
+   våben, og med et tomt skydevåben. Det er udgangspunktet for resten.
 
 2. **Tegn et aktivitetsdiagram** for, hvad der skal ske i attack-sekvensen.
 
@@ -213,8 +233,8 @@ classDiagram
 
 Det er svært at tro, at der bliver tid til udvidelser, men skulle I få attack-sekvensen til at
 fungere og sidde med god tid til overs, så er her nogle forslag. Rækkefølgen er vilkårlig, og ingen
-af dem er afhængige af hinanden, så vælg frit imellem dem. Det er altsammen blot ideer – vi har
-ikke færdige løsninger til nogle af dem.
+af dem er afhængige af hinanden, så vælg frit imellem dem. Det er alt sammen blot ideer – vi har
+ikke færdige løsninger til nogen af dem.
 
 ### NPC'er
 
@@ -237,7 +257,7 @@ enten har `go`, `attack`, `take` eller `eat` (evt. også andre kommandoer), kald
 registrerer, at der nu er gået en tur.
 
 Det er vigtigt, at I ikke blot lader alle kommandoer resultere i, at der er gået en tur, men
-specifikt kalder metoden – med mindre selvfølgelig at brugeren skal misse en tur, hvis hun staver
+specifikt kalder metoden – medmindre selvfølgelig at brugeren skal misse en tur, hvis hun staver
 forkert.
 
 Den metode skal derefter kalde en metode på alle fjender – eventuelt kun på fjenderne i samme rum
@@ -287,6 +307,9 @@ fra player og stikke af med det.
 
 I må stadig gerne arbejde i jeres grupper, men hvert enkelt medlem skal aflevere individuelt.
 
+> Det er i orden, at gruppens medlemmer afleverer den samme pdf – kravet er, at **hver enkelt**
+> afleverer den og kan stå inde for og forklare både koden og diagrammerne.
+
 ### Hvad
 
 Der skal afleveres en **pdf** med følgende:
@@ -298,7 +321,7 @@ Der skal afleveres en **pdf** med følgende:
     kan printes ud og tastes ind. (Det GitHub-repository må gerne være det, som I har arbejdet
     løbende med.)
   * Navne på samtlige gruppemedlemmer og deres GitHub-brugernavn
-* **Klassediagram** over alle klasser, associationer og arveforhold
+* **Klassediagram** over alle klasser, associationer (inkl. multiplicitet) og arveforhold
 * **Aktivitetsdiagram** over attack-sekvensen
 
 > Klassediagrammet **skal** være det gældende klassediagram for det færdige produkt.
@@ -309,7 +332,8 @@ UML-diagrammerne kan ligge i GitHub-repoet (i en `docs`-mappe).
 
 ### Hvordan
 
-Upload pdf'en som besvarelse på opgaven i itslearning.
+Upload pdf'en som besvarelse på opgaven i itslearning, og indsæt desuden linket til jeres
+GitHub-repository som klikbar tekst i besvarelsen – som ved de tidligere dele.
 
 ### Hvornår
 
@@ -364,42 +388,11 @@ Regler, der er værd at holde fast i:
 **Læs mere:** [What is an Activity Diagram?](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/)
 (Visual Paradigm)
 
-### Øvelse: Spiser katten?
+### Øvelse
 
-Jeg har en kat, der er meget sulten – og den har selv et meget sindrigt system for at beslutte, om
-den har spist op eller ej.
-
-Når den miaver, så miaver den altid **max fem gange**, før den opgiver – men hvis dens ønske bliver
-opfyldt inden, så holder den op med at miave. Den miaver meget intenst, så den kan ikke koncentrere
-sig om andet imens – det vil sige, at den først tjekker om der er mad, så miaver, så tjekker igen,
-etc. i et lille loop, der altså stopper efter 5 miav.
-
-Her er dens system, som starter, så snart den kommer ud i køkkenet:
-
-* Hvis der er mad i madskålen, så spiser den alt, hvad der er.
-* Hvis der ikke var mad i madskålen, så miaver den, indtil skålen bliver fyldt op (dog max fem
-  gange).
-* Hvis der ikke var mad i madskålen, og den ikke bliver fyldt op, så hopper katten op i
-  vindueskarmen.
-* Hvis der ikke er plads til at sidde i vindueskarmen, så hopper den ikke op, men miaver igen (fem
-  gange).
-* Hvis der er plads til at sidde i vindueskarmen, så venter den 5 minutter på, at der kommer mad i
-  skålen, før den opgiver og går ud.
-* Hvis der ikke var mad i skålen, og ikke plads i vindueskarmen, og ingen reagerer på dens miav, så
-  opgiver den og går ud.
-* Når den har spist, og skålen dermed er tom, så går den også ud.
-
-> En skål er altid enten tom eller fuld – katten spiser alt, hvad der er i den. I dens verden findes
-> der ikke en halvfuld skål.
-
-Det er ikke altid til at vide på forhånd, om der er mad i skålen, plads i vindueskarmen, eller om
-der bliver reageret på miaven, så mønsteret er ikke 100% ens fra gang til gang – men oplagt at lave
-et aktivitetsdiagram for.
-
-**Tegn et aktivitetsdiagram for katten.** Den slutter altid med at gå ud, men har ikke nødvendigvis
-fået noget at spise.
-
-**Arbejd sammen, og gør diagrammet så simpelt som muligt!**
+Er aktivitetsdiagrammer rustne, så tag
+[katte-øvelsen fra 14-09](../../38/01_man_2026-09-14/opgaver.md) igen, før I tegner
+attack-sekvensen – og sammenlign med jeres gamle tegning.
 
 ---
 

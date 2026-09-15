@@ -244,7 +244,11 @@ Datoerne for alle fem dele står samlet i
 Afleveringen sker i itslearning. For del 1-4 afleverer I **linket til jeres GitHub-repository** –
 til repositoriet som et hele, ikke til den enkelte fil eller mappe. Husk at gøre linket klikbart.
 
-For del 5 afleveres desuden en **pdf med dokumentation** – se [del 5](del-5-enemies.md).
+Til [del 1 – refactor](del-1-refactor.md) uploades desuden en **pdf med klassediagrammet**, og til
+[del 5](del-5-enemies.md) en **pdf med dokumentation**.
+
+Fredag 09-10 laver grupperne **kode-review** af hinandens projekter efter
+[review-skemaet](kode-review.md).
 
 ---
 

@@ -649,8 +649,8 @@ gantt
     dateFormat  YYYY-MM-DD
     axisFormat  %d-%m
 
-    section bogsamling
-    Bogsamling            :2026-09-7, 2026-09-18
+    section Bogsamling
+    Bogsamling     :2026-09-07, 2026-09-18
     
     section Adventure
     Adventure      :2026-09-21, 2026-10-09
@@ -667,19 +667,20 @@ gantt
 
 Se [00_vejledninger](00_vejledninger/README.md) – bl.a.
 [Organisering i IntelliJ](00_vejledninger/intellij_organisering.md), som gælder for alle dagens
-opgaver i uge 35–38.
+opgaver i uge 35–38, og [Lav dit eget tekstspil](00_vejledninger/tekstspil/README.md) – et frivilligt
+projekt, hvor du bygger et spil, holdet kan spille over netværket.
 
 ## Afleveringer og deadlines
 
-Alle afleveringer sker i **itslearning**. Ved kodeafleveringer afleverer I **linket til jeres
-GitHub-repository** – til repositoriet som et hele, ikke til den enkelte fil eller mappe. Husk at
+Alle afleveringer sker i **itslearning**. Ved kodeafleveringer **fra Adventure og frem** afleverer I **linket til
+jeres GitHub-repository** – til repositoriet som et hele, ikke til den enkelte fil eller mappe. Husk at
 gøre linket klikbart.
 
 ### [Bogsamling](projekter/bogsamling/readme.md)
 
 | Del | Undervisning | Deadline |
 |---|---|---|
-| Hele projektet | uge 37–38 | *meldes ud i undervisningen* |
+| Hele projektet | uge 37–38 | **fre 18-09-2026** |
 
 Bogsamling er ikke en bunden forudsætning. Koden afleveres som tekst, kopieret fra IntelliJ.
 
@@ -692,7 +693,7 @@ en pdf med dokumentation.
 | Del | Undervisning | Deadline |
 |---|---|---|
 | Intro + [del 1](projekter/adventure/del-1-rooms.md) | ons 23-09-2026 | **fre 25-09-2026 kl. 23:59** |
-| [Del 1 refactor](projekter/adventure/del-1-refactor.md) | fre 25-09-2026 | inden del 2 (man 28-09-2026) |
+| [Del 1 refactor](projekter/adventure/del-1-refactor.md) + pdf med klassediagram | fre 25-09-2026 | inden del 2 (man 28-09-2026) |
 | [Del 2](projekter/adventure/del-2-items.md) | man 28-09 + tir 29-09 | **tir 29-09-2026 kl. 23:59** |
 | [Del 3](projekter/adventure/del-3-food.md) | ons 30-09-2026 | **tor 01-10-2026 kl. 23:59** |
 | [Del 4](projekter/adventure/del-4-weapons.md) | man 05-10-2026 | **man 05-10-2026 kl. 23:59** |

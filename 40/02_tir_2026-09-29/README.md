@@ -337,8 +337,8 @@ classDiagram
         -Room currentRoom
         -ArrayList~Item~ inventory
         +move(String direction) boolean
-        +takeItem(String shortName) boolean
-        +dropItem(String shortName) boolean
+        +takeItem(String shortName) Item
+        +dropItem(String shortName) Item
     }
 
     class Room {
