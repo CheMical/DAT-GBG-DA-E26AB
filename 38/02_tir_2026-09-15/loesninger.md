@@ -262,8 +262,8 @@ flowchart LR
         c["c"]
     end
     subgraph heap["Heap"]
-        S1["String<br/>&quot;hello&quot; (fra pool)"]
-        S2["String<br/>&quot;hello&quot; (new)"]
+        S1["String hello<br/>(fra pool)"]
+        S2["String hello<br/>(oprettet med new)"]
     end
     a --> S1
     b --> S1
