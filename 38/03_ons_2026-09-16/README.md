@@ -417,12 +417,6 @@ System.out.println("Antal bøger: " + library.getNumberOfBooks());
 library.printBooks();
 ```
 
-Det samme princip kan senere bruges i Adventure:
-
-- et `Room` kan have en liste af `Item`
-- en spiller kan have en liste af ting i sit inventory
-- når en ting samles op, fjernes den fra rummet og tilføjes til spilleren
-
 ### Array og ArrayList sammenlignet
 
 | Array | ArrayList |
