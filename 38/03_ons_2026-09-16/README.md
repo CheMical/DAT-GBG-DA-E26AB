@@ -26,7 +26,7 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 ## Se denne video før undervisningen
 
-[ArrayLists](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=8h55m38s) (til: 09:05:23)
+[ArrayLists](https://www.youtube.com/watch?v=xTtL8E4LzTQ&list=PLEeqf0uSZqXsz7oU2U-VAxhQZ021PRVnd&t=8h55m50s) (til: 09:05:23)
 
 ## Læs nedenstående før undervisningen
 
