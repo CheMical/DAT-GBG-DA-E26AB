@@ -162,7 +162,7 @@
   <td><a href="39/01_man_2026-09-21/README.md">Mandag 21-09-2026</a></td>
   <td>Introduktion til git og GitHub</td>
   <td>MICA</td>
-  <td></td>
+  <td>Besøg fra studievejledning</td>
 </tr>
 <tr>
   <td></td>
