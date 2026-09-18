@@ -31,11 +31,11 @@ Når du har arbejdet med dagens materiale, skal du kunne:
 
 - forklare formålet med versionsstyring
 - forklare forskellen mellem Git og GitHub
-- forklare hvad et repository er
-- oprette et lokalt Git-repository
-- oprette et repository på GitHub
-- forbinde et lokalt repository med et repository på GitHub
-- hente et repository fra GitHub til din computer
+- forklare hvad et repositorie er
+- oprette et lokalt Git-repositorie
+- oprette et repositorie på GitHub
+- forbinde et lokalt repositorie med et repositorie på GitHub
+- hente et repositorie fra GitHub til din computer
 - forklare hvad staging og commits er
 - oprette commits med beskrivende commit-beskeder
 - vise projektets commit-historik
@@ -79,19 +79,19 @@ Git kan blandt andet hjælpe med at:
 - vende tilbage til tidligere versioner
 - udveksle ændringer med andre udviklere
 
-### Hvad er et repository?
+### Hvad er et repositorie?
 
-Et Git-projekt kaldes et **repository**, ofte forkortet til **repo**.
+Et Git-projekt kaldes et **repositorie**, ofte forkortet til **repo**.
 
-Et lokalt repository består af projektets almindelige filer og en skjult mappe med navnet `.git`. Den skjulte mappe indeholder Git-historikken og oplysninger om repositoryet.
+Et lokalt repositorie består af projektets almindelige filer og en skjult mappe med navnet `.git`. Den skjulte mappe indeholder Git-historikken og oplysninger om repositoriet.
 
 Du skal normalt ikke ændre indholdet af `.git` manuelt.
 
 ### Hvad er GitHub?
 
-GitHub er en onlinetjeneste til opbevaring og deling af Git-repositories. Et repository på GitHub kaldes ofte et **remote repository**, fordi det ligger et andet sted end den lokale kopi på din computer.
+GitHub er en onlinetjeneste til opbevaring og deling af Git-repositorier. Et repositorie på GitHub kaldes ofte et **remote repositorie**, fordi det ligger et andet sted end den lokale kopi på din computer.
 
-Et repository kan derfor eksistere:
+Et repositorie kan derfor eksistere:
 
 1. kun lokalt på din computer
 2. kun på GitHub
@@ -144,7 +144,7 @@ cd /c/Users/mica/IdeaProjects
 ls
 ```
 
-## Opret først et repository lokalt via terminal
+## Opret et repositorie lokalt via terminal
 
 ### Opret en projektmappe
 
@@ -198,7 +198,49 @@ git status
 
 Git viser nu `README.md` som en fil, der endnu ikke spores.
 
-## Opret først et repositorie på GitHub
+### Alternativ: Opret et repositorie lokalt via IntelliJ
+
+Hvis du foretrækker at oprette projektet direkte i IntelliJ, kan du gøre det uden først at bruge terminalen.
+
+1. Klik på `File` → `New` → `Project`.
+2. Vælg en mappe, hvor projektet skal ligge.
+3. Angiv et projektnavn, fx `mit-forste-repositorie`.
+4. Klik på `Create`.
+
+IntelliJ opretter nu projektet i en lokal mappe på din computer.
+
+Når projektet er åbent, skal du aktivere Git i projektet:
+
+1. Gå til `VCS` → `Enable Version Control Integration...`
+2. Vælg `Git`
+3. IntelliJ opretter den skjulte mappe `.git` i projektet
+
+Du kan kontrollere det i terminalen med:
+
+```bash
+git status
+```
+
+Hvis Git er sat korrekt op, vil IntelliJ vise, at `README.md` eller andre filer er nye og endnu ikke er commit’taet.
+
+For at lave en commit i IntelliJ kan du gøre dette:
+
+1. Højreklik på filen i projektet
+2. Vælg `Git` → `Add`
+3. Gå til `Git` → `Commit`
+4. Skriv en god commit-besked, fx `Tilføj introduktion til projektet`
+5. Klik på `Commit`
+
+Alternativt kan du fortsat bruge terminalen:
+
+```bash
+git add .
+git commit -m "Tilføj introduktion til projektet"
+```
+
+Det vigtigste er, at princippet er det samme: du har et lokalt repositorie, du laver commits, og senere kan du koble det til GitHub.
+
+## Opret et repositorie på GitHub
 
 Et repositorie kan også oprettes på GitHub først og derefter hentes til computeren.
 
@@ -404,4 +446,3 @@ Det er vigtigt at forstå, at `git commit` ikke sender noget til GitHub. Committ
 ## Aktiviteter i undervisningen
 
 De praktiske opgaver til undervisningsgangen findes i [opgaver.md](opgaver.md).
-
