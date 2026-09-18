@@ -420,25 +420,25 @@ Hver commit har et entydigt id, en forfatter, et tidspunkt og en commit-besked.
 Når du arbejder med Git, bevæger dine ændringer sig gennem flere stadier:
 
 ```text
-┌─────────────────────────────────────────────────────────────┐
-│                     DIN COMPUTER                             │
-│                                                              │
-│  Arbejdsmappe  →  Staging area  →  Lokalt repositorie      │
-│  (Dine filer)     (git add)       (git commit)              │
-│                                        ↓                     │
-│                                   git push                   │
-└─────────────────────────────────────────────────────────────┘
-                          ↓
-┌─────────────────────────────────────────────────────────────┐
-│                        GITHUB                                │
-│                                                              │
-│                   Remote repositorie                         │
-│                 (Dit projekt online)                         │
-│                        ↓                                     │
-│                    git pull                                  │
-└─────────────────────────────────────────────────────────────┘
-                          ↓
-            Tilbage til din arbejdsmappe
+┌───────────────────────────────────────────────────────────────┐
+│                       DIN COMPUTER                            │
+│                                                               │
+│    Arbejdsmappe  →  Staging area  →  Lokalt repositorie       │
+│    (Dine filer)       (git add)        (git commit)           │
+│                                             ↓                 │
+│                                        git push               │
+└───────────────────────────────────────────────────────────────┘
+                             ↓
+┌───────────────────────────────────────────────────────────────┐
+│                          GITHUB                               │
+│                                                               │
+│                     Remote repositorie                        │
+│                   (Dit projekt online)                        │
+│                             ↓                                 │
+│                         git pull                              │
+└───────────────────────────────────────────────────────────────┘
+                             ↓
+              Tilbage til din arbejdsmappe
 ```
 
 **Flowet:**
