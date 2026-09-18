@@ -55,7 +55,9 @@ Om GitHub:
 [How to create your first GitHub repository: A beginner's guide | Tutorial](https://www.youtube.com/watch?v=-RZ03WHqkaY)  
 [How to upload files and folders to GitHub: GitHub for Beginners](https://www.youtube.com/watch?v=tlu5e0TxSzo)
 
-## Læs nedenstående før undervisningen
+## Grundlæggende begreber
+
+Læs disse afsnit for at forstå de vigtigste Git-koncepter, før du går i gang med praktiske opgaver.
 
 ### Versionsstyring i hverdagen
 
@@ -144,9 +146,13 @@ cd /c/Users/mica/IdeaProjects
 ls
 ```
 
-## Opret et repositorie lokalt via terminal
+## Opret dit første repositorie
 
-### Opret en projektmappe
+Du kan oprette et repositorie på to måder: via terminalen eller via IntelliJ. Vælg den metode, du er mest komfortabel med.
+
+### Vejledning A: Opret repositorie via Terminal
+
+#### Opret en projektmappe
 
 Opret en ny mappe og gå ind i den:
 
@@ -155,7 +161,7 @@ mkdir mit-forste-repository
 cd mit-forste-repository
 ```
 
-### Initialiser Git
+#### Initialiser Git
 
 Gør mappen til et Git-repositorie:
 
@@ -178,7 +184,7 @@ git status
 - hvilke filer der er ændret
 - hvilke ændringer der er gjort klar til næste commit
 
-### Opret en fil
+#### Opret en fil
 
 Opret filen `README.md` i mappen. Du kan gøre det i IntelliJ eller med en almindelig teksteditor.
 
@@ -198,7 +204,7 @@ git status
 
 Git viser nu `README.md` som en fil, der endnu ikke spores.
 
-### Alternativ: Opret et repositorie lokalt via IntelliJ
+### Vejledning B: Opret repositorie via IntelliJ
 
 Hvis du foretrækker at oprette projektet direkte i IntelliJ, kan du gøre det uden først at bruge terminalen.
 
@@ -240,9 +246,15 @@ git commit -m "Tilføj introduktion til projektet"
 
 Det vigtigste er, at princippet er det samme: du har et lokalt repositorie, du laver commits, og senere kan du koble det til GitHub.
 
-## Opret et repositorie på GitHub
+## Forbind dit repositorie med GitHub
 
-Et repositorie kan også oprettes på GitHub først og derefter hentes til computeren.
+### To veje til GitHub
+
+Der er to måder at få dit repositorie på GitHub:
+
+**Vej 1: Opret på GitHub først, derefter klon lokalt**
+
+Et repositorie kan oprettes på GitHub først og derefter hentes til computeren.
 
 Når du opretter repositoriet på GitHub, skal du blandt andet vælge:
 
@@ -279,7 +291,7 @@ Gå derefter ind i den hentede mappe:
 cd repository-navn
 ```
 
-## Gør et lokalt repositorie tilgængeligt på GitHub
+**Vej 2: Opret lokalt først, derefter push til GitHub**
 
 Hvis repositoriet blev oprettet lokalt først, skal der oprettes et tomt repositorie på GitHub. Undlad i dette tilfælde at få GitHub til at oprette README, licens eller `.gitignore`, da det ellers ikke er helt tomt.
 
@@ -295,12 +307,6 @@ Kontrollér forbindelsen:
 
 ```bash
 git remote -v
-```
-
-Sørg for, at den lokale branch hedder `main`:
-
-```bash
-git branch -M main
 ```
 
 Når der er oprettet mindst én lokal commit, kan den sendes til GitHub:
@@ -409,6 +415,39 @@ git log --oneline
 
 Hver commit har et entydigt id, en forfatter, et tidspunkt og en commit-besked.
 
+## Arbejdsflowet: Fra lokalt til GitHub
+
+Når du arbejder med Git, bevæger dine ændringer sig gennem flere stadier:
+
+```text
+┌─────────────────────────────────────────────────────────────┐
+│                     DIN COMPUTER                             │
+│                                                              │
+│  Arbejdsmappe  →  Staging area  →  Lokalt repositorie      │
+│  (Dine filer)     (git add)       (git commit)              │
+│                                        ↓                     │
+│                                   git push                   │
+└─────────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│                        GITHUB                                │
+│                                                              │
+│                   Remote repositorie                         │
+│                 (Dit projekt online)                         │
+│                        ↓                                     │
+│                    git pull                                  │
+└─────────────────────────────────────────────────────────────┘
+                          ↓
+            Tilbage til din arbejdsmappe
+```
+
+**Flowet:**
+1. **Arbejdsmappe:** Du ændrer dine filer.
+2. **Staging area:** Du vælger hvilke ændringer der skal med (`git add`).
+3. **Lokalt repositorie:** Du gemmer ændringerne (`git commit`).
+4. **GitHub:** Du sender dine commits til GitHub (`git push`).
+5. **Hentning:** Du kan hente andres ændringer fra GitHub (`git pull`).
+
 ## Den grundlæggende arbejdsgang
 
 Når repositoriet allerede er oprettet og forbundet med GitHub, vil en almindelig arbejdsgang være:
@@ -427,6 +466,14 @@ Kommandoerne har forskellige opgaver:
 - `git commit` gemmer ændringerne lokalt i historikken.
 - `git push` sender lokale commits til GitHub.
 
+Hvis andre har lavet ændringer på GitHub, som du skal hente ned til din computer, kan du bruge:
+
+```bash
+git pull
+```
+
+`git pull` henter de nyeste ændringer fra GitHub og merger dem ind i dit lokale arbejde.
+
 Det er vigtigt at forstå, at `git commit` ikke sender noget til GitHub. Committen oprettes lokalt. Først med `git push` bliver den sendt til det tilknyttede remote repositorie.
 
 ## Det vigtigste at tage med
@@ -441,6 +488,7 @@ Det er vigtigt at forstå, at `git commit` ikke sender noget til GitHub. Committ
 - `git add` vælger ændringer til næste commit.
 - `git commit` gemmer ændringer lokalt i historikken.
 - `git push` sender commits til GitHub.
+- `git pull` henter ændringer fra GitHub til din computer.
 - Små commits med præcise beskeder gør historikken lettere at forstå.
 
 ## Aktiviteter i undervisningen
