@@ -144,7 +144,7 @@ cd /c/Users/mica/IdeaProjects
 ls
 ```
 
-## Opret først et repository lokalt
+## Opret først et repository lokalt via terminal
 
 ### Opret en projektmappe
 
