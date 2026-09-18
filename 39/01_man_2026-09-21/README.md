@@ -246,8 +246,8 @@ Når Git er aktiveret, vil IntelliJ markere dine filer med farver i Project View
 
 Du kan også åbne **Changes**-vinduet for at se alle ændringer samlet:
 
-- `Git` → `View Git Status` eller
-- `Alt+9` (Windows) / `⌘9` (Mac)
+- Klik på "Commit"-ikonet (vandret streg med cirkel ovenpå) i venstre sidebar, eller
+- Brug `Alt+0` (Windows) / `⌘0` (Mac)
 
 #### Opret en fil og lav din første commit
 
@@ -264,7 +264,7 @@ Dette repositorie bruges til at lære Git.
 4. Du ser nu, at `README.md` er markeret i rødt (eller en anden farve for utrackede filer).
 5. Højreklik på filen → `Git` → `Add`
 6. Filen er nu markeret i grønt og er klar til commit.
-7. Gå til `Git` → `Commit` (eller brug `Ctrl+K` / `⌘K` (Commit) eller `Alt+0` / `⌘0` på Windows)
+7. Gå til `Git` → `Commit` (eller brug `Ctrl+K` / `⌘K` (Commit) eller `Alt+0` / `⌘0`)
 8. Skriv en god commit-besked: `Tilføj introduktion til projektet`
 9. Klik på `Commit`
 
@@ -419,7 +419,7 @@ git status
 ```
 
 **I IntelliJ:**
-- Åbn **Changes**-vinduet: `Git` → `View Git Status` eller `Alt+9` (Windows) / `⌘9` (Mac)
+- Åbn **Commit**-panelet i venstre sidebar: klik på "Commit"-ikonet (vandret streg med cirkel ovenpå) eller brug `Alt+0` (Windows) / `⌘0` (Mac)
 - Her ser du alle filer grupperet efter status:
   - **Unversioned Files:** Filer som Git ikke følger (som `git status` viser som "Untracked")
   - **Modified:** Ændrede filer
@@ -447,9 +447,14 @@ Punktummet betyder den aktuelle mappe. Som begynder er det en god vane at køre 
 - Højreklik på en fil i Project View
 - Vælg `Git` → `Add`
 
-Eller i Changes-vinduet:
-- Marker de filer du vil tilføje
-- Højreklik og vælg `Git` → `Add to Index` eller klik på pilen for at flytte filen til staging area
+Eller i **Commit**-panelet:
+- Marker de filer du vil committes
+- Klik på pilen `→` eller højreklik → `Git` → `Add to Index`
+
+Filerne flyttes nu til "Staged"-sektionen.
+
+**Alternativt i Project View:**
+- Højreklik på en fil → `Git` → `Add`
 
 ### Opret en commit
 
@@ -479,13 +484,15 @@ færdig
 ```
 
 **I IntelliJ:**
-1. Gå til `Git` → `Commit` eller brug `Ctrl+K` / `⌘K` eller `Alt+0` / `⌘0` (Windows)
-2. Commit-dialogen åbnes
-3. Du ser alle ændringer som skal committes (kun staged filer)
-4. Skriv commit-beskeden i tekstfeltet øverst
-5. Klik `Commit` eller `Commit and Push` hvis du vil pushe samtidig
+1. Gå til `Git` → `Commit` eller brug `Ctrl+K` / `⌘K` eller `Alt+0` / `⌘0`
+2. **Commit**-dialogen åbnes
+3. Skriv commit-beskeden i tekstfeltet øverst
+4. Hvis der er filer i "Unstaged Changes", skal du enten:
+   - Markere dem og klikke på `+` for at stage dem først, eller
+   - Klikke på "Amend" hvis du vil tilføje dem til den forrige commit
+5. Klik `Commit`
 
-Du kan også tilføje filer direkte fra Commit-dialogen ved at markere dem i listen.
+Committen er nu gemt lokalt.
 
 ### Lav små, sammenhængende commits
 
@@ -591,8 +598,8 @@ Hvis du foretrækker at arbejde helt i IntelliJ uden at bruge terminalen, er her
 
 ### 1. Se ændringerne (git status)
 
-Åbn Changes-vinduet:
-- `Git` → `View Git Status` eller `Alt+9` (Windows) / `⌘9` (Mac)
+Åbn **Commit**-panelet i venstre sidebar:
+- Klik på "Commit"-ikonet (vandret streg med cirkel ovenpå) eller brug `Alt+0` (Windows) / `⌘0` (Mac)
 
 Du ser alle ændringer grupperet efter status. De filer som skal committes, er under "Staged" eller "Modified".
 
@@ -661,7 +668,7 @@ Her er en hurtig reference til de vigtigste Git-kommandoer og deres ækvivalente
 
 | Opgave | Windows | Mac |
 |--------|---------|-----|
-| **Se status** | `git status` / `Alt+9` | `git status` / `⌘9` |
+| **Se status** | `git status` / `Alt+0` | `git status` / `⌘0` |
 | **Tilføj en fil** | `git add fil.java` | `git add fil.java` |
 | **Tilføj alle filer** | `git add .` | `git add .` |
 | **Opret commit** | `git commit -m "besked"` / `Ctrl+K` eller `Alt+0` | `git commit -m "besked"` / `⌘K` eller `⌘0` |
@@ -683,4 +690,3 @@ For en komplet liste over alle tastaturgenveje i IntelliJ IDEA, se JetBrains off
 
 - **Windows:** [Reference Keymap - Default (Windows)](https://www.jetbrains.com/help/idea/reference-keymap-win-default.html)
 - **Mac:** [Reference Keymap - Default (Mac)](https://www.jetbrains.com/help/idea/reference-keymap-mac-default.html)
-
