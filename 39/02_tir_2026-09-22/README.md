@@ -197,14 +197,14 @@ Hvis en klasse får for mange ansvar, bliver den svær at forstå og svær at æ
 
 Afhængigheder handler om, at klasser bruger hinanden. Det er normalt okay, men vi vil gerne holde afhængighederne så simple som muligt, så en ændring ikke påvirker for mange andre klasser.
 
-### Coupling
+### Coupling (kobling)
 
-Coupling betyder, hvor tæt klasser er koblet sammen.
+Coupling betyder, hvor tæt klasser er koblet sammen. I dansk kan vi også sige, at det handler om, hvor stærkt klasser er afhængige af hinanden.
 
-- Lav coupling = klasserne er relativt uafhængige af hinanden
-- Høj coupling = klasserne er meget afhængige af hinanden
+- Lav kobling = klasserne er relativt uafhængige af hinanden
+- Høj kobling = klasserne er meget afhængige af hinanden
 
-Eksempel på høj coupling:
+Eksempel på høj kobling:
 
 ```java
 public class Main {
@@ -221,7 +221,7 @@ public class Main {
 
 Her bliver `Main` ansvarlig for for mange ting. Koden bliver svær at læse, og tingene står meget tæt sammen.
 
-Eksempel på lavere coupling:
+Eksempel på lavere kobling:
 
 ```java
 public class Main {
@@ -235,14 +235,14 @@ public class Main {
 
 Nu er `Main` kun ansvarlig for at starte programmet. De konkrete handlinger ligger i passende klasser.
 
-### Cohesion
+### Cohesion (sammenhæng)
 
-Cohesion handler om, hvor godt metoderne i en klasse arbejder sammen mod samme formål.
+Cohesion handler om, hvor godt metoderne i en klasse arbejder sammen mod samme formål. I dansk kan vi også sige, at det handler om, hvor godt en klasse har en tydelig sammenhæng i sit indhold.
 
-- Høj cohesion = klassen har et tydeligt formål
-- Lav cohesion = klassen blandes med mange forskellige emner
+- Høj sammenhæng = klassen har et tydeligt formål
+- Lav sammenhæng = klassen blandes med mange forskellige emner
 
-Eksempel på lav cohesion:
+Eksempel på lav sammenhæng:
 
 ```java
 public class Library {
@@ -256,7 +256,7 @@ public class Library {
 
 Her blandes flere forskellige ting i samme klasse.
 
-Eksempel på høj cohesion:
+Eksempel på høj sammenhæng:
 
 ```java
 public class Library {
