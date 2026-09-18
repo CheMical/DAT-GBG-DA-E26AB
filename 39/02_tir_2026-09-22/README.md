@@ -2,11 +2,11 @@
 
 ## Beskrivelse
 
-I de foregående lektioner har vi arbejdet med klasser, objekter, metoder og `ArrayList`. Vi har lavet projektet om bogsamling, hvor vi har bygget klasser som `Book` og `Library`, så vi kan oprette bøger, lægge dem i en liste og finde dem igen.
+I de foregående lektioner har vi arbejdet med klasser, objekter, metoder og `ArrayList`. Vi har bygget projektet om bogsamling, hvor vi har lavet klasser som `Book` og `Library`.
 
-I denne lektion tager vi et nyt skridt: ikke kun at få programmet til at fungere, men at tænke over, hvordan koden er bygget. Et program kan godt køre, men stadig være svært at forstå, ændre og udvide. Derfor arbejder vi med begreber som user stories, controller, ansvar, afhængigheder, coupling og cohesion.
+I denne lektion tager vi et nyt skridt: ikke kun at få programmet til at fungere, men at spørge, hvordan koden er organiseret. Et program kan godt køre, men stadig være svært at forstå, ændre og udvide. Derfor arbejder vi med user stories, controller, ansvar, afhængigheder, coupling og cohesion.
 
-Målet er, at vi lærer at organisere vores kode, så hver klasse har et klart formål, og så flere klasser kan samarbejde uden at blive for tæt koblet sammen.
+Målet er, at vi lærer at strukturere koden, så hver klasse har et klart ansvar, og så flere klasser kan samarbejde uden at blive for tæt koblet sammen.
 
 ## Læringsmål
 
@@ -36,7 +36,13 @@ Før lektionen bør du have genopfrisket:
 - hvordan `Book` og `Library` samarbejder
 - forskellen mellem en klasse, der beskriver data, og en klasse, der styrer flowet
 
-Vi bruger bogsamlingen som eksempel, fordi det er det projekt, vi allerede har arbejdet med. Det gør det lettere at se, hvordan designbegreber faktisk hænger sammen med den kode, vi allerede kender.
+## Udgangspunkt
+
+Vi fortsætter med projektet om bogsamling, fordi det er det projekt, vi allerede har arbejdet med.
+
+Vi har allerede set, at `Book` beskriver én bog, og at `Library` holder styr på mange bøger i en `ArrayList`.
+
+Det giver os et godt udgangspunkt til at tale om design i stedet for kun kode.
 
 ```java
 public class Book {
@@ -65,6 +71,8 @@ public class Book {
 ```
 
 ```java
+import java.util.ArrayList;
+
 public class Library {
     private ArrayList<Book> books;
 
@@ -87,9 +95,11 @@ public class Library {
 }
 ```
 
+Dette er vores udgangspunkt. Nu skal vi fokusere på, hvordan vi organiserer koden, så den bliver lettere at forstå, ændre og udvide.
+
 ## Aktiviteter i undervisningen
 
-### 1. User stories i bogsamling
+### User stories i bogsamling
 
 En user story er en kort beskrivelse af en funktionalitet fra brugerens synspunkt. Den beskriver ikke, hvordan vi skal bygge løsningen, men hvad brugeren vil kunne gøre.
 
@@ -136,11 +146,11 @@ Diskussion:
 - Hvilke acceptkriterier ville du skrive til “find bog” eller “markér som læst”?
 - Hvorfor er det nyttigt at have både en user story og acceptkriterier?
 
-### 2. Controller
+### Controller
 
-En controller er ofte den del af programmet, der styrer flowet. Den læser input, vælger den rigtige handling og kalder de rette metoder i andre klasser.
+Når vi har en brugerflade eller en konsolmenu, er controlleren den del, der styrer flowet. Den læser input, vælger den rette handling og kalder de metoder, der faktisk udfører arbejdet.
 
-Et simpelt eksempel kunne være en `LibraryController`, der styrer menuen i konsolprogrammet:
+Et simpelt eksempel kunne være en `LibraryController`:
 
 ```java
 public class LibraryController {
@@ -163,13 +173,13 @@ public class LibraryController {
 }
 ```
 
-Controlleren gør ikke alt selv. Den styrer ikke bogens data direkte. Det er `Book` og `Library`, der holder informationen og udfører de konkrete handlinger.
+Her styrer controlleren menuen og brugerinput. Den bruger `Library` til at gøre selve arbejdet.
 
-Det er vigtigt, at controlleren ikke bliver en "stor bunke af alt". Den skal styre flowet, ikke tage over for hele programlogikken.
+Det er vigtigt, at controlleren ikke bliver en stor “altmulig-mand”. Den skal styre flowet, ikke holde alle data og alle beslutninger selv.
 
-### 3. Ansvar og afhængigheder
+### Ansvar og afhængigheder
 
-Når vi designer klasser, er det vigtigt at spørge:
+Når vi designer klasser, bør vi altid spørge:
 
 - Hvad er klassen ansvarlig for?
 - Hvilken information skal den kende til?
@@ -178,16 +188,16 @@ Når vi designer klasser, er det vigtigt at spørge:
 
 Eksempler i bogsamlingen:
 
-- `Book` har ansvar for beskrivelser af en bog: titel, forfatter, læsestatus
-- `Library` har ansvar for at holde en samling af bøger og finde/fjerne/opdatere dem
+- `Book` har ansvar for at beskrive en bog: titel, forfatter og læsestatus
+- `Library` har ansvar for at holde bogsamlingen og finde/tilføje/fjerne bøger
 - `LibraryController` har ansvar for menuen og brugerinput
-- `Main` har ansvar for at starte programmet og lave testkald
+- `Main` har ansvar for at starte programmet og teste det
 
-Hvis en klasse har for mange ansvar, bliver den svær at forstå og svær at ændre. Derfor er det vigtigt, at klasserne har tydelige roller.
+Hvis en klasse får for mange ansvar, bliver den svær at forstå og svær at ændre. Derfor er det vigtigt, at klasserne har tydelige roller.
 
-Afhængigheder handler om, at klasser bruger hinanden. Det er normalt okay, men vi vil gerne holde afhængighederne lavt koblede, så en ændring ikke påvirker for mange andre klasser.
+Afhængigheder handler om, at klasser bruger hinanden. Det er normalt okay, men vi vil gerne holde afhængighederne så simple som muligt, så en ændring ikke påvirker for mange andre klasser.
 
-### 4. Coupling
+### Coupling
 
 Coupling betyder, hvor tæt klasser er koblet sammen.
 
@@ -201,10 +211,10 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Book> books = new ArrayList<>();
 
-        Book book = new Book("Dune", "Frank Herbert");
+        Book book = new Book("The Hobbit", "J.R.R. Tolkien");
         books.add(book);
 
-        // meget kode her: søgning, udskrift, validation, logging, menu
+        // meget kode her: søgning, visning, menu, validation, logging
     }
 }
 ```
@@ -225,7 +235,7 @@ public class Main {
 
 Nu er `Main` kun ansvarlig for at starte programmet. De konkrete handlinger ligger i passende klasser.
 
-### 5. Cohesion
+### Cohesion
 
 Cohesion handler om, hvor godt metoderne i en klasse arbejder sammen mod samme formål.
 
@@ -259,9 +269,9 @@ public class Library {
 
 Her hører metoderne sammen: de arbejder alle med bibliotekets samling af bøger.
 
-### 6. Refaktoring i bogsamlingen
+### Refaktoring af bogsamlingen
 
-Et godt design bliver tydeligt, når vi refaktorerer.
+Det er vigtigt at være opmærksom på, når vi har for meget kode i én klasse.
 
 Hvis vi starter med at have alt i `Main`, kan vi løbe ind i dette problem:
 
@@ -273,7 +283,7 @@ Hvis vi starter med at have alt i `Main`, kan vi løbe ind i dette problem:
 - vis menuer
 - håndter valg
 
-Det er meget, meget meget i én klasse.
+Det er meget i én klasse.
 
 I stedet kan vi dele det op:
 
@@ -282,17 +292,17 @@ I stedet kan vi dele det op:
 - `LibraryController` styrer brugerinteraktionen
 - `Main` starter programmet
 
-På den måde bliver koden mere overskuelig og lettere at udvikle videre.
+Det gør koden mere overskuelig, lettere at teste og lettere at udvide.
 
-### 7. Opgaver i undervisningen
+### Opgaver i undervisningen
 
 1. Skriv 3–5 user stories til projektet bogsamling.
 2. Beskriv, hvilket ansvar hver af følgende klasser bør have: `Book`, `Library`, `LibraryController`, `Main`.
 3. Tag et eksempel på kode, hvor meget står i `Main`, og diskuter, hvordan det kan refaktoreres.
 4. Forklar, hvor der er høj coupling eller lav cohesion i et eksempel.
-5. Skriv en kort beskrivelse af, hvordan en bedre designløsning ville se ud i bogsamlingen.
+5. Skriv et acceptkriterium til en user story i bogsamlingen.
 
-### 8. Opsamling
+### Opsamling
 
 Design handler ikke kun om, hvordan koden ser ud, men om, hvordan den er organiseret. Når vi arbejder med user stories, controller, ansvar, afhængigheder, coupling og cohesion, så skaber vi kode, der er:
 
