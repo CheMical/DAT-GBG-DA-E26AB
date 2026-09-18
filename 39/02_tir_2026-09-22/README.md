@@ -177,6 +177,22 @@ Her styrer controlleren menuen og brugerinput. Den bruger `Library` til at gøre
 
 Det er vigtigt, at controlleren ikke bliver en stor “altmulig-mand”. Den skal styre flowet, ikke holde alle data og alle beslutninger selv.
 
+#### En enkel opdeling i et konsolprogram
+
+I et konsolprogram kan vi tænke om design på en enkel måde:
+
+- Data/struktur: klasser, der beskriver problemområdet og holder information
+- Controller: klassen, der styrer brugerinteraktionen og flowet
+- Startpunkt: klassen, der sætter programmet i gang
+
+I bogsamlingen betyder det for eksempel:
+
+- `Book` og `Library` er data/struktur: de repræsenterer bogsamlingen og bogernes oplysninger
+- `LibraryController` er controlleren: den læser input, viser menu og kalder de rigtige metoder
+- `Main` er startpunktet: den opretter objekter og starter programmet
+
+Dette er en praktisk og konkret måde at tænke om ansvar på, når vi endnu ikke har lært MVC (Model-View-Controller) som et formelt mønster. Vi fokuserer her på tydelige roller i programmet, ikke på en komplet arkitektur med flere lag.
+
 ### Ansvar og afhængigheder
 
 Når vi designer klasser, bør vi altid spørge:
