@@ -247,7 +247,7 @@ Når Git er aktiveret, vil IntelliJ markere dine filer med farver i Project View
 Du kan også åbne **Changes**-vinduet for at se alle ændringer samlet:
 
 - `Git` → `View Git Status` eller
-- `Alt+9` (Windows) / `Cmd+9` (Mac)
+- `Alt+9` (Windows) / `⌘9` (Mac)
 
 #### Opret en fil og lav din første commit
 
@@ -264,7 +264,7 @@ Dette repositorie bruges til at lære Git.
 4. Du ser nu, at `README.md` er markeret i rødt (eller en anden farve for utrackede filer).
 5. Højreklik på filen → `Git` → `Add`
 6. Filen er nu markeret i grønt og er klar til commit.
-7. Gå til `Git` → `Commit` (eller brug `Ctrl+K` eller `Alt+0` på Windows)
+7. Gå til `Git` → `Commit` (eller brug `Ctrl+K` / `⌘K` (Commit) eller `Alt+0` / `⌘0` på Windows)
 8. Skriv en god commit-besked: `Tilføj introduktion til projektet`
 9. Klik på `Commit`
 
@@ -274,7 +274,7 @@ Committen er nu gemt lokalt i dit repositorie.
 
 Du kan også fortsætte med at bruge terminalen direkte i IntelliJ:
 
-1. Åbn terminalen nederst: `View` → `Tool Windows` → `Terminal` eller `Alt+F12`
+1. Åbn terminalen nederst: `View` → `Tool Windows` → `Terminal` eller `Alt+F12` (Windows) / `⌘`` (Mac)
 2. Kør de samme Git-kommandoer som normalt:
 
 ```bash
@@ -389,7 +389,7 @@ Hvis dit projekt allerede er lokalt:
 
 Nu kan du pushe dit projekt til GitHub:
 
-1. Gå til `Git` → `Push` (eller brug `Ctrl+Shift+K`)
+1. Gå til `Git` → `Push` (eller brug `Ctrl+Shift+K` / `⌘⇧K`)
 2. Vælg de branches du vil pushe (typisk `main`)
 3. Klik `Push`
 
@@ -419,7 +419,7 @@ git status
 ```
 
 **I IntelliJ:**
-- Åbn **Changes**-vinduet: `Git` → `View Git Status` eller `Alt+9`
+- Åbn **Changes**-vinduet: `Git` → `View Git Status` eller `Alt+9` (Windows) / `⌘9` (Mac)
 - Her ser du alle filer grupperet efter status:
   - **Unversioned Files:** Filer som Git ikke følger (som `git status` viser som "Untracked")
   - **Modified:** Ændrede filer
@@ -479,7 +479,7 @@ færdig
 ```
 
 **I IntelliJ:**
-1. Gå til `Git` → `Commit` eller brug `Ctrl+K` eller `Alt+0` (Windows)
+1. Gå til `Git` → `Commit` eller brug `Ctrl+K` / `⌘K` eller `Alt+0` / `⌘0` (Windows)
 2. Commit-dialogen åbnes
 3. Du ser alle ændringer som skal committes (kun staged filer)
 4. Skriv commit-beskeden i tekstfeltet øverst
@@ -516,7 +516,7 @@ git log --oneline
 Hver commit har et entydigt id, en forfatter, et tidspunkt og en commit-besked.
 
 **I IntelliJ:**
-1. Gå til `Git` → `Show History` eller brug `Alt+E` (på nogle systemer)
+1. Gå til `Git` → `Show History` eller højreklik på fil/projekt for at se commit-historikken
 2. Eller højreklik på en fil i Project View → `Git` → `Show History`
 3. Et History-vindue åbnes som viser alle commits for denne fil (eller hele repositoriet)
 4. Du kan klikke på hver commit for at se ændringerne
@@ -592,7 +592,7 @@ Hvis du foretrækker at arbejde helt i IntelliJ uden at bruge terminalen, er her
 ### 1. Se ændringerne (git status)
 
 Åbn Changes-vinduet:
-- `Git` → `View Git Status` eller `Alt+9`
+- `Git` → `View Git Status` eller `Alt+9` (Windows) / `⌘9` (Mac)
 
 Du ser alle ændringer grupperet efter status. De filer som skal committes, er under "Staged" eller "Modified".
 
@@ -609,7 +609,7 @@ Filerne flyttes nu til "Staged"-sektionen.
 
 ### 3. Opret en commit (git commit)
 
-1. Tryk `Ctrl+K` eller `Alt+0` (Windows), eller gå til `Git` → `Commit`
+1. Tryk `Ctrl+K` / `⌘K` eller `Alt+0` / `⌘0`, eller gå til `Git` → `Commit`
 2. **Commit**-dialogen åbnes
 3. Skriv commit-beskeden i tekstfeltet øverst
 4. Hvis der er filer i "Unstaged Changes", skal du enten:
@@ -621,7 +621,7 @@ Committen er nu gemt lokalt.
 
 ### 4. Push til GitHub (git push)
 
-1. Gå til `Git` → `Push` eller brug `Ctrl+Shift+K`
+1. Gå til `Git` → `Push` eller brug `Ctrl+Shift+K` / `⌘⇧K`
 2. Vælg den branch du vil pushe (typisk `main`)
 3. Klik `Push`
 
@@ -629,14 +629,14 @@ Dine commits er nu sendt til GitHub.
 
 ### 5. Hent ændringer fra GitHub (git pull)
 
-1. Gå til `Git` → `Pull` eller brug `Ctrl+Alt+L`
+1. Gå til `Git` → `Pull` eller brug `Ctrl+Alt+L` / `⌘⌥L`
 2. IntelliJ henter de nyeste ændringer fra GitHub
 3. Hvis der er konflikter, vises de i en merge-dialog
 
 **Hele flowet på en gang:**
 
 Du kan også kombinere Commit og Push:
-1. Tryk `Ctrl+K` for at åbne Commit-dialogen
+1. Tryk `Ctrl+K` / `⌘K` for at åbne Commit-dialogen
 2. I stedet for at klikke `Commit`, kan du klikke `Commit and Push`
 3. Begge handlinger udføres sekvens
 
@@ -659,20 +659,28 @@ Du kan også kombinere Commit og Push:
 
 Her er en hurtig reference til de vigtigste Git-kommandoer og deres ækvivalenter i IntelliJ:
 
-| Opgave | Terminal | IntelliJ |
-|--------|----------|----------|
-| **Se status** | `git status` | `Git` → `View Git Status` (`Alt+9`) eller Changes-vinduet |
-| **Tilføj en fil** | `git add fil.java` | Højreklik på fil → `Git` → `Add` |
-| **Tilføj alle filer** | `git add .` | I Changes-vinduet: vælg alle files og `Git` → `Add to Index` |
-| **Opret commit** | `git commit -m "besked"` | `Git` → `Commit` (`Ctrl+K` eller `Alt+0`), skriv besked, klik `Commit` |
-| **Commit & Push** | `git commit -m "..."` + `git push` | `Git` → `Commit`, klik `Commit and Push` |
-| **Push til GitHub** | `git push` | `Git` → `Push` (`Ctrl+Shift+K`) |
-| **Pull fra GitHub** | `git pull` | `Git` → `Pull` (`Ctrl+Alt+L`) |
-| **Se historik** | `git log` eller `git log --oneline` | `Git` → `Show History` (`Alt+E`) eller højreklik på fil/projekt → `Git` → `Show History` |
-| **Klone repo** | `git clone <url>` | `File` → `New` → `Project from Version Control`, vælg `Git`, indsæt URL |
-| **Opret lokalt repo** | `git init` | Markér `Create Git Repository` når du opretter projektet, eller gå til `Git` → `Enable Version Control Integration...` |
-| **Forbind til GitHub** | `git remote add origin <url>` | `Git` → `Manage Remotes...`, klik `+`, tilføj `origin` og URL |
+| Opgave | Windows | Mac |
+|--------|---------|-----|
+| **Se status** | `git status` / `Alt+9` | `git status` / `⌘9` |
+| **Tilføj en fil** | `git add fil.java` | `git add fil.java` |
+| **Tilføj alle filer** | `git add .` | `git add .` |
+| **Opret commit** | `git commit -m "besked"` / `Ctrl+K` eller `Alt+0` | `git commit -m "besked"` / `⌘K` eller `⌘0` |
+| **Commit & Push** | `Ctrl+K` → `Commit and Push` | `⌘K` → `Commit and Push` |
+| **Push til GitHub** | `git push` / `Ctrl+Shift+K` | `git push` / `⌘⇧K` |
+| **Pull fra GitHub** | `git pull` / `Ctrl+Alt+L` | `git pull` / `⌘⌥L` |
+| **Se historik** | `git log` / `Git` → `Show History` | `git log` / `Git` → `Show History` |
+| **Klone repo** | `git clone <url>` | `git clone <url>` |
+| **Opret lokalt repo** | `git init` | `git init` |
+| **Forbind til GitHub** | `git remote add origin <url>` | `git remote add origin <url>` |
 
 ## Aktiviteter i undervisningen
 
 De praktiske opgaver til undervisningsgangen findes i [opgaver.md](opgaver.md).
+
+## Appendiks: Tastaturgenveje
+
+For en komplet liste over alle tastaturgenveje i IntelliJ IDEA, se JetBrains officielle dokumentation:
+
+- **Windows:** [Reference Keymap - Default (Windows)](https://www.jetbrains.com/help/idea/reference-keymap-win-default.html)
+- **Mac:** [Reference Keymap - Default (Mac)](https://www.jetbrains.com/help/idea/reference-keymap-mac-default.html)
+
