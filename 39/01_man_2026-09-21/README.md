@@ -51,6 +51,10 @@ Om git:
 [Get Going with Git](https://git-scm.com/videos/get-going-with-git) (04:26)  
 [Quick Wins with Git](https://git-scm.com/videos/quick-wins-with-git) (05:06)
 
+Om GitHub:  
+[How to create your first GitHub repository: A beginner's guide | Tutorial](https://www.youtube.com/watch?v=-RZ03WHqkaY)  
+[How to upload files and folders to GitHub: GitHub for Beginners](https://www.youtube.com/watch?v=tlu5e0TxSzo)
+
 ## Læs nedenstående før undervisningen
 
 ### Versionsstyring i hverdagen
@@ -153,7 +157,7 @@ cd mit-forste-repository
 
 ### Initialiser Git
 
-Gør mappen til et Git-repository:
+Gør mappen til et Git-repositorie:
 
 ```bash
 git init
@@ -161,7 +165,7 @@ git init
 
 Git opretter nu den skjulte mappe `.git`. De almindelige projektfiler ændres ikke.
 
-Kontrollér repositoryets status:
+Kontrollér repositoriets status:
 
 ```bash
 git status
@@ -181,9 +185,9 @@ Opret filen `README.md` i mappen. Du kan gøre det i IntelliJ eller med en almin
 Skriv eksempelvis:
 
 ```markdown
-# Mit første repository
+# Mit første repositorie
 
-Dette repository bruges til at lære Git.
+Dette repositorie bruges til at lære Git.
 ```
 
 Kør derefter:
@@ -194,19 +198,19 @@ git status
 
 Git viser nu `README.md` som en fil, der endnu ikke spores.
 
-## Opret først et repository på GitHub
+## Opret først et repositorie på GitHub
 
-Et repository kan også oprettes på GitHub først og derefter hentes til computeren.
+Et repositorie kan også oprettes på GitHub først og derefter hentes til computeren.
 
-Når du opretter repositoryet på GitHub, skal du blandt andet vælge:
+Når du opretter repositoriet på GitHub, skal du blandt andet vælge:
 
 - et navn
-- om repositoryet skal være offentligt eller privat
+- om repositoriet skal være offentligt eller privat
 - om GitHub skal oprette en README-fil
 
-Hvis repositoryet oprettes med en README-fil, indeholder det allerede en commit. Den enkleste måde at få det ned på computeren er derfor at klone det.
+Hvis repositoriet oprettes med en README-fil, indeholder det allerede en commit. Den enkleste måde at få det ned på computeren er derfor at klone det.
 
-Kopiér repositoryets URL fra GitHub, og kør:
+Kopiér repositoriets URL fra GitHub, og kør:
 
 ```bash
 git clone <repository-url>
@@ -218,14 +222,14 @@ Eksempel på kommandoens form:
 git clone https://github.com/brugernavn/repository-navn.git
 ```
 
-Erstat adressen med URL'en til dit eget repository.
+Erstat adressen med URL'en til dit eget repositorie.
 
 `git clone`:
 
 - opretter en lokal mappe
 - henter filerne
 - henter commit-historikken
-- forbinder den lokale kopi med repositoryet på GitHub
+- forbinder den lokale kopi med repositoriet på GitHub
 
 Gå derefter ind i den hentede mappe:
 
@@ -233,17 +237,17 @@ Gå derefter ind i den hentede mappe:
 cd repository-navn
 ```
 
-## Gør et lokalt repository tilgængeligt på GitHub
+## Gør et lokalt repositorie tilgængeligt på GitHub
 
-Hvis repositoryet blev oprettet lokalt først, skal der oprettes et tomt repository på GitHub. Undlad i dette tilfælde at få GitHub til at oprette README, licens eller `.gitignore`, da det ellers ikke er helt tomt.
+Hvis repositoriet blev oprettet lokalt først, skal der oprettes et tomt repositorie på GitHub. Undlad i dette tilfælde at få GitHub til at oprette README, licens eller `.gitignore`, da det ellers ikke er helt tomt.
 
-Knyt derefter det lokale repository til adressen på GitHub:
+Knyt derefter det lokale repositorie til adressen på GitHub:
 
 ```bash
 git remote add origin <repository-url>
 ```
 
-Navnet `origin` er det almindelige navn for det primære remote repository.
+Navnet `origin` er det almindelige navn for det primære remote repositorie.
 
 Kontrollér forbindelsen:
 
@@ -365,7 +369,7 @@ Hver commit har et entydigt id, en forfatter, et tidspunkt og en commit-besked.
 
 ## Den grundlæggende arbejdsgang
 
-Når repositoryet allerede er oprettet og forbundet med GitHub, vil en almindelig arbejdsgang være:
+Når repositoriet allerede er oprettet og forbundet med GitHub, vil en almindelig arbejdsgang være:
 
 ```bash
 git status
@@ -381,17 +385,17 @@ Kommandoerne har forskellige opgaver:
 - `git commit` gemmer ændringerne lokalt i historikken.
 - `git push` sender lokale commits til GitHub.
 
-Det er vigtigt at forstå, at `git commit` ikke sender noget til GitHub. Committen oprettes lokalt. Først med `git push` bliver den sendt til det tilknyttede remote repository.
+Det er vigtigt at forstå, at `git commit` ikke sender noget til GitHub. Committen oprettes lokalt. Først med `git push` bliver den sendt til det tilknyttede remote repositorie.
 
 ## Det vigtigste at tage med
 
 - Git og GitHub er ikke det samme.
 - Git holder styr på projektets historik.
-- GitHub kan opbevare og dele Git-repositories online.
-- Et Git-projekt kaldes et repository.
-- `git init` opretter et repository i en eksisterende lokal mappe.
-- `git clone` henter et eksisterende repository og dets historik.
-- `git status` viser repositoryets aktuelle tilstand.
+- GitHub kan opbevare og dele Git-repositorier online.
+- Et Git-projekt kaldes et repositorie.
+- `git init` opretter et repositorie i en eksisterende lokal mappe.
+- `git clone` henter et eksisterende repositorie og dets historik.
+- `git status` viser repositoriets aktuelle tilstand.
 - `git add` vælger ændringer til næste commit.
 - `git commit` gemmer ændringer lokalt i historikken.
 - `git push` sender commits til GitHub.
