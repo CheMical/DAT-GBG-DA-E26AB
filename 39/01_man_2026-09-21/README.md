@@ -101,6 +101,20 @@ Et repositorie kan derfor eksistere:
 
 I praksis vil man ofte have både en lokal kopi og en kopi på GitHub.
 
+#### Opsætning af GitHub i IntelliJ
+
+Inden du kan arbejde med GitHub-repositorier direkte fra IntelliJ, skal du logge ind med din GitHub-konto:
+
+1. Åbn IntelliJ og gå til `File` → `Settings` (eller `IntelliJ IDEA` → `Preferences` på Mac)
+2. Vælg `Version Control` → `GitHub` i menuen til venstre
+3. Klik på `+` (plus-ikonet) for at tilføje en GitHub-konto
+4. Vælg `Log in via GitHub...`
+5. IntelliJ åbner en browser-vindue hvor du kan logge ind med din GitHub-brugernavn og adgangskode
+6. Efter login godkender du IntelliJ's adgang til din GitHub-konto
+7. Når login er fuldført, vises din GitHub-konto i indstillingerne
+
+Nu kan du klone repositories direkte fra GitHub, pushe dine projekter, og få adgang til andre GitHub-funktioner fra IntelliJ.
+
 ### Git Bash og terminalen
 
 Git Bash giver på Windows adgang til Git-kommandoer i en terminal. På Mac kan de samme Git-kommandoer anvendes i Terminal eller et tilsvarende program.
@@ -580,7 +594,7 @@ Kommandoerne har forskellige opgaver:
 - `git status` undersøger situationen.
 - `git add` vælger ændringer til næste commit.
 - `git commit` gemmer ændringerne lokalt i historikken.
-- `git push` sender lokale commits til GitHub.
+- `git push` sender commits til GitHub.
 
 Hvis andre har lavet ændringer på GitHub, som du skal hente ned til din computer, kan du bruge:
 
