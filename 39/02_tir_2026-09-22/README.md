@@ -93,20 +93,48 @@ public class Library {
 
 En user story er en kort beskrivelse af en funktionalitet fra brugerens synspunkt. Den beskriver ikke, hvordan vi skal bygge løsningen, men hvad brugeren vil kunne gøre.
 
+Vi skriver user stories i et simpelt format med tre dele:
+
+- Bruger: hvem er det, der får værdi af funktionen?
+- Handling: hvad vil brugeren kunne gøre?
+- Grund / behov / værdi: hvorfor er det vigtigt for brugeren?
+
+Formatet ser sådan ud:
+
+- Som [bruger] vil jeg [handling], så [grund/behov/værdi].
+
 Eksempler til bogsamlingen:
 
 - Som bruger vil jeg kunne tilføje en bog, så jeg kan samle mine bøger.
-- Som bruger vil jeg kunne finde en bog ud fra titel, så jeg hurtigt kan finde den igen.
-- Som bruger vil jeg kunne markere en bog som læst, så jeg kan holde styr på mine læste bøger.
-- Som bruger vil jeg kunne se alle bøger i min samling, så jeg kan få et overblik.
+- Som bruger vil jeg kunne finde en bog ud fra titel, så jeg hurtigt kan finde den rigtige bog.
+- Som bruger vil jeg kunne markere en bog som læst, så jeg kan holde styr på, hvad jeg allerede har læst.
+- Som bruger vil jeg kunne se alle bøger i min samling, så jeg får et overblik over mine bøger.
 
-User stories hjælper os med at fokusere på den funktionalitet, programmet faktisk skal kunne.
+Det vigtigste i en user story er ikke teknikken, men den værdi, som brugeren får. Derfor er “grund / behov / værdi”-delen vigtig. Den fortæller, hvorfor funktionen overhovedet er relevant.
+
+Acceptkriterier
+
+Når vi skriver user stories, er det ofte nyttigt at tilføje acceptkriterier. Acceptkriterier er konkrete regler for, hvornår en funktion er færdig og fungerer som forventet. De gør user storyen mere præcis og lettere at teste.
+
+Et acceptkriterium skrives ofte som:
+
+- Givet [forudsætning], når [handling], så [resultat]
+
+Eksempler til bogsamlingen:
+
+- Givet at brugeren indtaster en titel, når der søges efter en bog, så skal programmet returnere den bog, der matcher titlen.
+- Givet at bogen ikke findes, når brugeren søger, så skal programmet vise en passende besked.
+- Givet at en bog er markeret som læst, når brugeren åbner bogens oplysninger, så skal den vises som læst.
+- Givet at biblioteket er tomt, når brugeren vil se alle bøger, så skal programmet vise en tydelig besked om, at der ingen bøger er.
+
+Acceptkriterier er nyttige, fordi de gør det tydeligt, hvad der skal være sandt, før vi kan sige, at en user story er løst.
 
 Diskussion:
 
 - Hvilke user stories passer godt til projektet bogsamling?
-- Hvad er vigtigt at tænke over, før vi begynder at kode?
-- Hvorfor er det nyttigt at skrive user stories, før vi designet klasserne?
+- Hvad er den vigtigste del i en user story: bruger, handling eller grund/behov/værdi?
+- Hvilke acceptkriterier ville du skrive til “find bog” eller “markér som læst”?
+- Hvorfor er det nyttigt at have både en user story og acceptkriterier?
 
 ### 2. Controller
 
