@@ -22,9 +22,9 @@ Efter lektionen skal du kunne:
 
 ## Se disse videoer før undervisningen:
 
-- Dave Farley: "Managing complexity"
-  https://www.youtube.com/watch?v=J8vCm1NdKIc&t=1931s
-  Se fra afsnittet "Managing complexity" og frem til slutningen af videoen.
+Engineering for Software • Dave Farley • YOW! 2022  
+["Managing complexity"](https://www.youtube.com/watch?v=J8vCm1NdKIc&t=1931s)
+(til slutningen af videoen)
 
 ## Læs nedenstående før undervisningen
 
@@ -294,14 +294,6 @@ I stedet kan vi dele det op:
 
 Det gør koden mere overskuelig, lettere at teste og lettere at udvide.
 
-### Opgaver i undervisningen
-
-1. Skriv 3–5 user stories til projektet bogsamling.
-2. Beskriv, hvilket ansvar hver af følgende klasser bør have: `Book`, `Library`, `LibraryController`, `Main`.
-3. Tag et eksempel på kode, hvor meget står i `Main`, og diskuter, hvordan det kan refaktoreres.
-4. Forklar, hvor der er høj coupling eller lav cohesion i et eksempel.
-5. Skriv et acceptkriterium til en user story i bogsamlingen.
-
 ### Opsamling
 
 Design handler ikke kun om, hvordan koden ser ud, men om, hvordan den er organiseret. Når vi arbejder med user stories, controller, ansvar, afhængigheder, coupling og cohesion, så skaber vi kode, der er:
@@ -314,3 +306,7 @@ Design handler ikke kun om, hvordan koden ser ud, men om, hvordan den er organis
 Det er et vigtigt næste skridt i vores objektorienterede programmering, fordi det går fra at have kode, der virker, til at have kode, der er godt designet.
 
 Det betyder også, at vi bliver bedre til at løse problemer, ikke kun at skrive funktioner. Vi lærer at tænke som udviklere, der planlægger og strukturerer et system, før det bliver for komplekst.
+
+## Aktiviteter i undervisningen
+
+Arbejd med disse [opgaver](opgaver.md).
