@@ -208,43 +208,75 @@ Git viser nu `README.md` som en fil, der endnu ikke spores.
 
 Hvis du foretrækker at oprette projektet direkte i IntelliJ, kan du gøre det uden først at bruge terminalen.
 
-1. Klik på `File` → `New` → `Project`.
-2. Vælg en mappe, hvor projektet skal ligge.
-3. Angiv et projektnavn, fx `mit-forste-repositorie`.
-4. Klik på `Create`.
+#### Opret et projekt
+
+1. Åbn IntelliJ.
+2. Klik på `File` → `New` → `Project`.
+3. Vælg en mappe, hvor projektet skal ligge.
+4. Angiv et projektnavn, fx `mit-forste-repositorie`.
+5. Klik på `Create`.
 
 IntelliJ opretter nu projektet i en lokal mappe på din computer.
 
-Når projektet er åbent, skal du aktivere Git i projektet:
+#### Aktivér Git i projektet
+
+Når projektet er åbent, skal du aktivere Git:
 
 1. Gå til `VCS` → `Enable Version Control Integration...`
-2. Vælg `Git`
-3. IntelliJ opretter den skjulte mappe `.git` i projektet
+2. Vælg `Git` fra dropdown-menuen
+3. Klik på `OK`
 
-Du kan kontrollere det i terminalen med:
+IntelliJ opretter nu den skjulte mappe `.git` i projektet. Du ser ikke mappen direkte i Project View (da den er skjult), men Git er nu aktiveret.
+
+#### Forstå Git-status i IntelliJ
+
+Når Git er aktiveret, vil IntelliJ markere dine filer med farver i Project View:
+
+- **Rød:** Filer som Git ikke følger endnu (utrackede filer)
+- **Blå:** Filer som er blevet ændret siden sidste commit
+- **Grøn:** Filer som er tilføjet til staging area (klar til commit)
+- **Grå:** Filer som er ignoreret (fx i `.gitignore`)
+
+Du kan også åbne **Changes**-vinduet for at se alle ændringer samlet:
+
+- `VCS` → `Git` → `View Git Status` eller
+- `Alt+9` (Windows) / `Cmd+9` (Mac)
+
+#### Opret en fil og lav din første commit
+
+1. Højreklik på dit projekt i Project View → `New` → `File`
+2. Navngiv den `README.md`
+3. Skriv indhold, fx:
+
+```markdown
+# Mit første repositorie
+
+Dette repositorie bruges til at lære Git.
+```
+
+4. Du ser nu, at `README.md` er markeret i rødt (eller en anden farve for utrackede filer).
+5. Højreklik på filen → `Git` → `Add`
+6. Filen er nu markeret i grønt og er klar til commit.
+7. Gå til `VCS` → `Git` → `Commit` (eller brug `Ctrl+K`)
+8. Skriv en god commit-besked: `Tilføj introduktion til projektet`
+9. Klik på `Commit`
+
+Committen er nu gemt lokalt i dit repositorie.
+
+#### Alternativ: Brug terminalen
+
+Du kan også fortsætte med at bruge terminalen direkte i IntelliJ:
+
+1. Åbn terminalen nederst: `View` → `Tool Windows` → `Terminal` eller `Alt+F12`
+2. Kør de samme Git-kommandoer som normalt:
 
 ```bash
 git status
-```
-
-Hvis Git er sat korrekt op, vil IntelliJ vise, at `README.md` eller andre filer er nye og endnu ikke er commit’taet.
-
-For at lave en commit i IntelliJ kan du gøre dette:
-
-1. Højreklik på filen i projektet
-2. Vælg `Git` → `Add`
-3. Gå til `Git` → `Commit`
-4. Skriv en god commit-besked, fx `Tilføj introduktion til projektet`
-5. Klik på `Commit`
-
-Alternativt kan du fortsat bruge terminalen:
-
-```bash
 git add .
 git commit -m "Tilføj introduktion til projektet"
 ```
 
-Det vigtigste er, at princippet er det samme: du har et lokalt repositorie, du laver commits, og senere kan du koble det til GitHub.
+**Det vigtigste er princippet:** Du har et lokalt repositorie, du laver commits, og senere kan du koble det til GitHub. Valget mellem GUI og terminal er helt op til dig.
 
 ## Forbind dit repositorie med GitHub
 
@@ -321,6 +353,41 @@ Indstillingen `-u` opretter forbindelsen mellem den lokale `main`-branch og `mai
 git push
 ```
 
+### Forbind med GitHub via IntelliJ
+
+Du kan også forbinde dit repositorie til GitHub direkte fra IntelliJ uden at bruge terminalen.
+
+#### Vej 1: Clone fra GitHub direkte i IntelliJ
+
+1. Fra IntelliJ startskærm, klik `Get from VCS` eller gå til `File` → `New` → `Project from Version Control`
+2. Vælg `Git` som version control system
+3. Indsæt repositoriets URL fra GitHub i feltet `URL`
+4. Vælg en lokal mappe, hvor projektet skal ligges
+5. Klik `Clone`
+
+IntelliJ henter nu repositoriet, al historikken, og sætter forbindelsen til GitHub op automatisk.
+
+Du kan nu se `.git`-mappen i dit projekt, og Git er fuldt integreret i IntelliJ.
+
+#### Vej 2: Push lokalt projekt til GitHub
+
+Hvis dit projekt allerede er lokalt:
+
+1. Opret et tomt repositorie på GitHub (ingen README, licens eller `.gitignore`)
+2. I IntelliJ, gå til `VCS` → `Git` → `Manage Remotes...`
+3. Klik `+` (tilføj remote)
+4. Sæt navn til `origin`
+5. Indsæt GitHub repositoriets URL
+6. Klik `OK`
+
+Nu kan du pushe dit projekt til GitHub:
+
+1. Gå til `VCS` → `Git` → `Push` (eller brug `Ctrl+Shift+K`)
+2. Vælg de branches du vil pushe (typisk `main`)
+3. Klik `Push`
+
+Dit lokale projekt er nu upload til GitHub, og de er forbundet.
+
 ## Commits
 
 En commit er en navngivet registrering af en meningsfuld ændring i projektet. Den kan sammenlignes med et øjebliksbillede, men Git gemmer ændringen som en del af projektets samlede historik.
@@ -344,6 +411,15 @@ Start altid med:
 git status
 ```
 
+**I IntelliJ:**
+- Åbn **Changes**-vinduet: `VCS` → `Git` → `View Git Status` eller `Alt+9`
+- Her ser du alle filer grupperet efter status:
+  - **Unversioned Files:** Filer som Git ikke følger (som `git status` viser som "Untracked")
+  - **Modified:** Ændrede filer
+  - **Added:** Filer som er tilføjet til staging area
+
+Du kan også se filernes farver direkte i Project View (rød = utrackede, blå = ændrede, grøn = staged).
+
 ### Gør en fil klar til commit
 
 En bestemt fil tilføjes til staging area med:
@@ -359,6 +435,14 @@ git add .
 ```
 
 Punktummet betyder den aktuelle mappe. Som begynder er det en god vane at køre `git status` både før og efter `git add .`, så du kan se, hvad der kommer med.
+
+**I IntelliJ:**
+- Højreklik på en fil i Project View
+- Vælg `Git` → `Add`
+
+Eller i Changes-vinduet:
+- Marker de filer du vil tilføje
+- Højreklik og vælg `Git` → `Add to Index` eller klik på pilen for at flytte filen til staging area
 
 ### Opret en commit
 
@@ -387,6 +471,15 @@ ting
 færdig
 ```
 
+**I IntelliJ:**
+1. Gå til `VCS` → `Git` → `Commit` eller brug `Ctrl+K`
+2. Commit-dialogen åbnes
+3. Du ser alle ændringer som skal committes (kun staged filer)
+4. Skriv commit-beskeden i tekstfeltet øverst
+5. Klik `Commit` eller `Commit and Push` hvis du vil pushe samtidig
+
+Du kan også tilføje filer direkte fra Commit-dialogen ved at markere dem i listen.
+
 ### Lav små, sammenhængende commits
 
 En commit bør samle ændringer, der hører naturligt sammen. Hvis du både retter en fejl, omdøber en klasse og skriver dokumentation, kan det være mere overskueligt at lave flere commits.
@@ -394,8 +487,8 @@ En commit bør samle ændringer, der hører naturligt sammen. Hvis du både rett
 En nyttig rytme er:
 
 1. Foretag én sammenhængende ændring.
-2. Kør `git status`.
-3. Tilføj de relevante filer med `git add`.
+2. Kør `git status` (eller åbn Changes-vinduet).
+3. Tilføj de relevante filer med `git add` (eller via GUI).
 4. Opret en commit med en præcis besked.
 5. Send senere commits til GitHub med `git push`.
 
@@ -414,6 +507,15 @@ git log --oneline
 ```
 
 Hver commit har et entydigt id, en forfatter, et tidspunkt og en commit-besked.
+
+**I IntelliJ:**
+1. Gå til `VCS` → `Git` → `Show History` eller brug `Alt+E` (på nogle systemer)
+2. Eller højreklik på en fil i Project View → `Git` → `Show History`
+3. Et History-vindue åbnes som viser alle commits for denne fil (eller hele repositoriet)
+4. Du kan klikke på hver commit for at se ændringerne
+5. Du kan også høreklikke på en commit for at se flere muligheder (f.eks. revert, cherry-pick osv.)
+
+Du kan også se hele repositoriets historik ved at højreklikke på projektmappen → `Git` → `Show History`.
 
 ## Arbejdsflowet: Fra lokalt til GitHub
 
@@ -476,6 +578,61 @@ git pull
 
 Det er vigtigt at forstå, at `git commit` ikke sender noget til GitHub. Committen oprettes lokalt. Først med `git push` bliver den sendt til det tilknyttede remote repositorie.
 
+## Workflow i IntelliJ
+
+Hvis du foretrækker at arbejde helt i IntelliJ uden at bruge terminalen, er her en typisk arbejdsgang:
+
+### 1. Se ændringerne (git status)
+
+Åbn Changes-vinduet:
+- `VCS` → `Git` → `View Git Status` eller `Alt+9`
+
+Du ser alle ændringer grupperet efter status. De filer som skal committes, er under "Staged" eller "Modified".
+
+### 2. Tilføj filer til staging area (git add)
+
+I Changes-vinduet:
+- Marker de filer du vil committes
+- Klik på pilen `→` eller højreklik → `Git` → `Add to Index`
+
+Filerne flyttes nu til "Staged"-sektionen.
+
+**Alternativt i Project View:**
+- Højreklik på en fil → `Git` → `Add`
+
+### 3. Opret en commit (git commit)
+
+1. Tryk `Ctrl+K` eller gå til `VCS` → `Git` → `Commit`
+2. **Commit**-dialogen åbnes
+3. Skriv commit-beskeden i tekstfeltet øverst
+4. Hvis der er filer i "Unstaged Changes", skal du enten:
+   - Markere dem og klikke på `+` for at stage dem først, eller
+   - Klikke på "Amend" hvis du vil tilføje dem til den forrige commit
+5. Klik `Commit`
+
+Committen er nu gemt lokalt.
+
+### 4. Push til GitHub (git push)
+
+1. Gå til `VCS` → `Git` → `Push` eller brug `Ctrl+Shift+K`
+2. Vælg den branch du vil pushe (typisk `main`)
+3. Klik `Push`
+
+Dine commits er nu sendt til GitHub.
+
+### 5. Hent ændringer fra GitHub (git pull)
+
+1. Gå til `VCS` → `Git` → `Pull` eller brug `Ctrl+Alt+L`
+2. IntelliJ henter de nyeste ændringer fra GitHub
+3. Hvis der er konflikter, vises de i en merge-dialog
+
+**Hele flowet på en gang:**
+
+Du kan også kombinere Commit og Push:
+1. Tryk `Ctrl+K` for at åbne Commit-dialogen
+2. I stedet for at klikke `Commit`, kan du klikke `Commit and Push`
+3. Begge handlinger udføres sekvens
+
 ## Det vigtigste at tage med
 
 - Git og GitHub er ikke det samme.
@@ -490,6 +647,24 @@ Det er vigtigt at forstå, at `git commit` ikke sender noget til GitHub. Committ
 - `git push` sender commits til GitHub.
 - `git pull` henter ændringer fra GitHub til din computer.
 - Små commits med præcise beskeder gør historikken lettere at forstå.
+
+## Terminal-kommandoer vs. IntelliJ
+
+Her er en hurtig reference til de vigtigste Git-kommandoer og deres ækvivalenter i IntelliJ:
+
+| Opgave | Terminal | IntelliJ |
+|--------|----------|----------|
+| **Se status** | `git status` | `VCS` → `Git` → `View Git Status` (`Alt+9`) eller Changes-vinduet |
+| **Tilføj en fil** | `git add fil.java` | Højreklik på fil → `Git` → `Add` |
+| **Tilføj alle filer** | `git add .` | I Changes-vinduet: vælg alle files og `Git` → `Add to Index` |
+| **Opret commit** | `git commit -m "besked"` | `VCS` → `Git` → `Commit` (`Ctrl+K`), skriv besked, klik `Commit` |
+| **Commit & Push** | `git commit -m "..."` + `git push` | `VCS` → `Git` → `Commit`, klik `Commit and Push` |
+| **Push til GitHub** | `git push` | `VCS` → `Git` → `Push` (`Ctrl+Shift+K`) |
+| **Pull fra GitHub** | `git pull` | `VCS` → `Git` → `Pull` (`Ctrl+Alt+L`) |
+| **Se historik** | `git log` eller `git log --oneline` | `VCS` → `Git` → `Show History` (`Alt+E`) eller højreklik på fil/projekt → `Git` → `Show History` |
+| **Klone repo** | `git clone <url>` | `File` → `New` → `Project from Version Control`, vælg `Git`, indsæt URL |
+| **Opret lokalt repo** | `git init` | `VCS` → `Enable Version Control Integration...`, vælg `Git` |
+| **Forbind til GitHub** | `git remote add origin <url>` | `VCS` → `Git` → `Manage Remotes...`, klik `+`, tilføj `origin` og URL |
 
 ## Aktiviteter i undervisningen
 
