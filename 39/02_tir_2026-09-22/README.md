@@ -122,7 +122,7 @@ Eksempler til bogsamlingen:
 
 Det vigtigste i en user story er ikke teknikken, men den værdi, som brugeren får. Derfor er “grund / behov / værdi”-delen vigtig. Den fortæller, hvorfor funktionen overhovedet er relevant.
 
-Acceptkriterier
+#### Acceptkriterier
 
 Når vi skriver user stories, er det ofte nyttigt at tilføje acceptkriterier. Acceptkriterier er konkrete regler for, hvornår en funktion er færdig og fungerer som forventet. De gør user storyen mere præcis og lettere at teste.
 
@@ -139,7 +139,7 @@ Eksempler til bogsamlingen:
 
 Acceptkriterier er nyttige, fordi de gør det tydeligt, hvad der skal være sandt, før vi kan sige, at en user story er løst.
 
-Diskussion:
+#### Diskussion
 
 - Hvilke user stories passer godt til projektet bogsamling?
 - Hvad er den vigtigste del i en user story: bruger, handling eller grund/behov/værdi?
