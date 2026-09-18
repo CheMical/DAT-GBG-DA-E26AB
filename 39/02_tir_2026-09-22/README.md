@@ -26,6 +26,9 @@ Engineering for Software • Dave Farley • YOW! 2022
 ["Managing complexity"](https://www.youtube.com/watch?v=J8vCm1NdKIc&t=1931s)
 (til slutningen af videoen)
 
+Scrum.org • User Stories: Writing Tips and Real Examples  
+["User Stories: Writing Tips and Real Examples"](https://www.scrum.org/resources/blog/user-stories-writing-tips-real-examples)
+
 ## Læs nedenstående før undervisningen
 
 Før lektionen bør du have genopfrisket:
