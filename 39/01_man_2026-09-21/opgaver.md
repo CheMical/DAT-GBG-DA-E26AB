@@ -235,13 +235,40 @@ Hvis du vil gøre det systematisk, kan du sammenligne tegn for tegn og tælle hv
 3. Fortsæt indtil programmet udskriver dit navn.
 4. Diskuter, hvorfor det er en god øvelse at arbejde i små trin.
 
-## Opgave 6 – [overskrift]
+## Opgave 6 – Gå tilbage til et tidligere commit
+
+I denne opgave skal du undersøge, hvordan Git viser historikken og hvordan du kan gå tilbage til et tidligere punkt i projektet.
+
+### 1. Åbn Git-vinduet i IntelliJ
+
+I IntelliJ skal du finde **Git-vinduet** nederst i editoren. Der ser du typisk tre områder:
+
+- til venstre: **branches**
+- i midten: **commits**
+- til højre: information om det valgte commit
+
+### 2. Vælg et tidligere commit
+
+Vælg et commit, der ligger cirka midt i rækken af de commits, du lige har lavet.
+
+Højreklik på det valgte commit og vælg:
+
+```text
+Checkout Revision
+```
+
+### 3. Diskussion og refleksion
+
+Diskuter følgende i gruppen:
+
+- Hvad sker der, når du checker ud af et tidligere commit?
+- Hvordan kan du se, at du har flyttet dig tilbage i historikken?
+- Hvilke informationer ser du i det valgte commit til højre?
+- Hvorfor kan det være nyttigt at kunne gå tilbage til et tidligere punkt i projektet?
+- Hvorfor er det måske for mange små commits i denne øvelse, når man kigges på et samlet projektforløb?
+- Hvad er forskellen mellem at gå tilbage til en tidligere revision og at ændre den nuværende version permanent?
 
 ## Opgave 7 – [overskrift]
-
----
-
-# Del 3 – Commits, historik og workflow
 
 ## Opgave 8 – [overskrift]
 
