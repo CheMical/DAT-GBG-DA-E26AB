@@ -68,7 +68,42 @@ Diskuter derefter i gruppen:
 
 *(Bemærk: Hvis du opdager en skjult mappe ved navn `.git`, kan du se bort fra den for nu – den kigger vi nærmere på i de næste opgaver).*
 
-## Opgave 2 – [overskrift]
+## Opgave 2 – Slet src-mappen og gendan med Git
+
+I denne opgave undersøger du en af de mest basale styrker ved Git: muligheden for at genskabe tabte filer.
+
+### 1. Slet `src`-mappen med bekræftelse
+
+Slet nu `src`-mappen og dens indhold via terminalen. Vi bruger flaget `-i` (interactive) og `-r` (recursive), så du bliver bedt om at bekræfte hver sletning i stedet for at gennemtvinge den:
+
+```bash
+rm -ri src
+```
+
+Tast `y` (for *yes*) og tryk **Enter**, hver gang terminalen spørger, om en fil eller mappen skal slettes.
+
+Når du er færdig, undersøg mappen (fx med `ls`). Se, at `src`-mappen er væk, og at mappen ellers er tom (kun den skjulte `.git`-mappe er tilbage).
+
+### 2. Gendan med `git checkout`
+
+Prøv nu at hente de slettede filer tilbage med kommandoen:
+
+```bash
+git checkout master
+```
+
+> **Tip til terminalen:** Du behøver ikke at skrive hele branch-navnet manuelt. Når du blot har skrevet `git checkout ` og derefter de første par bogstaver (fx `ma`), kan du trykke på **Tab-tasten** 1–3 gange. Terminalen vil så automatisk auto-udfylde branch-navnet for dig!
+
+Kør derefter `ls` igen for at bekræfte, at `src`-mappen og alle filerne er vendt tilbage.
+
+### 3. Diskussion og refleksion
+
+Diskuter følgende i gruppen:
+
+- Hvad skete der helt præcist, da du kørte `git checkout master`?
+- Hvor kom filerne fra, når de lige var blevet slettet fra harddisken?
+- Hvilken rolle spiller `.git`-mappen i denne sammenhæng?
+- Hvorfor giver versionsstyring som Git en tryghed, når man arbejder på et projekt, sammenlignet med en almindelig mappe?
 
 ## Opgave 3 – [overskrift]
 
