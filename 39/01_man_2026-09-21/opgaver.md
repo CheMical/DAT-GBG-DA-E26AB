@@ -195,7 +195,45 @@ Diskuter herefter:
 - Hvorfor er det vigtigt at skrive en tydelig commit-besked?
 - Hvordan kan en commit gøre det nemmere at holde styr på projektets historie?
 
-## Opgave 5 – [overskrift]
+## Opgave 5 – Gør det én ændring ad gangen
+
+I denne opgave skal du ændre programmet, så det udskriver dit navn i stedet for `World`.
+
+Men her gælder en ekstra regel: for hvert bogstav eller tegn, du ændrer, laver du et nyt Git-commit med en kort og tydelig commit-besked.
+
+Eksempel:
+
+```java
+System.out.println("Hello World!");
+```
+
+skal efterhånden blive til:
+
+```java
+System.out.println("Hello Mica!");
+```
+
+### Hvor mange commits er nødvendige?
+
+Hvis du bruger navnet `Mica`, så skal du sammenligne teksten `Hello World!` med teksten `Hello Mica!`.
+
+Her skal `Hello` stå uændret, så det er kun delen `World!` der ændres til `Mica!`.
+
+Det betyder, at du kun skal ændre eller slette de tegn, der er nødvendige for at få `World!` til `Mica!`.
+
+Hvis du vil gøre det systematisk, kan du sammenligne tegn for tegn og tælle hver ændring som et eget commit.
+
+### Opgave
+
+1. Lav en lille ændring i teksten.
+2. Commit med en kort tekst som fx:
+
+```text
+Ændr W til M
+```
+
+3. Fortsæt indtil programmet udskriver dit navn.
+4. Diskuter, hvorfor det er en god øvelse at arbejde i små trin.
 
 ## Opgave 6 – [overskrift]
 
