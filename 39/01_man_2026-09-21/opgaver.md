@@ -105,11 +105,34 @@ Diskuter følgende i gruppen:
 - Hvilken rolle spiller `.git`-mappen i denne sammenhæng?
 - Hvorfor giver versionsstyring som Git en tryghed, når man arbejder på et projekt, sammenlignet med en almindelig mappe?
 
-## Opgave 3 – [overskrift]
+## Opgave 3 – Åbn projektet i IntelliJ og se Git-status
 
----
+I denne opgave åbner du det klonede repository som et IntelliJ-projekt og undersøger, hvilke filer der er registreret som uversionsstyrede.
 
-# Del 2 – Repositorier og GitHub
+### 1. Åbn projektet i IntelliJ
+
+1. Åbn IntelliJ.
+2. Vælg **File → Open...**
+3. Naviger til den mappe, du klonede i `IdeaProjects`.
+4. Vælg projektmappen og åbn den som et IntelliJ-projekt.
+
+### 2. Gå til Change-vinduet
+
+Når projektet er åbnet, skal du finde **Git / Change**-vinduet i IntelliJ.
+
+Se herefter efter sektionen **Unversioned Files**.
+
+> **Vigtigt:** Denne sektion kan være foldet sammen. Klik på den for at udvide den, så du kan se hvilke filer der ligger der.
+
+### 3. Diskussion og refleksion
+
+Diskuter følgende i gruppen:
+
+- Hvilke filer vises under `Unversioned Files`?
+- Hvorfor er de ikke allerede versioneret i Git?
+- Hvad betyder det, at en fil er "unversioned"?
+- Hvem eller hvad har oprettet disse ekstra filer?
+- Hvorfor er dette et nyttigt sted at se, når man lige har klonet et projekt eller har lavet nye filer lokalt?
 
 ## Opgave 4 – [overskrift]
 
