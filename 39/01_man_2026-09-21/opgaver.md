@@ -134,21 +134,82 @@ Diskuter følgende i gruppen:
 - Hvem eller hvad har oprettet disse ekstra filer?
 - Hvorfor er dette et nyttigt sted at se, når man lige har klonet et projekt eller har lavet nye filer lokalt?
 
-## Opgave 4 – [overskrift]
+## Opgave 4 – Omdøb projektet i IntelliJ og undersøg Git-status
+
+I denne opgave ændrer du navnet på projektmappen i IntelliJ for at få erfaring med, hvordan fil- og projektnavne påvirker et Git-repositorie.
+
+### 1. Omdøb projektet i IntelliJ
+
+1. I IntelliJ skal du gå til **Project-vinduet**.
+2. Find projektmappen, der hedder `Main`.
+3. Højreklik på mappen og vælg en mulighed for at omdøbe den.
+4. Giv projektet et mere beskrivende navn, fx `Main-xyz`, `GitDemo` eller et andet passende navn.
+
+### 2. Undersøg, hvad der sker
+
+Når du har omdøbt projektet, skal du se nærmere på **Git / Change**-vinduet igen.
+
+Diskuter følgende i gruppen:
+
+- Hvad skete der med projektet, da du omdøbte mappen?
+- Er Git opmærksom på den nye mappe-navngivning?
+- Hvad sker der med kildekoden, når du omdøber projektet lokalt?
+- Kan du stadig køre programmet efter omdøbningen?
+
+### 3. Kør programmet igen
+
+Prøv at køre projektet efter omdøbningen.
+
+Besvar:
+
+- Kørte programmet stadig uden problemer?
+- Var der nogen ekstra trin nødvendige for at få det til at køre igen?
+
+### 4. Er det nødvendigt at gemme ændringen i Git?
+
+Tænk over:
+
+- Er omdøbningen af en mappe en ændring i projektets indhold?
+- Skal denne ændring gemmes i Git, eller er det blot en lokal ændring i din arbejdsmappe?
+- Hvad er forskellen på at omdøbe en mappe lokalt og at committe en ændring til GitHub?
+
+### 5. Lav et commit over ændringen
+
+Hvis du har gjort en lokal ændring, fx omdøbt projektmappen, kan du også gemme den i Git.
+
+I IntelliJ skal du:
+
+1. Gå til **Git / Commit**
+2. Vælg de filer, der er ændret
+3. Skriv en passende commit-besked, fx:
+
+```text
+Omdøb projektmappe fra Main til et mere passende navn
+```
+
+4. Tryk på **Commit**-knappen.
+
+Diskuter herefter:
+
+- Hvad betyder det at "committe" en ændring?
+- Hvorfor er det vigtigt at skrive en tydelig commit-besked?
+- Hvordan kan en commit gøre det nemmere at holde styr på projektets historie?
 
 ## Opgave 5 – [overskrift]
 
 ## Opgave 6 – [overskrift]
 
+## Opgave 7 – [overskrift]
+
 ---
 
 # Del 3 – Commits, historik og workflow
 
-## Opgave 7 – [overskrift]
-
 ## Opgave 8 – [overskrift]
 
 ## Opgave 9 – [overskrift]
+
+## Opgave 10 – [overskrift]
 
 ---
 
