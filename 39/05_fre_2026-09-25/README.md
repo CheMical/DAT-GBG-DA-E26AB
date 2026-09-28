@@ -232,8 +232,8 @@ classDiagram
         -Scanner scanner
         -Adventure adventure
         +start()
-        +parseInput(String command)
-        +showHelp()
+        -parseInput(String command)
+        -showHelp()
     }
     class Adventure {
         -Player player
