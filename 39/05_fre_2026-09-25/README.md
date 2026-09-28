@@ -234,12 +234,12 @@ classDiagram
         +start()
         -parseInput(String command)
         -showHelp()
+        -look() String
     }
     class Adventure {
         -Player player
         -Map map
         +go(String direction) boolean
-        +look() String
     }
     class Map {
         +buildMap()
