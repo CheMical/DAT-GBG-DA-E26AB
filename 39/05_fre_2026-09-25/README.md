@@ -231,14 +231,13 @@ classDiagram
     class UserInterface {
         -Scanner scanner
         -Adventure adventure
-        +startProgram()
+        +start()
         +parseInput(String command)
         +showHelp()
     }
     class Adventure {
         -Player player
         -Map map
-        +startGame()
         +go(String direction) boolean
         +look() String
     }
