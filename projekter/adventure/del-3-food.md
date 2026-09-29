@@ -160,12 +160,28 @@ classDiagram
     class Player {
         -int health
         -ArrayList~Item~ inventory
-        +eat(String shortName) EatResult
+        +eat(String shortName) EatOutcome
         +getHealth() int
+    }
+    class EatOutcome {
+        -EatResult result
+        -String itemName
+        -int healthChange
+        +getResult() EatResult
+        +getItemName() String
+        +getHealthChange() int
+    }
+    class EatResult {
+        <<enumeration>>
+        NOT_FOUND
+        NOT_FOOD
+        EATEN
     }
 
     Item <|-- Food : extends
     Player "1" --> "0..*" Item : bærer
+    Player ..> EatOutcome : returnerer
+    EatOutcome --> EatResult
 ```
 
 Bemærk at `Player` stadig har en liste af **`Item`** – ikke af `Food`. Et `Food`-objekt kan ligge i
@@ -178,15 +194,36 @@ så brug en enum:
 public enum EatResult { NOT_FOUND, NOT_FOOD, EATEN }
 ```
 
-`Player.eat` finder tingen (i inventory eller i `currentRoom`), tjekker med `instanceof Food`,
-ændrer `health`, fjerner maden fra listen og returnerer det passende `EatResult`. Brugerfladen
-`switch`er på resultatet og skriver beskeden.
+Men en enum alene er ikke nok. Når maden er spist, er den væk, og brugerfladen skal alligevel kunne
+skrive dens lange navn (`You eat the loaf of stale bread`). `eat` skal derfor returnere **både**
+udfaldet **og** de data, brugerfladen skal bruge. Pak dem sammen i en lille wrapper-klasse,
+**`EatOutcome`**:
 
-> **Tip:** Når maden er spist, er den væk – men brugerfladen skal bruge dens lange navn i beskeden.
-> Find derfor tingen, **før** den bliver spist (fx med en metode på `Player`, der leder i både
-> inventory og rummet), så navnet kan skrives bagefter. Om det var sund mad eller gift, kan
-> brugerfladen se på health før og efter – eller I kan give enummen flere værdier, fx
-> `EATEN_HEALTHY` og `EATEN_POISONOUS`. Begge dele er fine.
+```java
+public class EatOutcome {
+    private final EatResult result;
+    private final String itemName;   // tingens lange navn (null hvis den ikke blev fundet)
+    private final int healthChange;  // 0 hvis intet blev spist
+
+    public EatOutcome(EatResult result, String itemName, int healthChange) {
+        this.result = result;
+        this.itemName = itemName;
+        this.healthChange = healthChange;
+    }
+
+    // getResult(), getItemName() og getHealthChange()
+}
+```
+
+`Player.eat` finder tingen (i inventory eller i `currentRoom`) **før** noget bliver ændret, gemmer
+det lange navn, tjekker med `instanceof Food`, ændrer `health`, fjerner maden fra listen og
+returnerer et `EatOutcome`. Brugerfladen `switch`er på `outcome.getResult()` og skriver beskeden
+med `outcome.getItemName()`.
+
+> **Tip:** `EatOutcome` indeholder *data*, ikke en færdig tekst – så ligger al output stadig i
+> `UserInterface`. Om det var sund mad eller gift, kan brugerfladen se på `getHealthChange()`
+> (positivt eller negativt). Har I set `record`, kan klassen skrives som
+> `record EatOutcome(EatResult result, String itemName, int healthChange) {}`.
 
 ---
 
@@ -198,8 +235,8 @@ public enum EatResult { NOT_FOUND, NOT_FOOD, EATEN }
 
    1. Start med at oprette klassen, og tilføj nogle `Food`-objekter til mappet. Test at man kan
       samle dem op og droppe dem, som almindelige items.
-   2. Lav derefter `eat`-kommandoen, og vær især opmærksom på **de tre forskellige udfald**, og
-      sørg for at alt output er i `UserInterface`.
+   2. Lav derefter `eat`-kommandoen med `EatResult` og `EatOutcome`, og vær især opmærksom på **de
+      tre forskellige udfald**, og sørg for at alt output er i `UserInterface`.
    3. Tilføj i `eat`-metoden, at health forandres med madens `healthPoints`, og husk at fjerne
       `Food`-objektet fra rummet eller inventory, så det ikke kan spises igen!
 
