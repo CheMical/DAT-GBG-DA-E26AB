@@ -160,6 +160,56 @@ classDiagram
     class Player {
         -int health
         -ArrayList~Item~ inventory
+        +eat(String shortName) EatResult
+        +getHealth() int
+    }
+
+    Item <|-- Food : extends
+    Player "1" --> "0..*" Item : bærer
+```
+
+Bemærk at `Player` stadig har en liste af **`Item`** – ikke af `Food`. Et `Food`-objekt kan ligge i
+den liste, fordi et `Food` **er et** `Item`.
+
+`eat` skal fortælle brugerfladen, hvilket af de tre udfald der skete. En `boolean` kan kun to ting,
+så brug en enum:
+
+```java
+public enum EatResult { NOT_FOUND, NOT_FOOD, EATEN }
+```
+
+Men en enum alene er ikke nok. Når maden er spist, er den væk, og brugerfladen skal alligevel kunne
+skrive dens lange navn (`You eat the loaf of stale bread`). `eat` skal derfor returnere **både**
+udfaldet **og** de data, brugerfladen skal bruge.
+
+Løsningen er en **wrapper-klasse**: en lille klasse, der "pakker" flere værdier ind i ét objekt, så
+en metode kan returnere dem samlet. Her hedder den **`EatOutcome`** og pakker enummen `EatResult`
+sammen med tingens lange navn og health-ændringen. `eat` returnerer dermed ikke længere en
+`EatResult`, men et `EatOutcome`, som *indeholder* en `EatResult`:
+
+```java
+public class EatOutcome {
+    private final EatResult result;
+    private final String itemName;   // tingens lange navn (null hvis den ikke blev fundet)
+    private final int healthChange;  // 0 hvis intet blev spist
+
+    public EatOutcome(EatResult result, String itemName, int healthChange) {
+        this.result = result;
+        this.itemName = itemName;
+        this.healthChange = healthChange;
+    }
+
+    // getResult(), getItemName() og getHealthChange()
+}
+```
+
+Med `EatOutcome` ændrer `Player.eat` returtype, så klassediagrammet bliver i stedet:
+
+```mermaid
+classDiagram
+    class Player {
+        -int health
+        -ArrayList~Item~ inventory
         +eat(String shortName) EatOutcome
         +getHealth() int
     }
@@ -178,41 +228,8 @@ classDiagram
         EATEN
     }
 
-    Item <|-- Food : extends
-    Player "1" --> "0..*" Item : bærer
     Player ..> EatOutcome : returnerer
     EatOutcome --> EatResult
-```
-
-Bemærk at `Player` stadig har en liste af **`Item`** – ikke af `Food`. Et `Food`-objekt kan ligge i
-den liste, fordi et `Food` **er et** `Item`.
-
-`eat` skal fortælle brugerfladen, hvilket af de tre udfald der skete. En `boolean` kan kun to ting,
-så brug en enum:
-
-```java
-public enum EatResult { NOT_FOUND, NOT_FOOD, EATEN }
-```
-
-Men en enum alene er ikke nok. Når maden er spist, er den væk, og brugerfladen skal alligevel kunne
-skrive dens lange navn (`You eat the loaf of stale bread`). `eat` skal derfor returnere **både**
-udfaldet **og** de data, brugerfladen skal bruge. Pak dem sammen i en lille wrapper-klasse,
-**`EatOutcome`**:
-
-```java
-public class EatOutcome {
-    private final EatResult result;
-    private final String itemName;   // tingens lange navn (null hvis den ikke blev fundet)
-    private final int healthChange;  // 0 hvis intet blev spist
-
-    public EatOutcome(EatResult result, String itemName, int healthChange) {
-        this.result = result;
-        this.itemName = itemName;
-        this.healthChange = healthChange;
-    }
-
-    // getResult(), getItemName() og getHealthChange()
-}
 ```
 
 `Player.eat` finder tingen (i inventory eller i `currentRoom`) **før** noget bliver ændret, gemmer
@@ -222,8 +239,7 @@ med `outcome.getItemName()`.
 
 > **Tip:** `EatOutcome` indeholder *data*, ikke en færdig tekst – så ligger al output stadig i
 > `UserInterface`. Om det var sund mad eller gift, kan brugerfladen se på `getHealthChange()`
-> (positivt eller negativt). Har I set `record`, kan klassen skrives som
-> `record EatOutcome(EatResult result, String itemName, int healthChange) {}`.
+> (positivt eller negativt).
 
 ---
 
